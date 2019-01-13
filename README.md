@@ -1,0 +1,1 @@
+# Generative Adversarial Imagination for Increased Sample Efficiency in Deep Reinforcement Learning (GAIRL)
