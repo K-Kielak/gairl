@@ -1,8 +1,13 @@
-from gairl.config import agent, env
-from gairl.config import EPISODES_NUM, MAX_STEPS_PER_EPISODE, RENDER
+from gym.envs.classic_control import CartPoleEnv
+
+from gairl.agents import create_agent
+from gairl.config import AGENT_STR, EPISODES_NUM, MAX_STEPS_PER_EPISODE, RENDER
 
 
 def main():
+    env = CartPoleEnv()
+    agent = create_agent(AGENT_STR, env.action_space.n,
+                         env.observation_space.shape)
     for e in range(EPISODES_NUM):
         observation = env.reset()
         action = agent.step(observation)
