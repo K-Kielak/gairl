@@ -3,10 +3,9 @@ from abc import ABC, abstractmethod
 
 class AbstractAgent(ABC):
 
-    def __init__(self, actions_num, state_shape, state_dtype):
+    def __init__(self, actions_num, state_shape):
         self._actions_num = actions_num
         self._state_shape = state_shape
-        self._state_dtype = state_dtype
 
     @abstractmethod
     def step(self, state, reward=None):

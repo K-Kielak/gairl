@@ -5,9 +5,7 @@ from gairl.agents.random_agent import RandomAgent
 
 env = CartPoleEnv()
 agent = RandomAgent(env.action_space.n,
-                    env.observation_space.shape,
-                    env.observation_space.dtype)
-
+                    env.observation_space.shape)
 
 EPISODES_NUM = 1000
 MAX_STEPS_PER_EPISODE = 1000
