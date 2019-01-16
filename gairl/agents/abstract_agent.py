@@ -4,6 +4,9 @@ from abc import ABC, abstractmethod
 class AbstractAgent(ABC):
 
     def __init__(self, actions_num, state_shape):
+        assert actions_num > 0, 'actions_num has to be higher than 0'
+        assert isinstance(state_shape, tuple), 'state_shape has to be a tuple'
+
         self._actions_num = actions_num
         self._state_shape = state_shape
 

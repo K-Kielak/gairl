@@ -40,7 +40,7 @@ class DQNAgent(AbstractAgent):
         :param state_shape: tuple of ints; describes shape of the
             state input.
         :param hidden_layers: tuple of ints; describes number of nodes
-            in each hidden layer of the feedforwad network.
+            in each hidden layer of the feedforward network.
         :param session: tensorflow..Session; tensorflow session that
             will be used to run the model.
         :param dtype: tensorflow.DType; type of the state input.
@@ -66,6 +66,15 @@ class DQNAgent(AbstractAgent):
         :param target_update_freq: int; how many online network
             updates the agent will perform in-between target network updates.
         """
+        assert session, 'DQN agent requires tensorflow session!'
+        assert gradient_clip > 0, 'gradient_clip needs to be higher than 0'
+        assert 0. <= discount_factor <= 1, \
+            'discount_factor needs to be in [0; 1] range'
+        assert 0. <= epsilon_start <= 1, 'epsilon needs to be in [0; 1] range'
+        assert 0. <= epsilon_end <= 1, 'epsilon needs to be in [0; 1] range'
+        assert update_freq > target_update_freq, \
+            'target_update_freq needs to be higher than update_freq'
+
         super().__init__(actions_num, state_shape)
 
         self._sess = session

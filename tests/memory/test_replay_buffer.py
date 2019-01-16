@@ -28,13 +28,13 @@ def test_init_valid2():
 
 def test_init_batch_size_higher_than_min_cap():
     # When/Then
-    with pytest.raises(AttributeError):
+    with pytest.raises(AssertionError):
         ReplayBuffer(7, 5, 6)
 
 
 def test_init_min_cap_higher_than_max_cap():
     # When/Then
-    with pytest.raises(AttributeError):
+    with pytest.raises(AssertionError):
         ReplayBuffer(7, 8, 3)
 
 

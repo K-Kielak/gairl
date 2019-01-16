@@ -24,9 +24,6 @@ def _create_random_agent(actions_num, state_shape):
 
 
 def _create_dqn_agent(actions_num, state_shape, session):
-    if not session:
-        raise AttributeError('DQN agent requires tensorflow session!')
-
     return DQNAgent(actions_num,
                     state_shape,
                     dqn_conf.HIDDEN_LAYERS,

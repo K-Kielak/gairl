@@ -15,15 +15,13 @@ class ReplayBuffer:
         :param replay_batch_size: int; how many samples are returned
             when replaying the experience.
         """
-        if replay_batch_size > min_capacity:
-            raise AttributeError(f'min_capacity ({min_capacity}) has '
-                                 f'to be equal or higher than '
-                                 f'replay_batch_size ({replay_batch_size})')
+        assert min_capacity >= replay_batch_size, \
+            f'min_capacity ({min_capacity}) has to be equal or ' \
+            f'higher than replay_batch_size ({replay_batch_size})'
 
-        if min_capacity > max_capacity:
-            raise AttributeError(f'max_capacity ({max_capacity} has'
-                                 f'to be equal or higher than'
-                                 f'min_capacity ({min_capacity})')
+        assert max_capacity >= min_capacity, \
+            f'max_capacity ({max_capacity} has to be equal or ' \
+            f'higher than min_capacity ({min_capacity})'
 
         self._max_capacity = max_capacity
         self._min_capacity = min_capacity
