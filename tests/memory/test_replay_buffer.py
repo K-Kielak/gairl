@@ -1,7 +1,7 @@
 import random
 
 import pytest
-from hamcrest import assert_that, contains, equal_to
+from hamcrest import assert_that, contains, equal_to, none
 
 from gairl.memory.replay_buffer import ReplayBuffer
 
@@ -97,3 +97,18 @@ def test_replay_experience():
         ['s5', 'a5', 'r6', 's6'],
         ['s4', 'a4', 'r5', 's5']
     ))
+
+
+def test_replay_exerience_not_enough():
+    # Given
+    rep_buff = ReplayBuffer(7, 6, 3)
+
+    # When
+    rep_buff.add_experience('s1', 'a1', 'r2', 's2')
+    rep_buff.add_experience('s2', 'a2', 'r3', 's3')
+    rep_buff.add_experience('s3', 'a3', 'r4', 's4')
+    rep_buff.add_experience('s4', 'a4', 'r5', 's5')
+    rep_buff.add_experience('s5', 'a5', 'r6', 's6')
+
+    # Then
+    assert_that(rep_buff.replay_experience(), none())
