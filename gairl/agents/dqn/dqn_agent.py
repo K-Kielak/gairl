@@ -1,4 +1,3 @@
-from functools import reduce
 from random import random, randrange
 
 import numpy as np
@@ -6,8 +5,8 @@ import tensorflow as tf
 
 from gairl.agents.abstract_agent import AbstractAgent
 from gairl.memory.replay_buffer import ReplayBuffer
-from gairl.utils.neural_utils import DenseLayerParams
-from gairl.utils.neural_utils import gen_rand_biases, gen_rand_weights
+from gairl.utils.neural_utils import create_copy_ops
+from gairl.utils.neural_utils import DenseNetworkUtils as Dnu
 
 
 # TODO add logging, tensorboard, and model saving/loading
@@ -72,12 +71,14 @@ class DQNAgent(AbstractAgent):
             'discount_factor needs to be in [0; 1] range'
         assert 0. <= epsilon_start <= 1, 'epsilon needs to be in [0; 1] range'
         assert 0. <= epsilon_end <= 1, 'epsilon needs to be in [0; 1] range'
-        assert update_freq > target_update_freq, \
+        assert target_update_freq > update_freq, \
             'target_update_freq needs to be higher than update_freq'
 
         super().__init__(actions_num, state_shape)
 
+        # Set up important variables
         self._sess = session
+        self._activation_fn = activation_fn
         self._optimizer = optimizer
         self._gradient_clip = gradient_clip
         self._discount_factor = discount_factor
@@ -93,24 +94,7 @@ class DQNAgent(AbstractAgent):
         self._prev_action = None
         self._steps_so_far = 0
 
-        # Create network parameters
-        online_params = create_network_params(state_shape, hidden_layers,
-                                              actions_num, dtype)
-        target_params = create_network_params(state_shape, hidden_layers,
-                                              actions_num, dtype,
-                                              trainable=False)
-
-        # Create copy from online to target network tensorflow operations
-        self._online_to_target_ops = []
-        for i in range(len(online_params)):
-            weights_copy_ops = target_params[i].weights\
-                .assign(online_params[i].weights)
-            biases_copy_ops = target_params[i].biases\
-                .assign(online_params[i].biases)
-            self._online_to_target_ops.append(weights_copy_ops)
-            self._online_to_target_ops.append(biases_copy_ops)
-
-        # Set up placeholders
+        # Set up input placeholders
         self._start_states = tf.placeholder(shape=(None, *state_shape),
                                             dtype=dtype)
         self._chosen_actions = tf.placeholder(shape=(None,), dtype=tf.int32)
@@ -118,32 +102,48 @@ class DQNAgent(AbstractAgent):
         self._next_states = tf.placeholder(shape=(None, *state_shape),
                                            dtype=dtype)
 
-        # Model outputs
-        online_start_qs = model_output(self._start_states,
-                                       online_params, activation_fn)
-        target_next_outputs = model_output(self._next_states,
-                                           target_params, activation_fn)
+        # Create network
+        self._online_params = Dnu.create_network_params(state_shape, hidden_layers,
+                                                        actions_num, dtype)
+        self._target_params = Dnu.create_network_params(state_shape, hidden_layers,
+                                                        actions_num, dtype,
+                                                        trainable=False)
+        self._online_to_target_ops = create_copy_ops(
+            Dnu.unpack_params(self._online_params),
+            Dnu.unpack_params(self._target_params)
+        )
+        self._action, self._update_op = self._create_action_and_update_ops()
 
-        # Make decision on action
-        self._best_online_actions = tf.argmax(online_start_qs, axis=1)
+        self._initialize_vars()
 
-        # Update calculation
+    def _create_action_and_update_ops(self):
+        online_start_qs = Dnu.model_output(self._start_states,
+                                           self._online_params,
+                                           self._activation_fn)
+        target_next_qs = Dnu.model_output(self._next_states,
+                                          self._target_params,
+                                          self._activation_fn)
+        best_online_actions = tf.argmax(online_start_qs, axis=1)
+
+        # Set up online network update calculation
         chosen_online_qs = tf.gather(online_start_qs,
                                      self._chosen_actions, axis=1)
-        best_target_next_qs = tf.reduce_max(target_next_outputs, axis=1)
+        best_target_next_qs = tf.reduce_max(target_next_qs, axis=1)
         expected_q_values = self._rewards + tf.scalar_mul(self._discount_factor,
                                                           best_target_next_qs)
         td_errors = tf.square(chosen_online_qs - expected_q_values)
         loss = tf.reduce_mean(td_errors)
         grads = self._optimizer.compute_gradients(loss)
-        grads = [(tf.clip_by_value(grad, -self._gradient_clip, self._gradient_clip),
-                  var) for grad, var in grads]
-        self._online_update = optimizer.apply_gradients(grads)
+        grads = [
+            (tf.clip_by_value(grad, -self._gradient_clip, self._gradient_clip),
+             var) for grad, var in grads]
+        online_update = self._optimizer.apply_gradients(grads)
+        return best_online_actions, online_update
 
-        # Initialize variables
+    def _initialize_vars(self):
         init_ops = tf.variables_initializer(
-            reduce(lambda x, y: x.extend(list(y)) or list(x), online_params, []) +
-            reduce(lambda x, y: x.extend(list(y)) or list(x), target_params, []) +
+            Dnu.unpack_params(self._online_params) +
+            Dnu.unpack_params(self._target_params) +
             self._optimizer.variables()
         )
         self._sess.run(init_ops)
@@ -172,7 +172,7 @@ class DQNAgent(AbstractAgent):
         if self._steps_so_far % self._target_update_freq < self._update_freq:
             self._copy_online_to_target()
 
-        self._sess.run(self._online_update,
+        self._sess.run(self._update_op,
                        feed_dict={
                            self._start_states: np.vstack(samples[:, 0]),
                            self._chosen_actions: samples[:, 1],
@@ -185,7 +185,7 @@ class DQNAgent(AbstractAgent):
            self._steps_so_far < self._epsilon_warmup:
             return randrange(self._actions_num)
 
-        return self._sess.run(self._best_online_actions,
+        return self._sess.run(self._action,
                               feed_dict={self._start_states: [state]})[0]
 
     def _update_epsilon(self):
@@ -196,51 +196,3 @@ class DQNAgent(AbstractAgent):
     def _copy_online_to_target(self):
         for op in self._online_to_target_ops:
             self._sess.run(op)
-
-
-def create_network_params(input_shape, hidden_layers, outputs_num, dtype,
-                          trainable=True):
-    """
-    Crates tensorflow variables for dense feedforward neural network.
-    :param input_shape: tuple of ints; shape of the input to the network.
-    :param hidden_layers: tuple of ints; number of nodes in each hidden
-        layer of the network.
-    :param outputs_num: int; number of outputs network should produce.
-    :param dtype: numpy.Dtype; what type should the params have.
-    :param trainable: bool; will these params be trainable, i.e.
-        if they can be updated by tensorflow training algorithms.
-    :return: list of gairl..DenseLayerParams; tensorflow variables
-        representing network weights and biases.
-    """
-    if not hidden_layers:
-        raise AttributeError('DQN has to have some hidden layers!')
-
-    params = []
-    layers = list(input_shape) + hidden_layers + [outputs_num]
-    for i in range(1, len(layers)):
-        weights = gen_rand_weights((layers[i - 1], layers[i]),
-                                   dtype, trainable=trainable)
-        biases = gen_rand_biases((layers[i],), dtype, trainable=trainable)
-        params.append(DenseLayerParams(weights, biases))
-
-    return params
-
-
-def model_output(input, params, activation_fn):
-    """
-    :param input: tf.placeholder; placeholder for network input
-    :param params: gairl..DenseLayerParams; tensorflow variables
-        representing network weights and biases.
-    :param activation_fn: function applied to result of each hidden
-        layer of the network.
-    :return: Final output of the network as a tensorflow tensor
-    """
-    layer_sum = tf.matmul(input, params[0].weights) + params[0].biases
-    activation = activation_fn(layer_sum)
-
-    # Up to len(params) - 1 because last layer doesn't use activation_fn
-    for i in range(1, len(params) - 1):
-        layer_sum = tf.matmul(activation, params[i].weights) + params[i].biases
-        activation = activation_fn(layer_sum)
-
-    return tf.matmul(activation, params[-1].weights) + params[-1].biases
