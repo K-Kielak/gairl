@@ -9,7 +9,7 @@ from gairl.utils.neural_utils import create_copy_ops
 from gairl.utils.neural_utils import DenseNetworkUtils as Dnu
 
 
-# TODO add logging, tensorboard, and model saving/loading
+# TODO add tensorboard, and model saving/loading
 class DQNAgent(AbstractAgent):
 
     def __init__(self,
@@ -31,7 +31,8 @@ class DQNAgent(AbstractAgent):
                  epsilon_period=100000,
                  replay_buffer=ReplayBuffer(250000, 80000, 32),
                  update_freq=4,
-                 target_update_freq=10000):
+                 target_update_freq=10000,
+                 logging_freq=1000):
         """
         Initializes feed-forward version of DQN
         :param actions_num: int; describes number of actions the
@@ -64,6 +65,8 @@ class DQNAgent(AbstractAgent):
             will perform in-between online network updates.
         :param target_update_freq: int; how many online network
             updates the agent will perform in-between target network updates.
+        :param logging_freq: int; frequency of progress logging and
+            writing tensorflow summaries.
         """
         assert session, 'DQN agent requires tensorflow session!'
         assert gradient_clip > 0, 'gradient_clip needs to be higher than 0'
@@ -73,6 +76,24 @@ class DQNAgent(AbstractAgent):
         assert 0. <= epsilon_end <= 1, 'epsilon needs to be in [0; 1] range'
         assert target_update_freq > update_freq, \
             'target_update_freq needs to be higher than update_freq'
+
+        tf.logging.info(
+            f'\nCreating DQN Agent with:\n'
+            f'Input shape {state_shape}\n'
+            f'Hidden layers: {hidden_layers}\n'
+            f'Outputs number: {actions_num}\n'
+            f'Activation function: {activation_fn.__name__}\n'
+            f'Optimizer: {optimizer.__class__.__name__}\n'
+            f'Gradient clip: {gradient_clip}\n'
+            f'Discount factor: {discount_factor}\n'
+            f'Starting epsilon: {epsilon_start}\n'
+            f'Epsilon warmup period: {epsilon_warmup}\n'
+            f'Ending epsilon: {epsilon_end}\n'
+            f'Epsilon decay period: {epsilon_period}\n'
+            f'Replay buffer type: {replay_buffer.__class__.__name__}\n'
+            f'Update frequency: {update_freq}\n'
+            f'Target update frequency: {target_update_freq}\n'
+        )
 
         super().__init__(actions_num, state_shape)
 
@@ -89,10 +110,13 @@ class DQNAgent(AbstractAgent):
         self._replay_buffer = replay_buffer
         self._update_freq = update_freq
         self._target_update_freq = target_update_freq
+        self._logging_freq = logging_freq
 
         self._prev_state = None
         self._prev_action = None
         self._steps_so_far = 0
+        self._episodes_so_far = 0
+        self._episode_reward = 0
 
         # Set up input placeholders
         self._start_states = tf.placeholder(shape=(None, *state_shape),
@@ -134,10 +158,10 @@ class DQNAgent(AbstractAgent):
         td_errors = tf.square(chosen_online_qs - expected_q_values)
         loss = tf.reduce_mean(td_errors)
         grads = self._optimizer.compute_gradients(loss)
-        grads = [
-            (tf.clip_by_value(grad, -self._gradient_clip, self._gradient_clip),
-             var) for grad, var in grads]
+        grads = [(tf.clip_by_value(grad, -self._gradient_clip, self._gradient_clip),
+                 var) for grad, var in grads]
         online_update = self._optimizer.apply_gradients(grads)
+
         return best_online_actions, online_update
 
     def _initialize_vars(self):
@@ -150,9 +174,13 @@ class DQNAgent(AbstractAgent):
 
     def step(self, state, reward=None):
         if reward:
+            self._episode_reward += reward
             self._replay_buffer.add_experience(self._prev_state,
                                                self._prev_action,
                                                reward, state)
+        else:
+            self._episodes_so_far += 1
+            self._episode_reward = 0
 
         if self._steps_so_far % self._update_freq == 0:
             self._update_networks()
@@ -162,6 +190,19 @@ class DQNAgent(AbstractAgent):
         self._prev_state = state
         self._prev_action = action
         self._steps_so_far += 1
+
+        tf.logging.log_every_n(
+            tf.logging.INFO,
+            '\n--------------------------------------------------\n'
+            f'Step {self._steps_so_far-1}\n'
+            f'Current state: {state}\n'
+            f'Received reward: {reward}\n'
+            f'Current episode total reward: {self._episode_reward}\n'
+            f'Chosen action: {action}\n'
+            f'Current epsilon: {self._curr_epsilon}\n'
+            f'----------------------------------------------------\n',
+            self._logging_freq
+        )
         return action
 
     def _update_networks(self):
@@ -194,5 +235,6 @@ class DQNAgent(AbstractAgent):
             self._curr_epsilon -= self._epsilon_decay
 
     def _copy_online_to_target(self):
+        tf.logging.info(' Updating target network with online params')
         for op in self._online_to_target_ops:
             self._sess.run(op)

@@ -39,7 +39,8 @@ def _create_dqn_agent(actions_num, state_shape, session):
                     epsilon_period=dqn_conf.EPSILON_PERIOD,
                     replay_buffer=dqn_conf.REPLAY_BUFFER,
                     update_freq=dqn_conf.UPDATE_FREQ,
-                    target_update_freq=dqn_conf.TARGET_UPDATE_FREQ)
+                    target_update_freq=dqn_conf.TARGET_UPDATE_FREQ,
+                    logging_freq=dqn_conf.LOGGING_FREQ)
 
 
 _STR_TO_AGENT = {

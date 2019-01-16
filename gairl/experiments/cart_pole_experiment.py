@@ -8,7 +8,9 @@ AGENT_STR = 'dqn'
 EPISODES_NUM = 100000
 EPISODE_END_REWARD = -100
 MAX_STEPS_PER_EPISODE = 1000
-RENDER = True
+RENDER = False
+
+tf.logging.set_verbosity(tf.logging.INFO)
 
 
 def main():
