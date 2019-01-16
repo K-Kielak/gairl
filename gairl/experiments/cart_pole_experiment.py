@@ -4,7 +4,7 @@ from gym.envs.classic_control import CartPoleEnv
 from gairl.agents import create_agent
 
 
-AGENT_STR = 'random'
+AGENT_STR = 'dqn'
 EPISODES_NUM = 100000
 EPISODE_END_REWARD = -100
 MAX_STEPS_PER_EPISODE = 1000
