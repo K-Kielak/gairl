@@ -1,6 +1,5 @@
+import os
 from inspect import getfullargspec
-
-import tensorflow as tf
 
 from gairl.agents.dqn import dqn_config as dqn_conf
 from gairl.agents.dqn.dqn_agent import DQNAgent
@@ -24,10 +23,12 @@ def _create_random_agent(actions_num, state_shape):
 
 
 def _create_dqn_agent(actions_num, state_shape, session):
+    os.mkdir(dqn_conf.OUTPUT_DIRECTORY)
     return DQNAgent(actions_num,
                     state_shape,
                     dqn_conf.HIDDEN_LAYERS,
                     session,
+                    dqn_conf.OUTPUT_DIRECTORY,
                     dtype=dqn_conf.DTYPE,
                     activation_fn=dqn_conf.ACTIVATION_FN,
                     optimizer=dqn_conf.OPTIMIZER,

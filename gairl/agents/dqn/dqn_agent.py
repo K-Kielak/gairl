@@ -1,3 +1,5 @@
+import logging
+import os
 from random import random, randrange
 
 import numpy as np
@@ -5,8 +7,9 @@ import tensorflow as tf
 
 from gairl.agents.abstract_agent import AbstractAgent
 from gairl.memory.replay_buffer import ReplayBuffer
-from gairl.utils.neural_utils import create_copy_ops
-from gairl.utils.neural_utils import DenseNetworkUtils as Dnu
+from gairl.neural_utils import DenseNetworkUtils as Dnu
+from gairl.neural_utils import summarize_ndarray, summarize_vector
+from gairl.neural_utils import create_copy_ops
 
 
 # TODO add tensorboard, and model saving/loading
@@ -17,6 +20,7 @@ class DQNAgent(AbstractAgent):
                  state_shape,
                  hidden_layers,
                  session,
+                 output_directory,
                  dtype=tf.float64,
                  activation_fn=tf.nn.leaky_relu,
                  optimizer=tf.train.AdamOptimizer(
@@ -43,6 +47,8 @@ class DQNAgent(AbstractAgent):
             in each hidden layer of the feedforward network.
         :param session: tensorflow..Session; tensorflow session that
             will be used to run the model.
+        :param output_directory: directory to which all of the network
+            outputs (logs, checkpoints) will be saved.
         :param dtype: tensorflow.DType; type of the state input.
         :param activation_fn: activation function for hidden layers of networks
         :param optimizer: tf.trainOptimizer; optimizer that calculates
@@ -77,24 +83,6 @@ class DQNAgent(AbstractAgent):
         assert target_update_freq > update_freq, \
             'target_update_freq needs to be higher than update_freq'
 
-        tf.logging.info(
-            f'\nCreating DQN Agent with:\n'
-            f'Input shape {state_shape}\n'
-            f'Hidden layers: {hidden_layers}\n'
-            f'Outputs number: {actions_num}\n'
-            f'Activation function: {activation_fn.__name__}\n'
-            f'Optimizer: {optimizer.__class__.__name__}\n'
-            f'Gradient clip: {gradient_clip}\n'
-            f'Discount factor: {discount_factor}\n'
-            f'Starting epsilon: {epsilon_start}\n'
-            f'Epsilon warmup period: {epsilon_warmup}\n'
-            f'Ending epsilon: {epsilon_end}\n'
-            f'Epsilon decay period: {epsilon_period}\n'
-            f'Replay buffer type: {replay_buffer.__class__.__name__}\n'
-            f'Update frequency: {update_freq}\n'
-            f'Target update frequency: {target_update_freq}\n'
-        )
-
         super().__init__(actions_num, state_shape)
 
         # Set up important variables
@@ -116,53 +104,127 @@ class DQNAgent(AbstractAgent):
         self._prev_action = None
         self._steps_so_far = 0
         self._episodes_so_far = 0
-        self._episode_reward = 0
+        self._episode_reward = 0.
+        # Placeholders for tensorboard
+        self._ep_reward_ph = tf.placeholder(dtype=dtype, shape=(),
+                                            name='episode_reward')
 
         # Set up input placeholders
         self._start_states = tf.placeholder(shape=(None, *state_shape),
                                             dtype=dtype)
         self._chosen_actions = tf.placeholder(shape=(None,), dtype=tf.int32)
-        self._rewards = tf.placeholder(shape=(None,), dtype=dtype)
+        self._rewards = tf.placeholder(shape=(None,), dtype=tf.float64)
         self._next_states = tf.placeholder(shape=(None, *state_shape),
                                            dtype=dtype)
 
         # Create network
-        self._online_params = Dnu.create_network_params(state_shape, hidden_layers,
-                                                        actions_num, dtype)
-        self._target_params = Dnu.create_network_params(state_shape, hidden_layers,
-                                                        actions_num, dtype,
-                                                        trainable=False)
+        self._online_params = Dnu.create_network_params(state_shape,
+                                                        hidden_layers,
+                                                        actions_num,
+                                                        dtype,
+                                                        name='online_params')
+        self._target_params = Dnu.create_network_params(state_shape,
+                                                        hidden_layers,
+                                                        actions_num,
+                                                        dtype,
+                                                        trainable=False,
+                                                        name='target_params')
         self._online_to_target_ops = create_copy_ops(
             Dnu.unpack_params(self._online_params),
             Dnu.unpack_params(self._target_params)
         )
-        self._action, self._update_op = self._create_action_and_update_ops()
+        self._create_outputs_and_update()
 
+        self._set_up_outputs(output_directory)
+        self._add_summaries()
         self._initialize_vars()
 
-    def _create_action_and_update_ops(self):
-        online_start_qs = Dnu.model_output(self._start_states,
-                                           self._online_params,
-                                           self._activation_fn)
-        target_next_qs = Dnu.model_output(self._next_states,
-                                          self._target_params,
-                                          self._activation_fn)
-        best_online_actions = tf.argmax(online_start_qs, axis=1)
+        tf.logging.info(
+            f'\nCreating DQN Agent with:\n'
+            f'Input shape {state_shape}\n'
+            f'Hidden layers: {hidden_layers}\n'
+            f'Outputs number: {actions_num}\n'
+            f'Activation function: {activation_fn.__name__}\n'
+            f'Optimizer: {optimizer.__class__.__name__}\n'
+            f'Gradient clip: {gradient_clip}\n'
+            f'Discount factor: {discount_factor}\n'
+            f'Starting epsilon: {epsilon_start}\n'
+            f'Epsilon warmup period: {epsilon_warmup}\n'
+            f'Ending epsilon: {epsilon_end}\n'
+            f'Epsilon decay period: {epsilon_period}\n'
+            f'Replay buffer type: {replay_buffer.__class__.__name__}\n'
+            f'Update frequency: {update_freq}\n'
+            f'Target update frequency: {target_update_freq}'
+        )
+
+    def _set_up_outputs(self, output_dir):
+        logs_filepath = os.path.join(output_dir, 'logs.log')
+        sumaries_dir = os.path.join(output_dir, 'tensorboard')
+
+        tflogger = logging.getLogger('tensorflow')
+        tflogger.addHandler(logging.FileHandler(logs_filepath))
+
+        self._summary_writer = tf.summary.FileWriter(sumaries_dir,
+                                                     self._sess.graph)
+
+    def _add_summaries(self):
+        training_summs = []
+        with tf.name_scope(f'online-layer'):
+            for i, layer in enumerate(self._online_params):
+                with tf.name_scope(f'{i}/weights'):
+                    training_summs.extend(summarize_ndarray(layer.weights))
+                with tf.name_scope(f'{i}/biases'):
+                    training_summs.extend(summarize_ndarray(layer.biases))
+
+        with tf.name_scope('target-layer'):
+            for i, layer in enumerate(self._target_params):
+                with tf.name_scope(f'{i}/weights'):
+                    training_summs.extend(summarize_ndarray(layer.weights))
+                with tf.name_scope(f'{i}/biases'):
+                    training_summs.extend(summarize_ndarray(layer.biases))
+
+        with tf.name_scope('loss'):
+            training_summs.append(tf.summary.scalar('value', self._loss))
+
+        output_summs = []
+        with tf.name_scope('online-qs'):
+            output_summs.extend(summarize_vector(self._online_start_qs[0, :]))
+        with tf.name_scope('target-qs'):
+            output_summs.extend(summarize_vector(self._target_start_qs[0, :]))
+
+        with tf.name_scope('episode-reward'):
+            self._ep_reward_summary = tf.summary.scalar('value',
+                                                        self._ep_reward_ph)
+        self._training_summary = tf.summary.merge(training_summs)
+        self._output_summary = tf.summary.merge(output_summs)
+
+    def _create_outputs_and_update(self):
+        self._online_start_qs = Dnu.model_output(self._start_states,
+                                                 self._online_params,
+                                                 self._activation_fn,
+                                                 name='online_start_out')
+        self._target_start_qs = Dnu.model_output(self._start_states,
+                                                 self._target_params,
+                                                 self._activation_fn,
+                                                 name='target_start_out')
+        self._target_next_qs = Dnu.model_output(self._next_states,
+                                                self._target_params,
+                                                self._activation_fn,
+                                                name='target_next_out')
+        self._best_online_actions = tf.argmax(self._online_start_qs, axis=1)
 
         # Set up online network update calculation
-        chosen_online_qs = tf.gather(online_start_qs,
+        chosen_online_qs = tf.gather(self._online_start_qs,
                                      self._chosen_actions, axis=1)
-        best_target_next_qs = tf.reduce_max(target_next_qs, axis=1)
+        best_target_next_qs = tf.reduce_max(self._target_next_qs, axis=1)
         expected_q_values = self._rewards + tf.scalar_mul(self._discount_factor,
                                                           best_target_next_qs)
         td_errors = tf.square(chosen_online_qs - expected_q_values)
-        loss = tf.reduce_mean(td_errors)
-        grads = self._optimizer.compute_gradients(loss)
+        self._loss = tf.reduce_mean(td_errors, name='loss')
+        grads = self._optimizer.compute_gradients(self._loss)
         grads = [(tf.clip_by_value(grad, -self._gradient_clip, self._gradient_clip),
                  var) for grad, var in grads]
-        online_update = self._optimizer.apply_gradients(grads)
-
-        return best_online_actions, online_update
+        self._online_update = self._optimizer.apply_gradients(grads)
 
     def _initialize_vars(self):
         init_ops = tf.variables_initializer(
@@ -179,8 +241,7 @@ class DQNAgent(AbstractAgent):
                                                self._prev_action,
                                                reward, state)
         else:
-            self._episodes_so_far += 1
-            self._episode_reward = 0
+            self._end_episode()
 
         if self._steps_so_far % self._update_freq == 0:
             self._update_networks()
@@ -191,19 +252,37 @@ class DQNAgent(AbstractAgent):
         self._prev_action = action
         self._steps_so_far += 1
 
-        tf.logging.log_every_n(
-            tf.logging.INFO,
+        if self._steps_so_far % self._logging_freq == 0:
+            self._log_step(state, reward, action)
+
+        return action
+
+    def _log_step(self, state, reward, action):
+        out_summ, online_qs, target_qs = \
+            self._sess.run([self._output_summary, self._online_start_qs,
+                            self._target_start_qs],
+                           feed_dict={self._start_states: [state]})
+
+        tf.logging.info(
             '\n--------------------------------------------------\n'
-            f'Step {self._steps_so_far-1}\n'
+            f'Step {self._steps_so_far}\n'
             f'Current state: {state}\n'
             f'Received reward: {reward}\n'
             f'Current episode total reward: {self._episode_reward}\n'
+            f'Online qs: {online_qs[0, :]}\n'
+            f'Target qs: {target_qs[0, :]}\n'
             f'Chosen action: {action}\n'
             f'Current epsilon: {self._curr_epsilon}\n'
-            f'----------------------------------------------------\n',
-            self._logging_freq
         )
-        return action
+        self._summary_writer.add_summary(out_summ, self._steps_so_far)
+
+    def _end_episode(self):
+        reward_summary = self._sess.run(self._ep_reward_summary, feed_dict={
+            self._ep_reward_ph: self._episode_reward
+        })
+        self._summary_writer.add_summary(reward_summary, self._episodes_so_far)
+        self._episodes_so_far += 1
+        self._episode_reward = 0
 
     def _update_networks(self):
         samples = self._replay_buffer.replay_experience()
@@ -213,28 +292,37 @@ class DQNAgent(AbstractAgent):
         if self._steps_so_far % self._target_update_freq < self._update_freq:
             self._copy_online_to_target()
 
-        self._sess.run(self._update_op,
-                       feed_dict={
-                           self._start_states: np.vstack(samples[:, 0]),
-                           self._chosen_actions: samples[:, 1],
-                           self._rewards: samples[:, 2],
-                           self._next_states: np.vstack(samples[:, 3])
-                       })
+        _, loss, train_summ = \
+            self._sess.run([self._online_update, self._loss,
+                            self._training_summary],
+                           feed_dict={
+                               self._start_states: np.vstack(samples[:, 0]),
+                               self._chosen_actions: samples[:, 1],
+                               self._rewards: samples[:, 2],
+                               self._next_states: np.vstack(samples[:, 3])
+                            })
+
+        if self._steps_so_far % self._logging_freq < self._update_freq:
+            tf.logging.info(
+                f'Training with loss: {loss}\n'
+                f'----------------------------------------------------\n'
+            )
+            self._summary_writer.add_summary(train_summ, self._steps_so_far)
+
+    def _copy_online_to_target(self):
+        tf.logging.info(' Updating target network with online params')
+        for op in self._online_to_target_ops:
+            self._sess.run(op)
 
     def _choose_action(self, state):
         if random() < self._curr_epsilon or \
            self._steps_so_far < self._epsilon_warmup:
             return randrange(self._actions_num)
 
-        return self._sess.run(self._action,
+        return self._sess.run(self._best_online_actions,
                               feed_dict={self._start_states: [state]})[0]
 
     def _update_epsilon(self):
         if self._epsilon_warmup < self._steps_so_far and \
            self._steps_so_far - self._epsilon_warmup < self._epsilon_period:
             self._curr_epsilon -= self._epsilon_decay
-
-    def _copy_online_to_target(self):
-        tf.logging.info(' Updating target network with online params')
-        for op in self._online_to_target_ops:
-            self._sess.run(op)

@@ -1,9 +1,13 @@
+import os
+
 import tensorflow as tf
 
+from gairl.config import OUTPUTS_DIR
 from gairl.memory.replay_buffer import ReplayBuffer
 
 
 HIDDEN_LAYERS = [8, 16, 8, 4]
+OUTPUT_DIRECTORY = os.path.join(OUTPUTS_DIR, 'dqn')
 DTYPE = tf.float64
 ACTIVATION_FN = tf.nn.leaky_relu
 OPTIMIZER = tf.train.AdamOptimizer(learning_rate=6.25e-5, epsilon=1.5e-4)

@@ -2,18 +2,16 @@ import tensorflow as tf
 from gym.envs.classic_control import CartPoleEnv
 
 from gairl.agents import create_agent
+from gairl.config import AGENT_STR, LOGS_VERBOSITY, RENDER
 
 
-AGENT_STR = 'dqn'
+EPISODE_END_REWARD = -2000
 EPISODES_NUM = 100000
-EPISODE_END_REWARD = -100
-MAX_STEPS_PER_EPISODE = 1000
-RENDER = False
-
-tf.logging.set_verbosity(tf.logging.INFO)
+MAX_STEPS_PER_EPISODE = 200
 
 
 def main():
+    tf.logging.set_verbosity(LOGS_VERBOSITY)
     env = CartPoleEnv()
     with tf.Session() as sess:
         agent = create_agent(AGENT_STR, env.action_space.n,
@@ -31,7 +29,7 @@ def main():
                     break
                 else:
                     # The longer it stays the better rewards
-                    action = agent.step(observation, reward + t)
+                    action = agent.step(observation, reward * (t + 1))
 
 
 if __name__ == '__main__':
