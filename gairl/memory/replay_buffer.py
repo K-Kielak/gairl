@@ -28,19 +28,21 @@ class ReplayBuffer:
         self._replay_batch_size = replay_batch_size
         self._buffer = deque()
 
-    def add_experience(self, start_state, action, reward, next_state):
+    def add_experience(self, start_state, action,
+                       reward, next_state, is_terminal):
         """
-        Takes experience s_{t}, a_{t}, r_{t+1}, s_{t+1} and saves
-        it to the buffer.
+        Takes experience s_{t}, a_{t}, r_{t+1}, s_{t+1}, it_{t+1}
+            and saves it to the buffer.
         """
-        self._buffer.appendleft((start_state, action, reward, next_state))
+        self._buffer.appendleft((start_state, action, reward,
+                                 next_state, is_terminal))
         if len(self._buffer) > self._max_capacity:
             self._buffer.pop()
 
     def replay_experience(self):
         """
         :return: self._replay_batch_size randomly sampled experience
-            tuples (s_{t}, a_{t}, r_{t+1}, s_{t+1}) from the buffer.
+            tuples (s_{t}, a_{t}, r_{t+1}, s_{t+1}, it_{t+1}) from the buffer.
         """
         if len(self._buffer) < self._min_capacity:
             return None

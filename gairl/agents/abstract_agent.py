@@ -11,13 +11,13 @@ class AbstractAgent(ABC):
         self._state_size = state_size
 
     @abstractmethod
-    def step(self, state, reward=None):
+    def step(self, state, reward=0, is_terminal=False):
         """
         Asks agent to decide what action to choose given the state.
         :param state: numpy.array of self._state_size size
             and self._state_dtype dtype; Current state the agent is in.
         :param reward: float; Recent reward returned by the environment.
-            None if beginning of a new training episode.
+        :param is_terminal: bool; Is it the last state in the episode.
         :return: int a in [0,1,...,self.actions_num-1]; representing
             chosen action.
         """

@@ -5,7 +5,6 @@ from gairl.agents import create_agent
 from gairl.config import AGENT_STR, LOGS_VERBOSITY, RENDER
 
 
-EPISODE_END_REWARD = -2000
 EPISODES_NUM = 100000
 MAX_STEPS_PER_EPISODE = 200
 
@@ -25,11 +24,10 @@ def main():
 
                 observation, reward, done, _ = env.step(action)
                 if done:
-                    agent.step(observation, EPISODE_END_REWARD)
+                    agent.step(observation, reward, is_terminal=True)
                     break
                 else:
-                    # The longer it stays the better rewards
-                    action = agent.step(observation, reward * (t + 1))
+                    action = agent.step(observation, reward)
 
 
 if __name__ == '__main__':

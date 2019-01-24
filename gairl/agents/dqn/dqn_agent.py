@@ -86,6 +86,7 @@ class DQNAgent(AbstractAgent):
 
         # Set up important variables
         self._sess = session
+        self._dtype = dtype
         self._activation_fn = activation_fn
         self._optimizer = optimizer
         self._gradient_clip = gradient_clip
@@ -101,6 +102,7 @@ class DQNAgent(AbstractAgent):
 
         self._prev_state = None
         self._prev_action = None
+        self._was_terminal = True
         self._steps_so_far = 0
         self._episodes_so_far = 0
         self._episode_reward = 0.
@@ -115,6 +117,7 @@ class DQNAgent(AbstractAgent):
         self._rewards = tf.placeholder(shape=(None,), dtype=tf.float64)
         self._next_states = tf.placeholder(shape=(None, state_size),
                                            dtype=dtype)
+        self._are_terminal = tf.placeholder(shape=(None,), dtype=bool)
 
         # Create network
         self._online_params = Dnu.create_network_params(state_size,
@@ -156,7 +159,41 @@ class DQNAgent(AbstractAgent):
             f'Target update frequency: {target_update_freq}'
         )
 
+    def _create_outputs_and_update(self):
+        self._online_start_qs = Dnu.model_output(self._start_states,
+                                                 self._online_params,
+                                                 self._activation_fn,
+                                                 name='online_start_out')
+        self._target_start_qs = Dnu.model_output(self._start_states,
+                                                 self._target_params,
+                                                 self._activation_fn,
+                                                 name='target_start_out')
+        self._target_next_qs = Dnu.model_output(self._next_states,
+                                                self._target_params,
+                                                self._activation_fn,
+                                                name='target_next_out')
+        self._best_online_actions = tf.argmax(self._online_start_qs, axis=1)
+
+        # Set up online network update calculation
+        chosen_online_qs = tf.gather(self._online_start_qs,
+                                     self._chosen_actions, axis=1)
+        best_target_next_qs = tf.reduce_max(self._target_next_qs, axis=1)
+        # If non-terminal then take best next qs into account, oterwise 0
+        zeros = tf.zeros_like(best_target_next_qs)
+        self._real_next_qs = tf.where(self._are_terminal, zeros,
+                                      best_target_next_qs)
+
+        expected_q_values = self._rewards + tf.scalar_mul(self._discount_factor,
+                                                          self._real_next_qs)
+        td_errors = tf.square(chosen_online_qs - expected_q_values)
+        self._loss = tf.reduce_mean(td_errors, name='loss')
+        grads = self._optimizer.compute_gradients(self._loss)
+        grads = [(tf.clip_by_value(grad, -self._gradient_clip, self._gradient_clip),
+                 var) for grad, var in grads]
+        self._online_update = self._optimizer.apply_gradients(grads)
+
     def _set_up_outputs(self, output_dir):
+        os.mkdir(output_dir)
         logs_filepath = os.path.join(output_dir, 'logs.log')
         sumaries_dir = os.path.join(output_dir, 'tensorboard')
 
@@ -197,34 +234,6 @@ class DQNAgent(AbstractAgent):
         self._training_summary = tf.summary.merge(training_summs)
         self._output_summary = tf.summary.merge(output_summs)
 
-    def _create_outputs_and_update(self):
-        self._online_start_qs = Dnu.model_output(self._start_states,
-                                                 self._online_params,
-                                                 self._activation_fn,
-                                                 name='online_start_out')
-        self._target_start_qs = Dnu.model_output(self._start_states,
-                                                 self._target_params,
-                                                 self._activation_fn,
-                                                 name='target_start_out')
-        self._target_next_qs = Dnu.model_output(self._next_states,
-                                                self._target_params,
-                                                self._activation_fn,
-                                                name='target_next_out')
-        self._best_online_actions = tf.argmax(self._online_start_qs, axis=1)
-
-        # Set up online network update calculation
-        chosen_online_qs = tf.gather(self._online_start_qs,
-                                     self._chosen_actions, axis=1)
-        best_target_next_qs = tf.reduce_max(self._target_next_qs, axis=1)
-        expected_q_values = self._rewards + tf.scalar_mul(self._discount_factor,
-                                                          best_target_next_qs)
-        td_errors = tf.square(chosen_online_qs - expected_q_values)
-        self._loss = tf.reduce_mean(td_errors, name='loss')
-        grads = self._optimizer.compute_gradients(self._loss)
-        grads = [(tf.clip_by_value(grad, -self._gradient_clip, self._gradient_clip),
-                 var) for grad, var in grads]
-        self._online_update = self._optimizer.apply_gradients(grads)
-
     def _initialize_vars(self):
         init_ops = tf.variables_initializer(
             Dnu.unpack_params(self._online_params) +
@@ -233,55 +242,69 @@ class DQNAgent(AbstractAgent):
         )
         self._sess.run(init_ops)
 
-    def step(self, state, reward=None):
-        if reward:
+    def step(self, state, reward=0, is_terminal=False):
+        action = self._choose_action(state)
+        if not self._was_terminal:
             self._episode_reward += reward
             self._replay_buffer.add_experience(self._prev_state,
                                                self._prev_action,
-                                               reward, state)
-        else:
-            self._end_episode()
+                                               reward, state, is_terminal)
+            if self._steps_so_far % self._logging_freq == 0:
+                self._log_step(state, reward, action, is_terminal)
+
+        if is_terminal:
+            reward_summary = \
+                self._sess.run(self._ep_reward_summary, feed_dict={
+                               self._ep_reward_ph: self._episode_reward})
+            self._summary_writer.add_summary(reward_summary,
+                                             self._episodes_so_far)
+            self._episodes_so_far += 1
+            self._episode_reward = 0
+            self._prev_state = None
+            self._prev_action = None
+            self._was_terminal = True
+            return None
 
         if self._steps_so_far % self._update_freq == 0:
             self._update_networks()
 
-        action = self._choose_action(state)
         self._update_epsilon()
         self._prev_state = state
         self._prev_action = action
+        self._was_terminal = False
         self._steps_so_far += 1
-
-        if self._steps_so_far % self._logging_freq == 0:
-            self._log_step(state, reward, action)
 
         return action
 
-    def _log_step(self, state, reward, action):
-        out_summ, online_qs, target_qs = \
+    def _log_step(self, state, reward, action, is_terminal):
+        out_summ, prev_online_qs, prev_target_qs, \
+            curr_target_qs, curr_real_qs = \
             self._sess.run([self._output_summary, self._online_start_qs,
-                            self._target_start_qs],
-                           feed_dict={self._start_states: [state]})
+                            self._target_start_qs, self._target_next_qs,
+                            self._real_next_qs], feed_dict={
+                                self._start_states: [self._prev_state],
+                                self._chosen_actions: [self._prev_action],
+                                self._rewards: [reward],
+                                self._next_states: [state],
+                                self._are_terminal: [is_terminal]
+                            })
 
         tf.logging.info(
             '\n--------------------------------------------------\n'
             f'Step {self._steps_so_far}\n'
-            f'Current state: {state}\n'
             f'Received reward: {reward}\n'
-            f'Current episode total reward: {self._episode_reward}\n'
-            f'Online qs: {online_qs[0, :]}\n'
-            f'Target qs: {target_qs[0, :]}\n'
+            f'Current state: {state}\n'
             f'Chosen action: {action}\n'
+            f'Current episode total reward: {self._episode_reward}\n'
+            f'Is terminal: {is_terminal}\n\n'
+            f'Prev step values:\n'
+            f'Prev online qs: {prev_online_qs[0, :]}\n'
+            f'Prev target qs: {prev_target_qs[0, :]}\n'
+            f'Curr target qs: {curr_target_qs[0, :]}\n'
+            f'Curr real qs: {curr_real_qs[0]}\n'
             f'Current epsilon: {self._curr_epsilon}\n'
         )
         self._summary_writer.add_summary(out_summ, self._steps_so_far)
-
-    def _end_episode(self):
-        reward_summary = self._sess.run(self._ep_reward_summary, feed_dict={
-            self._ep_reward_ph: self._episode_reward
-        })
-        self._summary_writer.add_summary(reward_summary, self._episodes_so_far)
-        self._episodes_so_far += 1
-        self._episode_reward = 0
 
     def _update_networks(self):
         samples = self._replay_buffer.replay_experience()
@@ -298,7 +321,8 @@ class DQNAgent(AbstractAgent):
                                self._start_states: np.vstack(samples[:, 0]),
                                self._chosen_actions: samples[:, 1],
                                self._rewards: samples[:, 2],
-                               self._next_states: np.vstack(samples[:, 3])
+                               self._next_states: np.vstack(samples[:, 3]),
+                               self._are_terminal: samples[:, 4]
                             })
 
         if self._steps_so_far % self._logging_freq < self._update_freq:

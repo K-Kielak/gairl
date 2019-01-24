@@ -1,4 +1,3 @@
-import os
 from inspect import getfullargspec
 
 from gairl.agents.dqn import dqn_config as dqn_conf
@@ -23,7 +22,6 @@ def _create_random_agent(actions_num, state_size):
 
 
 def _create_dqn_agent(actions_num, state_size, session):
-    os.mkdir(dqn_conf.OUTPUT_DIRECTORY)
     return DQNAgent(actions_num,
                     state_size,
                     dqn_conf.HIDDEN_LAYERS,
