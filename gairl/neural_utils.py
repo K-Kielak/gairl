@@ -33,7 +33,7 @@ class DenseNetworkUtils:
             raise AttributeError('DQN has to have some hidden layers!')
 
         params = []
-        layers = list(input_shape) + hidden_layers + [outputs_num]
+        layers = [input_shape] + hidden_layers + [outputs_num]
         for i in range(1, len(layers)):
             with tf.name_scope(f'{name}-layer{i}'):
                 weights = gen_rand_weights((layers[i - 1], layers[i]), dtype,

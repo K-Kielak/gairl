@@ -6,26 +6,26 @@ from gairl.agents.dqn.dqn_agent import DQNAgent
 from gairl.agents.random_agent import RandomAgent
 
 
-def create_agent(agent_name, actions_num, state_shape, session=None):
+def create_agent(agent_name, actions_num, state_size, session=None):
     if agent_name not in _STR_TO_AGENT.keys():
         raise AttributeError(f"There's no agent like {agent_name}. You "
                              f"can choose only from {_STR_TO_AGENT.keys()}")
 
     creation_method = _STR_TO_AGENT[agent_name]
     if 'session' in getfullargspec(creation_method).args:
-        return creation_method(actions_num, state_shape, session=session)
+        return creation_method(actions_num, state_size, session=session)
 
-    return creation_method(actions_num, state_shape)
-
-
-def _create_random_agent(actions_num, state_shape):
-    return RandomAgent(actions_num, state_shape)
+    return creation_method(actions_num, state_size)
 
 
-def _create_dqn_agent(actions_num, state_shape, session):
+def _create_random_agent(actions_num, state_size):
+    return RandomAgent(actions_num, state_size)
+
+
+def _create_dqn_agent(actions_num, state_size, session):
     os.mkdir(dqn_conf.OUTPUT_DIRECTORY)
     return DQNAgent(actions_num,
-                    state_shape,
+                    state_size,
                     dqn_conf.HIDDEN_LAYERS,
                     session,
                     dqn_conf.OUTPUT_DIRECTORY,

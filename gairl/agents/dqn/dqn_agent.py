@@ -12,12 +12,12 @@ from gairl.neural_utils import summarize_ndarray, summarize_vector
 from gairl.neural_utils import create_copy_ops
 
 
-# TODO add tensorboard, and model saving/loading
+# TODO add model saving/loading
 class DQNAgent(AbstractAgent):
 
     def __init__(self,
                  actions_num,
-                 state_shape,
+                 state_size,
                  hidden_layers,
                  session,
                  output_directory,
@@ -41,8 +41,7 @@ class DQNAgent(AbstractAgent):
         Initializes feed-forward version of DQN
         :param actions_num: int; describes number of actions the
             agent can choose from.
-        :param state_shape: tuple of ints; describes shape of the
-            state input.
+        :param state_size: int; describes size of the state vector.
         :param hidden_layers: tuple of ints; describes number of nodes
             in each hidden layer of the feedforward network.
         :param session: tensorflow..Session; tensorflow session that
@@ -83,7 +82,7 @@ class DQNAgent(AbstractAgent):
         assert target_update_freq > update_freq, \
             'target_update_freq needs to be higher than update_freq'
 
-        super().__init__(actions_num, state_shape)
+        super().__init__(actions_num, state_size)
 
         # Set up important variables
         self._sess = session
@@ -110,20 +109,20 @@ class DQNAgent(AbstractAgent):
                                             name='episode_reward')
 
         # Set up input placeholders
-        self._start_states = tf.placeholder(shape=(None, *state_shape),
+        self._start_states = tf.placeholder(shape=(None, state_size),
                                             dtype=dtype)
         self._chosen_actions = tf.placeholder(shape=(None,), dtype=tf.int32)
         self._rewards = tf.placeholder(shape=(None,), dtype=tf.float64)
-        self._next_states = tf.placeholder(shape=(None, *state_shape),
+        self._next_states = tf.placeholder(shape=(None, state_size),
                                            dtype=dtype)
 
         # Create network
-        self._online_params = Dnu.create_network_params(state_shape,
+        self._online_params = Dnu.create_network_params(state_size,
                                                         hidden_layers,
                                                         actions_num,
                                                         dtype,
                                                         name='online_params')
-        self._target_params = Dnu.create_network_params(state_shape,
+        self._target_params = Dnu.create_network_params(state_size,
                                                         hidden_layers,
                                                         actions_num,
                                                         dtype,
@@ -141,7 +140,7 @@ class DQNAgent(AbstractAgent):
 
         tf.logging.info(
             f'\nCreating DQN Agent with:\n'
-            f'Input shape {state_shape}\n'
+            f'Input size {state_size}\n'
             f'Hidden layers: {hidden_layers}\n'
             f'Outputs number: {actions_num}\n'
             f'Activation function: {activation_fn.__name__}\n'

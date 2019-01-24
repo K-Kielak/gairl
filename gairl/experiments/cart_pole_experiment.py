@@ -15,7 +15,7 @@ def main():
     env = CartPoleEnv()
     with tf.Session() as sess:
         agent = create_agent(AGENT_STR, env.action_space.n,
-                             env.observation_space.shape, sess)
+                             env.observation_space.shape[0], sess)
         for e in range(EPISODES_NUM):
             observation = env.reset()
             action = agent.step(observation)
