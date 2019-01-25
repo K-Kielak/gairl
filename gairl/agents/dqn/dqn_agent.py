@@ -1,5 +1,6 @@
 import logging
 import os
+from collections import deque
 from random import random, randrange
 
 import numpy as np
@@ -105,10 +106,13 @@ class DQNAgent(AbstractAgent):
         self._was_terminal = True
         self._steps_so_far = 0
         self._episodes_so_far = 0
-        self._episode_reward = 0.
+        # stores last 100 episodes
+        self._100_episode_rewards = deque([0.])
         # Placeholders for tensorboard
         self._ep_reward_ph = tf.placeholder(dtype=dtype, shape=(),
                                             name='episode_reward')
+        self._avg_ep_reward_ph = tf.placeholder(dtype=dtype, shape=(),
+                                                name='avg_episode_reward')
 
         # Set up input placeholders
         self._start_states = tf.placeholder(shape=(None, state_size),
@@ -244,11 +248,15 @@ class DQNAgent(AbstractAgent):
         with tf.name_scope('target-qs'):
             output_summs.extend(summarize_vector(self._target_start_qs[0, :]))
 
+        ep_summs = []
         with tf.name_scope('episode-reward'):
-            self._ep_reward_summary = tf.summary.scalar('value',
-                                                        self._ep_reward_ph)
+            ep_summs.append(tf.summary.scalar('reward', self._ep_reward_ph))
+            ep_summs.append(tf.summary.scalar('avg_100_reward',
+                                              self._avg_ep_reward_ph))
+
         self._training_summary = tf.summary.merge(training_summs)
         self._output_summary = tf.summary.merge(output_summs)
+        self._ep_summary = tf.summary.merge(ep_summs)
 
     def _initialize_vars(self):
         init_ops = tf.variables_initializer(
@@ -261,7 +269,7 @@ class DQNAgent(AbstractAgent):
     def step(self, state, reward=0, is_terminal=False):
         action = self._choose_action(state)
         if not self._was_terminal:
-            self._episode_reward += reward
+            self._100_episode_rewards[-1] += reward
             self._replay_buffer.add_experience(self._prev_state,
                                                self._prev_action,
                                                reward, state, is_terminal)
@@ -270,12 +278,16 @@ class DQNAgent(AbstractAgent):
 
         if is_terminal:
             reward_summary = \
-                self._sess.run(self._ep_reward_summary, feed_dict={
-                               self._ep_reward_ph: self._episode_reward})
+                self._sess.run(self._ep_summary, feed_dict={
+                    self._ep_reward_ph: self._100_episode_rewards[-1],
+                    self._avg_ep_reward_ph: np.mean(self._100_episode_rewards)
+                })
             self._summary_writer.add_summary(reward_summary,
                                              self._episodes_so_far)
             self._episodes_so_far += 1
-            self._episode_reward = 0
+            self._100_episode_rewards.append(0.)
+            if len(self._100_episode_rewards) > 100:
+                self._100_episode_rewards.popleft()
             self._prev_state = None
             self._prev_action = None
             self._was_terminal = True
@@ -362,7 +374,7 @@ class DQNAgent(AbstractAgent):
             f'Previous online qs: {prev_online_qs} (calculated now)\n'
             f'Previous action: {self._prev_action}\n'
             f'Received reward: {reward}\n'
-            f'Episode cumulative reward: {self._episode_reward}\n'
+            f'Episode cumulative reward: {self._100_episode_rewards[-1]}\n'
             f'***\n'
             f'Current step: {self._steps_so_far}\n'
             f'Is terminal: {is_terminal}\n'
@@ -372,6 +384,10 @@ class DQNAgent(AbstractAgent):
             f'Current real qs: {real_curr_qs[0]}\n'
             f'Chosen action: {action}\n'
             f'Current sample loss: {sample_loss}\n'
+            f'***\n'
+            f'Episodes so far: {self._episodes_so_far}\n'
+            f'Average reward over last 100 episodes: '
+            f'{np.mean(self._100_episode_rewards)}\n'
             f'Current epsilon: {self._curr_epsilon}\n'
         )
         self._summary_writer.add_summary(out_summ, self._steps_so_far)
