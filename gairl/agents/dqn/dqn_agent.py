@@ -276,35 +276,13 @@ class DQNAgent(AbstractAgent):
 
         return action
 
-    def _log_step(self, state, reward, action, is_terminal):
-        out_summ, prev_online_qs, prev_target_qs, \
-            curr_target_qs, curr_real_qs = \
-            self._sess.run([self._output_summary, self._online_start_qs,
-                            self._target_start_qs, self._target_next_qs,
-                            self._real_next_qs], feed_dict={
-                                self._start_states: [self._prev_state],
-                                self._chosen_actions: [self._prev_action],
-                                self._rewards: [reward],
-                                self._next_states: [state],
-                                self._are_terminal: [is_terminal]
-                            })
+    def _choose_action(self, state):
+        if random() < self._curr_epsilon or \
+           self._steps_so_far < self._epsilon_warmup:
+            return randrange(self._actions_num)
 
-        tf.logging.info(
-            '\n--------------------------------------------------\n'
-            f'Step {self._steps_so_far}\n'
-            f'Received reward: {reward}\n'
-            f'Current state: {state}\n'
-            f'Chosen action: {action}\n'
-            f'Current episode total reward: {self._episode_reward}\n'
-            f'Is terminal: {is_terminal}\n\n'
-            f'Prev step values:\n'
-            f'Prev online qs: {prev_online_qs[0, :]}\n'
-            f'Prev target qs: {prev_target_qs[0, :]}\n'
-            f'Curr target qs: {curr_target_qs[0, :]}\n'
-            f'Curr real qs: {curr_real_qs[0]}\n'
-            f'Current epsilon: {self._curr_epsilon}\n'
-        )
-        self._summary_writer.add_summary(out_summ, self._steps_so_far)
+        return self._sess.run(self._best_online_actions,
+                              feed_dict={self._start_states: [state]})[0]
 
     def _update_networks(self):
         samples = self._replay_buffer.replay_experience()
@@ -333,19 +311,51 @@ class DQNAgent(AbstractAgent):
             self._summary_writer.add_summary(train_summ, self._steps_so_far)
 
     def _copy_online_to_target(self):
-        tf.logging.info(' Updating target network with online params')
+        if self._steps_so_far % self._logging_freq < self._target_update_freq:
+            tf.logging.info(' Updating target network with online params')
+
         for op in self._online_to_target_ops:
             self._sess.run(op)
-
-    def _choose_action(self, state):
-        if random() < self._curr_epsilon or \
-           self._steps_so_far < self._epsilon_warmup:
-            return randrange(self._actions_num)
-
-        return self._sess.run(self._best_online_actions,
-                              feed_dict={self._start_states: [state]})[0]
 
     def _update_epsilon(self):
         if self._epsilon_warmup < self._steps_so_far and \
            self._steps_so_far - self._epsilon_warmup < self._epsilon_period:
             self._curr_epsilon -= self._epsilon_decay
+
+    def _log_step(self, state, reward, action, is_terminal):
+        out_summ, curr_online_qs, curr_target_qs = \
+            self._sess.run([self._output_summary, self._online_start_qs,
+                            self._target_start_qs], feed_dict={
+                                self._start_states: [state]
+                            })
+
+        prev_online_qs, real_curr_qs, sample_loss = \
+            self._sess.run([self._online_start_qs, self._real_next_qs,
+                            self._loss], feed_dict={
+                                self._start_states: [self._prev_state],
+                                self._chosen_actions: [self._prev_action],
+                                self._rewards: [reward],
+                                self._next_states: [state],
+                                self._are_terminal: [is_terminal]
+                            })
+
+        tf.logging.info(
+            '\n--------------------------------------------------\n'
+            f'Previous step: {self._steps_so_far - 1}\n'
+            f'Previous state: {self._prev_state}\n'
+            f'Previous online qs: {prev_online_qs} (calculated now)\n'
+            f'Previous action: {self._prev_action}\n'
+            f'Received reward: {reward}\n'
+            f'Episode cumulative reward: {self._episode_reward}\n'
+            f'***\n'
+            f'Current step: {self._steps_so_far}\n'
+            f'Is terminal: {is_terminal}\n'
+            f'Current state: {state}\n'
+            f'Current online qs: {curr_online_qs[0]}\n'
+            f'Current target qs: {curr_target_qs[0]}\n'
+            f'Current real qs: {real_curr_qs[0]}\n'
+            f'Chosen action: {action}\n'
+            f'Current sample loss: {sample_loss}\n'
+            f'Current epsilon: {self._curr_epsilon}\n'
+        )
+        self._summary_writer.add_summary(out_summ, self._steps_so_far)

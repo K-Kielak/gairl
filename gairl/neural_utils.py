@@ -60,8 +60,7 @@ class DenseNetworkUtils:
 
         # Up to len(params) - 1 because last layer doesn't use activation_fn
         for i in range(1, len(params) - 1):
-            layer_sum = tf.matmul(activation, params[i].weights) + params[
-                i].biases
+            layer_sum = tf.matmul(activation, params[i].weights) + params[i].biases
             activation = activation_fn(layer_sum)
 
         final_mul = tf.matmul(activation, params[-1].weights)
