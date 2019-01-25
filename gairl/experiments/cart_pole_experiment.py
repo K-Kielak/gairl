@@ -5,7 +5,7 @@ from gairl.agents import create_agent
 from gairl.config import AGENT_STR, LOGS_VERBOSITY, RENDER
 
 
-EPISODES_NUM = 100000
+EPISODES_NUM = 10000
 MAX_STEPS_PER_EPISODE = 200
 
 
@@ -18,12 +18,12 @@ def main():
         for e in range(EPISODES_NUM):
             observation = env.reset()
             action = agent.step(observation)
-            for t in range(MAX_STEPS_PER_EPISODE):
+            for t in range(MAX_STEPS_PER_EPISODE + 1):
                 if RENDER:
                     env.render()
 
                 observation, reward, done, _ = env.step(action)
-                if done:
+                if done or t == MAX_STEPS_PER_EPISODE:
                     agent.step(observation, reward, is_terminal=True)
                     break
                 else:
