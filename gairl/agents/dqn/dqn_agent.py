@@ -112,12 +112,15 @@ class DQNAgent(AbstractAgent):
 
         # Set up input placeholders
         self._start_states = tf.placeholder(shape=(None, state_size),
-                                            dtype=dtype)
-        self._chosen_actions = tf.placeholder(shape=(None,), dtype=tf.int32)
-        self._rewards = tf.placeholder(shape=(None,), dtype=tf.float64)
+                                            dtype=dtype, name='start_state')
+        self._chosen_actions = tf.placeholder(shape=(None,), dtype=tf.int32,
+                                              name='chosen_action')
+        self._rewards = tf.placeholder(shape=(None,), dtype=tf.float64,
+                                       name='reward')
         self._next_states = tf.placeholder(shape=(None, state_size),
-                                           dtype=dtype)
-        self._are_terminal = tf.placeholder(shape=(None,), dtype=bool)
+                                           dtype=dtype, name='next_state')
+        self._are_terminal = tf.placeholder(shape=(None,), dtype=bool,
+                                            name='is_terminal')
 
         # Create network
         self._online_params = Dnu.create_network_params(state_size,
@@ -163,33 +166,46 @@ class DQNAgent(AbstractAgent):
         self._online_start_qs = Dnu.model_output(self._start_states,
                                                  self._online_params,
                                                  self._activation_fn,
-                                                 name='online_start_out')
+                                                 name='online_start_qs')
         self._target_start_qs = Dnu.model_output(self._start_states,
                                                  self._target_params,
                                                  self._activation_fn,
-                                                 name='target_start_out')
+                                                 name='target_start_qs')
         self._target_next_qs = Dnu.model_output(self._next_states,
                                                 self._target_params,
                                                 self._activation_fn,
-                                                name='target_next_out')
-        self._best_online_actions = tf.argmax(self._online_start_qs, axis=1)
+                                                name='target_next_qs')
+        self._best_online_actions = tf.argmax(self._online_start_qs, axis=1,
+                                              name='best_actions')
 
         # Set up online network update calculation
-        chosen_online_qs = tf.gather(self._online_start_qs,
-                                     self._chosen_actions, axis=1)
-        best_target_next_qs = tf.reduce_max(self._target_next_qs, axis=1)
+        action_indices = tf.range(tf.shape(self._chosen_actions)[0])
+        action_indices = tf.stack([action_indices, self._chosen_actions],
+                                  axis=1)
+        chosen_online_qs = tf.gather_nd(self._online_start_qs,
+                                        action_indices,
+                                        name='chosen_online_qs')
+        best_target_next_qs = tf.reduce_max(self._target_next_qs,
+                                            axis=1,
+                                            name='best_target_next_qs')
         # If non-terminal then take best next qs into account, oterwise 0
         zeros = tf.zeros_like(best_target_next_qs)
-        self._real_next_qs = tf.where(self._are_terminal, zeros,
-                                      best_target_next_qs)
-
-        expected_q_values = self._rewards + tf.scalar_mul(self._discount_factor,
-                                                          self._real_next_qs)
-        td_errors = tf.square(chosen_online_qs - expected_q_values)
+        self._real_next_qs = tf.where(self._are_terminal,
+                                      zeros,
+                                      best_target_next_qs,
+                                      name='real_next_qs')
+        discounted_next_qs = tf.scalar_mul(self._discount_factor,
+                                           self._real_next_qs)
+        expected_qs = tf.add(self._rewards,
+                             discounted_next_qs,
+                             name='expected_qs')
+        td_errors = tf.square(chosen_online_qs - expected_qs, name='td_errors')
         self._loss = tf.reduce_mean(td_errors, name='loss')
         grads = self._optimizer.compute_gradients(self._loss)
-        grads = [(tf.clip_by_value(grad, -self._gradient_clip, self._gradient_clip),
-                 var) for grad, var in grads]
+        grads = [(tf.clip_by_value(grad,
+                                   -self._gradient_clip,
+                                   self._gradient_clip), var)
+                 for grad, var in grads]
         self._online_update = self._optimizer.apply_gradients(grads)
 
     def _set_up_outputs(self, output_dir):
