@@ -108,9 +108,6 @@ def summarize_vector(vec):
 
     summaries = []
     vector_shape = vec.get_shape().as_list()[0]
-    print(vec)
-    print(vec.get_shape())
-    print(vec.get_shape().as_list())
     for i in range(0, vector_shape):
         summaries.append(tf.summary.scalar(str(i), tf.gather(vec, i)))
 
