@@ -1,8 +1,10 @@
+import time
+
 import tensorflow as tf
 from gym.envs.classic_control import CartPoleEnv
 
 from gairl.agents import create_agent
-from gairl.config import AGENT_STR, RENDER
+from gairl.config import AGENT_STR, DELAY_BETWEEN_RENDERS, RENDER
 
 
 EPISODES_NUM = 10000
@@ -20,6 +22,7 @@ def main():
             for t in range(MAX_STEPS_PER_EPISODE + 1):
                 if RENDER:
                     env.render()
+                    time.sleep(DELAY_BETWEEN_RENDERS)
 
                 observation, reward, done, _ = env.step(action)
                 if done or t == MAX_STEPS_PER_EPISODE:
