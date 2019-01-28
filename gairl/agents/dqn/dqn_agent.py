@@ -105,10 +105,13 @@ class DQNAgent(AbstractAgent):
         self._prev_action = None
         self._was_terminal = True
         self._steps_so_far = 0
+        self._steps_per_episode = 0
         self._episodes_so_far = 0
-        # stores last 100 episodes
-        self._100_episode_rewards = deque([0.])
+        self._avg_episode_length = 0.
+        self._100_episode_rewards = deque([0.])  # stores last 100 episodes
         # Placeholders for tensorboard
+        self._avg_ep_length_ph = tf.placeholder(dtype=tf.int32, shape=(),
+                                                name='avg_episode_length')
         self._ep_reward_ph = tf.placeholder(dtype=dtype, shape=(),
                                             name='episode_reward')
         self._avg_ep_reward_ph = tf.placeholder(dtype=dtype, shape=(),
@@ -249,10 +252,12 @@ class DQNAgent(AbstractAgent):
             output_summs.extend(summarize_vector(self._target_start_qs[0, :]))
 
         ep_summs = []
-        with tf.name_scope('episode-reward'):
+        with tf.name_scope('episode'):
             ep_summs.append(tf.summary.scalar('reward', self._ep_reward_ph))
             ep_summs.append(tf.summary.scalar('avg_100_reward',
                                               self._avg_ep_reward_ph))
+            ep_summs.append(tf.summary.scalar('avg_episode_length',
+                                              self._avg_ep_length_ph))
 
         self._training_summary = tf.summary.merge(training_summs)
         self._output_summary = tf.summary.merge(output_summs)
@@ -277,13 +282,19 @@ class DQNAgent(AbstractAgent):
                 self._log_step(state, reward, action, is_terminal)
 
         if is_terminal:
+            self._avg_episode_length = (self._episodes_so_far *
+                                        self._avg_episode_length +
+                                        self._steps_per_episode) / \
+                                       (self._episodes_so_far + 1)
             reward_summary = \
                 self._sess.run(self._ep_summary, feed_dict={
                     self._ep_reward_ph: self._100_episode_rewards[-1],
-                    self._avg_ep_reward_ph: np.mean(self._100_episode_rewards)
+                    self._avg_ep_reward_ph: np.mean(self._100_episode_rewards),
+                    self._avg_ep_length_ph: self._avg_episode_length
                 })
             self._summary_writer.add_summary(reward_summary,
-                                             self._episodes_so_far)
+                                             self._steps_so_far)
+            self._steps_per_episode = 0
             self._episodes_so_far += 1
             self._100_episode_rewards.append(0.)
             if len(self._100_episode_rewards) > 100:
@@ -301,7 +312,7 @@ class DQNAgent(AbstractAgent):
         self._prev_action = action
         self._was_terminal = False
         self._steps_so_far += 1
-
+        self._steps_per_episode += 1
         return action
 
     def _choose_action(self, state):
@@ -386,6 +397,7 @@ class DQNAgent(AbstractAgent):
             f'Current sample loss: {sample_loss}\n'
             f'***\n'
             f'Episodes so far: {self._episodes_so_far}\n'
+            f'Average episode length: {self._avg_episode_length}\n'
             f'Average reward over last 100 episodes: '
             f'{np.mean(self._100_episode_rewards)}\n'
             f'Current epsilon: {self._curr_epsilon}\n'
