@@ -2,7 +2,7 @@ import tensorflow as tf
 from gym.envs.classic_control import CartPoleEnv
 
 from gairl.agents import create_agent
-from gairl.config import AGENT_STR, LOGS_VERBOSITY, RENDER
+from gairl.config import AGENT_STR, RENDER
 
 
 EPISODES_NUM = 10000
@@ -10,7 +10,6 @@ MAX_STEPS_PER_EPISODE = 200
 
 
 def main():
-    tf.logging.set_verbosity(LOGS_VERBOSITY)
     env = CartPoleEnv()
     with tf.Session() as sess:
         agent = create_agent(AGENT_STR, env.action_space.n,

@@ -1,5 +1,6 @@
 import logging
 import os
+import sys
 from collections import deque
 from random import random, randrange
 
@@ -13,7 +14,6 @@ from gairl.neural_utils import summarize_ndarray, summarize_vector
 from gairl.neural_utils import create_copy_ops
 
 
-# TODO add model saving/loading
 class DQNAgent(AbstractAgent):
 
     def __init__(self,
@@ -22,6 +22,7 @@ class DQNAgent(AbstractAgent):
                  hidden_layers,
                  session,
                  output_directory,
+                 name='DQN',
                  dtype=tf.float64,
                  activation_fn=tf.nn.leaky_relu,
                  optimizer=tf.train.AdamOptimizer(
@@ -37,7 +38,8 @@ class DQNAgent(AbstractAgent):
                  replay_buffer=ReplayBuffer(250000, 80000, 32),
                  update_freq=4,
                  target_update_freq=10000,
-                 logging_freq=1000):
+                 logging_freq=1000,
+                 logging_level=logging.INFO):
         """
         Initializes feed-forward version of DQN
         :param actions_num: int; describes number of actions the
@@ -73,6 +75,7 @@ class DQNAgent(AbstractAgent):
             updates the agent will perform in-between target network updates.
         :param logging_freq: int; frequency of progress logging and
             writing tensorflow summaries.
+        :param logging_level: logging.LEVEL; level of the internal logger.
         """
         assert session, 'DQN agent requires tensorflow session!'
         assert gradient_clip > 0, 'gradient_clip needs to be higher than 0'
@@ -86,6 +89,7 @@ class DQNAgent(AbstractAgent):
         super().__init__(actions_num, state_size)
 
         # Set up important variables
+        self._name = name
         self._sess = session
         self._dtype = dtype
         self._activation_fn = activation_fn
@@ -147,11 +151,11 @@ class DQNAgent(AbstractAgent):
         )
         self._create_outputs_and_update()
 
-        self._set_up_outputs(output_directory)
+        self._set_up_outputs(output_directory, logging_level)
         self._add_summaries()
         self._initialize_vars()
 
-        tf.logging.info(
+        self._logger.info(
             f'\nCreating DQN Agent with:\n'
             f'Input size {state_size}\n'
             f'Hidden layers: {hidden_layers}\n'
@@ -215,13 +219,21 @@ class DQNAgent(AbstractAgent):
                  for grad, var in grads]
         self._online_update = self._optimizer.apply_gradients(grads)
 
-    def _set_up_outputs(self, output_dir):
+    def _set_up_outputs(self, output_dir, logging_level):
         os.mkdir(output_dir)
         logs_filepath = os.path.join(output_dir, 'logs.log')
         sumaries_dir = os.path.join(output_dir, 'tensorboard')
 
-        tflogger = logging.getLogger('tensorflow')
-        tflogger.addHandler(logging.FileHandler(logs_filepath))
+        self._logger = logging.getLogger(self._name)
+        formatter = logging.Formatter('%(asctime)s:%(name)s:'
+                                      '%(levelname)s: %(message)s')
+        file_handler = logging.FileHandler(logs_filepath)
+        file_handler.setFormatter(formatter)
+        self._logger.addHandler(file_handler)
+        console_handler = logging.StreamHandler(sys.stdout)
+        console_handler.setFormatter(formatter)
+        self._logger.addHandler(console_handler)
+        self._logger.setLevel(logging_level)
 
         self._summary_writer = tf.summary.FileWriter(sumaries_dir,
                                                      self._sess.graph)
@@ -343,7 +355,7 @@ class DQNAgent(AbstractAgent):
                             })
 
         if self._steps_so_far % self._logging_freq < self._update_freq:
-            tf.logging.info(
+            self._logger.info(
                 f'Training with loss: {loss}\n'
                 f'----------------------------------------------------\n'
             )
@@ -351,7 +363,7 @@ class DQNAgent(AbstractAgent):
 
     def _copy_online_to_target(self):
         if self._steps_so_far % self._logging_freq < self._target_update_freq:
-            tf.logging.info(' Updating target network with online params')
+            self._logger.info('Updating target network with online params')
 
         for op in self._online_to_target_ops:
             self._sess.run(op)
@@ -378,7 +390,7 @@ class DQNAgent(AbstractAgent):
                                 self._are_terminal: [is_terminal]
                             })
 
-        tf.logging.info(
+        self._logger.info(
             '\n--------------------------------------------------\n'
             f'Previous step: {self._steps_so_far - 1}\n'
             f'Previous state: {self._prev_state}\n'
