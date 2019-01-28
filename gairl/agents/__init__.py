@@ -40,7 +40,10 @@ def _create_dqn_agent(actions_num, state_size, session):
                     update_freq=dqn_conf.UPDATE_FREQ,
                     target_update_freq=dqn_conf.TARGET_UPDATE_FREQ,
                     logging_freq=dqn_conf.LOGGING_FREQ,
-                    logging_level=dqn_conf.LOGGING_LEVEL)
+                    logging_level=dqn_conf.LOGGING_LEVEL,
+                    max_checkpoints=dqn_conf.MAX_CHECKPOINTS,
+                    save_freq=dqn_conf.SAVE_FREQUENCY,
+                    load_path=dqn_conf.MODEL_LOAD_PATH)
 
 
 _STR_TO_AGENT = {

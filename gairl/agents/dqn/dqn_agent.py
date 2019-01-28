@@ -39,7 +39,10 @@ class DQNAgent(AbstractAgent):
                  update_freq=4,
                  target_update_freq=10000,
                  logging_freq=1000,
-                 logging_level=logging.INFO):
+                 logging_level=logging.INFO,
+                 max_checkpoints=5,
+                 save_freq=100000,
+                 load_path=None):
         """
         Initializes feed-forward version of DQN
         :param actions_num: int; describes number of actions the
@@ -49,8 +52,8 @@ class DQNAgent(AbstractAgent):
             in each hidden layer of the feedforward network.
         :param session: tensorflow..Session; tensorflow session that
             will be used to run the model.
-        :param output_directory: directory to which all of the network
-            outputs (logs, checkpoints) will be saved.
+        :param output_directory: string; directory to which all of the
+            network outputs (logs, checkpoints) will be saved.
         :param dtype: tensorflow.DType; type of the state input.
         :param activation_fn: activation function for hidden layers of networks
         :param optimizer: tf.trainOptimizer; optimizer that calculates
@@ -76,6 +79,10 @@ class DQNAgent(AbstractAgent):
         :param logging_freq: int; frequency of progress logging and
             writing tensorflow summaries.
         :param logging_level: logging.LEVEL; level of the internal logger.
+        :param max_checkpoints: int; number of checkpoints to keep.
+        :param save_freq: int; how often the model will be saved.
+        :param model_path: string; path of the model to load. If None
+            then do not load any model and start from scratch.
         """
         assert session, 'DQN agent requires tensorflow session!'
         assert gradient_clip > 0, 'gradient_clip needs to be higher than 0'
@@ -104,6 +111,7 @@ class DQNAgent(AbstractAgent):
         self._update_freq = update_freq
         self._target_update_freq = target_update_freq
         self._logging_freq = logging_freq
+        self._save_freq = save_freq
 
         self._prev_state = None
         self._prev_action = None
@@ -151,9 +159,12 @@ class DQNAgent(AbstractAgent):
         )
         self._create_outputs_and_update()
 
-        self._set_up_outputs(output_directory, logging_level)
+        self._set_up_outputs(output_directory, logging_level, max_checkpoints)
         self._add_summaries()
         self._initialize_vars()
+        if load_path:
+            self._logger.info(f'Loading the model from {load_path}')
+            self._saver.restore(self._sess, load_path)
 
         self._logger.info(
             f'\nCreating DQN Agent with:\n'
@@ -219,10 +230,14 @@ class DQNAgent(AbstractAgent):
                  for grad, var in grads]
         self._online_update = self._optimizer.apply_gradients(grads)
 
-    def _set_up_outputs(self, output_dir, logging_level):
+    def _set_up_outputs(self, output_dir, logging_level, max_checkpoints):
         os.mkdir(output_dir)
         logs_filepath = os.path.join(output_dir, 'logs.log')
         sumaries_dir = os.path.join(output_dir, 'tensorboard')
+        checkpoints_dir = os.path.join(output_dir, 'checkpoints')
+        os.mkdir(checkpoints_dir)
+        self._ckpt_path = os.path.join(checkpoints_dir, 'ckpt')
+        self._saver = tf.train.Saver(max_to_keep=max_checkpoints)
 
         self._logger = logging.getLogger(self._name)
         formatter = logging.Formatter('%(asctime)s:%(name)s:'
@@ -318,6 +333,11 @@ class DQNAgent(AbstractAgent):
 
         if self._steps_so_far % self._update_freq == 0:
             self._update_networks()
+
+        if self._steps_so_far % self._save_freq == 0:
+            self._logger.info('Saving the model')
+            self._saver.save(self._sess, self._ckpt_path,
+                             global_step=self._steps_so_far)
 
         self._update_epsilon()
         self._prev_state = state
