@@ -85,4 +85,10 @@ its capabilities predicting expected reward to be around 140.
 
 **Hypothesis confirmed - agent stabilizes almost completely.**
 
-Final agent outputs can be found at `outputs/cartpole/dqn2424gdsc5e-3batch256`
+Multiple runs of the final agent can be found at:
+`outputs/cartpole/dqn2424gdsc5e-3batch256`
+`outputs/cartpole/dqn2424gdsc5e-3batch256-2`
+`outputs/cartpole/dqn2424gdsc5e-3batch256-3`
+`outputs/cartpole/dqn2424gdsc5e-3batch256-saved`
+where the last one also consists of a saved network model. Best performing
+model was saved under checkpoint 90000
