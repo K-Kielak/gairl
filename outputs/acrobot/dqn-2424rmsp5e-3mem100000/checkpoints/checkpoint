@@ -1,0 +1,4 @@
+model_checkpoint_path: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/acrobot/dqn-2424rmsp5e-3mem100000/checkpoints/ckpt-200000"
+all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/acrobot/dqn-2424rmsp5e-3mem100000/checkpoints/ckpt-0"
+all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/acrobot/dqn-2424rmsp5e-3mem100000/checkpoints/ckpt-100000"
+all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/acrobot/dqn-2424rmsp5e-3mem100000/checkpoints/ckpt-200000"
