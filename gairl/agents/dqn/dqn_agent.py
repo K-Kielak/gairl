@@ -122,7 +122,7 @@ class DQNAgent(AbstractAgent):
         self._avg_episode_length = 0.
         self._100_episode_rewards = deque([0.])  # stores last 100 episodes
         # Placeholders for tensorboard
-        self._avg_ep_length_ph = tf.placeholder(dtype=tf.int32, shape=(),
+        self._avg_ep_length_ph = tf.placeholder(dtype=tf.float32, shape=(),
                                                 name='avg_episode_length')
         self._ep_reward_ph = tf.placeholder(dtype=dtype, shape=(),
                                             name='episode_reward')
