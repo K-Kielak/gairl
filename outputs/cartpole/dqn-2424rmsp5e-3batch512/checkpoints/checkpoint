@@ -1,0 +1,6 @@
+model_checkpoint_path: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/cartpole/dqn-2424rmsp5e-3batch512/checkpoints/ckpt-1100000"
+all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/cartpole/dqn-2424rmsp5e-3batch512/checkpoints/ckpt-700000"
+all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/cartpole/dqn-2424rmsp5e-3batch512/checkpoints/ckpt-800000"
+all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/cartpole/dqn-2424rmsp5e-3batch512/checkpoints/ckpt-900000"
+all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/cartpole/dqn-2424rmsp5e-3batch512/checkpoints/ckpt-1000000"
+all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/cartpole/dqn-2424rmsp5e-3batch512/checkpoints/ckpt-1100000"

@@ -9,7 +9,7 @@ from gairl.memory.replay_buffer import ReplayBuffer
 
 HIDDEN_LAYERS = [24, 24]
 OUTPUT_DIRECTORY = os.path.join(OUTPUTS_DIR, 'cartpole',
-                                'dqn-2424gdsc5e-3batch256-loaded')
+                                'dqn-2424gdsc5e-3batch256')
 DTYPE = tf.float64
 ACTIVATION_FN = tf.nn.leaky_relu
 OPTIMIZER = tf.train.GradientDescentOptimizer(learning_rate=5e-3)
