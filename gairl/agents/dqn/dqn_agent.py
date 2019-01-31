@@ -54,6 +54,7 @@ class DQNAgent(AbstractAgent):
             will be used to run the model.
         :param output_directory: string; directory to which all of the
             network outputs (logs, checkpoints) will be saved.
+        :param name: string; name of the network.
         :param dtype: tensorflow.DType; type of the state input.
         :param activation_fn: activation function for hidden layers of networks
         :param optimizer: tf.trainOptimizer; optimizer that calculates
