@@ -43,17 +43,17 @@ def test_add_experience_max_not_exceeded():
     rep_buff = ReplayBuffer(4, 2, 2)
 
     # When
-    rep_buff.add_experience('s1', 'a1', 'r2', 's2')
-    rep_buff.add_experience('s2', 'a2', 'r3', 's3')
-    rep_buff.add_experience('s3', 'a3', 'r4', 's4')
-    rep_buff.add_experience('s4', 'a4', 'r5', 's5')
+    rep_buff.add_experience('s1', 'a1', 'r2', 's2', 't2')
+    rep_buff.add_experience('s2', 'a2', 'r3', 's3', 't3')
+    rep_buff.add_experience('s3', 'a3', 'r4', 's4', 't4')
+    rep_buff.add_experience('s4', 'a4', 'r5', 's5', 't5')
 
     # Then
     assert_that(rep_buff._buffer, contains(
-        ('s4', 'a4', 'r5', 's5'),
-        ('s3', 'a3', 'r4', 's4'),
-        ('s2', 'a2', 'r3', 's3'),
-        ('s1', 'a1', 'r2', 's2'),
+        ('s4', 'a4', 'r5', 's5', 't5'),
+        ('s3', 'a3', 'r4', 's4', 't4'),
+        ('s2', 'a2', 'r3', 's3', 't3'),
+        ('s1', 'a1', 'r2', 's2', 't2'),
     ))
 
 
@@ -62,17 +62,17 @@ def test_add_experience_max_exceeded():
     rep_buff = ReplayBuffer(3, 2, 2)
 
     # When
-    rep_buff.add_experience('s1', 'a1', 'r2', 's2')
-    rep_buff.add_experience('s2', 'a2', 'r3', 's3')
-    rep_buff.add_experience('s3', 'a3', 'r4', 's4')
-    rep_buff.add_experience('s4', 'a4', 'r5', 's5')
-    rep_buff.add_experience('s5', 'a5', 'r6', 's6')
+    rep_buff.add_experience('s1', 'a1', 'r2', 's2', 't2')
+    rep_buff.add_experience('s2', 'a2', 'r3', 's3', 't3')
+    rep_buff.add_experience('s3', 'a3', 'r4', 's4', 't4')
+    rep_buff.add_experience('s4', 'a4', 'r5', 's5', 't5')
+    rep_buff.add_experience('s5', 'a5', 'r6', 's6', 't6')
 
     # Then
     assert_that(rep_buff._buffer, contains(
-        ('s5', 'a5', 'r6', 's6'),
-        ('s4', 'a4', 'r5', 's5'),
-        ('s3', 'a3', 'r4', 's4')
+        ('s5', 'a5', 'r6', 's6', 't6'),
+        ('s4', 'a4', 'r5', 's5', 't5'),
+        ('s3', 'a3', 'r4', 's4', 't4')
     ))
 
 
@@ -82,20 +82,19 @@ def test_replay_experience():
     rep_buff = ReplayBuffer(3, 2, 2)
 
     # When
-    rep_buff.add_experience('s1', 'a1', 'r2', 's2')
-    rep_buff.add_experience('s2', 'a2', 'r3', 's3')
-    rep_buff.add_experience('s3', 'a3', 'r4', 's4')
-    rep_buff.add_experience('s4', 'a4', 'r5', 's5')
-    rep_buff.add_experience('s5', 'a5', 'r6', 's6')
-
+    rep_buff.add_experience('s1', 'a1', 'r2', 's2', 't2')
+    rep_buff.add_experience('s2', 'a2', 'r3', 's3', 't3')
+    rep_buff.add_experience('s3', 'a3', 'r4', 's4', 't4')
+    rep_buff.add_experience('s4', 'a4', 'r5', 's5', 't5')
+    rep_buff.add_experience('s5', 'a5', 'r6', 's6', 't6')
     # Then
     assert_that(rep_buff.replay_experience().tolist(), contains(
-        ['s3', 'a3', 'r4', 's4'],
-        ['s5', 'a5', 'r6', 's6']
+        ['s3', 'a3', 'r4', 's4', 't4'],
+        ['s5', 'a5', 'r6', 's6', 't6']
     ))
     assert_that(rep_buff.replay_experience().tolist(), contains(
-        ['s5', 'a5', 'r6', 's6'],
-        ['s4', 'a4', 'r5', 's5']
+        ['s5', 'a5', 'r6', 's6', 't6'],
+        ['s4', 'a4', 'r5', 's5', 't5']
     ))
 
 
@@ -104,11 +103,11 @@ def test_replay_exerience_not_enough():
     rep_buff = ReplayBuffer(7, 6, 3)
 
     # When
-    rep_buff.add_experience('s1', 'a1', 'r2', 's2')
-    rep_buff.add_experience('s2', 'a2', 'r3', 's3')
-    rep_buff.add_experience('s3', 'a3', 'r4', 's4')
-    rep_buff.add_experience('s4', 'a4', 'r5', 's5')
-    rep_buff.add_experience('s5', 'a5', 'r6', 's6')
+    rep_buff.add_experience('s1', 'a1', 'r2', 's2', 't2')
+    rep_buff.add_experience('s2', 'a2', 'r3', 's3', 't3')
+    rep_buff.add_experience('s3', 'a3', 'r4', 's4', 't4')
+    rep_buff.add_experience('s4', 'a4', 'r5', 's5', 't5')
+    rep_buff.add_experience('s5', 'a5', 'r6', 's6', 't6')
 
     # Then
     assert_that(rep_buff.replay_experience(), none())
