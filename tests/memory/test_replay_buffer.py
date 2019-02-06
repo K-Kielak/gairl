@@ -80,19 +80,22 @@ def test_replay_experience():
     # Given
     random.seed(9812312)
     rep_buff = ReplayBuffer(3, 2, 2)
-
-    # When
     rep_buff.add_experience('s1', 'a1', 'r2', 's2', 't2')
     rep_buff.add_experience('s2', 'a2', 'r3', 's3', 't3')
     rep_buff.add_experience('s3', 'a3', 'r4', 's4', 't4')
     rep_buff.add_experience('s4', 'a4', 'r5', 's5', 't5')
     rep_buff.add_experience('s5', 'a5', 'r6', 's6', 't6')
+
+    # When
+    replay1 = rep_buff.replay_experience()
+    replay2 = rep_buff.replay_experience()
+
     # Then
-    assert_that(rep_buff.replay_experience().tolist(), contains(
+    assert_that(replay1.tolist(), contains(
         ['s3', 'a3', 'r4', 's4', 't4'],
         ['s5', 'a5', 'r6', 's6', 't6']
     ))
-    assert_that(rep_buff.replay_experience().tolist(), contains(
+    assert_that(replay2.tolist(), contains(
         ['s5', 'a5', 'r6', 's6', 't6'],
         ['s4', 'a4', 'r5', 's5', 't5']
     ))
@@ -101,13 +104,14 @@ def test_replay_experience():
 def test_replay_exerience_not_enough():
     # Given
     rep_buff = ReplayBuffer(7, 6, 3)
-
-    # When
     rep_buff.add_experience('s1', 'a1', 'r2', 's2', 't2')
     rep_buff.add_experience('s2', 'a2', 'r3', 's3', 't3')
     rep_buff.add_experience('s3', 'a3', 'r4', 's4', 't4')
     rep_buff.add_experience('s4', 'a4', 'r5', 's5', 't5')
     rep_buff.add_experience('s5', 'a5', 'r6', 's6', 't6')
 
+    # When
+    replay = rep_buff.replay_experience()
+
     # Then
-    assert_that(rep_buff.replay_experience(), none())
+    assert_that(replay, none())
