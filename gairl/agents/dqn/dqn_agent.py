@@ -145,22 +145,9 @@ class DQNAgent(AbstractAgent):
                                           name='is_weights')
 
         # Create network
-        self._online_params = Dnu.create_network_params(state_size,
-                                                        hidden_layers,
-                                                        actions_num,
-                                                        dtype,
-                                                        name='online_params')
-        self._target_params = Dnu.create_network_params(state_size,
-                                                        hidden_layers,
-                                                        actions_num,
-                                                        dtype,
-                                                        trainable=False,
-                                                        name='target_params')
-        self._online_to_target_ops = create_copy_ops(
-            Dnu.unpack_params(self._online_params),
-            Dnu.unpack_params(self._target_params)
-        )
-        self._create_outputs_and_update()
+        self._create_network_params(state_size, hidden_layers, actions_num)
+        self._create_outputs()
+        self._create_update()
 
         self._set_up_outputs(output_directory, logging_level, max_checkpoints)
         self._add_summaries()
@@ -187,7 +174,24 @@ class DQNAgent(AbstractAgent):
             f'Target update frequency: {target_update_freq}'
         )
 
-    def _create_outputs_and_update(self):
+    def _create_network_params(self, state_size, hidden_layers, actions_num):
+        self._online_params = Dnu.create_network_params(state_size,
+                                                        hidden_layers,
+                                                        actions_num,
+                                                        self._dtype,
+                                                        name='online_params')
+        self._target_params = Dnu.create_network_params(state_size,
+                                                        hidden_layers,
+                                                        actions_num,
+                                                        self._dtype,
+                                                        trainable=False,
+                                                        name='target_params')
+        self._online_to_target_ops = create_copy_ops(
+            Dnu.unpack_params(self._online_params),
+            Dnu.unpack_params(self._target_params)
+        )
+
+    def _create_outputs(self):
         self._online_start_qs = Dnu.model_output(self._start_states,
                                                  self._online_params,
                                                  self._activation_fn,
@@ -203,27 +207,14 @@ class DQNAgent(AbstractAgent):
         self._best_online_actions = tf.argmax(self._online_start_qs, axis=1,
                                               name='best_actions')
 
-        # Set up online network update calculation
+    def _create_update(self):
+        # Get online network qs for chosen actions
         action_indices = tf.range(tf.shape(self._chosen_actions)[0])
-        action_indices = tf.stack([action_indices, self._chosen_actions],
-                                  axis=1)
-        chosen_online_qs = tf.gather_nd(self._online_start_qs,
-                                        action_indices,
+        action_indices = tf.stack([action_indices, self._chosen_actions], axis=1)
+        chosen_online_qs = tf.gather_nd(self._online_start_qs, action_indices,
                                         name='chosen_online_qs')
-        best_target_next_qs = tf.reduce_max(self._target_next_qs,
-                                            axis=1,
-                                            name='best_target_next_qs')
-        # If non-terminal then take best next qs into account, oterwise 0
-        zeros = tf.zeros_like(best_target_next_qs)
-        self._real_next_qs = tf.where(self._are_terminal,
-                                      zeros,
-                                      best_target_next_qs,
-                                      name='real_next_qs')
-        discounted_next_qs = tf.scalar_mul(self._discount_factor,
-                                           self._real_next_qs)
-        expected_qs = tf.add(self._rewards,
-                             discounted_next_qs,
-                             name='expected_qs')
+
+        expected_qs = self._calc_expected_qs()
         self._td_errors = tf.square(chosen_online_qs - expected_qs,
                                     name='td_errors')
         weighted_td_errors = tf.multiply(self._is_weights, self._td_errors,
@@ -235,6 +226,17 @@ class DQNAgent(AbstractAgent):
                                    self._gradient_clip), var)
                  for grad, var in grads]
         self._online_update = self._optimizer.apply_gradients(grads)
+
+    def _calc_expected_qs(self):
+        best_target_next_qs = tf.reduce_max(self._target_next_qs, axis=1,
+                                            name='best_target_next_qs')
+        # If non-terminal then take best next qs into account, oterwise 0
+        zeros = tf.zeros_like(best_target_next_qs)
+        self._real_next_qs = tf.where(self._are_terminal, zeros,
+                                      best_target_next_qs, name='real_next_qs')
+        discounted_next_qs = tf.scalar_mul(self._discount_factor,
+                                           self._real_next_qs)
+        return tf.add(self._rewards, discounted_next_qs, name='expected_qs')
 
     def _set_up_outputs(self, output_dir, logging_level, max_checkpoints):
         os.mkdir(output_dir)
