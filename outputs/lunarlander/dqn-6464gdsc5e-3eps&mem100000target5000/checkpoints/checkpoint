@@ -1,6 +1,0 @@
-model_checkpoint_path: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/lunarlander/dqn-6464gdsc5e-3eps&mem100000target5000/checkpoints/ckpt-600000"
-all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/lunarlander/dqn-6464gdsc5e-3eps&mem100000target5000/checkpoints/ckpt-200000"
-all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/lunarlander/dqn-6464gdsc5e-3eps&mem100000target5000/checkpoints/ckpt-300000"
-all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/lunarlander/dqn-6464gdsc5e-3eps&mem100000target5000/checkpoints/ckpt-400000"
-all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/lunarlander/dqn-6464gdsc5e-3eps&mem100000target5000/checkpoints/ckpt-500000"
-all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/lunarlander/dqn-6464gdsc5e-3eps&mem100000target5000/checkpoints/ckpt-600000"

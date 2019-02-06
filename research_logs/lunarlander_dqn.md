@@ -6,10 +6,10 @@ all of the classic control environment. Then the DQN was adapted to the new
 more complex situation.
 
 Random agent was used as a baseline. Logs and tensorboard files for the random
-agent can be found at `outputs/lunarlander/dqn-random/`.
+agent can be found at `outputs/lunarlander/random/`.
 
 ### Agent worse then random because it learns to fly
-*Agent outputs can be found at `outputs/lunarlander/dqn-2424gdsc5e-3batch256/`*
+*Agent outputs can be found at `outputs/lunarlander/dqn/2424gdsc5e-3batch256/`*
 
 Agent performed worse then random. What was interesting, it is not because it
 started crashing harder and faster but because it learnt to fly. It was flying
@@ -18,7 +18,7 @@ generating such a high negative reward that even proper landing afterwards
 was no able to increase the episode reward over average random agent reward.
 
 #### Hypothesis I - memory too short
-*Agent outputs can be found at `outputs/lunarlander/dqn-2424gdsc5e-3mem100000/`*
+*Agent outputs can be found at `outputs/lunarlander/dqn/2424gdsc5e-3mem100000/`*
 
 Because episodes in this environment can be infinitely long, I hypothesised
 that once the agent learned to fly it was spending too much time in the air
@@ -35,7 +35,7 @@ performance plummeted.
 **Hypothesis semi-confirmed - slight improvement**
 
 #### Hypothesis II - network to small
-*Agent outputs can be found at `outputs/lunarlander/dqn-6464gdsc5e-3eps&mem100000/`*
+*Agent outputs can be found at `outputs/lunarlander/dqn/6464gdsc5e-3eps&mem100000/`*
 
 Network for the classic control problem consisted of only 2 hidden layers, 
 24 nodes each. I hypothesised size of the network may be too small to properly
@@ -60,9 +60,9 @@ extremely bad.
 
 #### Hypothesis I - target update to frequent
 *Agent outputs can be found at:
-`outputs/lunarlander/dqn-6464rmsp5e-3eps&mem100000target5000/`
-`outputs/lunarlanderdqn-6464rmps5e-3eps&mem100000target5000-2/`
-`outputs/lunarlanderdqn-6464rmps5e-3eps&mem100000target10000/`*
+`outputs/lunarlander/dqn/6464rmsp5e-3eps&mem100000target5000/`
+`outputs/lunarlander/dqn/6464rmps5e-3eps&mem100000target5000-2/`
+`outputs/lunarlander/dqn/6464rmps5e-3eps&mem100000target10000/`*
 
 I hypothesized that this is just caused by a standard lack of stability of
 deep reinforcement learning algorithms. To circumvent it, I decided to increase
@@ -78,7 +78,7 @@ stable the agent but also achieves lower maximum reward.
 **Hypothesis confirmed - agent became much more stable though not enough**
 
 #### Hypothesis II - RMSProp made stable configuration unstable
-*Agent outputs can be found at: `outputs/lunarlander/dqn-6464gdsc5e-3eps&mem100000target5000/`*
+*Agent outputs can be found at: `outputs/lunarlander/dqn/6464gdsc5e-3eps&mem100000target5000/`*
 
 Although increasing target update frequency highly stabilised the network,
 it still was collapsing after some time of good policy. From previous
@@ -96,8 +96,8 @@ another hypothesis below.
 
 #### Hypothesis III - RMSProp made confguration more stable, target update frequency had nothing to do with that
 *Agent outputs can be found at: 
-`outputs/lunarlander/dqn-6464rmsp5e-3eps&mem5000`
-`outputs/lunarlander/dqn-6464rmsp5e-3eps&mem5000-2`*
+`outputs/lunarlander/dqn/6464rmsp5e-3eps&mem5000`
+`outputs/lunarlander/dqn/6464rmsp5e-3eps&mem5000-2`*
 
 Assumption in `Hypothesis I` was that higher higher target update improved
 stability of the network. However, rejection of `Hypothesis II` showed that
@@ -117,8 +117,8 @@ actually landing there.
 
 ### Agent can learn optimal policy very unstably or be stable but not much better than random
 *Agent outputs can be found at: 
-`outputs/lunarlander/dqn-6464rmsp5e-3eps&mem100000target5000/`
-`outputs/lunarlanderdqn-6464rmps5e-3eps&mem100000target10000/`*
+`outputs/lunarlander/dqn/6464rmsp5e-3eps&mem100000target5000/`
+`outputs/lunarlander/dqn/6464rmps5e-3eps&mem100000target10000/`*
 
 There are a few well performing agents that trade of learnability of the agent
 with its stability. Agent can either become stable but have difficulties with
@@ -127,7 +127,7 @@ as he does it go extremely down with its performance.
 
 #### Hypothesis I - network size is still not enough
 *Agent outputs can be found at: 
-`outputs/lunarlander/dqn-128128rmsp5e-3eps&mem100000target5000/`*
+`outputs/lunarlander/dqn/128128rmsp5e-3eps&mem100000target5000/`*
 
 Based on the qualitative assessment of the agent's behaviour I hypothesized 
 that the network still cannot catch complex states of the environment and thus
