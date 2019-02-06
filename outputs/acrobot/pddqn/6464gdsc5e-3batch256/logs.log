@@ -6422,3 +6422,2384 @@ Current epsilon: 0.0500950000001857
 2019-02-06 20:54:59,481:RainbowDQN:INFO: Training with loss: 4.547385098806286
 ----------------------------------------------------
 
+2019-02-06 20:55:02,498:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 237999
+Previous state: [-0.05948626 -0.99822912 -0.65487084 -0.75574082  2.58111134 -0.21662847]
+Previous online qs: [[-23.87409512 -24.05227959 -23.73424018]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -82.0
+***
+Current step: 238000
+Is terminal: False
+Current state: [ 0.53383226 -0.8455904  -0.72602226 -0.6876712   3.61598479 -0.62780541]
+Current online qs: [-23.83787854 -24.24563682 -24.29339139]
+Current target qs: [-23.89320408 -24.17057352 -23.9162358 ]
+Current real qs: -23.89320408068967
+Chosen action: 0
+Current sample loss: 0.846458631658477
+***
+Episodes so far: 1162
+Average episode length: 204.748709122203
+Average reward over last 100 episodes: -98.77
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:02,502:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:02,507:RainbowDQN:INFO: Training with loss: 2.6410390583294134
+----------------------------------------------------
+
+2019-02-06 20:55:05,490:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 238999
+Previous state: [ 0.99513727  0.09849779  0.94982296 -0.31278801  0.40353115 -0.6605474 ]
+Previous online qs: [[-52.42592945 -52.73855639 -53.12149685]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -4.0
+***
+Current step: 239000
+Is terminal: False
+Current state: [ 0.98547147  0.16984106  0.90663187 -0.42192256  0.29926887 -0.48498004]
+Current online qs: [-51.3537078  -51.54684254 -51.77649891]
+Current target qs: [-50.94637706 -51.15530454 -50.93264493]
+Current real qs: -50.94637705684485
+Chosen action: 0
+Current sample loss: 0.9781529805255432
+***
+Episodes so far: 1173
+Average episode length: 203.74765558397266
+Average reward over last 100 episodes: -97.29
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:05,493:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:05,499:RainbowDQN:INFO: Training with loss: 2.6624259349487227
+----------------------------------------------------
+
+2019-02-06 20:55:08,465:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 239999
+Previous state: [ 0.99976548 -0.02165594  0.93454747  0.3558385   1.30057057 -2.66456482]
+Previous online qs: [[-43.54425656 -45.15539493 -46.19459983]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -14.0
+***
+Current step: 240000
+Is terminal: False
+Current state: [ 0.96924096  0.24611371  0.97583735 -0.21849819  1.31925204 -3.0089029 ]
+Current online qs: [-44.61998833 -46.12076712 -46.9936366 ]
+Current target qs: [-44.31461888 -45.80334053 -46.80678146]
+Current real qs: -44.31461888318077
+Chosen action: 0
+Current sample loss: 1.7615026787613157
+***
+Episodes so far: 1184
+Average episode length: 202.69087837837836
+Average reward over last 100 episodes: -95.37
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:08,487:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:08,496:RainbowDQN:INFO: Training with loss: 2.5595987859922316
+----------------------------------------------------
+
+2019-02-06 20:55:11,970:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 240999
+Previous state: [ 0.70947003  0.7047356   0.35677274 -0.93419121  1.08548541 -2.29211173]
+Previous online qs: [[-42.20849183 -42.93843435 -42.80952221]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -28.0
+***
+Current step: 241000
+Is terminal: False
+Current state: [ 0.61849199  0.7857911   0.03652706 -0.99933266  0.12559301 -0.99296061]
+Current online qs: [-42.7487711  -42.69806445 -42.17786949]
+Current target qs: [-41.80768264 -41.95517866 -41.37717495]
+Current real qs: -41.37717495334099
+Chosen action: 2
+Current sample loss: 0.060068436813729364
+***
+Episodes so far: 1194
+Average episode length: 201.81909547738692
+Average reward over last 100 episodes: -95.28
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:11,973:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:11,978:RainbowDQN:INFO: Training with loss: 2.6198596654371187
+----------------------------------------------------
+
+2019-02-06 20:55:14,961:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 241999
+Previous state: [ 0.44144948 -0.8972861  -0.95700983  0.2900555   2.65505395 -0.43156148]
+Previous online qs: [[-23.95229443 -23.34352886 -24.07755316]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -60.0
+***
+Current step: 242000
+Is terminal: False
+Current state: [ 0.88381041 -0.46784523 -0.85778549  0.51400783  3.50337106 -1.9992411 ]
+Current online qs: [-24.40039828 -24.77487942 -26.18597066]
+Current target qs: [-24.03466684 -24.69163547 -26.02052251]
+Current real qs: -24.0346668431843
+Chosen action: 0
+Current sample loss: 2.1047954428659184
+***
+Episodes so far: 1204
+Average episode length: 200.9468438538206
+Average reward over last 100 episodes: -95.83
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:14,965:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:14,970:RainbowDQN:INFO: Training with loss: 2.8126416998014
+----------------------------------------------------
+
+2019-02-06 20:55:17,949:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 242999
+Previous state: [ 0.70639011  0.70782273  0.41386075 -0.9103402   0.02018394 -1.58436587]
+Previous online qs: [[-44.99254081 -44.40705898 -43.70974423]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -24.0
+***
+Current step: 243000
+Is terminal: False
+Current state: [ 0.77875928  0.62732287  0.285282   -0.95844362 -1.07340459  0.20980548]
+Current online qs: [-42.76594085 -41.93509306 -41.16387547]
+Current target qs: [-43.05551629 -42.64727927 -41.75736578]
+Current real qs: -41.75736578060229
+Chosen action: 2
+Current sample loss: 1.8767687683503371
+***
+Episodes so far: 1216
+Average episode length: 199.8157894736842
+Average reward over last 100 episodes: -94.02
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:17,953:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:17,958:RainbowDQN:INFO: Training with loss: 1.9555807838573565
+----------------------------------------------------
+
+2019-02-06 20:55:20,969:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 243999
+Previous state: [ 0.49507281 -0.86885149 -0.7159297   0.69817238 -5.0471039   2.15294364]
+Previous online qs: [[-18.05502489 -19.41339428 -18.55906058]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -93.0
+***
+Current step: 244000
+Is terminal: False
+Current state: [-0.34343696 -0.93917573 -0.80715933  0.59033364 -3.55688818 -0.59294474]
+Current online qs: [-15.82295977 -17.84636612 -17.56957383]
+Current target qs: [-15.31693172 -17.41044981 -17.08730574]
+Current real qs: -15.316931718266169
+Chosen action: 0
+Current sample loss: 3.576873791274528
+***
+Episodes so far: 1225
+Average episode length: 199.1077551020408
+Average reward over last 100 episodes: -94.91
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:20,972:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:20,977:RainbowDQN:INFO: Training with loss: 2.3634901731936724
+----------------------------------------------------
+
+2019-02-06 20:55:23,937:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 244999
+Previous state: [ 0.52495043  0.8511328   0.9142838  -0.40507423 -5.37615982  9.71292761]
+Previous online qs: [[-19.02013883 -19.20091955 -18.0851851 ]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -112.0
+***
+Current step: 245000
+Is terminal: False
+Current state: [ 0.99447313 -0.10499139  0.09503689  0.99547375 -5.49463688  8.16629149]
+Current online qs: [-16.48484618 -16.19147877 -13.89017764]
+Current target qs: [-14.84978031 -14.75782162 -12.35050457]
+Current real qs: -12.350504566487468
+Chosen action: 2
+Current sample loss: 23.60196712984026
+***
+Episodes so far: 1236
+Average episode length: 198.12944983818767
+Average reward over last 100 episodes: -94.18
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:23,941:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:23,946:RainbowDQN:INFO: Training with loss: 1.9123999852401634
+----------------------------------------------------
+
+2019-02-06 20:55:26,886:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 245999
+Previous state: [ 0.98873558 -0.1496728   0.97115366  0.23845454  0.10830528 -0.46738634]
+Previous online qs: [[-53.07372324 -53.74920386 -54.13479194]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -7.0
+***
+Current step: 246000
+Is terminal: False
+Current state: [ 0.99423769 -0.10719806  0.99364749  0.11253744  0.30744968 -0.78444814]
+Current online qs: [-52.31243244 -53.06485669 -53.51263161]
+Current target qs: [-52.74190676 -53.31144337 -53.59873106]
+Current real qs: -52.741906764963474
+Chosen action: 0
+Current sample loss: 0.28592137493050823
+***
+Episodes so far: 1247
+Average episode length: 197.2678428227746
+Average reward over last 100 episodes: -93.57
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:26,889:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:26,894:RainbowDQN:INFO: Training with loss: 2.266332979204463
+----------------------------------------------------
+
+2019-02-06 20:55:30,261:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 246999
+Previous state: [ 0.74876845  0.66283166  0.57536096 -0.81789961  2.46699571 -4.33332356]
+Previous online qs: [[-36.53945923 -37.71311089 -38.25974077]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -41.0
+***
+Current step: 247000
+Is terminal: False
+Current state: [ 0.44329176  0.89637739 -0.08959786 -0.99597802  1.37486787 -2.71431203]
+Current online qs: [-37.3594207  -37.91458591 -37.65879048]
+Current target qs: [-36.04825546 -36.58462326 -36.68811716]
+Current real qs: -36.048255460120686
+Chosen action: 0
+Current sample loss: 0.0219969467151249
+***
+Episodes so far: 1257
+Average episode length: 196.46698488464594
+Average reward over last 100 episodes: -93.25
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:30,265:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:30,271:RainbowDQN:INFO: Training with loss: 2.9567860740870415
+----------------------------------------------------
+
+2019-02-06 20:55:33,405:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 247999
+Previous state: [ 0.74225511 -0.67011741  0.78208227  0.62317519 -1.83637946  3.27571462]
+Previous online qs: [[-41.52678162 -40.77985887 -40.55289742]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -28.0
+***
+Current step: 248000
+Is terminal: False
+Current state: [ 0.53715782 -0.84348176  0.35738817  0.93395594 -0.82407974  2.02161288]
+Current online qs: [-39.22541372 -39.29946381 -39.32245411]
+Current target qs: [-38.77271762 -38.93606344 -38.99962096]
+Current real qs: -38.772717623684066
+Chosen action: 0
+Current sample loss: 1.36400669360239
+***
+Episodes so far: 1268
+Average episode length: 195.5615141955835
+Average reward over last 100 episodes: -93.02
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:33,408:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:33,414:RainbowDQN:INFO: Training with loss: 2.295175397923992
+----------------------------------------------------
+
+2019-02-06 20:55:36,508:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 248999
+Previous state: [ 9.99992419e-01  3.89394548e-03  9.19241124e-01  3.93695005e-01
+  3.00326305e+00 -4.36316381e+00]
+Previous online qs: [[-38.48153894 -40.3903555  -41.65460982]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -46.0
+***
+Current step: 249000
+Is terminal: False
+Current state: [ 0.82753735  0.56141066  0.87668597 -0.4810631   2.74866444 -4.3419807 ]
+Current online qs: [-38.59944498 -40.37314869 -41.37443187]
+Current target qs: [-38.89149873 -40.78904312 -41.85336227]
+Current real qs: -38.89149872897214
+Chosen action: 0
+Current sample loss: 1.042532478716077
+***
+Episodes so far: 1279
+Average episode length: 194.6473807662235
+Average reward over last 100 episodes: -93.26
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:36,511:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:36,518:RainbowDQN:INFO: Training with loss: 3.6763478087481545
+----------------------------------------------------
+
+2019-02-06 20:55:40,020:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 249999
+Previous state: [ 0.75621061  0.65432829 -0.33217066 -0.9432193  -2.96023537  3.40971358]
+Previous online qs: [[-29.48939881 -29.25157636 -28.61416029]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -52.0
+***
+Current step: 250000
+Is terminal: False
+Current state: [ 0.99888224  0.04726813  0.55077038 -0.83465681 -3.6520434   5.82136884]
+Current online qs: [-29.80693592 -28.7843372  -27.784945  ]
+Current target qs: [-32.46524365 -31.43126232 -30.44363383]
+Current real qs: -30.443633831525233
+Chosen action: 2
+Current sample loss: 6.375812866012936
+***
+Episodes so far: 1290
+Average episode length: 193.7581395348836
+Average reward over last 100 episodes: -92.26
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:40,024:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:40,031:RainbowDQN:INFO: Training with loss: 2.23851244713285
+----------------------------------------------------
+
+2019-02-06 20:55:43,352:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 250999
+Previous state: [ 0.93253834  0.36107098  0.850003   -0.52677785  0.10340923 -1.13196756]
+Previous online qs: [[-49.01033302 -48.79345679 -48.7018068 ]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -12.0
+***
+Current step: 251000
+Is terminal: False
+Current state: [ 0.9484893   0.31680915  0.79238683 -0.61001894 -0.56218207  0.12186355]
+Current online qs: [-50.26775275 -49.37074741 -48.90544705]
+Current target qs: [-49.86625034 -49.35134999 -48.31567962]
+Current real qs: -48.315679622070725
+Chosen action: 2
+Current sample loss: 0.017086678116889183
+***
+Episodes so far: 1300
+Average episode length: 193.06769230769223
+Average reward over last 100 episodes: -92.54
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:43,355:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:43,362:RainbowDQN:INFO: Training with loss: 3.6528663118414206
+----------------------------------------------------
+
+2019-02-06 20:55:46,568:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 251999
+Previous state: [ 0.44132238 -0.89734863 -0.23932625  0.97093921 -0.38516873  1.62931327]
+Previous online qs: [[-38.22794831 -38.56867215 -38.70118104]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -35.0
+***
+Current step: 252000
+Is terminal: False
+Current state: [ 0.4858729  -0.87402948 -0.37536488  0.92687713  0.87082911 -0.19662909]
+Current online qs: [-38.63671729 -38.48061106 -38.73961426]
+Current target qs: [-38.64440017 -38.58147155 -38.97882116]
+Current real qs: -38.58147155249248
+Chosen action: 0
+Current sample loss: 0.9364597882963246
+***
+Episodes so far: 1310
+Average episode length: 192.33969465648843
+Average reward over last 100 episodes: -93.63
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:46,571:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:46,577:RainbowDQN:INFO: Training with loss: 2.6367145816198776
+----------------------------------------------------
+
+2019-02-06 20:55:49,949:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 252999
+Previous state: [ 0.1821632  -0.98326831  0.88431286  0.46689481 -2.69216479  5.88991735]
+Previous online qs: [[-29.20553417 -28.56351813 -28.00551763]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -64.0
+***
+Current step: 253000
+Is terminal: False
+Current state: [-0.19986845 -0.97982274  0.06037052  0.99817604 -1.11216411  4.3525402 ]
+Current online qs: [-28.29289616 -27.96210129 -27.78038676]
+Current target qs: [-28.90999634 -28.34136021 -28.13784008]
+Current real qs: -28.137840084506518
+Chosen action: 2
+Current sample loss: 0.7241057815104293
+***
+Episodes so far: 1320
+Average episode length: 191.61818181818174
+Average reward over last 100 episodes: -94.59
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:49,952:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:49,958:RainbowDQN:INFO: Training with loss: 3.4210969617184372
+----------------------------------------------------
+
+2019-02-06 20:55:53,329:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 253999
+Previous state: [ 0.88926561  0.45739117  0.48671881 -0.8735587  -1.00074293  0.834761  ]
+Previous online qs: [[-53.41284413 -52.72703846 -52.17040469]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -22.0
+***
+Current step: 254000
+Is terminal: False
+Current state: [ 0.97904739  0.20363254  0.73803515 -0.67476227 -1.65516568  2.34590095]
+Current online qs: [-52.83948604 -51.63331108 -50.87990608]
+Current target qs: [-52.7406485  -51.48121316 -50.67461279]
+Current real qs: -50.67461278886828
+Chosen action: 2
+Current sample loss: 1.005082490488533
+***
+Episodes so far: 1331
+Average episode length: 190.81743050338082
+Average reward over last 100 episodes: -93.7
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:53,332:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:53,337:RainbowDQN:INFO: Training with loss: 3.749971437528371
+----------------------------------------------------
+
+2019-02-06 20:55:56,549:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 254999
+Previous state: [ 0.99902019 -0.0442567  -0.53899425  0.84230944 -5.67675061  4.93341791]
+Previous online qs: [[-17.09433218 -15.7865806  -13.92578958]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -96.0
+***
+Current step: 255000
+Is terminal: False
+Current state: [ 0.39650762 -0.91803143 -0.97059692  0.24071064 -5.28622342  2.76653433]
+Current online qs: [-12.46735709 -13.84340178 -13.04296335]
+Current target qs: [-13.59124624 -14.68311109 -14.05055113]
+Current real qs: -13.591246240876266
+Chosen action: 0
+Current sample loss: 0.28041706336100336
+***
+Episodes so far: 1341
+Average episode length: 190.08501118568225
+Average reward over last 100 episodes: -94.34
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:56,552:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:56,559:RainbowDQN:INFO: Training with loss: 4.286986787742975
+----------------------------------------------------
+
+2019-02-06 20:55:59,618:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 255999
+Previous state: [-0.80180387 -0.59758728 -0.1028457   0.99469732  2.73777368 -6.23416406]
+Previous online qs: [[-11.22398813 -13.19721149 -13.31976184]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -103.0
+***
+Current step: 256000
+Is terminal: False
+Current state: [-0.21844238 -0.97584985  0.97635172  0.21618815  4.39368479 -8.38962682]
+Current online qs: [-12.02641377 -14.20412925 -14.8519449 ]
+Current target qs: [-13.0928745  -14.90839536 -15.45050068]
+Current real qs: -13.092874500684674
+Chosen action: 0
+Current sample loss: 7.496411966712166
+***
+Episodes so far: 1349
+Average episode length: 189.693847294292
+Average reward over last 100 episodes: -96.29
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:55:59,621:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:55:59,626:RainbowDQN:INFO: Training with loss: 3.2994498958308793
+----------------------------------------------------
+
+2019-02-06 20:56:02,726:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 256999
+Previous state: [ 0.86972346 -0.49353937  0.87677718  0.48089684 -1.8259274   3.21469835]
+Previous online qs: [[-45.47351965 -44.41116914 -43.42418139]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -31.0
+***
+Current step: 257000
+Is terminal: False
+Current state: [ 0.69321887 -0.72072713  0.50358045  0.86394834 -1.01222426  2.13298451]
+Current online qs: [-45.09486613 -44.90691169 -44.56129474]
+Current target qs: [-44.29158508 -44.13005182 -43.7001206 ]
+Current real qs: -43.70012060297429
+Chosen action: 2
+Current sample loss: 0.7038169822897502
+***
+Episodes so far: 1360
+Average episode length: 188.94779411764694
+Average reward over last 100 episodes: -95.76
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:02,730:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:02,736:RainbowDQN:INFO: Training with loss: 2.4920953638775885
+----------------------------------------------------
+
+2019-02-06 20:56:05,889:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 257999
+Previous state: [ 0.1800836  -0.98365131  0.18038942  0.98359527  0.66402057  2.2432498 ]
+Previous online qs: [[-31.83652593 -31.90951473 -31.73616191]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -63.0
+***
+Current step: 258000
+Is terminal: False
+Current state: [ 0.45095436 -0.89254701 -0.09834241  0.99515264  2.17219653  0.48827221]
+Current online qs: [-31.5783541  -32.35610554 -32.6722615 ]
+Current target qs: [-32.04517126 -32.59029358 -32.60709994]
+Current real qs: -32.04517125921133
+Chosen action: 0
+Current sample loss: 0.9772461987730657
+***
+Episodes so far: 1370
+Average episode length: 188.27518248175167
+Average reward over last 100 episodes: -96.72
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:05,892:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:05,898:RainbowDQN:INFO: Training with loss: 3.479766230892843
+----------------------------------------------------
+
+2019-02-06 20:56:09,281:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 258999
+Previous state: [ 0.99855928  0.05365965  0.99913159 -0.0416662   0.19835424 -0.24886262]
+Previous online qs: [[-51.29863298 -51.80660642 -52.36836337]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -35.0
+***
+Current step: 259000
+Is terminal: False
+Current state: [ 0.99526403  0.09720858  0.99357066 -0.11321369  0.22721528 -0.4495506 ]
+Current online qs: [-50.70982721 -51.27678938 -51.84890984]
+Current target qs: [-50.8487603  -51.74480099 -52.08298843]
+Current real qs: -50.84876029608154
+Chosen action: 0
+Current sample loss: 0.0017338656862807072
+***
+Episodes so far: 1378
+Average episode length: 187.9281567489113
+Average reward over last 100 episodes: -99.47
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:09,286:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:09,294:RainbowDQN:INFO: Training with loss: 3.1218973278167943
+----------------------------------------------------
+
+2019-02-06 20:56:12,752:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 259999
+Previous state: [ 0.24830246 -0.96868255 -0.34674908  0.93795793 -0.31475355  1.93849599]
+Previous online qs: [[-33.21474855 -33.14377225 -33.58276175]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -49.0
+***
+Current step: 260000
+Is terminal: False
+Current state: [ 0.31557534 -0.94890052 -0.54829666  0.83628391  0.99934977  0.31710415]
+Current online qs: [-33.81191395 -33.33374051 -33.89379621]
+Current target qs: [-34.32609553 -33.8276169  -34.41722803]
+Current real qs: -33.82761689695882
+Chosen action: 1
+Current sample loss: 1.8105545208284672
+***
+Episodes so far: 1387
+Average episode length: 187.41961067051173
+Average reward over last 100 episodes: -101.17
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:12,756:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:12,762:RainbowDQN:INFO: Training with loss: 1.8668849999279897
+----------------------------------------------------
+
+2019-02-06 20:56:15,738:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 260999
+Previous state: [ 0.78389191  0.62089732  0.1916437  -0.98146456 -4.2183265   3.27745486]
+Previous online qs: [[-25.09145567 -24.44221198 -23.32107625]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -66.0
+***
+Current step: 261000
+Is terminal: False
+Current state: [ 0.96839432 -0.24942423  0.91240961 -0.40927828 -4.84505621  6.00991597]
+Current online qs: [-25.14916976 -24.39314936 -23.22025076]
+Current target qs: [-24.50121722 -23.91108074 -22.49142527]
+Current real qs: -22.49142527224365
+Chosen action: 2
+Current sample loss: 0.002977364526979063
+***
+Episodes so far: 1396
+Average episode length: 186.91547277936945
+Average reward over last 100 episodes: -102.63
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:15,741:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:15,747:RainbowDQN:INFO: Training with loss: 2.006899015402852
+----------------------------------------------------
+
+2019-02-06 20:56:18,744:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 261999
+Previous state: [ 0.21148771 -0.97738066 -0.38811487  0.921611   -0.6329095   1.79775889]
+Previous online qs: [[-33.50422968 -33.39495456 -33.50866242]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -49.0
+***
+Current step: 262000
+Is terminal: False
+Current state: [ 0.21489868 -0.97663635 -0.56634382  0.82416909  0.66066488  0.23783745]
+Current online qs: [-32.95480431 -32.52736404 -32.57901436]
+Current target qs: [-33.20991392 -32.68085772 -32.66416644]
+Current real qs: -32.680857724890856
+Chosen action: 1
+Current sample loss: 0.0016732524513346733
+***
+Episodes so far: 1407
+Average episode length: 186.17697228144974
+Average reward over last 100 episodes: -101.43
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:18,747:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:18,753:RainbowDQN:INFO: Training with loss: 1.5638936270561767
+----------------------------------------------------
+
+2019-02-06 20:56:21,750:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 262999
+Previous state: [ 0.69786894  0.71622548  0.51165633 -0.8591902   0.53709038 -1.9029466 ]
+Previous online qs: [[-40.83391293 -41.3289721  -40.89540479]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -23.0
+***
+Current step: 263000
+Is terminal: False
+Current state: [ 0.68922923  0.72454335  0.27370881 -0.9618126  -0.41414957 -0.68490804]
+Current online qs: [-42.04367908 -41.99243762 -41.25733711]
+Current target qs: [-42.31074698 -42.27352497 -41.68541708]
+Current real qs: -41.6854170829603
+Chosen action: 2
+Current sample loss: 2.0582205794481045
+***
+Episodes so far: 1417
+Average episode length: 185.5871559633026
+Average reward over last 100 episodes: -102.22
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:21,753:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:21,759:RainbowDQN:INFO: Training with loss: 1.8838369358346407
+----------------------------------------------------
+
+2019-02-06 20:56:24,761:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 263999
+Previous state: [ 0.21419999 -0.97678983 -0.41831737 -0.90830093  2.76014252  1.02187057]
+Previous online qs: [[-21.64180805 -21.3751372  -21.55641886]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -85.0
+***
+Current step: 264000
+Is terminal: False
+Current state: [ 0.73465329 -0.67844274 -0.20482527 -0.97879855  3.20609347  1.48394449]
+Current online qs: [-22.75729822 -23.20454229 -23.33031235]
+Current target qs: [-22.57319756 -23.39207109 -23.72097836]
+Current real qs: -22.573197559579505
+Chosen action: 0
+Current sample loss: 3.8900792501394577
+***
+Episodes so far: 1428
+Average episode length: 184.81442577030796
+Average reward over last 100 episodes: -101.21
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:24,765:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:24,770:RainbowDQN:INFO: Training with loss: 1.8666085303221018
+----------------------------------------------------
+
+2019-02-06 20:56:27,685:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 264999
+Previous state: [-0.45654244  0.88970164  0.37667632 -0.92634494  1.40913585 -4.42481227]
+Previous online qs: [[-24.72950371 -24.5695456  -25.13450896]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -77.0
+***
+Current step: 265000
+Is terminal: False
+Current state: [-0.5665967   0.82399526 -0.36962835 -0.92917968 -0.13662531 -3.24440449]
+Current online qs: [-23.69423624 -23.07136963 -23.63452884]
+Current target qs: [-24.46249777 -23.98462794 -24.64671384]
+Current real qs: -23.98462793976146
+Chosen action: 1
+Current sample loss: 0.03070767548615165
+***
+Episodes so far: 1439
+Average episode length: 184.1021542738011
+Average reward over last 100 episodes: -101.05
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:27,689:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:27,694:RainbowDQN:INFO: Training with loss: 3.7607109157489824
+----------------------------------------------------
+
+2019-02-06 20:56:30,633:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 265999
+Previous state: [ 0.33195235 -0.94329616 -0.92467045  0.38076838  3.16259706 -0.32869247]
+Previous online qs: [[-23.68264069 -23.86132399 -23.83503189]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -66.0
+***
+Current step: 266000
+Is terminal: False
+Current state: [ 0.88238699 -0.4705244  -0.78750739  0.61630521  4.13249371 -2.40668292]
+Current online qs: [-23.04298104 -24.43133057 -25.01706702]
+Current target qs: [-22.29715094 -23.50451214 -24.08247154]
+Current real qs: -22.297150940101105
+Chosen action: 0
+Current sample loss: 0.37022509834419404
+***
+Episodes so far: 1448
+Average episode length: 183.65607734806613
+Average reward over last 100 episodes: -100.04
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:30,637:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:30,642:RainbowDQN:INFO: Training with loss: 1.452043617909289
+----------------------------------------------------
+
+2019-02-06 20:56:33,566:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 266999
+Previous state: [ 0.99648787  0.08373724  0.88629829 -0.46311483 -0.01490964 -0.11722538]
+Previous online qs: [[-51.97401082 -52.24944046 -52.22967543]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -9.0
+***
+Current step: 267000
+Is terminal: False
+Current state: [ 0.99713109  0.07569401  0.88548555 -0.46466691 -0.0640413   0.09848624]
+Current online qs: [-52.23529229 -52.40306713 -52.32927521]
+Current target qs: [-51.56177623 -51.45201033 -51.47527808]
+Current real qs: -51.56177622905078
+Chosen action: 0
+Current sample loss: 0.0052052823074776565
+***
+Episodes so far: 1460
+Average episode length: 182.87054794520532
+Average reward over last 100 episodes: -98.46
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:33,569:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:33,575:RainbowDQN:INFO: Training with loss: 2.4675868492287716
+----------------------------------------------------
+
+2019-02-06 20:56:36,623:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 267999
+Previous state: [ 0.99766001  0.06837032  0.99265561  0.12097451  3.03599182 -5.06956264]
+Previous online qs: [[-37.4825634  -38.71179544 -39.84600014]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -33.0
+***
+Current step: 268000
+Is terminal: False
+Current state: [ 0.79949687  0.60067025  0.65641882 -0.75439666  2.56016229 -4.35565536]
+Current online qs: [-38.41116681 -38.8488409  -39.34123051]
+Current target qs: [-37.17315659 -37.85140902 -38.59637348]
+Current real qs: -37.173156590566
+Chosen action: 0
+Current sample loss: 0.10167273434900914
+***
+Episodes so far: 1470
+Average episode length: 182.29047619047603
+Average reward over last 100 episodes: -98.76
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:36,627:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:36,633:RainbowDQN:INFO: Training with loss: 2.1255865007672803
+----------------------------------------------------
+
+2019-02-06 20:56:40,464:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 268999
+Previous state: [-0.70740039 -0.70681305 -0.77083581  0.63703387 -1.14877681  3.04956679]
+Previous online qs: [[-22.58449957 -21.77193712 -20.95179244]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -84.0
+***
+Current step: 269000
+Is terminal: False
+Current state: [-0.79835529 -0.6021867  -0.98950524  0.14449696 -0.28140643  2.40807105]
+Current online qs: [-21.38892899 -20.33044629 -19.50517814]
+Current target qs: [-21.02231147 -20.30147454 -19.41349101]
+Current real qs: -19.413491012007192
+Chosen action: 2
+Current sample loss: 0.5364629929920859
+***
+Episodes so far: 1480
+Average episode length: 181.69999999999985
+Average reward over last 100 episodes: -96.36
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:40,468:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:40,474:RainbowDQN:INFO: Training with loss: 2.0928611123792047
+----------------------------------------------------
+
+2019-02-06 20:56:43,702:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 269999
+Previous state: [ 0.47384133 -0.88061024  0.20460909  0.97884377 -0.25278667  0.69670866]
+Previous online qs: [[-41.47287791 -41.46011852 -41.57094122]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -31.0
+***
+Current step: 270000
+Is terminal: False
+Current state: [ 0.53104559 -0.84734325  0.21512835  0.97658578  0.90684107 -0.81326125]
+Current online qs: [-42.23780966 -42.34128272 -42.54776121]
+Current target qs: [-40.92609451 -41.29670644 -41.30012973]
+Current real qs: -40.92609450943131
+Chosen action: 0
+Current sample loss: 0.0032165960281593806
+***
+Episodes so far: 1491
+Average episode length: 181.06572769953036
+Average reward over last 100 episodes: -95.07
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:43,706:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:43,713:RainbowDQN:INFO: Training with loss: 5.368804420954721
+----------------------------------------------------
+
+2019-02-06 20:56:46,894:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 270999
+Previous state: [ 0.91940194 -0.3933193   0.16051904  0.98703274 -2.17114533 11.40294926]
+Previous online qs: [[-18.98420865 -18.5118167  -17.94854484]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -190.0
+***
+Current step: 271000
+Is terminal: False
+Current state: [ 0.87856596 -0.47762104 -0.98237865 -0.18690155  0.41964626  8.7586713 ]
+Current online qs: [-19.50661338 -18.69002141 -19.26193142]
+Current target qs: [-19.53359868 -19.22541384 -19.99350348]
+Current real qs: -19.225413837429045
+Chosen action: 1
+Current sample loss: 4.345619128432943
+***
+Episodes so far: 1500
+Average episode length: 180.53999999999985
+Average reward over last 100 episodes: -95.35
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:46,897:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:46,904:RainbowDQN:INFO: Training with loss: 3.0149495545676355
+----------------------------------------------------
+
+2019-02-06 20:56:50,013:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 271999
+Previous state: [ 0.47639953  0.87922892 -0.0790699  -0.99686907  1.54057159 -3.43112896]
+Previous online qs: [[-35.39890723 -35.49204985 -35.13468036]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -42.0
+***
+Current step: 272000
+Is terminal: False
+Current state: [ 0.31964011  0.94753902 -0.53743006 -0.84330832  0.17977539 -1.5005156 ]
+Current online qs: [-35.24046813 -35.71441539 -35.78380527]
+Current target qs: [-36.50482439 -37.3328621  -37.52426962]
+Current real qs: -36.50482439361576
+Chosen action: 0
+Current sample loss: 4.020409132938783
+***
+Episodes so far: 1510
+Average episode length: 180.10463576158924
+Average reward over last 100 episodes: -95.19
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:50,016:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:50,022:RainbowDQN:INFO: Training with loss: 2.6530039628690987
+----------------------------------------------------
+
+2019-02-06 20:56:53,014:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 272999
+Previous state: [ 0.9999977   0.00214504  0.97952804 -0.20130775  0.32595861 -0.60658786]
+Previous online qs: [[-52.6587942  -53.10113799 -53.43360293]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -3.0
+***
+Current step: 273000
+Is terminal: False
+Current state: [ 0.99733644  0.07293855  0.94586629 -0.32455655  0.36438641 -0.63920479]
+Current online qs: [-52.04772152 -52.51777246 -52.80065331]
+Current target qs: [-51.4226046  -51.43505075 -51.81897278]
+Current real qs: -51.422604602875204
+Chosen action: 0
+Current sample loss: 0.5631236386035895
+***
+Episodes so far: 1521
+Average episode length: 179.48520710059157
+Average reward over last 100 episodes: -94.72
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:53,017:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:53,024:RainbowDQN:INFO: Training with loss: 3.6263480151792997
+----------------------------------------------------
+
+2019-02-06 20:56:56,183:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 273999
+Previous state: [ 0.33314631  0.94287514 -0.49226013 -0.87044814 -2.83835545  0.30095884]
+Previous online qs: [[-32.32241882 -32.51683146 -32.70687273]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -60.0
+***
+Current step: 274000
+Is terminal: False
+Current state: [ 0.85097416  0.52520756 -0.23618547 -0.97170799 -3.8244557   2.49639094]
+Current online qs: [-30.03478136 -30.50385882 -29.46018931]
+Current target qs: [-33.96891376 -33.33473553 -32.68454985]
+Current real qs: -32.68454984866197
+Chosen action: 2
+Current sample loss: 1.0718161241165394
+***
+Episodes so far: 1531
+Average episode length: 178.92880470280846
+Average reward over last 100 episodes: -96.1
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:56,187:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:56,193:RainbowDQN:INFO: Training with loss: 3.2342654141954337
+----------------------------------------------------
+
+2019-02-06 20:56:59,303:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 274999
+Previous state: [ 0.50976698 -0.86031252  0.09503216  0.9954742  -1.46525731  3.17707258]
+Previous online qs: [[-36.6345652  -36.83153473 -36.28278698]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -38.0
+***
+Current step: 275000
+Is terminal: False
+Current state: [ 0.35318927 -0.93555189 -0.38123205  0.92447938 -0.26940293  1.71292377]
+Current online qs: [-34.47410374 -34.87114374 -35.02298656]
+Current target qs: [-34.73404152 -34.54306505 -34.74240247]
+Current real qs: -34.73404152355678
+Chosen action: 0
+Current sample loss: 0.8029698887579501
+***
+Episodes so far: 1542
+Average episode length: 178.31517509727612
+Average reward over last 100 episodes: -96.33
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:56:59,306:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:56:59,312:RainbowDQN:INFO: Training with loss: 2.9043685977529923
+----------------------------------------------------
+
+2019-02-06 20:57:02,389:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 275999
+Previous state: [-0.17144996 -0.98519283 -0.5141683   0.85768931 -0.09079315  3.01629836]
+Previous online qs: [[-26.68734385 -26.39825837 -26.2299869 ]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -59.0
+***
+Current step: 276000
+Is terminal: False
+Current state: [-0.03936432 -0.99922492 -0.84376546  0.53671207  1.39774687  1.60031807]
+Current online qs: [-25.95580658 -25.86426223 -26.0979813 ]
+Current target qs: [-25.05627813 -25.11292536 -25.11543942]
+Current real qs: -25.112925355608425
+Chosen action: 1
+Current sample loss: 0.13556446604183825
+***
+Episodes so far: 1553
+Average episode length: 177.6825499034126
+Average reward over last 100 episodes: -94.09
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:02,392:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:02,399:RainbowDQN:INFO: Training with loss: 1.5906523477359156
+----------------------------------------------------
+
+2019-02-06 20:57:05,529:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 276999
+Previous state: [ 0.50585273  0.86261986  0.62652549 -0.77940093  2.82622995 -5.31695727]
+Previous online qs: [[-31.58370888 -32.01726056 -32.99214234]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -48.0
+***
+Current step: 277000
+Is terminal: False
+Current state: [ 0.10291201  0.99469046 -0.20323429 -0.97913014  1.43530119 -3.56127903]
+Current online qs: [-30.40604956 -30.10580607 -30.79356733]
+Current target qs: [-31.10951719 -31.03574573 -31.53335949]
+Current real qs: -31.03574573259305
+Chosen action: 1
+Current sample loss: 0.020073051094007796
+***
+Episodes so far: 1563
+Average episode length: 177.1925783749199
+Average reward over last 100 episodes: -95.05
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:05,533:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:05,539:RainbowDQN:INFO: Training with loss: 3.6505155858663056
+----------------------------------------------------
+
+2019-02-06 20:57:08,506:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 277999
+Previous state: [-0.69994968 -0.71419216 -0.98531894 -0.17072374  1.51381509 -0.09581378]
+Previous online qs: [[-25.7180114  -25.88316588 -25.68908785]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -74.0
+***
+Current step: 278000
+Is terminal: False
+Current state: [-0.36216183 -0.93211523 -0.99994484 -0.01050339  2.58395888 -1.56338165]
+Current online qs: [-24.64113494 -25.91771876 -26.22826873]
+Current target qs: [-24.4598122  -25.53739871 -25.86295504]
+Current real qs: -24.459812200427663
+Chosen action: 0
+Current sample loss: 0.25280514652987907
+***
+Episodes so far: 1574
+Average episode length: 176.57306226175334
+Average reward over last 100 episodes: -95.04
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:08,509:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:08,520:RainbowDQN:INFO: Training with loss: 2.9269970470496665
+----------------------------------------------------
+
+2019-02-06 20:57:12,151:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 278999
+Previous state: [ 0.96294674  0.26969164  0.34347279  0.93916263  5.88513768 -7.41816083]
+Previous online qs: [[-17.68758914 -20.24877026 -21.34238589]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -108.0
+***
+Current step: 279000
+Is terminal: False
+Current state: [ 0.14229208  0.98982471  0.88723114 -0.46132516  5.39226666 -8.58880093]
+Current online qs: [-13.42868588 -15.9221179  -17.69793008]
+Current target qs: [-12.41720171 -14.6440537  -16.54201594]
+Current real qs: -12.417201710464063
+Chosen action: 0
+Current sample loss: 19.312152738405818
+***
+Episodes so far: 1583
+Average episode length: 176.17940619077686
+Average reward over last 100 episodes: -96.14
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:12,154:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:12,159:RainbowDQN:INFO: Training with loss: 4.579437756050397
+----------------------------------------------------
+
+2019-02-06 20:57:15,147:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 279999
+Previous state: [-0.27588389  0.96119097  0.93616704 -0.35155551  1.1106436  -8.05034221]
+Previous online qs: [[-16.52925551 -17.07346248 -17.42997448]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -123.0
+***
+Current step: 280000
+Is terminal: False
+Current state: [-0.22959493  0.97328627 -0.1461957  -0.98925569 -1.84229771 -5.25471741]
+Current online qs: [-17.39927702 -17.70604856 -17.77779418]
+Current target qs: [-16.66028177 -16.80164614 -16.95016937]
+Current real qs: -16.660281772052134
+Chosen action: 0
+Current sample loss: 0.930112586185339
+***
+Episodes so far: 1593
+Average episode length: 175.69177652228484
+Average reward over last 100 episodes: -96.27
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:15,150:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:15,156:RainbowDQN:INFO: Training with loss: 2.9822596841148075
+----------------------------------------------------
+
+2019-02-06 20:57:18,128:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 280999
+Previous state: [ 0.8856933   0.46427081 -0.35135522 -0.93624223  3.1332065   2.67672413]
+Previous online qs: [[-30.01193955 -29.6133047  -29.39478041]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -85.0
+***
+Current step: 281000
+Is terminal: False
+Current state: [ 0.65489683  0.75571829  0.51741036 -0.85573741  0.45215657  6.43009938]
+Current online qs: [-29.02056724 -28.72716824 -27.54567634]
+Current target qs: [-31.32144198 -30.45800307 -30.1605726 ]
+Current real qs: -30.160572595813036
+Chosen action: 2
+Current sample loss: 2.1438419927616197
+***
+Episodes so far: 1604
+Average episode length: 175.13403990024923
+Average reward over last 100 episodes: -94.05
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:18,132:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:18,137:RainbowDQN:INFO: Training with loss: 2.976266487832005
+----------------------------------------------------
+
+2019-02-06 20:57:21,079:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 281999
+Previous state: [-0.17575641  0.98443369  0.17267295 -0.98497921 -2.67352589  6.5790358 ]
+Previous online qs: [[-25.64322693 -25.07229519 -23.12844374]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -96.0
+***
+Current step: 282000
+Is terminal: False
+Current state: [ 0.53443835  0.84520746  0.97855875  0.2059679  -4.52395798  9.05180047]
+Current online qs: [-24.90788618 -23.45923391 -21.25277086]
+Current target qs: [-25.35610526 -24.04183383 -21.875588  ]
+Current real qs: -21.875587995335938
+Chosen action: 1
+Current sample loss: 0.22241752825452793
+***
+Episodes so far: 1614
+Average episode length: 174.66171003717457
+Average reward over last 100 episodes: -94.35
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:21,082:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:21,090:RainbowDQN:INFO: Training with loss: 2.478114160756024
+----------------------------------------------------
+
+2019-02-06 20:57:24,158:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 282999
+Previous state: [ 0.67573112  0.73714819  0.66060533 -0.75073337  1.22710807 -2.30443445]
+Previous online qs: [[-41.56458875 -41.52297375 -40.96367938]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -42.0
+***
+Current step: 283000
+Is terminal: False
+Current state: [ 0.57828079  0.81583781  0.42132732 -0.90690865  0.02007837 -0.56803262]
+Current online qs: [-40.32314591 -39.99160856 -39.09235399]
+Current target qs: [-41.86887424 -41.5042732  -40.77873291]
+Current real qs: -40.77873290934839
+Chosen action: 2
+Current sample loss: 0.16586576039913203
+***
+Episodes so far: 1624
+Average episode length: 174.2352216748767
+Average reward over last 100 episodes: -95.37
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:24,161:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:24,167:RainbowDQN:INFO: Training with loss: 2.7194274492552952
+----------------------------------------------------
+
+2019-02-06 20:57:27,226:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 283999
+Previous state: [ 0.86799177 -0.49657858  0.24875052  0.96856759  2.800576   -4.1792659 ]
+Previous online qs: [[-35.57006292 -36.87497997 -37.28479042]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -44.0
+***
+Current step: 284000
+Is terminal: False
+Current state: [ 0.99294036  0.1186147   0.96573482  0.25953083  3.46666264 -6.16304894]
+Current online qs: [-34.14042007 -34.76867181 -36.41768857]
+Current target qs: [-35.23448866 -36.27631325 -37.34907924]
+Current real qs: -35.23448865979172
+Chosen action: 0
+Current sample loss: 0.0973944573503119
+***
+Episodes so far: 1634
+Average episode length: 173.77968176254575
+Average reward over last 100 episodes: -95.75
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:27,229:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:27,235:RainbowDQN:INFO: Training with loss: 4.591343461673229
+----------------------------------------------------
+
+2019-02-06 20:57:30,356:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 284999
+Previous state: [ 0.92694609  0.37519456  0.69703942 -0.71703281 -2.32560403  3.17469153]
+Previous online qs: [[-40.29735709 -39.62931828 -38.71112474]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -34.0
+***
+Current step: 285000
+Is terminal: False
+Current state: [ 0.99075754 -0.13564477  0.99974305 -0.02266798 -2.75316886  4.34938933]
+Current online qs: [-42.0498936  -40.35201189 -38.99568158]
+Current target qs: [-43.23040343 -41.41786796 -40.07817928]
+Current real qs: -40.07817928484226
+Chosen action: 2
+Current sample loss: 3.866228539347145
+***
+Episodes so far: 1644
+Average episode length: 173.33698296836968
+Average reward over last 100 episodes: -96.96
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:30,359:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:30,366:RainbowDQN:INFO: Training with loss: 2.2352977923188435
+----------------------------------------------------
+
+2019-02-06 20:57:33,423:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 285999
+Previous state: [ 0.73076885 -0.682625    0.994301   -0.10660916 -3.07083767 13.20183536]
+Previous online qs: [[-16.5566899  -15.85123875 -13.18177229]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -177.0
+***
+Current step: 286000
+Is terminal: False
+Current state: [ 0.53371888 -0.84566197 -0.53329601  0.8459287   1.27103421  8.25622718]
+Current online qs: [-15.80036104 -17.2475949  -17.08831051]
+Current target qs: [-17.05832183 -17.92278744 -17.86956868]
+Current real qs: -17.05832183233447
+Chosen action: 0
+Current sample loss: 22.1461190859427
+***
+Episodes so far: 1652
+Average episode length: 173.01634382566573
+Average reward over last 100 episodes: -99.6
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:33,427:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:33,434:RainbowDQN:INFO: Training with loss: 3.068181035914697
+----------------------------------------------------
+
+2019-02-06 20:57:36,396:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 286999
+Previous state: [ 0.54112634  0.84094131 -0.41784553 -0.90851809  6.15634339 -5.37897648]
+Previous online qs: [[-13.37054704 -14.27301382 -14.01021519]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -106.0
+***
+Current step: 287000
+Is terminal: False
+Current state: [-0.53640736  0.84395921 -0.92869471 -0.37084517  5.1821136  -2.5905756 ]
+Current online qs: [-20.41916181 -19.86016643 -20.48724685]
+Current target qs: [-20.1755597  -19.82635182 -20.3419427 ]
+Current real qs: -19.826351821002348
+Chosen action: 1
+Current sample loss: 52.67190512005631
+***
+Episodes so far: 1660
+Average episode length: 172.82771084337335
+Average reward over last 100 episodes: -102.31
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:36,400:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:36,405:RainbowDQN:INFO: Training with loss: 1.9742325781175918
+----------------------------------------------------
+
+2019-02-06 20:57:39,939:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 287999
+Previous state: [ 0.88855311  0.45877376 -0.67208961 -0.74046982 -1.11599549  7.75393114]
+Previous online qs: [[-25.63792663 -25.0768323  -24.57431506]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -84.0
+***
+Current step: 288000
+Is terminal: False
+Current state: [ 9.99997492e-01  2.23976665e-03  9.22077876e-01 -3.87004380e-01
+ -3.51850356e+00  1.14046031e+01]
+Current online qs: [-22.78964118 -22.55939239 -20.53814734]
+Current target qs: [-23.7680815  -22.89897146 -21.56612128]
+Current real qs: -21.566121275881834
+Chosen action: 2
+Current sample loss: 4.945531044690168
+***
+Episodes so far: 1669
+Average episode length: 172.50808867585366
+Average reward over last 100 episodes: -103.25
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:39,943:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:39,950:RainbowDQN:INFO: Training with loss: 1.6823107774603367
+----------------------------------------------------
+
+2019-02-06 20:57:43,054:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 288999
+Previous state: [-0.13190698  0.9912621  -0.8245382  -0.56580629 -1.7495043  -0.76436106]
+Previous online qs: [[-27.99971571 -26.80095263 -26.9119202 ]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -63.0
+***
+Current step: 289000
+Is terminal: False
+Current state: [ 0.34641434  0.93808161 -0.81022737 -0.58611569 -3.07362758  1.06939692]
+Current online qs: [-30.19199237 -28.91877431 -28.58109686]
+Current target qs: [-28.74802677 -28.05380993 -27.88001788]
+Current real qs: -27.880017880748998
+Chosen action: 2
+Current sample loss: 3.240954345270406
+***
+Episodes so far: 1680
+Average episode length: 171.98630952380938
+Average reward over last 100 episodes: -102.6
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:43,057:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:43,077:RainbowDQN:INFO: Training with loss: 3.5588676877000163
+----------------------------------------------------
+
+2019-02-06 20:57:46,048:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 289999
+Previous state: [ -0.3320997    0.94324429   0.82362647  -0.56713265   8.48543763
+ -12.31520025]
+Previous online qs: [[-4.47704643 -8.07850146 -9.93213604]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -147.0
+***
+Current step: 290000
+Is terminal: False
+Current state: [-0.93663633 -0.35030329 -0.85107227 -0.52504856  7.92044653 -8.26212597]
+Current online qs: [-12.44817817 -12.81215801 -13.71204784]
+Current target qs: [-11.42263677 -11.73831011 -12.67368247]
+Current real qs: -11.42263677372547
+Chosen action: 0
+Current sample loss: 61.33026174565078
+***
+Episodes so far: 1690
+Average episode length: 171.51065088757383
+Average reward over last 100 episodes: -102.27
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:46,052:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:46,058:RainbowDQN:INFO: Training with loss: 1.9020217414583525
+----------------------------------------------------
+
+2019-02-06 20:57:49,001:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 290999
+Previous state: [-0.24897741 -0.96850929 -0.18053191  0.98356913 -1.42457946  2.99070063]
+Previous online qs: [[-26.09706188 -25.58931521 -24.8857564 ]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -62.0
+***
+Current step: 291000
+Is terminal: False
+Current state: [-0.39755347 -0.91757901 -0.62464201  0.78091124 -0.15260519  1.96542654]
+Current online qs: [-28.71764711 -28.03236451 -27.62516016]
+Current target qs: [-27.18775424 -26.65052396 -26.14076347]
+Current real qs: -26.140763474055618
+Chosen action: 2
+Current sample loss: 3.9744387113263824
+***
+Episodes so far: 1700
+Average episode length: 171.13999999999987
+Average reward over last 100 episodes: -102.58
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:49,004:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:49,010:RainbowDQN:INFO: Training with loss: 2.8328555075427273
+----------------------------------------------------
+
+2019-02-06 20:57:51,976:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 291999
+Previous state: [ 0.86756718 -0.49732     0.45308469  0.89146748  2.64409364 -4.15286038]
+Previous online qs: [[-35.16078915 -36.19057271 -36.235628  ]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -39.0
+***
+Current step: 292000
+Is terminal: False
+Current state: [ 0.99616537  0.08749034  0.99735084  0.07274131  3.29180188 -5.832705  ]
+Current online qs: [-33.24143191 -33.99867445 -35.01575443]
+Current target qs: [-34.81634627 -34.99654736 -36.63892349]
+Current real qs: -34.816346269489586
+Chosen action: 0
+Current sample loss: 0.09449086136977107
+***
+Episodes so far: 1711
+Average episode length: 170.63763880771464
+Average reward over last 100 episodes: -101.46
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:51,979:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:51,985:RainbowDQN:INFO: Training with loss: 2.483828096837153
+----------------------------------------------------
+
+2019-02-06 20:57:55,004:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 292999
+Previous state: [ 0.95409583 -0.29950151  0.86825732  0.49611413  0.21416343 -0.01340402]
+Previous online qs: [[-46.82791906 -47.48828218 -48.23831839]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -12.0
+***
+Current step: 293000
+Is terminal: False
+Current state: [ 0.97887334 -0.20446756  0.91798559  0.39661373  0.74766367 -1.07388079]
+Current online qs: [-45.03405517 -46.06643033 -47.0525703 ]
+Current target qs: [-45.51680712 -46.89316821 -47.38169872]
+Current real qs: -45.51680711689798
+Chosen action: 0
+Current sample loss: 0.5871850540588881
+***
+Episodes so far: 1721
+Average episode length: 170.24288204532235
+Average reward over last 100 episodes: -101.88
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:55,007:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:55,012:RainbowDQN:INFO: Training with loss: 2.667021914027335
+----------------------------------------------------
+
+2019-02-06 20:57:58,063:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 293999
+Previous state: [ 0.11338644  0.99355096 -0.37213239 -0.92817966  0.95786845 -2.58760322]
+Previous online qs: [[-29.60126712 -30.29233193 -30.99211051]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -42.0
+***
+Current step: 294000
+Is terminal: False
+Current state: [ 0.05955573  0.99822498 -0.67579244 -0.73709197 -0.40947742 -1.03151165]
+Current online qs: [-31.25772776 -32.27138933 -33.33788168]
+Current target qs: [-29.9484175  -31.08787132 -32.42039007]
+Current real qs: -29.94841750169633
+Chosen action: 0
+Current sample loss: 0.12716455788422942
+***
+Episodes so far: 1731
+Average episode length: 169.81975736568444
+Average reward over last 100 episodes: -101.55
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:57:58,066:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:57:58,072:RainbowDQN:INFO: Training with loss: 1.5768053552163237
+----------------------------------------------------
+
+2019-02-06 20:58:01,015:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 294999
+Previous state: [ 0.1333302  -0.99107167 -0.61318491  0.7899394   0.31865738  0.81472038]
+Previous online qs: [[-31.74145548 -31.53812616 -31.36239951]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -43.0
+***
+Current step: 295000
+Is terminal: False
+Current state: [ 0.31344824 -0.94960529 -0.63280967  0.77430738  1.51461716 -0.58857288]
+Current online qs: [-32.4473738  -32.20325603 -32.34118382]
+Current target qs: [-32.07401121 -31.86942121 -32.01711798]
+Current real qs: -31.869421205745653
+Chosen action: 1
+Current sample loss: 1.4121222100719877
+***
+Episodes so far: 1742
+Average episode length: 169.32089552238793
+Average reward over last 100 episodes: -100.24
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:01,018:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:01,024:RainbowDQN:INFO: Training with loss: 2.6559039066186956
+----------------------------------------------------
+
+2019-02-06 20:58:03,999:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 295999
+Previous state: [ 0.99870128 -0.05094845  0.99022899  0.13945088 -0.16598215  0.52862522]
+Previous online qs: [[-48.55931878 -48.39077731 -47.68356102]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -3.0
+***
+Current step: 296000
+Is terminal: False
+Current state: [ 0.99626488 -0.08634981  0.96746254  0.25301428 -0.17794334  0.6046879 ]
+Current online qs: [-48.30075449 -48.14687693 -47.48703693]
+Current target qs: [-48.17445306 -47.90035144 -47.40034023]
+Current real qs: -47.40034022788866
+Chosen action: 2
+Current sample loss: 0.058940093875314147
+***
+Episodes so far: 1752
+Average episode length: 168.94805936073047
+Average reward over last 100 episodes: -96.54
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:04,002:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:04,007:RainbowDQN:INFO: Training with loss: 2.431008083067108
+----------------------------------------------------
+
+2019-02-06 20:58:06,973:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 296999
+Previous state: [-0.34703753 -0.93785124 -0.87736632  0.47982115  1.44030801  4.56585063]
+Previous online qs: [[-18.3956986  -18.12947729 -17.0035025 ]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -85.0
+***
+Current step: 297000
+Is terminal: False
+Current state: [ 0.08621768 -0.99627632 -0.96609654 -0.2581811   2.76914734  3.18759551]
+Current online qs: [-19.74224055 -20.05303937 -19.64141847]
+Current target qs: [-20.60568315 -20.80922632 -20.78131076]
+Current real qs: -20.78131075781652
+Chosen action: 2
+Current sample loss: 20.88485567524664
+***
+Episodes so far: 1760
+Average episode length: 168.70170454545442
+Average reward over last 100 episodes: -98.16
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:06,977:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:06,985:RainbowDQN:INFO: Training with loss: 2.466170059099074
+----------------------------------------------------
+
+2019-02-06 20:58:10,532:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 297999
+Previous state: [ 0.08015826 -0.99678215 -0.26963598  0.96296232  0.62774225  2.25249995]
+Previous online qs: [[-29.44649788 -29.43199216 -29.20071648]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -51.0
+***
+Current step: 298000
+Is terminal: False
+Current state: [ 0.3505157  -0.93655686 -0.53108722  0.84731716  2.11412066  0.56861495]
+Current online qs: [-27.64995291 -28.2186486  -28.32217766]
+Current target qs: [-28.63107459 -29.27042444 -29.12056332]
+Current real qs: -28.631074589922186
+Chosen action: 0
+Current sample loss: 0.02074964434985842
+***
+Episodes so far: 1771
+Average episode length: 168.23771880293606
+Average reward over last 100 episodes: -96.8
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:10,536:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:10,541:RainbowDQN:INFO: Training with loss: 2.746304987180827
+----------------------------------------------------
+
+2019-02-06 20:58:13,515:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 298999
+Previous state: [ 0.589001    0.8081323   0.93619899 -0.35147042  3.14463846 -5.29421595]
+Previous online qs: [[-28.97809694 -30.07591219 -31.21948601]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -54.0
+***
+Current step: 299000
+Is terminal: False
+Current state: [ 0.12418711  0.99225882  0.29446147 -0.95566335  1.85721675 -3.77484316]
+Current online qs: [-27.49436394 -28.11078404 -28.24301078]
+Current target qs: [-25.96479591 -26.91629388 -27.11460294]
+Current real qs: -25.96479590748494
+Chosen action: 0
+Current sample loss: 5.166297104521634
+***
+Episodes so far: 1782
+Average episode length: 167.7586980920313
+Average reward over last 100 episodes: -96.99
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:13,518:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:13,523:RainbowDQN:INFO: Training with loss: 2.7084593081451915
+----------------------------------------------------
+
+2019-02-06 20:58:16,511:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 299999
+Previous state: [ 0.95706087 -0.28988705  0.99398815  0.10948767 -1.47269247  2.808271  ]
+Previous online qs: [[-41.38338627 -40.34204899 -40.03470019]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -20.0
+***
+Current step: 300000
+Is terminal: False
+Current state: [ 0.85429088 -0.51979525  0.80638277  0.59139397 -0.98667685  2.30003626]
+Current online qs: [-39.26424031 -38.94362887 -38.99800922]
+Current target qs: [-38.70598375 -38.59042433 -38.45724493]
+Current real qs: -38.590424330413136
+Chosen action: 1
+Current sample loss: 0.6891990053410912
+***
+Episodes so far: 1794
+Average episode length: 167.21293199554057
+Average reward over last 100 episodes: -94.76
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:16,514:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:16,520:RainbowDQN:INFO: Training with loss: 1.475879574033416
+----------------------------------------------------
+
+2019-02-06 20:58:16,520:RainbowDQN:INFO: Saving the model
+2019-02-06 20:58:19,520:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 300999
+Previous state: [ 0.06346574 -0.99798402 -0.66584946 -0.74608612  2.67488095  0.85276883]
+Previous online qs: [[-17.56087116 -18.28819982 -17.50921285]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -76.0
+***
+Current step: 301000
+Is terminal: False
+Current state: [ 0.62515183 -0.78050316 -0.54557443 -0.83806237  3.36700783  0.86758315]
+Current online qs: [-18.52146705 -19.23879741 -18.62063475]
+Current target qs: [-19.30341978 -19.57967231 -18.87527227]
+Current real qs: -19.303419781804465
+Chosen action: 0
+Current sample loss: 6.766099589499723
+***
+Episodes so far: 1804
+Average episode length: 166.8093126385808
+Average reward over last 100 episodes: -94.84
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:19,523:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:19,528:RainbowDQN:INFO: Training with loss: 1.6305118746181313
+----------------------------------------------------
+
+2019-02-06 20:58:22,488:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 301999
+Previous state: [ 0.99881346 -0.04869981 -0.2032286   0.97913132 -6.17757163  8.26733996]
+Previous online qs: [[-13.51166695 -11.60675073  -9.59004835]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -110.0
+***
+Current step: 302000
+Is terminal: False
+Current state: [ 3.04539607e-01 -9.52499673e-01 -9.99993771e-01  3.52956307e-03
+ -5.75595753e+00  5.77195231e+00]
+Current online qs: [-4.8717138  -5.25790566 -3.60675101]
+Current target qs: [-5.99008324 -6.09678314 -4.59179243]
+Current real qs: -4.591792430376208
+Chosen action: 2
+Current sample loss: 16.355342080496584
+***
+Episodes so far: 1814
+Average episode length: 166.42227122381465
+Average reward over last 100 episodes: -95.41
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:22,492:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:22,499:RainbowDQN:INFO: Training with loss: 2.4477695737243534
+----------------------------------------------------
+
+2019-02-06 20:58:25,445:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 302999
+Previous state: [ 0.5458388   0.83789021  0.07867755 -0.99690012  2.10693109 -4.03037839]
+Previous online qs: [[-33.3101792  -33.29347231 -33.77357048]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -44.0
+***
+Current step: 303000
+Is terminal: False
+Current state: [ 0.28018027  0.9599474  -0.51358596 -0.85803815  0.82481316 -2.21693148]
+Current online qs: [-34.08461183 -33.66497362 -34.17259315]
+Current target qs: [-34.53106145 -34.45975313 -34.76993487]
+Current real qs: -34.4597531290261
+Chosen action: 1
+Current sample loss: 3.318530006738528
+***
+Episodes so far: 1825
+Average episode length: 166.00328767123275
+Average reward over last 100 episodes: -94.54
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:25,449:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:25,454:RainbowDQN:INFO: Training with loss: 3.028429189616661
+----------------------------------------------------
+
+2019-02-06 20:58:28,543:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 303999
+Previous state: [ 0.9379562   0.34675377 -0.5938714  -0.80455998 -4.64531135  5.25852841]
+Previous online qs: [[-22.08027245 -21.79898531 -20.82778581]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -78.0
+***
+Current step: 304000
+Is terminal: False
+Current state: [ 0.8322226  -0.55444164  0.63152803 -0.77535304 -4.74269194  7.92435386]
+Current online qs: [-18.46958086 -17.74064987 -15.45408838]
+Current target qs: [-21.80433031 -20.79191898 -19.27555305]
+Current real qs: -19.27555305174827
+Chosen action: 2
+Current sample loss: 0.5550075472834806
+***
+Episodes so far: 1835
+Average episode length: 165.62506811989087
+Average reward over last 100 episodes: -94.87
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:28,547:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:28,553:RainbowDQN:INFO: Training with loss: 1.3846886947919077
+----------------------------------------------------
+
+2019-02-06 20:58:31,659:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 304999
+Previous state: [ 0.83335934  0.55273158  0.63429136  0.77309409  3.48525781 -5.13654839]
+Previous online qs: [[-29.19440384 -30.80706209 -31.47488947]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -54.0
+***
+Current step: 305000
+Is terminal: False
+Current state: [ 0.3372278   0.94142308  0.97937811 -0.20203592  2.79134585 -5.37838164]
+Current online qs: [-28.66137642 -30.14866882 -31.09127627]
+Current target qs: [-29.10194511 -30.31802981 -31.44295318]
+Current real qs: -29.101945110589426
+Chosen action: 0
+Current sample loss: 0.38009915674490125
+***
+Episodes so far: 1845
+Average episode length: 165.2823848238481
+Average reward over last 100 episodes: -95.43
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:31,662:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:31,668:RainbowDQN:INFO: Training with loss: 2.239903290174829
+----------------------------------------------------
+
+2019-02-06 20:58:34,718:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 305999
+Previous state: [ 0.9677822  -0.25178883  0.64479169 -0.76435835 -4.23909279  5.59503949]
+Previous online qs: [[-23.26939018 -22.16417021 -20.38154792]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -60.0
+***
+Current step: 306000
+Is terminal: False
+Current state: [ 0.47623255 -0.87931937  0.93869846  0.34473932 -3.75270656  6.07119285]
+Current online qs: [-22.96772343 -22.11212204 -21.3786954 ]
+Current target qs: [-22.23303876 -21.64951752 -20.94652579]
+Current real qs: -20.94652579376139
+Chosen action: 2
+Current sample loss: 1.837414456560399
+***
+Episodes so far: 1856
+Average episode length: 164.83836206896538
+Average reward over last 100 episodes: -92.76
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:34,721:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:34,727:RainbowDQN:INFO: Training with loss: 2.4317849276058663
+----------------------------------------------------
+
+2019-02-06 20:58:37,711:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 306999
+Previous state: [-0.85039983 -0.52613698 -0.6369521   0.77090338 -2.49183531  2.81930532]
+Previous online qs: [[-19.94232311 -19.36304322 -18.56680845]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -79.0
+***
+Current step: 307000
+Is terminal: False
+Current state: [-0.99481563 -0.10169495 -0.94345935  0.33148824 -2.11960199  2.70646119]
+Current online qs: [-19.5787491  -18.18974655 -17.29087396]
+Current target qs: [-18.90797645 -17.72348201 -16.84292586]
+Current real qs: -16.842925863982103
+Chosen action: 2
+Current sample loss: 0.7962204337484231
+***
+Episodes so far: 1866
+Average episode length: 164.48070739549826
+Average reward over last 100 episodes: -93.42
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:37,714:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:37,720:RainbowDQN:INFO: Training with loss: 4.159512571199073
+----------------------------------------------------
+
+2019-02-06 20:58:41,317:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 307999
+Previous state: [ 0.80514134  0.59308298  0.99952524  0.03081063  3.32797416 -5.8014601 ]
+Previous online qs: [[-28.46942076 -29.63676837 -31.12918181]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -53.0
+***
+Current step: 308000
+Is terminal: False
+Current state: [ 0.35968977  0.93307195  0.51645069 -0.85631693  2.22490746 -4.53712857]
+Current online qs: [-26.73601433 -27.84942095 -29.02356695]
+Current target qs: [-26.1498259  -26.94333636 -28.00761909]
+Current real qs: -26.149825901015085
+Chosen action: 0
+Current sample loss: 2.4998554336597825
+***
+Episodes so far: 1875
+Average episode length: 164.23839999999987
+Average reward over last 100 episodes: -94.95
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:41,320:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:41,326:RainbowDQN:INFO: Training with loss: 4.892391908052334
+----------------------------------------------------
+
+2019-02-06 20:58:44,323:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 308999
+Previous state: [ 0.85988808  0.51048261  0.5981844  -0.80135848  2.54081899 -4.15488366]
+Previous online qs: [[-36.48984326 -37.11585634 -37.74858257]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -39.0
+***
+Current step: 309000
+Is terminal: False
+Current state: [ 0.57645495  0.81712893 -0.03213568 -0.99948352  1.62554164 -2.57610204]
+Current online qs: [-38.26429395 -38.49486162 -38.75987188]
+Current target qs: [-35.56131784 -35.76051279 -36.44818256]
+Current real qs: -35.561317836035435
+Chosen action: 0
+Current sample loss: 0.08073474416340162
+***
+Episodes so far: 1885
+Average episode length: 163.90503978779827
+Average reward over last 100 episodes: -95.89
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:44,326:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:44,332:RainbowDQN:INFO: Training with loss: 4.416770941484632
+----------------------------------------------------
+
+2019-02-06 20:58:47,317:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 309999
+Previous state: [ 0.08147262  0.99667558 -0.66899426 -0.74326757  0.33801447 -0.5226677 ]
+Previous online qs: [[-37.56573369 -36.98967318 -37.16800657]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -49.0
+***
+Current step: 310000
+Is terminal: False
+Current state: [ 0.14018039  0.99012598 -0.63415724 -0.77320411 -0.92574192  0.99157489]
+Current online qs: [-35.04335576 -34.75379361 -34.86702806]
+Current target qs: [-37.67028204 -37.61748607 -37.8181874 ]
+Current real qs: -37.617486073618565
+Chosen action: 1
+Current sample loss: 1.5665977732551117
+***
+Episodes so far: 1895
+Average episode length: 163.5625329815302
+Average reward over last 100 episodes: -96.87
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:47,320:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:47,326:RainbowDQN:INFO: Training with loss: 2.9010285330266785
+----------------------------------------------------
+
+2019-02-06 20:58:50,281:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 310999
+Previous state: [ 0.85692126 -0.51544734  0.70209983  0.71207853 -2.48219236  4.27748829]
+Previous online qs: [[-37.27365923 -36.2191738  -35.73827722]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -40.0
+***
+Current step: 311000
+Is terminal: False
+Current state: [ 0.58349679 -0.81211544  0.07380783  0.99727248 -1.53712479  2.74644047]
+Current online qs: [-35.71573173 -35.36994414 -34.72449134]
+Current target qs: [-34.84479452 -34.47592945 -33.89842644]
+Current real qs: -33.898426436254894
+Chosen action: 2
+Current sample loss: 1.3896520794058325
+***
+Episodes so far: 1903
+Average episode length: 163.40514976353114
+Average reward over last 100 episodes: -99.77
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:50,284:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:50,290:RainbowDQN:INFO: Training with loss: 4.023226542187576
+----------------------------------------------------
+
+2019-02-06 20:58:53,272:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 311999
+Previous state: [ 0.74336897  0.66888158  0.51932999 -0.85457379  0.24720231 -1.7592147 ]
+Previous online qs: [[-40.80141516 -40.84667997 -40.63114426]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -23.0
+***
+Current step: 312000
+Is terminal: False
+Current state: [ 0.78195388  0.62333629  0.36015739 -0.93289156 -0.82265705 -0.01792158]
+Current online qs: [-40.99576657 -40.63383308 -40.30456544]
+Current target qs: [-40.29017658 -40.36172917 -39.37331017]
+Current real qs: -39.37331017441998
+Chosen action: 2
+Current sample loss: 0.424539793521447
+***
+Episodes so far: 1913
+Average episode length: 163.08259278619957
+Average reward over last 100 episodes: -100.11
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:53,276:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:53,281:RainbowDQN:INFO: Training with loss: 1.9671085066280498
+----------------------------------------------------
+
+2019-02-06 20:58:56,355:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 312999
+Previous state: [ 0.99727121  0.07382507 -0.0584489  -0.9982904  -4.06329943  4.4202039 ]
+Previous online qs: [[-28.1154035  -27.69744979 -26.7135172 ]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -60.0
+***
+Current step: 313000
+Is terminal: False
+Current state: [ 0.73804201 -0.67475476  0.86496894 -0.5018254  -3.99186684  6.38749182]
+Current online qs: [-27.08410781 -25.76890229 -24.29266099]
+Current target qs: [-26.4609604  -25.31250846 -23.66851669]
+Current real qs: -23.66851668862693
+Chosen action: 2
+Current sample loss: 5.206089524577794
+***
+Episodes so far: 1923
+Average episode length: 162.73530941237638
+Average reward over last 100 episodes: -100.43
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:56,358:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:56,364:RainbowDQN:INFO: Training with loss: 2.6905270571588504
+----------------------------------------------------
+
+2019-02-06 20:58:59,450:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 313999
+Previous state: [ 0.93478402 -0.35521662  0.59402846  0.80444403  0.32469028 -0.1409818 ]
+Previous online qs: [[-43.72408184 -44.49922944 -44.7087448 ]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -12.0
+***
+Current step: 314000
+Is terminal: False
+Current state: [ 0.97219282 -0.2341818   0.71854296  0.69548258  0.92177468 -1.49562671]
+Current online qs: [-42.20385223 -43.23632707 -43.668851  ]
+Current target qs: [-42.34962583 -43.70481182 -44.22413083]
+Current real qs: -42.34962583486405
+Chosen action: 0
+Current sample loss: 0.6367278102520765
+***
+Episodes so far: 1934
+Average episode length: 162.35160289555313
+Average reward over last 100 episodes: -99.79
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:58:59,454:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:58:59,459:RainbowDQN:INFO: Training with loss: 2.143309269575866
+----------------------------------------------------
+
+2019-02-06 20:59:02,664:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 314999
+Previous state: [ 0.78839027  0.61517541  0.8961519  -0.44374742  2.76646517 -5.68812999]
+Previous online qs: [[-35.25418569 -36.45070866 -37.65571415]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -56.0
+***
+Current step: 315000
+Is terminal: False
+Current state: [ 0.45450511  0.89074413  0.13352842 -0.99104498  1.53052621 -4.00455718]
+Current online qs: [-35.23794377 -35.76661065 -36.2099117 ]
+Current target qs: [-35.56563822 -35.6727539  -35.82236746]
+Current real qs: -35.56563821874204
+Chosen action: 0
+Current sample loss: 0.9135462760610746
+***
+Episodes so far: 1944
+Average episode length: 162.00823045267478
+Average reward over last 100 episodes: -99.55
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:59:02,668:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:59:02,674:RainbowDQN:INFO: Training with loss: 2.0760818425391863
+----------------------------------------------------
+
+2019-02-06 20:59:06,076:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 315999
+Previous state: [ 0.83965423 -0.54312133 -0.24833926  0.96867312  4.54456828 -2.99224062]
+Previous online qs: [[-23.5597525  -25.10864891 -25.95167213]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -76.0
+***
+Current step: 316000
+Is terminal: False
+Current state: [ 0.92854656  0.37121595  0.61190299  0.79093283  4.87137228 -5.96833453]
+Current online qs: [-23.12639771 -26.6071299  -27.48544789]
+Current target qs: [-22.99698517 -26.32097222 -27.65517861]
+Current real qs: -22.996985172362567
+Chosen action: 0
+Current sample loss: 0.042957875564343474
+***
+Episodes so far: 1954
+Average episode length: 161.68065506653008
+Average reward over last 100 episodes: -100.55
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:59:06,079:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:59:06,085:RainbowDQN:INFO: Training with loss: 2.1634504349866512
+----------------------------------------------------
+
+2019-02-06 20:59:09,419:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 316999
+Previous state: [ 0.99767185  0.06819733  0.93722335  0.34872968  1.73274294 -2.28544438]
+Previous online qs: [[-45.9143898  -47.29644369 -47.82614922]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -22.0
+***
+Current step: 317000
+Is terminal: False
+Current state: [ 0.91703729  0.39880146  0.98968032 -0.14329295  1.6004176  -2.55721804]
+Current online qs: [-45.75069697 -46.36447707 -46.45611228]
+Current target qs: [-45.8682347  -47.14350209 -47.03847541]
+Current real qs: -45.86823470097406
+Chosen action: 1
+Current sample loss: 0.24518595311178687
+***
+Episodes so far: 1965
+Average episode length: 161.3119592875317
+Average reward over last 100 episodes: -99.8
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:59:09,431:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:59:09,448:RainbowDQN:INFO: Training with loss: 2.8461735955071674
+----------------------------------------------------
+
+2019-02-06 20:59:12,876:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 317999
+Previous state: [-0.3066979  -0.95180691 -0.76300674  0.64639053  2.58437575  1.75415673]
+Previous online qs: [[-19.66413969 -19.67016132 -19.9195944 ]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -89.0
+***
+Current step: 318000
+Is terminal: False
+Current state: [ 0.36680598 -0.93029747 -0.83274926  0.55365031  4.21649236 -0.67154232]
+Current online qs: [-18.88991424 -19.80138657 -20.67149875]
+Current target qs: [-17.7452833  -18.82863481 -19.57703924]
+Current real qs: -17.74528329524991
+Chosen action: 0
+Current sample loss: 1.2018939164438533
+***
+Episodes so far: 1974
+Average episode length: 161.04913880445784
+Average reward over last 100 episodes: -99.54
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:59:12,880:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:59:12,887:RainbowDQN:INFO: Training with loss: 4.14834448558889
+----------------------------------------------------
+
+2019-02-06 20:59:16,030:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 318999
+Previous state: [ 0.64093826 -0.76759243  0.29342723  0.95598141  0.49285328 -0.26468223]
+Previous online qs: [[-45.9808123  -46.26761764 -46.29942695]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -29.0
+***
+Current step: 319000
+Is terminal: False
+Current state: [ 0.78588488 -0.61837283  0.50398281  0.86371369  1.56837746 -2.04957421]
+Current online qs: [-46.12069989 -46.53707464 -46.74979355]
+Current target qs: [-46.25008488 -46.49740105 -46.4022    ]
+Current real qs: -46.250084884485254
+Chosen action: 0
+Current sample loss: 0.650880639202694
+***
+Episodes so far: 1985
+Average episode length: 160.69068010075554
+Average reward over last 100 episodes: -98.3
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:59:16,033:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:59:16,039:RainbowDQN:INFO: Training with loss: 2.5130733990303558
+----------------------------------------------------
+
+2019-02-06 20:59:19,173:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 319999
+Previous state: [ 0.25124974  0.9679223   0.95943428  0.28193237  3.07204327 -5.46476663]
+Previous online qs: [[-24.75338221 -25.79052175 -26.30155964]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -78.0
+***
+Current step: 320000
+Is terminal: False
+Current state: [-0.24483041  0.96956592  0.73723036 -0.67564147  1.8714958  -4.65368784]
+Current online qs: [-23.34195558 -24.56050414 -25.37230984]
+Current target qs: [-23.53835909 -24.37344084 -24.94964901]
+Current real qs: -23.538359087231743
+Chosen action: 0
+Current sample loss: 0.20286620597700983
+***
+Episodes so far: 1993
+Average episode length: 160.52282990466622
+Average reward over last 100 episodes: -100.54
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:59:19,176:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:59:19,181:RainbowDQN:INFO: Training with loss: 3.1763651644451207
+----------------------------------------------------
+
+2019-02-06 20:59:22,386:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 320999
+Previous state: [ 0.06921027  0.99760209 -0.81528731 -0.57905665 -0.93986205 -1.11338466]
+Previous online qs: [[-31.8399636  -31.93963542 -32.66227752]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -63.0
+***
+Current step: 321000
+Is terminal: False
+Current state: [ 0.37338403  0.92767687 -0.85683082 -0.51559765 -2.16329832  0.37385454]
+Current online qs: [-31.33596725 -31.20112305 -31.37842206]
+Current target qs: [-32.86491292 -33.12200597 -33.23306379]
+Current real qs: -33.122005972170406
+Chosen action: 1
+Current sample loss: 3.8057076913890153
+***
+Episodes so far: 2003
+Average episode length: 160.22815776335486
+Average reward over last 100 episodes: -98.45
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:59:22,389:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:59:22,396:RainbowDQN:INFO: Training with loss: 2.9213608138401423
+----------------------------------------------------
+
+2019-02-06 20:59:25,410:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 321999
+Previous state: [-0.24808518 -0.96873822 -0.09594101  0.99538702 -0.25205027  3.37059907]
+Previous online qs: [[-29.34867692 -28.6425237  -28.5505704 ]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -67.0
+***
+Current step: 322000
+Is terminal: False
+Current state: [-0.1373762  -0.99051895 -0.59378914  0.80462069  1.38091862  1.9769858 ]
+Current online qs: [-26.3002285  -25.73536294 -25.95165543]
+Current target qs: [-26.42191769 -26.05829709 -26.29584639]
+Current real qs: -26.058297091385963
+Chosen action: 1
+Current sample loss: 3.072505137506969
+***
+Episodes so far: 2013
+Average episode length: 159.92697466467948
+Average reward over last 100 episodes: -98.28
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:59:25,413:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:59:25,419:RainbowDQN:INFO: Training with loss: 4.721247174633648
+----------------------------------------------------
+
+2019-02-06 20:59:28,502:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 322999
+Previous state: [-0.43530777  0.9002817  -0.859666   -0.5108565  -4.15720983  1.84578841]
+Previous online qs: [[-19.86303187 -17.70523481 -17.4394258 ]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -95.0
+***
+Current step: 323000
+Is terminal: False
+Current state: [ 0.48236257  0.87597166 -0.39365727 -0.91925728 -5.3464579   4.73301638]
+Current online qs: [-20.43204615 -20.2381169  -19.96757062]
+Current target qs: [-15.2946787  -15.0219008  -14.82970741]
+Current real qs: -14.82970740677348
+Chosen action: 2
+Current sample loss: 3.0906183708646306
+***
+Episodes so far: 2023
+Average episode length: 159.6169055857636
+Average reward over last 100 episodes: -98.71
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:59:28,505:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:59:28,511:RainbowDQN:INFO: Training with loss: 3.916376873000449
+----------------------------------------------------
+
+2019-02-06 20:59:31,657:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 323999
+Previous state: [ 0.94961459 -0.31342004  0.89474731 -0.44657278 -3.12500553  5.64053825]
+Previous online qs: [[-41.21819935 -39.89400729 -38.3469888 ]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -47.0
+***
+Current step: 324000
+Is terminal: False
+Current state: [ 0.62278672 -0.78239165  0.78549621  0.61886647 -2.47755925  5.24139964]
+Current online qs: [-38.82561295 -38.01713808 -37.57974374]
+Current target qs: [-38.75962943 -37.79132873 -37.20945824]
+Current real qs: -37.20945824197411
+Chosen action: 2
+Current sample loss: 0.25971777877259034
+***
+Episodes so far: 2033
+Average episode length: 159.34727004426944
+Average reward over last 100 episodes: -99.13
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:59:31,661:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:59:31,666:RainbowDQN:INFO: Training with loss: 3.237001666994974
+----------------------------------------------------
+
+2019-02-06 20:59:34,717:RainbowDQN:INFO: 
+--------------------------------------------------
+Previous step: 324999
+Previous state: [ 0.56229887 -0.82693409 -0.84414124  0.53612085  2.26194831 -0.87900463]
+Previous online qs: [[-29.30578859 -29.67387113 -30.39947759]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -51.0
+***
+Current step: 325000
+Is terminal: False
+Current state: [ 0.9077391  -0.41953514 -0.59903535  0.80072258  3.0444551  -2.74737935]
+Current online qs: [-27.47875903 -29.55455907 -30.93052174]
+Current target qs: [-28.52666974 -30.05699676 -31.03272334]
+Current real qs: -28.52666974134935
+Chosen action: 0
+Current sample loss: 0.004145498660598944
+***
+Episodes so far: 2044
+Average episode length: 158.97700587084137
+Average reward over last 100 episodes: -98.39
+Current epsilon: 0.0500950000001857
+
+2019-02-06 20:59:34,721:RainbowDQN:INFO: Updating target network with online params
+2019-02-06 20:59:34,730:RainbowDQN:INFO: Training with loss: 3.2675598162476893
+----------------------------------------------------
+
