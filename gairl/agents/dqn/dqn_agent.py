@@ -135,12 +135,14 @@ class DQNAgent(AbstractAgent):
                                             dtype=dtype, name='start_state')
         self._chosen_actions = tf.placeholder(shape=(None,), dtype=tf.int32,
                                               name='chosen_action')
-        self._rewards = tf.placeholder(shape=(None,), dtype=tf.float64,
+        self._rewards = tf.placeholder(shape=(None,), dtype=dtype,
                                        name='reward')
         self._next_states = tf.placeholder(shape=(None, state_size),
                                            dtype=dtype, name='next_state')
         self._are_terminal = tf.placeholder(shape=(None,), dtype=bool,
                                             name='is_terminal')
+        self._is_weights = tf.placeholder(shape=(None,), dtype=dtype,
+                                          name='is_weights')
 
         # Create network
         self._online_params = Dnu.create_network_params(state_size,
@@ -180,7 +182,7 @@ class DQNAgent(AbstractAgent):
             f'Epsilon warmup period: {epsilon_warmup}\n'
             f'Ending epsilon: {epsilon_end}\n'
             f'Epsilon decay period: {epsilon_period}\n'
-            f'Replay buffer type: {replay_buffer.__class__.__name__}\n'
+            f'Replay buffer: {replay_buffer}\n'
             f'Update frequency: {update_freq}\n'
             f'Target update frequency: {target_update_freq}'
         )
@@ -222,8 +224,11 @@ class DQNAgent(AbstractAgent):
         expected_qs = tf.add(self._rewards,
                              discounted_next_qs,
                              name='expected_qs')
-        td_errors = tf.square(chosen_online_qs - expected_qs, name='td_errors')
-        self._loss = tf.reduce_mean(td_errors, name='loss')
+        self._td_errors = tf.square(chosen_online_qs - expected_qs,
+                                    name='td_errors')
+        weighted_td_errors = tf.multiply(self._is_weights, self._td_errors,
+                                         name='weighted_td_errors')
+        self._loss = tf.reduce_mean(weighted_td_errors, name='loss')
         grads = self._optimizer.compute_gradients(self._loss)
         grads = [(tf.clip_by_value(grad,
                                    -self._gradient_clip,
@@ -361,19 +366,29 @@ class DQNAgent(AbstractAgent):
         if samples is None:
             return
 
+        if self._replay_buffer.prioritized:
+            samples, indices, is_weights = samples
+        else:
+            indices = None
+            is_weights = [1]*len(samples)
+
         if self._steps_so_far % self._target_update_freq < self._update_freq:
             self._copy_online_to_target()
 
-        _, loss, train_summ = \
+        _, loss, td_errors, train_summ = \
             self._sess.run([self._online_update, self._loss,
-                            self._training_summary],
+                            self._td_errors, self._training_summary],
                            feed_dict={
                                self._start_states: np.vstack(samples[:, 0]),
                                self._chosen_actions: samples[:, 1],
                                self._rewards: samples[:, 2],
                                self._next_states: np.vstack(samples[:, 3]),
-                               self._are_terminal: samples[:, 4]
+                               self._are_terminal: samples[:, 4],
+                               self._is_weights: is_weights
                             })
+
+        if self._replay_buffer.prioritized:
+            self._replay_buffer.update_priorities(indices, is_weights)
 
         if self._steps_so_far % self._logging_freq < self._update_freq:
             self._logger.info(
@@ -408,7 +423,8 @@ class DQNAgent(AbstractAgent):
                                 self._chosen_actions: [self._prev_action],
                                 self._rewards: [reward],
                                 self._next_states: [state],
-                                self._are_terminal: [is_terminal]
+                                self._are_terminal: [is_terminal],
+                                self._is_weights: [1]
                             })
 
         self._logger.info(
