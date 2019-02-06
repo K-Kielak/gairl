@@ -26,27 +26,29 @@ def test_add_not_full():
     tree = _SumTree(16)
 
     # When
-    tree.add((1, 'a', 1.))
-    tree.add(('b', 2, 2.))
-    tree.add(195)
-    tree.add((3, 3., 'c'))
-    tree.add('d')
-    tree.add(19287412.214121)
-    tree.add(0)
+    tree.add((1, 'a', 1.), 1)
+    tree.add(('b', 2, 2.), 0.1)
+    tree.add(195, 3)
+    tree.add((3, 3., 'c'), 1)
+    tree.add('d', 5)
+    tree.add(19287412.214121, 0.1)
+    tree.add(0, 9)
 
     # Then
-    assert_that(tree.priorities_range, equal_to((1, 1)))
+    assert_that(tree.priorities_range, equal_to((0.1, 9)))
+    assert_that(tree._max_priorities_num, equal_to(1))
+    assert_that(tree._min_priorities_num, equal_to(2))
     assert_that(tree._data, equal_to([
         (1, 'a', 1.), ('b', 2, 2.), 195,
         (3, 3., 'c'), 'd', 19287412.214121, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0
     ]))
     assert_that(tree._tree, equal_to([
-        7,
-        7, 0,
-        4, 3, 0, 0,
-        2, 2, 2, 1, 0, 0, 0, 0,
-        1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        19.2,
+        19.2, 0,
+        5.1, 14.1, 0, 0,
+        1.1, 4, 5.1, 9, 0, 0, 0, 0,
+        1, 0.1, 3, 1, 5, 0.1, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0
     ]))
 
 
@@ -55,18 +57,20 @@ def test_add_overflow():
     tree = _SumTree(4)
 
     # When
-    tree.add((1, 'a', 1.))
-    tree.add(('b', 2, 2.))
-    tree.add(195)
-    tree.add((3, 3., 'c'))
-    tree.add('d')
-    tree.add(19287412.214121)
-    tree.add(0)
+    tree.add((1, 'a', 1.), 1)
+    tree.add(('b', 2, 2.), 0.1)
+    tree.add(195, 3)
+    tree.add((3, 3., 'c'), 1)
+    tree.add('d', 5)
+    tree.add(19287412.214121, 0.1)
+    tree.add(0, 9)
 
     # Then
-    assert_that(tree.priorities_range, equal_to((1, 1)))
+    assert_that(tree.priorities_range, equal_to((0.1, 9)))
+    assert_that(tree._max_priorities_num, equal_to(1))
+    assert_that(tree._min_priorities_num, equal_to(1))
     assert_that(tree._data, equal_to(['d', 19287412.214121, 0, (3, 3., 'c')]))
-    assert_that(tree._tree, equal_to([4, 2, 2, 1, 1, 1, 1]))
+    assert_that(tree._tree, equal_to([15.1, 5.1, 10, 5, 0.1, 9, 1]))
 
 
 def test_get_not_full():

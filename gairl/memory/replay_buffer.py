@@ -28,6 +28,12 @@ class ReplayBuffer:
         self._replay_batch_size = replay_batch_size
         self._buffer = deque()
 
+    def __str__(self):
+        return f'ReplayBuffer(' \
+               f'max_capacity={self._max_capacity}, ' \
+               f'min_capacity={self._min_capacity}, ' \
+               f'replay_batch_size={self._replay_batch_size})'
+
     def add_experience(self, start_state, action,
                        reward, next_state, is_terminal):
         """
@@ -49,3 +55,7 @@ class ReplayBuffer:
 
         samples = sample(self._buffer, self._replay_batch_size)
         return np.array(samples)
+
+    @property
+    def prioritized(self):
+        return False
