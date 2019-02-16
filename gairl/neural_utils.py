@@ -29,13 +29,10 @@ class DenseNetworkUtils:
         :return: list of gairl..DenseLayerParams; tensorflow variables
             representing network weights and biases.
         """
-        if not hidden_layers:
-            raise AttributeError('DQN has to have some hidden layers!')
-
         params = []
-        layers = [input_shape] + hidden_layers + [outputs_num]
+        layers = [input_shape] + list(hidden_layers) + [outputs_num]
         for i in range(1, len(layers)):
-            with tf.name_scope(f'{name}-layer{i}'):
+            with tf.name_scope(f'{name}_layer{i}'):
                 weights = gen_rand_weights((layers[i - 1], layers[i]), dtype,
                                            trainable=trainable)
                 biases = gen_rand_biases((layers[i],), dtype,
@@ -55,6 +52,10 @@ class DenseNetworkUtils:
         :param name: string; name of the resulting tensor
         :return: Final output of the network as a tensorflow tensor
         """
+        if len(params) == 1:
+            mul = tf.matmul(input, params[0].weights)
+            return tf.add(mul, params[0].biases, name=name)
+
         layer_sum = tf.matmul(input, params[0].weights) + params[0].biases
         activation = activation_fn(layer_sum)
 
