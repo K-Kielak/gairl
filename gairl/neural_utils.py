@@ -42,7 +42,8 @@ class DenseNetworkUtils:
         return params
 
     @staticmethod
-    def model_output(input, params, activation_fn, dropout_prob=1, name=None):
+    def model_output(input, params, activation_fn,
+                     dropout_prob=1, out_activation_fn=None, name=None):
         """
         :param input: tf.placeholder; placeholder for network input
         :param params: gairl..DenseLayerParams; tensorflow variables
@@ -50,25 +51,32 @@ class DenseNetworkUtils:
         :param activation_fn: function applied to result of each hidden
             layer of the network.
         :param dropout_prob: probability of dropout for the hidden layers.
+        :param out_activation_fn: activation function used on the
+            network's output, linear if None.
         :param name: string; name of the resulting tensor
         :return: Final output of the network as a tensorflow tensor
         """
         if len(params) == 1:
             mul = tf.matmul(input, params[0].weights)
-            return tf.add(mul, params[0].biases, name=name)
-
-        layer_sum = tf.matmul(input, params[0].weights) + params[0].biases
-        layer_sum = tf.nn.dropout(layer_sum, dropout_prob)
-        activation = activation_fn(layer_sum)
-
-        # Up to len(params) - 1 because last layer doesn't use activation_fn
-        for i in range(1, len(params) - 1):
-            layer_sum = tf.matmul(activation, params[i].weights) + params[i].biases
+            out = tf.add(mul, params[0].biases, name=name)
+        else:
+            layer_sum = tf.matmul(input, params[0].weights) + params[0].biases
             layer_sum = tf.nn.dropout(layer_sum, dropout_prob)
             activation = activation_fn(layer_sum)
 
-        final_mul = tf.matmul(activation, params[-1].weights)
-        return tf.add(final_mul, params[-1].biases, name=name)
+            # Up to len(params) - 1 cause last layer uses different activation
+            for i in range(1, len(params) - 1):
+                layer_sum = tf.matmul(activation, params[i].weights) + params[i].biases
+                layer_sum = tf.nn.dropout(layer_sum, dropout_prob)
+                activation = activation_fn(layer_sum)
+
+            final_mul = tf.matmul(activation, params[-1].weights)
+            out = tf.add(final_mul, params[-1].biases, name=name)
+
+        if out_activation_fn:
+            out = out_activation_fn(out)
+
+        return out
 
 
 def gen_rand_weights(size, dtype, trainable=True):
