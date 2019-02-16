@@ -42,13 +42,14 @@ class DenseNetworkUtils:
         return params
 
     @staticmethod
-    def model_output(input, params, activation_fn, name=None):
+    def model_output(input, params, activation_fn, dropout_prob=1, name=None):
         """
         :param input: tf.placeholder; placeholder for network input
         :param params: gairl..DenseLayerParams; tensorflow variables
             representing network weights and biases.
         :param activation_fn: function applied to result of each hidden
             layer of the network.
+        :param dropout_prob: probability of dropout for the hidden layers.
         :param name: string; name of the resulting tensor
         :return: Final output of the network as a tensorflow tensor
         """
@@ -57,11 +58,13 @@ class DenseNetworkUtils:
             return tf.add(mul, params[0].biases, name=name)
 
         layer_sum = tf.matmul(input, params[0].weights) + params[0].biases
+        layer_sum = tf.nn.dropout(layer_sum, dropout_prob)
         activation = activation_fn(layer_sum)
 
         # Up to len(params) - 1 because last layer doesn't use activation_fn
         for i in range(1, len(params) - 1):
             layer_sum = tf.matmul(activation, params[i].weights) + params[i].biases
+            layer_sum = tf.nn.dropout(layer_sum, dropout_prob)
             activation = activation_fn(layer_sum)
 
         final_mul = tf.matmul(activation, params[-1].weights)
