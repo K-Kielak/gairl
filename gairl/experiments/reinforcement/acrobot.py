@@ -4,8 +4,8 @@ import tensorflow as tf
 from gym.envs.classic_control import AcrobotEnv
 
 from gairl.agents import create_agent
-from gairl.config import AGENT_STR, DELAY_BETWEEN_RENDERS, RENDER
-
+from gairl.experiments.reinforcement.config import AGENT_STR, \
+    DELAY_BETWEEN_RENDERS, RENDER
 
 EPISODES_NUM = 5000
 

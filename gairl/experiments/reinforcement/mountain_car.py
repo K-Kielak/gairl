@@ -1,18 +1,18 @@
 import time
 
 import tensorflow as tf
-from gym.envs.classic_control import CartPoleEnv
+from gym.envs.classic_control import MountainCarEnv
 
 from gairl.agents import create_agent
-from gairl.config import AGENT_STR, DELAY_BETWEEN_RENDERS, RENDER
-
+from gairl.experiments.reinforcement.config import AGENT_STR, \
+    DELAY_BETWEEN_RENDERS, RENDER
 
 EPISODES_NUM = 10000
 MAX_STEPS_PER_EPISODE = 200
 
 
 def main():
-    env = CartPoleEnv()
+    env = MountainCarEnv()
     with tf.Session() as sess:
         agent = create_agent(AGENT_STR, env.action_space.n,
                              env.observation_space.shape[0], sess)

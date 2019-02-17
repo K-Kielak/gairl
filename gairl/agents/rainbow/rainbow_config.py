@@ -4,13 +4,12 @@ import os
 import tensorflow as tf
 
 from gairl.config import OUTPUTS_DIR
-from gairl.memory.replay_buffer import ReplayBuffer
 from gairl.memory.prioritized_replay_buffer import PrioritizedReplayBuffer
 
 
 HIDDEN_LAYERS = ((24,), (24,), (24,))
-OUTPUT_DIRECTORY = os.path.join(OUTPUTS_DIR, 'cartpole', 'pdddqn',
-                                '24,24,24gdsc5e-3batch256')
+OUTPUT_DIRECTORY = os.path.join(OUTPUTS_DIR, 'reinforcement', 'cartpole',
+                                'pdddqn', '24,24,24gdsc5e-3batch256')
 DTYPE = tf.float64
 ACTIVATION_FN = tf.nn.leaky_relu
 OPTIMIZER = tf.train.GradientDescentOptimizer(learning_rate=5e-3)

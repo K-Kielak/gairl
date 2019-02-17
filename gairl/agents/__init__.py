@@ -1,8 +1,8 @@
 from inspect import getfullargspec
 
 from gairl.agents.dqn import dqn_config as dqn_conf
-from gairl.agents.rainbow import rainbow_config as rainbow_conf
 from gairl.agents.dqn.dqn_agent import DQNAgent
+from gairl.agents.rainbow import rainbow_config as rainbow_conf
 from gairl.agents.rainbow.rainbow_agent import RainbowDQNAgent
 from gairl.agents.random_agent import RandomAgent
 
