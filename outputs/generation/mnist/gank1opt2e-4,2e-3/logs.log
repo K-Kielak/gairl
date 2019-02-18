@@ -1,0 +1,5553 @@
+2019-02-18 13:58:43,387:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 10
+Fake discrimination mean: 0.9096546669956264
+Real discrimination mean: 0.7473589192091095
+
+2019-02-18 13:58:44,303:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 20
+Fake discrimination mean: 0.6502537960471141
+Real discrimination mean: 0.6910647502802365
+
+2019-02-18 13:58:45,301:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 30
+Fake discrimination mean: 0.4871462501205909
+Real discrimination mean: 0.7100052720176491
+
+2019-02-18 13:58:46,258:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 40
+Fake discrimination mean: 0.534111337142908
+Real discrimination mean: 0.7221114707683713
+
+2019-02-18 13:58:47,228:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 50
+Fake discrimination mean: 0.5482460391377747
+Real discrimination mean: 0.7205238071028761
+
+2019-02-18 13:58:48,244:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 60
+Fake discrimination mean: 0.5778238640783114
+Real discrimination mean: 0.6706523165640934
+
+2019-02-18 13:58:49,213:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 70
+Fake discrimination mean: 0.47990927174659304
+Real discrimination mean: 0.6646204353214
+
+2019-02-18 13:58:50,203:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 80
+Fake discrimination mean: 0.48114221926535805
+Real discrimination mean: 0.6704499484570868
+
+2019-02-18 13:58:51,204:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 90
+Fake discrimination mean: 0.5298377064779197
+Real discrimination mean: 0.6877960418909831
+
+2019-02-18 13:58:52,369:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 100
+Fake discrimination mean: 0.5721518623196477
+Real discrimination mean: 0.6402871225531712
+
+2019-02-18 13:58:53,368:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 110
+Fake discrimination mean: 0.5368337714131273
+Real discrimination mean: 0.6642549303745164
+
+2019-02-18 13:58:54,347:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 120
+Fake discrimination mean: 0.5117961033325151
+Real discrimination mean: 0.6722502973623974
+
+2019-02-18 13:58:55,532:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 130
+Fake discrimination mean: 0.47329547571053854
+Real discrimination mean: 0.6900614258157555
+
+2019-02-18 13:58:56,874:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 140
+Fake discrimination mean: 0.5083192474727584
+Real discrimination mean: 0.6410982039027964
+
+2019-02-18 13:58:58,045:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 150
+Fake discrimination mean: 0.5766015851094883
+Real discrimination mean: 0.6302696304967413
+
+2019-02-18 13:58:59,587:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 160
+Fake discrimination mean: 0.5253129791686159
+Real discrimination mean: 0.6422670392425665
+
+2019-02-18 13:59:01,113:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 170
+Fake discrimination mean: 0.5557999516490095
+Real discrimination mean: 0.6377561781697044
+
+2019-02-18 13:59:02,329:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 180
+Fake discrimination mean: 0.5485509934973384
+Real discrimination mean: 0.6192247549567863
+
+2019-02-18 13:59:03,547:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 190
+Fake discrimination mean: 0.5230611972332003
+Real discrimination mean: 0.602702672640666
+
+2019-02-18 13:59:04,797:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 200
+Fake discrimination mean: 0.5535764399936643
+Real discrimination mean: 0.6103131316440606
+
+2019-02-18 13:59:05,989:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 210
+Fake discrimination mean: 0.5826340910766542
+Real discrimination mean: 0.5715164728963569
+
+2019-02-18 13:59:07,105:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 220
+Fake discrimination mean: 0.6130442117844731
+Real discrimination mean: 0.5239099576088974
+
+2019-02-18 13:59:08,304:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 230
+Fake discrimination mean: 0.5504224429353644
+Real discrimination mean: 0.5177804839969233
+
+2019-02-18 13:59:09,376:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 240
+Fake discrimination mean: 0.5325765467075921
+Real discrimination mean: 0.5237594897091413
+
+2019-02-18 13:59:10,364:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 250
+Fake discrimination mean: 0.5469574433236439
+Real discrimination mean: 0.5243342613002385
+
+2019-02-18 13:59:11,312:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 260
+Fake discrimination mean: 0.5258677176142609
+Real discrimination mean: 0.5068486304919579
+
+2019-02-18 13:59:12,223:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 270
+Fake discrimination mean: 0.5598873746099235
+Real discrimination mean: 0.5291538837184595
+
+2019-02-18 13:59:13,159:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 280
+Fake discrimination mean: 0.5625869291078484
+Real discrimination mean: 0.5115204664783877
+
+2019-02-18 13:59:14,128:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 290
+Fake discrimination mean: 0.5529831956439406
+Real discrimination mean: 0.5235731582050945
+
+2019-02-18 13:59:15,077:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 300
+Fake discrimination mean: 0.5380662260933966
+Real discrimination mean: 0.5164949696841341
+
+2019-02-18 13:59:16,019:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 310
+Fake discrimination mean: 0.5670956197120502
+Real discrimination mean: 0.531125682704283
+
+2019-02-18 13:59:16,929:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 320
+Fake discrimination mean: 0.5440715198984972
+Real discrimination mean: 0.5213067082046207
+
+2019-02-18 13:59:17,833:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 330
+Fake discrimination mean: 0.5297534756567818
+Real discrimination mean: 0.5213645549885954
+
+2019-02-18 13:59:18,779:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 340
+Fake discrimination mean: 0.5274297824541575
+Real discrimination mean: 0.4909983432999323
+
+2019-02-18 13:59:19,712:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 350
+Fake discrimination mean: 0.5539501940954868
+Real discrimination mean: 0.5236561189924493
+
+2019-02-18 13:59:20,642:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 360
+Fake discrimination mean: 0.5615019358435093
+Real discrimination mean: 0.5058642813080201
+
+2019-02-18 13:59:21,626:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 370
+Fake discrimination mean: 0.5567836306630253
+Real discrimination mean: 0.49395397125507257
+
+2019-02-18 13:59:22,543:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 380
+Fake discrimination mean: 0.5395786715972801
+Real discrimination mean: 0.49000497806053045
+
+2019-02-18 13:59:23,452:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 390
+Fake discrimination mean: 0.5330093261559005
+Real discrimination mean: 0.5246086956687152
+
+2019-02-18 13:59:24,392:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 400
+Fake discrimination mean: 0.5483738622137557
+Real discrimination mean: 0.5039529213931132
+
+2019-02-18 13:59:25,358:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 410
+Fake discrimination mean: 0.5316797144847105
+Real discrimination mean: 0.48652197096309197
+
+2019-02-18 13:59:26,429:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 420
+Fake discrimination mean: 0.5400077035444544
+Real discrimination mean: 0.4894351513997152
+
+2019-02-18 13:59:27,358:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 430
+Fake discrimination mean: 0.5419821166954536
+Real discrimination mean: 0.5126107009351845
+
+2019-02-18 13:59:28,369:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 440
+Fake discrimination mean: 0.5464032263461636
+Real discrimination mean: 0.528576340097689
+
+2019-02-18 13:59:29,298:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 450
+Fake discrimination mean: 0.5545163286203967
+Real discrimination mean: 0.5147741925585632
+
+2019-02-18 13:59:30,329:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 460
+Fake discrimination mean: 0.5447864959514598
+Real discrimination mean: 0.5168811468716712
+
+2019-02-18 13:59:31,381:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 470
+Fake discrimination mean: 0.5464950667841441
+Real discrimination mean: 0.5151128522027854
+
+2019-02-18 13:59:32,407:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 480
+Fake discrimination mean: 0.5476044787034807
+Real discrimination mean: 0.5011147020313261
+
+2019-02-18 13:59:33,539:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 490
+Fake discrimination mean: 0.5311382450671266
+Real discrimination mean: 0.5206757402309524
+
+2019-02-18 13:59:34,691:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 500
+Fake discrimination mean: 0.541084440000671
+Real discrimination mean: 0.514231534188649
+
+2019-02-18 13:59:35,770:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 510
+Fake discrimination mean: 0.5455416298227771
+Real discrimination mean: 0.5045515253005761
+
+2019-02-18 13:59:36,895:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 520
+Fake discrimination mean: 0.5442339998039637
+Real discrimination mean: 0.4961312617486081
+
+2019-02-18 13:59:37,815:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 530
+Fake discrimination mean: 0.5187904677472003
+Real discrimination mean: 0.49016092870549316
+
+2019-02-18 13:59:38,730:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 540
+Fake discrimination mean: 0.5087734388738303
+Real discrimination mean: 0.48159955954978445
+
+2019-02-18 13:59:39,658:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 550
+Fake discrimination mean: 0.509546444118307
+Real discrimination mean: 0.5011742731159595
+
+2019-02-18 13:59:40,586:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 560
+Fake discrimination mean: 0.5356391353449648
+Real discrimination mean: 0.49597609154684236
+
+2019-02-18 13:59:41,505:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 570
+Fake discrimination mean: 0.5529924937305439
+Real discrimination mean: 0.4988175645417439
+
+2019-02-18 13:59:42,437:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 580
+Fake discrimination mean: 0.5474713087839235
+Real discrimination mean: 0.5073166815010011
+
+2019-02-18 13:59:43,409:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 590
+Fake discrimination mean: 0.5372111295995233
+Real discrimination mean: 0.50689618271526
+
+2019-02-18 13:59:44,367:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 600
+Fake discrimination mean: 0.5351240681202721
+Real discrimination mean: 0.5110318126620623
+
+2019-02-18 13:59:45,332:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 610
+Fake discrimination mean: 0.5400519442831353
+Real discrimination mean: 0.5112620418780579
+
+2019-02-18 13:59:46,261:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 620
+Fake discrimination mean: 0.5294602154017322
+Real discrimination mean: 0.5111401575303272
+
+2019-02-18 13:59:47,159:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 630
+Fake discrimination mean: 0.5197556188562196
+Real discrimination mean: 0.512089547695141
+
+2019-02-18 13:59:48,072:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 640
+Fake discrimination mean: 0.5293990801153985
+Real discrimination mean: 0.5069874472231883
+
+2019-02-18 13:59:48,993:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 650
+Fake discrimination mean: 0.5422795350824284
+Real discrimination mean: 0.5033553257492361
+
+2019-02-18 13:59:49,885:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 660
+Fake discrimination mean: 0.5378733613358232
+Real discrimination mean: 0.4991303929560942
+
+2019-02-18 13:59:50,829:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 670
+Fake discrimination mean: 0.5307024579672511
+Real discrimination mean: 0.5001394857634492
+
+2019-02-18 13:59:51,763:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 680
+Fake discrimination mean: 0.525969087160459
+Real discrimination mean: 0.5186525886356965
+
+2019-02-18 13:59:52,674:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 690
+Fake discrimination mean: 0.5177537068888174
+Real discrimination mean: 0.5102413225759431
+
+2019-02-18 13:59:53,612:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 700
+Fake discrimination mean: 0.5241570016492063
+Real discrimination mean: 0.5083938584929466
+
+2019-02-18 13:59:54,565:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 710
+Fake discrimination mean: 0.5152300410502312
+Real discrimination mean: 0.5029817131102362
+
+2019-02-18 13:59:55,593:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 720
+Fake discrimination mean: 0.5116511811379382
+Real discrimination mean: 0.5002098368232487
+
+2019-02-18 13:59:56,555:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 730
+Fake discrimination mean: 0.509044918927139
+Real discrimination mean: 0.5070963804277066
+
+2019-02-18 13:59:57,515:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 740
+Fake discrimination mean: 0.5085805765487702
+Real discrimination mean: 0.5065916532233229
+
+2019-02-18 13:59:58,418:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 750
+Fake discrimination mean: 0.504932825745051
+Real discrimination mean: 0.5066786104389697
+
+2019-02-18 13:59:59,329:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 760
+Fake discrimination mean: 0.5099858190076839
+Real discrimination mean: 0.5059018366946583
+
+2019-02-18 14:00:00,262:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 770
+Fake discrimination mean: 0.5254959876226935
+Real discrimination mean: 0.513039948266191
+
+2019-02-18 14:00:01,250:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 780
+Fake discrimination mean: 0.5276281114286223
+Real discrimination mean: 0.5083439474179842
+
+2019-02-18 14:00:02,207:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 790
+Fake discrimination mean: 0.528309912728674
+Real discrimination mean: 0.5046537980230356
+
+2019-02-18 14:00:03,155:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 800
+Fake discrimination mean: 0.524920343195582
+Real discrimination mean: 0.5067733793541861
+
+2019-02-18 14:00:04,097:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 810
+Fake discrimination mean: 0.5266519221022193
+Real discrimination mean: 0.5096027892075043
+
+2019-02-18 14:00:05,053:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 820
+Fake discrimination mean: 0.5281336355376761
+Real discrimination mean: 0.5057835814197553
+
+2019-02-18 14:00:05,994:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 830
+Fake discrimination mean: 0.5100504572683012
+Real discrimination mean: 0.506937828922409
+
+2019-02-18 14:00:06,913:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 840
+Fake discrimination mean: 0.5060713704313191
+Real discrimination mean: 0.5126352853777385
+
+2019-02-18 14:00:07,843:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 850
+Fake discrimination mean: 0.505764290720262
+Real discrimination mean: 0.5170427935775145
+
+2019-02-18 14:00:08,788:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 860
+Fake discrimination mean: 0.518388214555573
+Real discrimination mean: 0.48733323229018743
+
+2019-02-18 14:00:09,723:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 870
+Fake discrimination mean: 0.5263125266548735
+Real discrimination mean: 0.5041054761293715
+
+2019-02-18 14:00:10,648:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 880
+Fake discrimination mean: 0.5182805425844625
+Real discrimination mean: 0.4993897799403391
+
+2019-02-18 14:00:11,575:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 890
+Fake discrimination mean: 0.5080435912964376
+Real discrimination mean: 0.5032949506400951
+
+2019-02-18 14:00:12,525:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 900
+Fake discrimination mean: 0.5000837685628315
+Real discrimination mean: 0.4972044429491531
+
+2019-02-18 14:00:13,466:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 910
+Fake discrimination mean: 0.5171557235333786
+Real discrimination mean: 0.512569089784883
+
+2019-02-18 14:00:14,484:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 920
+Fake discrimination mean: 0.515872853821375
+Real discrimination mean: 0.500633852843976
+
+2019-02-18 14:00:15,429:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 930
+Fake discrimination mean: 0.5206249594346005
+Real discrimination mean: 0.5020452761860416
+
+2019-02-18 14:00:16,489:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 940
+Fake discrimination mean: 0.5206528242500456
+Real discrimination mean: 0.5006174602225747
+
+2019-02-18 14:00:17,617:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 950
+Fake discrimination mean: 0.5095422986108449
+Real discrimination mean: 0.49926687318958146
+
+2019-02-18 14:00:18,540:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 960
+Fake discrimination mean: 0.4890923903163428
+Real discrimination mean: 0.4961376942971789
+
+2019-02-18 14:00:19,459:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 970
+Fake discrimination mean: 0.5004133304919479
+Real discrimination mean: 0.5118836981374691
+
+2019-02-18 14:00:20,520:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 980
+Fake discrimination mean: 0.5075474064928429
+Real discrimination mean: 0.49726402272733233
+
+2019-02-18 14:00:21,649:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 990
+Fake discrimination mean: 0.5100304507365426
+Real discrimination mean: 0.5033175410785321
+
+2019-02-18 14:00:22,698:VanillaGAN:INFO: Saving the model
+2019-02-18 14:00:23,164:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1000
+Fake discrimination mean: 0.502784679118611
+Real discrimination mean: 0.5088782627380533
+
+2019-02-18 14:00:24,793:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1010
+Fake discrimination mean: 0.5042420328472419
+Real discrimination mean: 0.5133997708091274
+
+2019-02-18 14:00:25,901:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1020
+Fake discrimination mean: 0.5200396309656103
+Real discrimination mean: 0.5204339784549483
+
+2019-02-18 14:00:26,982:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1030
+Fake discrimination mean: 0.5281707636855891
+Real discrimination mean: 0.514162609559239
+
+2019-02-18 14:00:28,052:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1040
+Fake discrimination mean: 0.5152262394238076
+Real discrimination mean: 0.5161605370201907
+
+2019-02-18 14:00:29,050:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1050
+Fake discrimination mean: 0.5106059717784853
+Real discrimination mean: 0.5261269584034504
+
+2019-02-18 14:00:30,052:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1060
+Fake discrimination mean: 0.5034058566511806
+Real discrimination mean: 0.5170895336038294
+
+2019-02-18 14:00:31,436:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1070
+Fake discrimination mean: 0.5039473936325599
+Real discrimination mean: 0.49965367177052455
+
+2019-02-18 14:00:32,674:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1080
+Fake discrimination mean: 0.5156566710263666
+Real discrimination mean: 0.5025194514177893
+
+2019-02-18 14:00:34,175:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1090
+Fake discrimination mean: 0.5170560952075678
+Real discrimination mean: 0.5044465704504073
+
+2019-02-18 14:00:35,680:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1100
+Fake discrimination mean: 0.5238714458558146
+Real discrimination mean: 0.5022114848135213
+
+2019-02-18 14:00:37,089:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1110
+Fake discrimination mean: 0.517024121639637
+Real discrimination mean: 0.503085682072965
+
+2019-02-18 14:00:38,263:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1120
+Fake discrimination mean: 0.5206178897887204
+Real discrimination mean: 0.5000043660866724
+
+2019-02-18 14:00:39,270:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1130
+Fake discrimination mean: 0.5114806863433751
+Real discrimination mean: 0.5111214161822775
+
+2019-02-18 14:00:40,245:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1140
+Fake discrimination mean: 0.5104784693007711
+Real discrimination mean: 0.508485460663668
+
+2019-02-18 14:00:41,240:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1150
+Fake discrimination mean: 0.5062170992624199
+Real discrimination mean: 0.5070807851175116
+
+2019-02-18 14:00:42,255:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1160
+Fake discrimination mean: 0.5074113960334242
+Real discrimination mean: 0.5011335116916903
+
+2019-02-18 14:00:43,491:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1170
+Fake discrimination mean: 0.5005090969497331
+Real discrimination mean: 0.5053411294727013
+
+2019-02-18 14:00:44,452:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1180
+Fake discrimination mean: 0.492027583083038
+Real discrimination mean: 0.5031699822446828
+
+2019-02-18 14:00:45,350:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1190
+Fake discrimination mean: 0.49057487591055393
+Real discrimination mean: 0.4954268612548958
+
+2019-02-18 14:00:46,366:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1200
+Fake discrimination mean: 0.4929604883253287
+Real discrimination mean: 0.48538415320941275
+
+2019-02-18 14:00:47,447:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1210
+Fake discrimination mean: 0.4898633016895041
+Real discrimination mean: 0.4908494184904516
+
+2019-02-18 14:00:48,444:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1220
+Fake discrimination mean: 0.495310337919567
+Real discrimination mean: 0.4842563625692104
+
+2019-02-18 14:00:49,614:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1230
+Fake discrimination mean: 0.5048687352036746
+Real discrimination mean: 0.48480993914857495
+
+2019-02-18 14:00:50,705:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1240
+Fake discrimination mean: 0.49499593445800044
+Real discrimination mean: 0.4994001291239132
+
+2019-02-18 14:00:51,879:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1250
+Fake discrimination mean: 0.49490054236334047
+Real discrimination mean: 0.5056093652428486
+
+2019-02-18 14:00:52,884:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1260
+Fake discrimination mean: 0.4817351788152838
+Real discrimination mean: 0.5025679855696248
+
+2019-02-18 14:00:53,866:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1270
+Fake discrimination mean: 0.4861681980287324
+Real discrimination mean: 0.5136562472008663
+
+2019-02-18 14:00:54,915:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1280
+Fake discrimination mean: 0.4994153582850964
+Real discrimination mean: 0.5230658321295955
+
+2019-02-18 14:00:56,650:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1290
+Fake discrimination mean: 0.507959279313694
+Real discrimination mean: 0.5165865095275654
+
+2019-02-18 14:00:57,629:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1300
+Fake discrimination mean: 0.5140435738251518
+Real discrimination mean: 0.5226633431639726
+
+2019-02-18 14:00:58,882:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1310
+Fake discrimination mean: 0.5133055795501619
+Real discrimination mean: 0.5375986914060311
+
+2019-02-18 14:01:00,332:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1320
+Fake discrimination mean: 0.5351384987973105
+Real discrimination mean: 0.5479798561526651
+
+2019-02-18 14:01:01,291:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1330
+Fake discrimination mean: 0.5114492565484451
+Real discrimination mean: 0.5460325048433847
+
+2019-02-18 14:01:02,252:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1340
+Fake discrimination mean: 0.49590033894979685
+Real discrimination mean: 0.5346686134825765
+
+2019-02-18 14:01:03,221:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1350
+Fake discrimination mean: 0.49296314178649053
+Real discrimination mean: 0.5304478414764722
+
+2019-02-18 14:01:04,177:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1360
+Fake discrimination mean: 0.4939433098017983
+Real discrimination mean: 0.513042926603098
+
+2019-02-18 14:01:05,143:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1370
+Fake discrimination mean: 0.5048302411856446
+Real discrimination mean: 0.5030027784036141
+
+2019-02-18 14:01:06,058:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1380
+Fake discrimination mean: 0.5075386815810771
+Real discrimination mean: 0.4773867171727912
+
+2019-02-18 14:01:07,003:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1390
+Fake discrimination mean: 0.5067823313916798
+Real discrimination mean: 0.4802187271828251
+
+2019-02-18 14:01:07,980:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1400
+Fake discrimination mean: 0.5073990340954923
+Real discrimination mean: 0.48069220309688304
+
+2019-02-18 14:01:08,948:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1410
+Fake discrimination mean: 0.5046321495590909
+Real discrimination mean: 0.4890968600115084
+
+2019-02-18 14:01:09,857:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1420
+Fake discrimination mean: 0.5171248585978266
+Real discrimination mean: 0.5081971647498651
+
+2019-02-18 14:01:10,775:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1430
+Fake discrimination mean: 0.5267601816262646
+Real discrimination mean: 0.5145817843087195
+
+2019-02-18 14:01:11,713:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1440
+Fake discrimination mean: 0.5258238591926863
+Real discrimination mean: 0.5159864834610667
+
+2019-02-18 14:01:12,664:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1450
+Fake discrimination mean: 0.5156725826607349
+Real discrimination mean: 0.5144928683624018
+
+2019-02-18 14:01:13,567:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1460
+Fake discrimination mean: 0.5121649188966078
+Real discrimination mean: 0.5100964711294506
+
+2019-02-18 14:01:14,493:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1470
+Fake discrimination mean: 0.5135545418329783
+Real discrimination mean: 0.5116948699248066
+
+2019-02-18 14:01:15,420:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1480
+Fake discrimination mean: 0.5111907868077435
+Real discrimination mean: 0.5189715073398393
+
+2019-02-18 14:01:16,365:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1490
+Fake discrimination mean: 0.5259634479647147
+Real discrimination mean: 0.5166167785378702
+
+2019-02-18 14:01:17,306:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1500
+Fake discrimination mean: 0.5203839284625746
+Real discrimination mean: 0.5127217096650848
+
+2019-02-18 14:01:18,266:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1510
+Fake discrimination mean: 0.503682912719045
+Real discrimination mean: 0.5069342310701217
+
+2019-02-18 14:01:19,176:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1520
+Fake discrimination mean: 0.512032527745544
+Real discrimination mean: 0.49932564839582333
+
+2019-02-18 14:01:20,095:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1530
+Fake discrimination mean: 0.5062540101228825
+Real discrimination mean: 0.49596016067808973
+
+2019-02-18 14:01:21,258:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1540
+Fake discrimination mean: 0.506522218959525
+Real discrimination mean: 0.5041189245422543
+
+2019-02-18 14:01:22,383:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1550
+Fake discrimination mean: 0.506406408081919
+Real discrimination mean: 0.5130758069735201
+
+2019-02-18 14:01:23,421:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1560
+Fake discrimination mean: 0.5144444699005675
+Real discrimination mean: 0.5094767595922473
+
+2019-02-18 14:01:24,338:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1570
+Fake discrimination mean: 0.5344267404760008
+Real discrimination mean: 0.5076435638597903
+
+2019-02-18 14:01:25,246:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1580
+Fake discrimination mean: 0.5206401892067516
+Real discrimination mean: 0.5068418072244202
+
+2019-02-18 14:01:26,251:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1590
+Fake discrimination mean: 0.4921522391281759
+Real discrimination mean: 0.5067840108660224
+
+2019-02-18 14:01:27,200:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1600
+Fake discrimination mean: 0.48741630046982926
+Real discrimination mean: 0.5048118768821674
+
+2019-02-18 14:01:28,101:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1610
+Fake discrimination mean: 0.4754856837723348
+Real discrimination mean: 0.4810463743277452
+
+2019-02-18 14:01:29,009:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1620
+Fake discrimination mean: 0.4721310329448179
+Real discrimination mean: 0.47078104882526467
+
+2019-02-18 14:01:29,912:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1630
+Fake discrimination mean: 0.4926965739584021
+Real discrimination mean: 0.476017122566747
+
+2019-02-18 14:01:30,813:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1640
+Fake discrimination mean: 0.5025032573430783
+Real discrimination mean: 0.47214143671473835
+
+2019-02-18 14:01:31,766:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1650
+Fake discrimination mean: 0.49164078915929293
+Real discrimination mean: 0.48254925997693815
+
+2019-02-18 14:01:32,730:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1660
+Fake discrimination mean: 0.5014957628221023
+Real discrimination mean: 0.5048988628003197
+
+2019-02-18 14:01:33,719:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1670
+Fake discrimination mean: 0.5093325723200296
+Real discrimination mean: 0.5128271867169965
+
+2019-02-18 14:01:34,628:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1680
+Fake discrimination mean: 0.5195996157291047
+Real discrimination mean: 0.5265333811560278
+
+2019-02-18 14:01:35,552:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1690
+Fake discrimination mean: 0.52670675050591
+Real discrimination mean: 0.5297769964878188
+
+2019-02-18 14:01:36,453:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1700
+Fake discrimination mean: 0.5179159024672693
+Real discrimination mean: 0.5307355255833796
+
+2019-02-18 14:01:37,524:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1710
+Fake discrimination mean: 0.5054705252065772
+Real discrimination mean: 0.5459872824659036
+
+2019-02-18 14:01:38,500:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1720
+Fake discrimination mean: 0.5207199875419424
+Real discrimination mean: 0.5439333843614892
+
+2019-02-18 14:01:39,507:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1730
+Fake discrimination mean: 0.5294332403709042
+Real discrimination mean: 0.5151478428153088
+
+2019-02-18 14:01:40,415:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1740
+Fake discrimination mean: 0.529075335153539
+Real discrimination mean: 0.4890660522277628
+
+2019-02-18 14:01:41,341:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1750
+Fake discrimination mean: 0.5051297542781862
+Real discrimination mean: 0.4748431651033657
+
+2019-02-18 14:01:42,258:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1760
+Fake discrimination mean: 0.49537098911086647
+Real discrimination mean: 0.49881712565987213
+
+2019-02-18 14:01:43,144:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1770
+Fake discrimination mean: 0.4998265494482994
+Real discrimination mean: 0.5073801363719223
+
+2019-02-18 14:01:44,047:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1780
+Fake discrimination mean: 0.49407326156873715
+Real discrimination mean: 0.52514588377697
+
+2019-02-18 14:01:44,954:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1790
+Fake discrimination mean: 0.4951730609725438
+Real discrimination mean: 0.5154607267562566
+
+2019-02-18 14:01:45,872:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1800
+Fake discrimination mean: 0.5104112031763176
+Real discrimination mean: 0.4987158733141912
+
+2019-02-18 14:01:46,802:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1810
+Fake discrimination mean: 0.5134497361336423
+Real discrimination mean: 0.49096971219763963
+
+2019-02-18 14:01:47,710:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1820
+Fake discrimination mean: 0.5141776004792693
+Real discrimination mean: 0.4897122051781796
+
+2019-02-18 14:01:48,614:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1830
+Fake discrimination mean: 0.5146763726867263
+Real discrimination mean: 0.4987344517433403
+
+2019-02-18 14:01:49,521:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1840
+Fake discrimination mean: 0.5044063369213075
+Real discrimination mean: 0.507318244149846
+
+2019-02-18 14:01:50,408:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1850
+Fake discrimination mean: 0.4952540715471514
+Real discrimination mean: 0.5067915743540187
+
+2019-02-18 14:01:51,297:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1860
+Fake discrimination mean: 0.49940910675132244
+Real discrimination mean: 0.5132035433102395
+
+2019-02-18 14:01:52,197:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1870
+Fake discrimination mean: 0.5143362476601326
+Real discrimination mean: 0.5045252038588398
+
+2019-02-18 14:01:53,110:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1880
+Fake discrimination mean: 0.5141069505382255
+Real discrimination mean: 0.5068145776141629
+
+2019-02-18 14:01:54,005:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1890
+Fake discrimination mean: 0.5215185597931955
+Real discrimination mean: 0.522704445635221
+
+2019-02-18 14:01:54,918:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1900
+Fake discrimination mean: 0.5119766869409758
+Real discrimination mean: 0.5304874301375336
+
+2019-02-18 14:01:55,982:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1910
+Fake discrimination mean: 0.48881929807539604
+Real discrimination mean: 0.5263038668349675
+
+2019-02-18 14:01:56,926:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1920
+Fake discrimination mean: 0.4835371899323501
+Real discrimination mean: 0.5104843335037379
+
+2019-02-18 14:01:57,844:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1930
+Fake discrimination mean: 0.4912425158545667
+Real discrimination mean: 0.506577751613568
+
+2019-02-18 14:01:58,801:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1940
+Fake discrimination mean: 0.4975938972576747
+Real discrimination mean: 0.4984700774620135
+
+2019-02-18 14:01:59,700:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1950
+Fake discrimination mean: 0.5025677446086472
+Real discrimination mean: 0.4785692789284248
+
+2019-02-18 14:02:00,608:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1960
+Fake discrimination mean: 0.49209438154508656
+Real discrimination mean: 0.46375933941970743
+
+2019-02-18 14:02:01,509:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1970
+Fake discrimination mean: 0.4775319824057216
+Real discrimination mean: 0.4710145917625867
+
+2019-02-18 14:02:02,471:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1980
+Fake discrimination mean: 0.4662188027223562
+Real discrimination mean: 0.481047923878063
+
+2019-02-18 14:02:03,400:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 1990
+Fake discrimination mean: 0.46953315376233634
+Real discrimination mean: 0.4946500965468421
+
+2019-02-18 14:02:04,281:VanillaGAN:INFO: Saving the model
+2019-02-18 14:02:04,551:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2000
+Fake discrimination mean: 0.4777385691156977
+Real discrimination mean: 0.5026468563521109
+
+2019-02-18 14:02:05,501:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2010
+Fake discrimination mean: 0.49973950094543235
+Real discrimination mean: 0.5007847053992344
+
+2019-02-18 14:02:06,432:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2020
+Fake discrimination mean: 0.49795740023554713
+Real discrimination mean: 0.4979952073613499
+
+2019-02-18 14:02:07,630:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2030
+Fake discrimination mean: 0.5093011197036253
+Real discrimination mean: 0.48829602500860214
+
+2019-02-18 14:02:08,887:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2040
+Fake discrimination mean: 0.5117186489653394
+Real discrimination mean: 0.4865413510850349
+
+2019-02-18 14:02:10,533:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2050
+Fake discrimination mean: 0.5033096879856247
+Real discrimination mean: 0.5019788730592042
+
+2019-02-18 14:02:11,497:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2060
+Fake discrimination mean: 0.4950234397989193
+Real discrimination mean: 0.5064041623815356
+
+2019-02-18 14:02:12,431:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2070
+Fake discrimination mean: 0.5083145365423901
+Real discrimination mean: 0.512243777531473
+
+2019-02-18 14:02:13,340:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2080
+Fake discrimination mean: 0.5287232298901212
+Real discrimination mean: 0.5249178232064071
+
+2019-02-18 14:02:14,271:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2090
+Fake discrimination mean: 0.5367180375396378
+Real discrimination mean: 0.5464986408352789
+
+2019-02-18 14:02:15,221:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2100
+Fake discrimination mean: 0.5258390158431393
+Real discrimination mean: 0.5481708780540306
+
+2019-02-18 14:02:16,150:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2110
+Fake discrimination mean: 0.5056792705165725
+Real discrimination mean: 0.5438385774851362
+
+2019-02-18 14:02:17,213:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2120
+Fake discrimination mean: 0.49662834163260106
+Real discrimination mean: 0.5301558678672248
+
+2019-02-18 14:02:18,160:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2130
+Fake discrimination mean: 0.5170561194822397
+Real discrimination mean: 0.5173698228111975
+
+2019-02-18 14:02:19,069:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2140
+Fake discrimination mean: 0.5033019633099763
+Real discrimination mean: 0.5075336382461404
+
+2019-02-18 14:02:20,041:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2150
+Fake discrimination mean: 0.5114942464270138
+Real discrimination mean: 0.48513745020284577
+
+2019-02-18 14:02:20,964:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2160
+Fake discrimination mean: 0.51085599627582
+Real discrimination mean: 0.4792285595919806
+
+2019-02-18 14:02:21,963:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2170
+Fake discrimination mean: 0.49648444862164154
+Real discrimination mean: 0.48889504807025724
+
+2019-02-18 14:02:22,901:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2180
+Fake discrimination mean: 0.4814526607093806
+Real discrimination mean: 0.5089164366096678
+
+2019-02-18 14:02:23,845:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2190
+Fake discrimination mean: 0.48608616660770737
+Real discrimination mean: 0.5096061903996554
+
+2019-02-18 14:02:24,846:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2200
+Fake discrimination mean: 0.4887080299376818
+Real discrimination mean: 0.5076927520241363
+
+2019-02-18 14:02:25,952:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2210
+Fake discrimination mean: 0.5095128703929638
+Real discrimination mean: 0.5178276481985097
+
+2019-02-18 14:02:26,876:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2220
+Fake discrimination mean: 0.5116876942337213
+Real discrimination mean: 0.5187650819363951
+
+2019-02-18 14:02:27,791:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2230
+Fake discrimination mean: 0.5387691412899234
+Real discrimination mean: 0.5229741479340156
+
+2019-02-18 14:02:28,711:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2240
+Fake discrimination mean: 0.5292531613114021
+Real discrimination mean: 0.5200835047707018
+
+2019-02-18 14:02:29,630:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2250
+Fake discrimination mean: 0.4974240368533186
+Real discrimination mean: 0.5248789900780065
+
+2019-02-18 14:02:30,571:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2260
+Fake discrimination mean: 0.48081330255040905
+Real discrimination mean: 0.5248766302642467
+
+2019-02-18 14:02:31,683:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2270
+Fake discrimination mean: 0.4870534984685237
+Real discrimination mean: 0.5271140602889031
+
+2019-02-18 14:02:32,624:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2280
+Fake discrimination mean: 0.4898628952408838
+Real discrimination mean: 0.5164569131464338
+
+2019-02-18 14:02:33,626:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2290
+Fake discrimination mean: 0.49407039244953566
+Real discrimination mean: 0.49149692975538856
+
+2019-02-18 14:02:34,551:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2300
+Fake discrimination mean: 0.5058458880546945
+Real discrimination mean: 0.49956605023493095
+
+2019-02-18 14:02:35,458:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2310
+Fake discrimination mean: 0.5030744368767952
+Real discrimination mean: 0.48711760216728966
+
+2019-02-18 14:02:36,412:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2320
+Fake discrimination mean: 0.49862725580792483
+Real discrimination mean: 0.5037184209095187
+
+2019-02-18 14:02:37,345:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2330
+Fake discrimination mean: 0.494510491229014
+Real discrimination mean: 0.5029084001140844
+
+2019-02-18 14:02:38,290:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2340
+Fake discrimination mean: 0.5032169753074958
+Real discrimination mean: 0.5160115375087709
+
+2019-02-18 14:02:39,364:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2350
+Fake discrimination mean: 0.5094168330254295
+Real discrimination mean: 0.5153447016225894
+
+2019-02-18 14:02:40,343:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2360
+Fake discrimination mean: 0.49768000895378905
+Real discrimination mean: 0.5116256937917815
+
+2019-02-18 14:02:41,366:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2370
+Fake discrimination mean: 0.507029617910874
+Real discrimination mean: 0.5206921313851673
+
+2019-02-18 14:02:42,280:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2380
+Fake discrimination mean: 0.5098089598734203
+Real discrimination mean: 0.5038397223888942
+
+2019-02-18 14:02:43,228:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2390
+Fake discrimination mean: 0.5114674892764934
+Real discrimination mean: 0.5062086115590642
+
+2019-02-18 14:02:44,169:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2400
+Fake discrimination mean: 0.5340858970171741
+Real discrimination mean: 0.5169496347924935
+
+2019-02-18 14:02:45,081:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2410
+Fake discrimination mean: 0.5271548448824579
+Real discrimination mean: 0.5468547338555796
+
+2019-02-18 14:02:46,017:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2420
+Fake discrimination mean: 0.4939883466622477
+Real discrimination mean: 0.5482975337476601
+
+2019-02-18 14:02:47,018:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2430
+Fake discrimination mean: 0.47752141251308755
+Real discrimination mean: 0.5552320741130436
+
+2019-02-18 14:02:47,969:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2440
+Fake discrimination mean: 0.5000817232095975
+Real discrimination mean: 0.5199336876701561
+
+2019-02-18 14:02:48,969:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2450
+Fake discrimination mean: 0.5150586712966375
+Real discrimination mean: 0.5071745167584709
+
+2019-02-18 14:02:49,869:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2460
+Fake discrimination mean: 0.5144227981024607
+Real discrimination mean: 0.5000663202420959
+
+2019-02-18 14:02:50,772:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2470
+Fake discrimination mean: 0.501744900006005
+Real discrimination mean: 0.4875774296791359
+
+2019-02-18 14:02:51,673:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2480
+Fake discrimination mean: 0.5024082883285764
+Real discrimination mean: 0.48938562902487687
+
+2019-02-18 14:02:52,573:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2490
+Fake discrimination mean: 0.5136975709191433
+Real discrimination mean: 0.4867874803112737
+
+2019-02-18 14:02:53,525:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2500
+Fake discrimination mean: 0.512620582222865
+Real discrimination mean: 0.4927802791677341
+
+2019-02-18 14:02:54,423:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2510
+Fake discrimination mean: 0.505144580820234
+Real discrimination mean: 0.5001351040845342
+
+2019-02-18 14:02:55,338:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2520
+Fake discrimination mean: 0.5045478269524313
+Real discrimination mean: 0.5228300574884487
+
+2019-02-18 14:02:56,369:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2530
+Fake discrimination mean: 0.5041492172788651
+Real discrimination mean: 0.5256627957648788
+
+2019-02-18 14:02:57,331:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2540
+Fake discrimination mean: 0.512398880499379
+Real discrimination mean: 0.5206725912662303
+
+2019-02-18 14:02:58,258:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2550
+Fake discrimination mean: 0.5130741792015431
+Real discrimination mean: 0.5309479639321644
+
+2019-02-18 14:02:59,177:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2560
+Fake discrimination mean: 0.5114628816852295
+Real discrimination mean: 0.5206475797409413
+
+2019-02-18 14:03:00,228:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2570
+Fake discrimination mean: 0.5179052039076975
+Real discrimination mean: 0.5229585367214733
+
+2019-02-18 14:03:01,198:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2580
+Fake discrimination mean: 0.5081061080818543
+Real discrimination mean: 0.5374989477343267
+
+2019-02-18 14:03:02,103:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2590
+Fake discrimination mean: 0.5038516570989269
+Real discrimination mean: 0.5327823577126473
+
+2019-02-18 14:03:03,038:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2600
+Fake discrimination mean: 0.5215969291207043
+Real discrimination mean: 0.5372305459618042
+
+2019-02-18 14:03:03,946:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2610
+Fake discrimination mean: 0.5078886145277668
+Real discrimination mean: 0.528331730732202
+
+2019-02-18 14:03:04,850:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2620
+Fake discrimination mean: 0.5020717776118846
+Real discrimination mean: 0.5249218842205073
+
+2019-02-18 14:03:05,760:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2630
+Fake discrimination mean: 0.5151650289026564
+Real discrimination mean: 0.5139922880727957
+
+2019-02-18 14:03:06,641:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2640
+Fake discrimination mean: 0.5178297987552195
+Real discrimination mean: 0.49575664382433443
+
+2019-02-18 14:03:07,555:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2650
+Fake discrimination mean: 0.5230503183254561
+Real discrimination mean: 0.4898847627186535
+
+2019-02-18 14:03:08,488:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2660
+Fake discrimination mean: 0.49344253230420676
+Real discrimination mean: 0.48390146628430114
+
+2019-02-18 14:03:09,382:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2670
+Fake discrimination mean: 0.49953126353269456
+Real discrimination mean: 0.49498923238251563
+
+2019-02-18 14:03:10,305:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2680
+Fake discrimination mean: 0.5020851367353952
+Real discrimination mean: 0.501926864316958
+
+2019-02-18 14:03:11,211:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2690
+Fake discrimination mean: 0.5062731610941048
+Real discrimination mean: 0.499105343640399
+
+2019-02-18 14:03:12,146:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2700
+Fake discrimination mean: 0.504095577974977
+Real discrimination mean: 0.4972108636351077
+
+2019-02-18 14:03:13,129:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2710
+Fake discrimination mean: 0.5016409529790963
+Real discrimination mean: 0.5054753530615488
+
+2019-02-18 14:03:14,037:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2720
+Fake discrimination mean: 0.50252190951339
+Real discrimination mean: 0.5101977769367161
+
+2019-02-18 14:03:14,970:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2730
+Fake discrimination mean: 0.5066330459480312
+Real discrimination mean: 0.5104825352403026
+
+2019-02-18 14:03:15,898:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2740
+Fake discrimination mean: 0.505550396451495
+Real discrimination mean: 0.5067666007638537
+
+2019-02-18 14:03:16,795:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2750
+Fake discrimination mean: 0.5006250775887341
+Real discrimination mean: 0.5000932900482004
+
+2019-02-18 14:03:17,707:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2760
+Fake discrimination mean: 0.5039061222744725
+Real discrimination mean: 0.5104888307373017
+
+2019-02-18 14:03:18,650:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2770
+Fake discrimination mean: 0.518383946621813
+Real discrimination mean: 0.49902303688249
+
+2019-02-18 14:03:19,566:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2780
+Fake discrimination mean: 0.5244427559057329
+Real discrimination mean: 0.5123974231268552
+
+2019-02-18 14:03:20,466:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2790
+Fake discrimination mean: 0.5183743357761047
+Real discrimination mean: 0.5155007170584678
+
+2019-02-18 14:03:21,396:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2800
+Fake discrimination mean: 0.5053481283180433
+Real discrimination mean: 0.5203048922429222
+
+2019-02-18 14:03:22,334:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2810
+Fake discrimination mean: 0.5083539590046873
+Real discrimination mean: 0.5336060428487561
+
+2019-02-18 14:03:23,255:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2820
+Fake discrimination mean: 0.5197745949144964
+Real discrimination mean: 0.5354062576475767
+
+2019-02-18 14:03:24,176:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2830
+Fake discrimination mean: 0.49701605717440955
+Real discrimination mean: 0.5222238791738175
+
+2019-02-18 14:03:25,093:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2840
+Fake discrimination mean: 0.474499554439377
+Real discrimination mean: 0.5140811713034821
+
+2019-02-18 14:03:26,158:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2850
+Fake discrimination mean: 0.4994337119762703
+Real discrimination mean: 0.5004435561644617
+
+2019-02-18 14:03:27,078:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2860
+Fake discrimination mean: 0.4981792462577721
+Real discrimination mean: 0.48506415235624073
+
+2019-02-18 14:03:28,044:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2870
+Fake discrimination mean: 0.5099951759167195
+Real discrimination mean: 0.48337592391589523
+
+2019-02-18 14:03:28,947:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2880
+Fake discrimination mean: 0.5015627312116905
+Real discrimination mean: 0.4815481445755182
+
+2019-02-18 14:03:29,874:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2890
+Fake discrimination mean: 0.5050347374783715
+Real discrimination mean: 0.4902862489250812
+
+2019-02-18 14:03:30,798:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2900
+Fake discrimination mean: 0.5040324195770042
+Real discrimination mean: 0.49580230582551393
+
+2019-02-18 14:03:31,730:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2910
+Fake discrimination mean: 0.5080465287000666
+Real discrimination mean: 0.5028101437967182
+
+2019-02-18 14:03:32,663:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2920
+Fake discrimination mean: 0.5103049234096
+Real discrimination mean: 0.49723391513686116
+
+2019-02-18 14:03:33,580:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2930
+Fake discrimination mean: 0.5040426462175438
+Real discrimination mean: 0.49938828643568106
+
+2019-02-18 14:03:34,497:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2940
+Fake discrimination mean: 0.5018985429564169
+Real discrimination mean: 0.5026699879343874
+
+2019-02-18 14:03:35,392:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2950
+Fake discrimination mean: 0.5036015547320253
+Real discrimination mean: 0.5084843205655929
+
+2019-02-18 14:03:36,318:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2960
+Fake discrimination mean: 0.5007753805127554
+Real discrimination mean: 0.5133144779607025
+
+2019-02-18 14:03:37,257:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2970
+Fake discrimination mean: 0.5206260357129752
+Real discrimination mean: 0.5176326937790786
+
+2019-02-18 14:03:38,175:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2980
+Fake discrimination mean: 0.5326876554383972
+Real discrimination mean: 0.5318850072202496
+
+2019-02-18 14:03:39,093:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 2990
+Fake discrimination mean: 0.533593509053836
+Real discrimination mean: 0.5216425689991001
+
+2019-02-18 14:03:39,938:VanillaGAN:INFO: Saving the model
+2019-02-18 14:03:40,178:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3000
+Fake discrimination mean: 0.5146024648898239
+Real discrimination mean: 0.5220218624315087
+
+2019-02-18 14:03:41,107:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3010
+Fake discrimination mean: 0.508465906028662
+Real discrimination mean: 0.5203540807542262
+
+2019-02-18 14:03:42,084:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3020
+Fake discrimination mean: 0.4962259447707501
+Real discrimination mean: 0.5269326936953955
+
+2019-02-18 14:03:43,000:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3030
+Fake discrimination mean: 0.4956273175162758
+Real discrimination mean: 0.5051391756301351
+
+2019-02-18 14:03:43,952:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3040
+Fake discrimination mean: 0.5030200359274231
+Real discrimination mean: 0.4894291696671695
+
+2019-02-18 14:03:44,863:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3050
+Fake discrimination mean: 0.5105140020757426
+Real discrimination mean: 0.4904183688678965
+
+2019-02-18 14:03:45,788:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3060
+Fake discrimination mean: 0.51292576753815
+Real discrimination mean: 0.49172927063887245
+
+2019-02-18 14:03:46,704:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3070
+Fake discrimination mean: 0.49857396848078567
+Real discrimination mean: 0.5008693760489138
+
+2019-02-18 14:03:47,648:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3080
+Fake discrimination mean: 0.5032042369903259
+Real discrimination mean: 0.5055158742184913
+
+2019-02-18 14:03:48,928:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3090
+Fake discrimination mean: 0.5035057266008355
+Real discrimination mean: 0.5091223666650859
+
+2019-02-18 14:03:50,155:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3100
+Fake discrimination mean: 0.5005430588750746
+Real discrimination mean: 0.5081445288279927
+
+2019-02-18 14:03:51,146:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3110
+Fake discrimination mean: 0.4915669656088828
+Real discrimination mean: 0.5066529642955918
+
+2019-02-18 14:03:52,080:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3120
+Fake discrimination mean: 0.4912212834448877
+Real discrimination mean: 0.49920831216530326
+
+2019-02-18 14:03:53,005:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3130
+Fake discrimination mean: 0.49376613478513365
+Real discrimination mean: 0.48981353282941315
+
+2019-02-18 14:03:53,928:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3140
+Fake discrimination mean: 0.5066455833081708
+Real discrimination mean: 0.4909332181342704
+
+2019-02-18 14:03:54,825:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3150
+Fake discrimination mean: 0.512150605029023
+Real discrimination mean: 0.4879634522163204
+
+2019-02-18 14:03:55,869:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3160
+Fake discrimination mean: 0.503256182673192
+Real discrimination mean: 0.48401841023142084
+
+2019-02-18 14:03:56,777:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3170
+Fake discrimination mean: 0.5066017028997285
+Real discrimination mean: 0.4959113991418137
+
+2019-02-18 14:03:57,676:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3180
+Fake discrimination mean: 0.5006980725316041
+Real discrimination mean: 0.5033909632986152
+
+2019-02-18 14:03:58,588:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3190
+Fake discrimination mean: 0.4975620052186906
+Real discrimination mean: 0.5122324956232243
+
+2019-02-18 14:03:59,612:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3200
+Fake discrimination mean: 0.5066767993631577
+Real discrimination mean: 0.5255038602531894
+
+2019-02-18 14:04:00,708:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3210
+Fake discrimination mean: 0.5173373009874376
+Real discrimination mean: 0.5232972553651185
+
+2019-02-18 14:04:01,628:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3220
+Fake discrimination mean: 0.5233960049605079
+Real discrimination mean: 0.5305818372641581
+
+2019-02-18 14:04:02,543:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3230
+Fake discrimination mean: 0.5315195055709326
+Real discrimination mean: 0.5272704432975874
+
+2019-02-18 14:04:03,491:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3240
+Fake discrimination mean: 0.5246630847497954
+Real discrimination mean: 0.5226797527743715
+
+2019-02-18 14:04:04,412:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3250
+Fake discrimination mean: 0.5055427880396748
+Real discrimination mean: 0.5106271028311317
+
+2019-02-18 14:04:05,322:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3260
+Fake discrimination mean: 0.49708431480973614
+Real discrimination mean: 0.5087509217870537
+
+2019-02-18 14:04:06,248:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3270
+Fake discrimination mean: 0.49572001346287353
+Real discrimination mean: 0.5054520972142446
+
+2019-02-18 14:04:07,173:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3280
+Fake discrimination mean: 0.5003310560933335
+Real discrimination mean: 0.4918321407790654
+
+2019-02-18 14:04:08,095:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3290
+Fake discrimination mean: 0.5031861748672704
+Real discrimination mean: 0.49612228393632607
+
+2019-02-18 14:04:09,066:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3300
+Fake discrimination mean: 0.49814103218001604
+Real discrimination mean: 0.5154616225814384
+
+2019-02-18 14:04:10,086:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3310
+Fake discrimination mean: 0.4816379401204657
+Real discrimination mean: 0.5242658431588506
+
+2019-02-18 14:04:11,038:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3320
+Fake discrimination mean: 0.4901583971470461
+Real discrimination mean: 0.5251259216580064
+
+2019-02-18 14:04:11,965:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3330
+Fake discrimination mean: 0.5036878991619844
+Real discrimination mean: 0.501912325843706
+
+2019-02-18 14:04:12,884:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3340
+Fake discrimination mean: 0.4949840004151737
+Real discrimination mean: 0.4958702721763782
+
+2019-02-18 14:04:13,817:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3350
+Fake discrimination mean: 0.5048287849193119
+Real discrimination mean: 0.48885363632148754
+
+2019-02-18 14:04:14,723:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3360
+Fake discrimination mean: 0.5005235913447668
+Real discrimination mean: 0.49741982713587135
+
+2019-02-18 14:04:15,630:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3370
+Fake discrimination mean: 0.4977753018282747
+Real discrimination mean: 0.4904074759887325
+
+2019-02-18 14:04:16,551:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3380
+Fake discrimination mean: 0.494467098371286
+Real discrimination mean: 0.49211295226677537
+
+2019-02-18 14:04:17,463:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3390
+Fake discrimination mean: 0.48323233990917297
+Real discrimination mean: 0.4812299522434269
+
+2019-02-18 14:04:18,520:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3400
+Fake discrimination mean: 0.48547187702919503
+Real discrimination mean: 0.48464497766221476
+
+2019-02-18 14:04:19,593:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3410
+Fake discrimination mean: 0.48812232854740517
+Real discrimination mean: 0.48487254712658834
+
+2019-02-18 14:04:21,168:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3420
+Fake discrimination mean: 0.49179606871936166
+Real discrimination mean: 0.48221525652846287
+
+2019-02-18 14:04:22,385:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3430
+Fake discrimination mean: 0.5001508356560211
+Real discrimination mean: 0.4894804081869012
+
+2019-02-18 14:04:23,387:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3440
+Fake discrimination mean: 0.4959367256344509
+Real discrimination mean: 0.5016809262814758
+
+2019-02-18 14:04:24,435:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3450
+Fake discrimination mean: 0.4991800961050524
+Real discrimination mean: 0.5037017587173441
+
+2019-02-18 14:04:25,486:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3460
+Fake discrimination mean: 0.5084091382571246
+Real discrimination mean: 0.5075699732092532
+
+2019-02-18 14:04:26,643:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3470
+Fake discrimination mean: 0.5082542217122213
+Real discrimination mean: 0.507024579719641
+
+2019-02-18 14:04:27,691:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3480
+Fake discrimination mean: 0.49190368033374915
+Real discrimination mean: 0.5190189134030114
+
+2019-02-18 14:04:28,595:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3490
+Fake discrimination mean: 0.48862897579010783
+Real discrimination mean: 0.5292419437535165
+
+2019-02-18 14:04:29,527:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3500
+Fake discrimination mean: 0.5028007036011473
+Real discrimination mean: 0.5336969395132001
+
+2019-02-18 14:04:30,528:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3510
+Fake discrimination mean: 0.5048257327699267
+Real discrimination mean: 0.5197426488542832
+
+2019-02-18 14:04:31,518:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3520
+Fake discrimination mean: 0.5076381550051555
+Real discrimination mean: 0.5043003198027691
+
+2019-02-18 14:04:32,540:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3530
+Fake discrimination mean: 0.5036230791141273
+Real discrimination mean: 0.49706945384476925
+
+2019-02-18 14:04:33,468:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3540
+Fake discrimination mean: 0.49931851337972744
+Real discrimination mean: 0.48886117792598655
+
+2019-02-18 14:04:34,380:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3550
+Fake discrimination mean: 0.5100449040438236
+Real discrimination mean: 0.49939547698688425
+
+2019-02-18 14:04:35,290:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3560
+Fake discrimination mean: 0.5047240462939563
+Real discrimination mean: 0.5059845416896226
+
+2019-02-18 14:04:36,228:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3570
+Fake discrimination mean: 0.5183157226838779
+Real discrimination mean: 0.5096044530600139
+
+2019-02-18 14:04:37,149:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3580
+Fake discrimination mean: 0.5301650295173745
+Real discrimination mean: 0.5062132814885376
+
+2019-02-18 14:04:38,062:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3590
+Fake discrimination mean: 0.5264096575835194
+Real discrimination mean: 0.4929867473964674
+
+2019-02-18 14:04:38,997:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3600
+Fake discrimination mean: 0.5072579983590114
+Real discrimination mean: 0.49353355789948034
+
+2019-02-18 14:04:39,902:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3610
+Fake discrimination mean: 0.494363083727333
+Real discrimination mean: 0.5057527539626616
+
+2019-02-18 14:04:40,875:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3620
+Fake discrimination mean: 0.47495899234593986
+Real discrimination mean: 0.5031847360322178
+
+2019-02-18 14:04:41,802:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3630
+Fake discrimination mean: 0.4854233006890425
+Real discrimination mean: 0.5114557951268339
+
+2019-02-18 14:04:42,902:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3640
+Fake discrimination mean: 0.49508458681925854
+Real discrimination mean: 0.5013923183945498
+
+2019-02-18 14:04:43,957:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3650
+Fake discrimination mean: 0.5025681548986054
+Real discrimination mean: 0.5043049663469225
+
+2019-02-18 14:04:44,897:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3660
+Fake discrimination mean: 0.512339730400503
+Real discrimination mean: 0.5003987776499728
+
+2019-02-18 14:04:45,824:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3670
+Fake discrimination mean: 0.5079932833371877
+Real discrimination mean: 0.49566258710271444
+
+2019-02-18 14:04:46,723:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3680
+Fake discrimination mean: 0.5001545704366134
+Real discrimination mean: 0.49365916628609796
+
+2019-02-18 14:04:47,630:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3690
+Fake discrimination mean: 0.49449007069354084
+Real discrimination mean: 0.5058252287006462
+
+2019-02-18 14:04:48,680:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3700
+Fake discrimination mean: 0.49040173364324324
+Real discrimination mean: 0.5062236261320926
+
+2019-02-18 14:04:49,709:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3710
+Fake discrimination mean: 0.49110934292030706
+Real discrimination mean: 0.5077058568093631
+
+2019-02-18 14:04:50,905:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3720
+Fake discrimination mean: 0.49099121544801105
+Real discrimination mean: 0.5078808132705555
+
+2019-02-18 14:04:51,931:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3730
+Fake discrimination mean: 0.5060515376512029
+Real discrimination mean: 0.5082344448935645
+
+2019-02-18 14:04:52,958:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3740
+Fake discrimination mean: 0.5104481894252042
+Real discrimination mean: 0.4954210327483585
+
+2019-02-18 14:04:53,925:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3750
+Fake discrimination mean: 0.5184837258464506
+Real discrimination mean: 0.5193699423414512
+
+2019-02-18 14:04:54,846:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3760
+Fake discrimination mean: 0.5251984111699669
+Real discrimination mean: 0.5437985031217097
+
+2019-02-18 14:04:55,867:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3770
+Fake discrimination mean: 0.5008065486223249
+Real discrimination mean: 0.5555473108480425
+
+2019-02-18 14:04:57,015:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3780
+Fake discrimination mean: 0.501071716771417
+Real discrimination mean: 0.5611634387509419
+
+2019-02-18 14:04:58,081:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3790
+Fake discrimination mean: 0.5194804131814271
+Real discrimination mean: 0.5208785050720214
+
+2019-02-18 14:04:58,992:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3800
+Fake discrimination mean: 0.5035357151472518
+Real discrimination mean: 0.48800257448802753
+
+2019-02-18 14:05:00,001:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3810
+Fake discrimination mean: 0.4993668509698215
+Real discrimination mean: 0.4885806561134789
+
+2019-02-18 14:05:00,992:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3820
+Fake discrimination mean: 0.49921353502633864
+Real discrimination mean: 0.4896348329114225
+
+2019-02-18 14:05:01,923:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3830
+Fake discrimination mean: 0.49662986401222875
+Real discrimination mean: 0.495211560774343
+
+2019-02-18 14:05:02,940:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3840
+Fake discrimination mean: 0.5170736116313858
+Real discrimination mean: 0.5248402383580544
+
+2019-02-18 14:05:03,849:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3850
+Fake discrimination mean: 0.5195083443910645
+Real discrimination mean: 0.5279848540351771
+
+2019-02-18 14:05:04,774:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3860
+Fake discrimination mean: 0.527962872359582
+Real discrimination mean: 0.524618408089614
+
+2019-02-18 14:05:05,714:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3870
+Fake discrimination mean: 0.5162432078562139
+Real discrimination mean: 0.5057791172884024
+
+2019-02-18 14:05:06,608:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3880
+Fake discrimination mean: 0.5079327771687097
+Real discrimination mean: 0.505789184298619
+
+2019-02-18 14:05:07,529:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3890
+Fake discrimination mean: 0.5097078447895439
+Real discrimination mean: 0.4916291428023865
+
+2019-02-18 14:05:08,471:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3900
+Fake discrimination mean: 0.49833044099934654
+Real discrimination mean: 0.48315398806731014
+
+2019-02-18 14:05:09,438:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3910
+Fake discrimination mean: 0.4813621200806286
+Real discrimination mean: 0.49508808109017566
+
+2019-02-18 14:05:10,428:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3920
+Fake discrimination mean: 0.47409586883657395
+Real discrimination mean: 0.49698980140563676
+
+2019-02-18 14:05:11,651:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3930
+Fake discrimination mean: 0.4827925896941958
+Real discrimination mean: 0.5078762199131883
+
+2019-02-18 14:05:12,902:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3940
+Fake discrimination mean: 0.47772771888237986
+Real discrimination mean: 0.5009181185638075
+
+2019-02-18 14:05:14,186:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3950
+Fake discrimination mean: 0.48739566538524287
+Real discrimination mean: 0.5117280982165486
+
+2019-02-18 14:05:15,307:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3960
+Fake discrimination mean: 0.49282910244516887
+Real discrimination mean: 0.5091627275230087
+
+2019-02-18 14:05:16,326:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3970
+Fake discrimination mean: 0.49971938654082104
+Real discrimination mean: 0.5036903116174859
+
+2019-02-18 14:05:17,246:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3980
+Fake discrimination mean: 0.4825613110883466
+Real discrimination mean: 0.5121101657949572
+
+2019-02-18 14:05:18,166:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 3990
+Fake discrimination mean: 0.4749607249953442
+Real discrimination mean: 0.5207660354395142
+
+2019-02-18 14:05:18,999:VanillaGAN:INFO: Saving the model
+2019-02-18 14:05:19,234:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4000
+Fake discrimination mean: 0.4801320942484751
+Real discrimination mean: 0.5333545034399844
+
+2019-02-18 14:05:20,171:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4010
+Fake discrimination mean: 0.518854930391363
+Real discrimination mean: 0.5419542812722856
+
+2019-02-18 14:05:21,082:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4020
+Fake discrimination mean: 0.5304822662357995
+Real discrimination mean: 0.5260022490200578
+
+2019-02-18 14:05:22,067:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4030
+Fake discrimination mean: 0.5230478745401338
+Real discrimination mean: 0.522826002675161
+
+2019-02-18 14:05:23,245:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4040
+Fake discrimination mean: 0.510120600058127
+Real discrimination mean: 0.5243883208854215
+
+2019-02-18 14:05:24,497:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4050
+Fake discrimination mean: 0.5131516166979709
+Real discrimination mean: 0.5125333746392884
+
+2019-02-18 14:05:25,744:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4060
+Fake discrimination mean: 0.5198594018111686
+Real discrimination mean: 0.49696292598008013
+
+2019-02-18 14:05:26,888:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4070
+Fake discrimination mean: 0.515883584636414
+Real discrimination mean: 0.48387694750308397
+
+2019-02-18 14:05:28,126:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4080
+Fake discrimination mean: 0.5113326091646483
+Real discrimination mean: 0.483691035631472
+
+2019-02-18 14:05:29,203:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4090
+Fake discrimination mean: 0.5115910483658508
+Real discrimination mean: 0.5003881313284047
+
+2019-02-18 14:05:30,311:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4100
+Fake discrimination mean: 0.500555930284955
+Real discrimination mean: 0.5118963376772641
+
+2019-02-18 14:05:31,451:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4110
+Fake discrimination mean: 0.49414153665238003
+Real discrimination mean: 0.522735844639355
+
+2019-02-18 14:05:32,587:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4120
+Fake discrimination mean: 0.4981942253807097
+Real discrimination mean: 0.5189162614790085
+
+2019-02-18 14:05:33,592:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4130
+Fake discrimination mean: 0.5059898491643243
+Real discrimination mean: 0.5150514525795394
+
+2019-02-18 14:05:34,655:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4140
+Fake discrimination mean: 0.5058507460806705
+Real discrimination mean: 0.5092902407448849
+
+2019-02-18 14:05:35,736:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4150
+Fake discrimination mean: 0.508456423009009
+Real discrimination mean: 0.5098174033225669
+
+2019-02-18 14:05:36,746:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4160
+Fake discrimination mean: 0.5078166530230955
+Real discrimination mean: 0.5160224915982397
+
+2019-02-18 14:05:37,790:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4170
+Fake discrimination mean: 0.5062036327796069
+Real discrimination mean: 0.5195524234616403
+
+2019-02-18 14:05:38,865:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4180
+Fake discrimination mean: 0.5168798296572148
+Real discrimination mean: 0.5192834532974462
+
+2019-02-18 14:05:39,997:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4190
+Fake discrimination mean: 0.5111016882523342
+Real discrimination mean: 0.5045968544377186
+
+2019-02-18 14:05:41,054:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4200
+Fake discrimination mean: 0.5118034635936359
+Real discrimination mean: 0.503701941894725
+
+2019-02-18 14:05:42,020:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4210
+Fake discrimination mean: 0.5088561441459243
+Real discrimination mean: 0.503330239835102
+
+2019-02-18 14:05:42,938:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4220
+Fake discrimination mean: 0.5085443709787847
+Real discrimination mean: 0.5079024920352131
+
+2019-02-18 14:05:43,851:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4230
+Fake discrimination mean: 0.4959449662272556
+Real discrimination mean: 0.4990900750941696
+
+2019-02-18 14:05:44,814:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4240
+Fake discrimination mean: 0.48794365997774003
+Real discrimination mean: 0.502413213281244
+
+2019-02-18 14:05:45,705:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4250
+Fake discrimination mean: 0.5005809143469112
+Real discrimination mean: 0.49555637221928095
+
+2019-02-18 14:05:46,668:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4260
+Fake discrimination mean: 0.5011352755147374
+Real discrimination mean: 0.503329394931143
+
+2019-02-18 14:05:47,560:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4270
+Fake discrimination mean: 0.4982866670983624
+Real discrimination mean: 0.5062884345737984
+
+2019-02-18 14:05:48,474:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4280
+Fake discrimination mean: 0.4892407721420298
+Real discrimination mean: 0.5085449076457014
+
+2019-02-18 14:05:49,386:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4290
+Fake discrimination mean: 0.48633892856530503
+Real discrimination mean: 0.5206578470161664
+
+2019-02-18 14:05:50,313:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4300
+Fake discrimination mean: 0.5027811690967412
+Real discrimination mean: 0.5230756402078274
+
+2019-02-18 14:05:51,222:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4310
+Fake discrimination mean: 0.5086295326206756
+Real discrimination mean: 0.5137244558602567
+
+2019-02-18 14:05:52,132:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4320
+Fake discrimination mean: 0.5075763032708367
+Real discrimination mean: 0.5001362762919264
+
+2019-02-18 14:05:53,039:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4330
+Fake discrimination mean: 0.49097227021596823
+Real discrimination mean: 0.4808232453517288
+
+2019-02-18 14:05:53,991:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4340
+Fake discrimination mean: 0.49532195305731674
+Real discrimination mean: 0.4764286373877434
+
+2019-02-18 14:05:54,892:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4350
+Fake discrimination mean: 0.492092264992496
+Real discrimination mean: 0.4785914521295906
+
+2019-02-18 14:05:56,099:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4360
+Fake discrimination mean: 0.4778312692302324
+Real discrimination mean: 0.5056445607849218
+
+2019-02-18 14:05:57,079:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4370
+Fake discrimination mean: 0.4988961090092101
+Real discrimination mean: 0.5063961552442242
+
+2019-02-18 14:05:57,995:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4380
+Fake discrimination mean: 0.5176601178501974
+Real discrimination mean: 0.5149651180457507
+
+2019-02-18 14:05:58,907:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4390
+Fake discrimination mean: 0.5242723752241651
+Real discrimination mean: 0.5078635331301634
+
+2019-02-18 14:05:59,876:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4400
+Fake discrimination mean: 0.5261375069159774
+Real discrimination mean: 0.5262325130796423
+
+2019-02-18 14:06:01,024:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4410
+Fake discrimination mean: 0.5342808637933436
+Real discrimination mean: 0.5327315739991583
+
+2019-02-18 14:06:02,108:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4420
+Fake discrimination mean: 0.5313436369110219
+Real discrimination mean: 0.533119612429687
+
+2019-02-18 14:06:03,110:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4430
+Fake discrimination mean: 0.5170454890702503
+Real discrimination mean: 0.5359448590987874
+
+2019-02-18 14:06:04,217:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4440
+Fake discrimination mean: 0.5029916348713058
+Real discrimination mean: 0.5143793236989709
+
+2019-02-18 14:06:05,214:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4450
+Fake discrimination mean: 0.5078475636802028
+Real discrimination mean: 0.5071832945702799
+
+2019-02-18 14:06:06,228:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4460
+Fake discrimination mean: 0.5000393541164027
+Real discrimination mean: 0.4901016512412682
+
+2019-02-18 14:06:07,127:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4470
+Fake discrimination mean: 0.4846168373746619
+Real discrimination mean: 0.48991507983480814
+
+2019-02-18 14:06:08,049:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4480
+Fake discrimination mean: 0.4831435746892094
+Real discrimination mean: 0.4974428311871034
+
+2019-02-18 14:06:08,978:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4490
+Fake discrimination mean: 0.4858368052875794
+Real discrimination mean: 0.49424446669485905
+
+2019-02-18 14:06:09,942:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4500
+Fake discrimination mean: 0.5039487655620013
+Real discrimination mean: 0.4955560881873646
+
+2019-02-18 14:06:10,904:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4510
+Fake discrimination mean: 0.5130477014980834
+Real discrimination mean: 0.49830834011277614
+
+2019-02-18 14:06:12,033:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4520
+Fake discrimination mean: 0.511100533173927
+Real discrimination mean: 0.4974748663344121
+
+2019-02-18 14:06:13,158:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4530
+Fake discrimination mean: 0.5098525265009841
+Real discrimination mean: 0.5076488979384698
+
+2019-02-18 14:06:14,505:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4540
+Fake discrimination mean: 0.5107873330191545
+Real discrimination mean: 0.512538034753235
+
+2019-02-18 14:06:15,811:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4550
+Fake discrimination mean: 0.49834814702930613
+Real discrimination mean: 0.5194951849395878
+
+2019-02-18 14:06:17,009:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4560
+Fake discrimination mean: 0.4852648640979224
+Real discrimination mean: 0.5325887166487335
+
+2019-02-18 14:06:18,280:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4570
+Fake discrimination mean: 0.4929014175094132
+Real discrimination mean: 0.5211990890029644
+
+2019-02-18 14:06:19,347:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4580
+Fake discrimination mean: 0.5041139973130495
+Real discrimination mean: 0.5073475872141368
+
+2019-02-18 14:06:20,293:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4590
+Fake discrimination mean: 0.5139762850772519
+Real discrimination mean: 0.503099576179662
+
+2019-02-18 14:06:21,266:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4600
+Fake discrimination mean: 0.4997838783659931
+Real discrimination mean: 0.4882575228667665
+
+2019-02-18 14:06:22,373:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4610
+Fake discrimination mean: 0.4855786799790859
+Real discrimination mean: 0.510733606855354
+
+2019-02-18 14:06:23,355:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4620
+Fake discrimination mean: 0.4963019766738519
+Real discrimination mean: 0.5052446742457759
+
+2019-02-18 14:06:24,344:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4630
+Fake discrimination mean: 0.5136972749182594
+Real discrimination mean: 0.5138051212799732
+
+2019-02-18 14:06:25,442:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4640
+Fake discrimination mean: 0.5281410562578871
+Real discrimination mean: 0.5288674305420281
+
+2019-02-18 14:06:26,512:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4650
+Fake discrimination mean: 0.5116852751728149
+Real discrimination mean: 0.5323517482887873
+
+2019-02-18 14:06:27,485:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4660
+Fake discrimination mean: 0.47621072064562553
+Real discrimination mean: 0.5580345399246815
+
+2019-02-18 14:06:28,737:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4670
+Fake discrimination mean: 0.46293715217386366
+Real discrimination mean: 0.5601600596919386
+
+2019-02-18 14:06:29,863:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4680
+Fake discrimination mean: 0.48384483102861625
+Real discrimination mean: 0.5395549650965363
+
+2019-02-18 14:06:30,935:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4690
+Fake discrimination mean: 0.5095845305558586
+Real discrimination mean: 0.5146982717448316
+
+2019-02-18 14:06:31,972:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4700
+Fake discrimination mean: 0.525156672262401
+Real discrimination mean: 0.5009144604205044
+
+2019-02-18 14:06:32,918:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4710
+Fake discrimination mean: 0.5287194029219947
+Real discrimination mean: 0.4857807252754013
+
+2019-02-18 14:06:33,879:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4720
+Fake discrimination mean: 0.5316449289729664
+Real discrimination mean: 0.4783198985930718
+
+2019-02-18 14:06:34,821:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4730
+Fake discrimination mean: 0.50763477968075
+Real discrimination mean: 0.4811542018001468
+
+2019-02-18 14:06:35,771:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4740
+Fake discrimination mean: 0.493749512641977
+Real discrimination mean: 0.4821327431110112
+
+2019-02-18 14:06:36,779:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4750
+Fake discrimination mean: 0.4922611233233404
+Real discrimination mean: 0.4984242401680264
+
+2019-02-18 14:06:37,940:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4760
+Fake discrimination mean: 0.4961234524344934
+Real discrimination mean: 0.5131658770176165
+
+2019-02-18 14:06:39,014:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4770
+Fake discrimination mean: 0.5091965785869844
+Real discrimination mean: 0.5204139811562892
+
+2019-02-18 14:06:39,974:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4780
+Fake discrimination mean: 0.5036119209236
+Real discrimination mean: 0.5106566987856628
+
+2019-02-18 14:06:41,169:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4790
+Fake discrimination mean: 0.51366153076337
+Real discrimination mean: 0.4928130896106402
+
+2019-02-18 14:06:42,152:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4800
+Fake discrimination mean: 0.5031246824371232
+Real discrimination mean: 0.4806608754112802
+
+2019-02-18 14:06:43,080:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4810
+Fake discrimination mean: 0.491307870885029
+Real discrimination mean: 0.4779386131867347
+
+2019-02-18 14:06:44,267:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4820
+Fake discrimination mean: 0.4901200713048652
+Real discrimination mean: 0.4870202403957282
+
+2019-02-18 14:06:45,273:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4830
+Fake discrimination mean: 0.48048438779765795
+Real discrimination mean: 0.4935486825635126
+
+2019-02-18 14:06:46,288:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4840
+Fake discrimination mean: 0.4810119254554859
+Real discrimination mean: 0.49502207176787605
+
+2019-02-18 14:06:47,251:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4850
+Fake discrimination mean: 0.4793164650940727
+Real discrimination mean: 0.5032757160187807
+
+2019-02-18 14:06:48,212:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4860
+Fake discrimination mean: 0.49707880963073486
+Real discrimination mean: 0.5078744235853503
+
+2019-02-18 14:06:49,182:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4870
+Fake discrimination mean: 0.5041964296675281
+Real discrimination mean: 0.5068099926461022
+
+2019-02-18 14:06:50,322:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4880
+Fake discrimination mean: 0.503915290832765
+Real discrimination mean: 0.5148373847816936
+
+2019-02-18 14:06:51,295:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4890
+Fake discrimination mean: 0.5104475171519596
+Real discrimination mean: 0.5113426004469629
+
+2019-02-18 14:06:52,224:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4900
+Fake discrimination mean: 0.5073826999556483
+Real discrimination mean: 0.5227531853237524
+
+2019-02-18 14:06:53,157:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4910
+Fake discrimination mean: 0.5057525459367441
+Real discrimination mean: 0.5404772078368569
+
+2019-02-18 14:06:54,113:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4920
+Fake discrimination mean: 0.47750899170894867
+Real discrimination mean: 0.5608194599976165
+
+2019-02-18 14:06:55,111:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4930
+Fake discrimination mean: 0.46871603885299506
+Real discrimination mean: 0.5742727526806548
+
+2019-02-18 14:06:56,301:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4940
+Fake discrimination mean: 0.4773422361516297
+Real discrimination mean: 0.5611402875347129
+
+2019-02-18 14:06:57,266:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4950
+Fake discrimination mean: 0.49874817011520095
+Real discrimination mean: 0.5395056748769701
+
+2019-02-18 14:06:58,246:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4960
+Fake discrimination mean: 0.519263414147603
+Real discrimination mean: 0.5162404127322333
+
+2019-02-18 14:06:59,210:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4970
+Fake discrimination mean: 0.5086001848619454
+Real discrimination mean: 0.47864936126118673
+
+2019-02-18 14:07:00,278:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4980
+Fake discrimination mean: 0.5143553841304529
+Real discrimination mean: 0.46518360462712066
+
+2019-02-18 14:07:01,240:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 4990
+Fake discrimination mean: 0.5084265640698097
+Real discrimination mean: 0.46800824024365495
+
+2019-02-18 14:07:02,118:VanillaGAN:INFO: Saving the model
+2019-02-18 14:07:02,353:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5000
+Fake discrimination mean: 0.5099570037916275
+Real discrimination mean: 0.4917975384554717
+
+2019-02-18 14:07:03,370:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5010
+Fake discrimination mean: 0.5090269430966101
+Real discrimination mean: 0.5081337876863538
+
+2019-02-18 14:07:04,375:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5020
+Fake discrimination mean: 0.5058661592851046
+Real discrimination mean: 0.5139461596141779
+
+2019-02-18 14:07:05,403:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5030
+Fake discrimination mean: 0.5014679067669242
+Real discrimination mean: 0.5154119880521226
+
+2019-02-18 14:07:06,347:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5040
+Fake discrimination mean: 0.4994951048626558
+Real discrimination mean: 0.5119023177347445
+
+2019-02-18 14:07:07,440:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5050
+Fake discrimination mean: 0.5090235869132669
+Real discrimination mean: 0.5120717866406689
+
+2019-02-18 14:07:08,502:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5060
+Fake discrimination mean: 0.5014586924322576
+Real discrimination mean: 0.5031453021524712
+
+2019-02-18 14:07:09,553:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5070
+Fake discrimination mean: 0.49759817257810945
+Real discrimination mean: 0.4929331787155479
+
+2019-02-18 14:07:10,697:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5080
+Fake discrimination mean: 0.48839568065952865
+Real discrimination mean: 0.5021926362780889
+
+2019-02-18 14:07:11,749:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5090
+Fake discrimination mean: 0.5068495639607864
+Real discrimination mean: 0.5078165334041522
+
+2019-02-18 14:07:12,747:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5100
+Fake discrimination mean: 0.5152423941111004
+Real discrimination mean: 0.5129510634694749
+
+2019-02-18 14:07:13,715:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5110
+Fake discrimination mean: 0.5204484012549666
+Real discrimination mean: 0.519264099593401
+
+2019-02-18 14:07:14,694:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5120
+Fake discrimination mean: 0.5356423061974942
+Real discrimination mean: 0.5147550960924755
+
+2019-02-18 14:07:15,812:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5130
+Fake discrimination mean: 0.5151279458968675
+Real discrimination mean: 0.5018302924853647
+
+2019-02-18 14:07:16,999:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5140
+Fake discrimination mean: 0.49744763652820884
+Real discrimination mean: 0.48893855070373093
+
+2019-02-18 14:07:18,065:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5150
+Fake discrimination mean: 0.4844346465899952
+Real discrimination mean: 0.4916778359806828
+
+2019-02-18 14:07:19,148:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5160
+Fake discrimination mean: 0.4726464254833951
+Real discrimination mean: 0.49052800677430825
+
+2019-02-18 14:07:20,204:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5170
+Fake discrimination mean: 0.4926814369191554
+Real discrimination mean: 0.4828987825652106
+
+2019-02-18 14:07:21,347:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5180
+Fake discrimination mean: 0.4872797399749823
+Real discrimination mean: 0.497586363533644
+
+2019-02-18 14:07:22,403:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5190
+Fake discrimination mean: 0.4940370315080768
+Real discrimination mean: 0.5018872557265567
+
+2019-02-18 14:07:23,475:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5200
+Fake discrimination mean: 0.49695813535682304
+Real discrimination mean: 0.5102923725633878
+
+2019-02-18 14:07:24,530:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5210
+Fake discrimination mean: 0.5043267805995865
+Real discrimination mean: 0.5122365105008234
+
+2019-02-18 14:07:25,692:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5220
+Fake discrimination mean: 0.5104363047454606
+Real discrimination mean: 0.5170464500376518
+
+2019-02-18 14:07:26,631:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5230
+Fake discrimination mean: 0.4957165272673819
+Real discrimination mean: 0.5070299381046485
+
+2019-02-18 14:07:27,570:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5240
+Fake discrimination mean: 0.4969514667104573
+Real discrimination mean: 0.5027683195630466
+
+2019-02-18 14:07:28,544:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5250
+Fake discrimination mean: 0.5087808328313748
+Real discrimination mean: 0.5044408670534977
+
+2019-02-18 14:07:29,527:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5260
+Fake discrimination mean: 0.503480659954865
+Real discrimination mean: 0.49585325469034713
+
+2019-02-18 14:07:30,473:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5270
+Fake discrimination mean: 0.5021092651387766
+Real discrimination mean: 0.5008912032339389
+
+2019-02-18 14:07:31,449:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5280
+Fake discrimination mean: 0.5034407419440285
+Real discrimination mean: 0.49889846036269164
+
+2019-02-18 14:07:32,389:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5290
+Fake discrimination mean: 0.5097729455089053
+Real discrimination mean: 0.49543180793640984
+
+2019-02-18 14:07:33,351:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5300
+Fake discrimination mean: 0.502604764462845
+Real discrimination mean: 0.4952291408657035
+
+2019-02-18 14:07:34,280:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5310
+Fake discrimination mean: 0.5032063276210357
+Real discrimination mean: 0.5193498212474327
+
+2019-02-18 14:07:35,250:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5320
+Fake discrimination mean: 0.5153707010613026
+Real discrimination mean: 0.5281014631929571
+
+2019-02-18 14:07:36,214:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5330
+Fake discrimination mean: 0.5307616362466644
+Real discrimination mean: 0.5320585747251229
+
+2019-02-18 14:07:37,150:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5340
+Fake discrimination mean: 0.5234688015693406
+Real discrimination mean: 0.5178400598688268
+
+2019-02-18 14:07:38,109:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5350
+Fake discrimination mean: 0.5196393652101906
+Real discrimination mean: 0.5189870099523565
+
+2019-02-18 14:07:39,056:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5360
+Fake discrimination mean: 0.5162022729873817
+Real discrimination mean: 0.5137920309631372
+
+2019-02-18 14:07:39,980:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5370
+Fake discrimination mean: 0.5125177969120931
+Real discrimination mean: 0.5073346638544899
+
+2019-02-18 14:07:41,049:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5380
+Fake discrimination mean: 0.49804698811345993
+Real discrimination mean: 0.5026044780407473
+
+2019-02-18 14:07:42,272:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5390
+Fake discrimination mean: 0.4935880229285057
+Real discrimination mean: 0.4958133258451496
+
+2019-02-18 14:07:43,357:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5400
+Fake discrimination mean: 0.4996827743570627
+Real discrimination mean: 0.4966413232898721
+
+2019-02-18 14:07:44,370:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5410
+Fake discrimination mean: 0.507019368688654
+Real discrimination mean: 0.5034963026235579
+
+2019-02-18 14:07:45,408:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5420
+Fake discrimination mean: 0.5018239996189393
+Real discrimination mean: 0.501119175578202
+
+2019-02-18 14:07:46,380:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5430
+Fake discrimination mean: 0.5026060443237254
+Real discrimination mean: 0.4976917901154524
+
+2019-02-18 14:07:47,301:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5440
+Fake discrimination mean: 0.4989589571247335
+Real discrimination mean: 0.5055782688159037
+
+2019-02-18 14:07:48,233:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5450
+Fake discrimination mean: 0.4964920896768145
+Real discrimination mean: 0.5065078486494901
+
+2019-02-18 14:07:49,183:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5460
+Fake discrimination mean: 0.5104461982640115
+Real discrimination mean: 0.5116590337936172
+
+2019-02-18 14:07:50,096:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5470
+Fake discrimination mean: 0.503549750127727
+Real discrimination mean: 0.506844158318726
+
+2019-02-18 14:07:51,137:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5480
+Fake discrimination mean: 0.5003255548168155
+Real discrimination mean: 0.5100184871617643
+
+2019-02-18 14:07:52,067:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5490
+Fake discrimination mean: 0.49064952597763495
+Real discrimination mean: 0.5063123451873504
+
+2019-02-18 14:07:53,046:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5500
+Fake discrimination mean: 0.4832609160750704
+Real discrimination mean: 0.5091607823326156
+
+2019-02-18 14:07:54,000:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5510
+Fake discrimination mean: 0.49036933914939745
+Real discrimination mean: 0.5116600073342876
+
+2019-02-18 14:07:55,033:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5520
+Fake discrimination mean: 0.5027238662869221
+Real discrimination mean: 0.5044604907507082
+
+2019-02-18 14:07:56,231:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5530
+Fake discrimination mean: 0.5027176068248653
+Real discrimination mean: 0.498988845021769
+
+2019-02-18 14:07:57,241:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5540
+Fake discrimination mean: 0.4860339767704258
+Real discrimination mean: 0.4874493334506178
+
+2019-02-18 14:07:58,177:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5550
+Fake discrimination mean: 0.47495612815982324
+Real discrimination mean: 0.4845709083323165
+
+2019-02-18 14:07:59,126:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5560
+Fake discrimination mean: 0.48978810073514567
+Real discrimination mean: 0.4969011243594638
+
+2019-02-18 14:08:00,091:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5570
+Fake discrimination mean: 0.5012429999882737
+Real discrimination mean: 0.49194554388538336
+
+2019-02-18 14:08:01,035:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5580
+Fake discrimination mean: 0.5275360306595993
+Real discrimination mean: 0.4912833210123553
+
+2019-02-18 14:08:02,056:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5590
+Fake discrimination mean: 0.5268139286673185
+Real discrimination mean: 0.5071695568721493
+
+2019-02-18 14:08:02,982:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5600
+Fake discrimination mean: 0.5047264757244908
+Real discrimination mean: 0.5269778566124526
+
+2019-02-18 14:08:03,909:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5610
+Fake discrimination mean: 0.48681320979653997
+Real discrimination mean: 0.544192162427328
+
+2019-02-18 14:08:04,825:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5620
+Fake discrimination mean: 0.4901214241672806
+Real discrimination mean: 0.5736975667909564
+
+2019-02-18 14:08:05,761:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5630
+Fake discrimination mean: 0.514331323831929
+Real discrimination mean: 0.5673619759918496
+
+2019-02-18 14:08:06,735:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5640
+Fake discrimination mean: 0.5120406708628844
+Real discrimination mean: 0.5440145969240215
+
+2019-02-18 14:08:07,694:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5650
+Fake discrimination mean: 0.4911239542323858
+Real discrimination mean: 0.521736767335215
+
+2019-02-18 14:08:08,612:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5660
+Fake discrimination mean: 0.4900017348981384
+Real discrimination mean: 0.5126897026097933
+
+2019-02-18 14:08:09,620:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5670
+Fake discrimination mean: 0.5069955894933394
+Real discrimination mean: 0.4908856865443883
+
+2019-02-18 14:08:10,603:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5680
+Fake discrimination mean: 0.5077931574451829
+Real discrimination mean: 0.4826872162700772
+
+2019-02-18 14:08:11,594:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5690
+Fake discrimination mean: 0.508084321509993
+Real discrimination mean: 0.48561659764979126
+
+2019-02-18 14:08:12,580:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5700
+Fake discrimination mean: 0.5059111831553497
+Real discrimination mean: 0.4997615010602422
+
+2019-02-18 14:08:13,598:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5710
+Fake discrimination mean: 0.49761745663439766
+Real discrimination mean: 0.5004325205351744
+
+2019-02-18 14:08:14,646:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5720
+Fake discrimination mean: 0.5041963577729331
+Real discrimination mean: 0.4973024597360205
+
+2019-02-18 14:08:15,656:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5730
+Fake discrimination mean: 0.49560051189664023
+Real discrimination mean: 0.5039072287039066
+
+2019-02-18 14:08:16,809:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5740
+Fake discrimination mean: 0.49004288029785487
+Real discrimination mean: 0.5055352493552548
+
+2019-02-18 14:08:18,114:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5750
+Fake discrimination mean: 0.5091971164383
+Real discrimination mean: 0.5160809419234892
+
+2019-02-18 14:08:19,342:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5760
+Fake discrimination mean: 0.5001084254114774
+Real discrimination mean: 0.5179323202214228
+
+2019-02-18 14:08:20,594:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5770
+Fake discrimination mean: 0.49921358654640796
+Real discrimination mean: 0.533195906311865
+
+2019-02-18 14:08:21,532:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5780
+Fake discrimination mean: 0.4751027685178274
+Real discrimination mean: 0.5325979147262117
+
+2019-02-18 14:08:22,456:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5790
+Fake discrimination mean: 0.4613392948313762
+Real discrimination mean: 0.5315145069390798
+
+2019-02-18 14:08:23,402:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5800
+Fake discrimination mean: 0.462555951566041
+Real discrimination mean: 0.5582020005280061
+
+2019-02-18 14:08:24,318:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5810
+Fake discrimination mean: 0.49413057446409725
+Real discrimination mean: 0.5798332782128118
+
+2019-02-18 14:08:25,466:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5820
+Fake discrimination mean: 0.5007420651490535
+Real discrimination mean: 0.5902702602786772
+
+2019-02-18 14:08:26,538:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5830
+Fake discrimination mean: 0.5389108695533786
+Real discrimination mean: 0.5834537917573562
+
+2019-02-18 14:08:27,557:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5840
+Fake discrimination mean: 0.5474180324072665
+Real discrimination mean: 0.5545261383594711
+
+2019-02-18 14:08:28,552:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5850
+Fake discrimination mean: 0.5441731703263099
+Real discrimination mean: 0.5300934198983738
+
+2019-02-18 14:08:29,479:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5860
+Fake discrimination mean: 0.5227252771803634
+Real discrimination mean: 0.5110368165175248
+
+2019-02-18 14:08:30,599:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5870
+Fake discrimination mean: 0.5219098900646921
+Real discrimination mean: 0.49167553197234354
+
+2019-02-18 14:08:32,041:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5880
+Fake discrimination mean: 0.5061485380143529
+Real discrimination mean: 0.48136466230916414
+
+2019-02-18 14:08:33,224:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5890
+Fake discrimination mean: 0.4992320702324467
+Real discrimination mean: 0.48446165373662914
+
+2019-02-18 14:08:34,247:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5900
+Fake discrimination mean: 0.4884480649537445
+Real discrimination mean: 0.48875299029468605
+
+2019-02-18 14:08:35,268:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5910
+Fake discrimination mean: 0.4797145033364902
+Real discrimination mean: 0.47409394302220975
+
+2019-02-18 14:08:36,473:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5920
+Fake discrimination mean: 0.4899910368466518
+Real discrimination mean: 0.48951838581866836
+
+2019-02-18 14:08:37,484:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5930
+Fake discrimination mean: 0.49962255379612164
+Real discrimination mean: 0.48452270778469997
+
+2019-02-18 14:08:38,460:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5940
+Fake discrimination mean: 0.5015979373966077
+Real discrimination mean: 0.498519283933359
+
+2019-02-18 14:08:39,538:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5950
+Fake discrimination mean: 0.5063672586051557
+Real discrimination mean: 0.4995435324769002
+
+2019-02-18 14:08:40,621:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5960
+Fake discrimination mean: 0.5021172958363607
+Real discrimination mean: 0.5120841297742527
+
+2019-02-18 14:08:41,605:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5970
+Fake discrimination mean: 0.4991030258088511
+Real discrimination mean: 0.513630607099576
+
+2019-02-18 14:08:42,642:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5980
+Fake discrimination mean: 0.4987125165472095
+Real discrimination mean: 0.5141672816842923
+
+2019-02-18 14:08:43,682:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 5990
+Fake discrimination mean: 0.5054888914142969
+Real discrimination mean: 0.5182703977141133
+
+2019-02-18 14:08:44,649:VanillaGAN:INFO: Saving the model
+2019-02-18 14:08:45,079:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6000
+Fake discrimination mean: 0.5014329186350917
+Real discrimination mean: 0.5117434066153704
+
+2019-02-18 14:08:46,202:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6010
+Fake discrimination mean: 0.49396144311666634
+Real discrimination mean: 0.5095138417926129
+
+2019-02-18 14:08:47,244:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6020
+Fake discrimination mean: 0.5028574705160063
+Real discrimination mean: 0.5019807285390402
+
+2019-02-18 14:08:48,199:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6030
+Fake discrimination mean: 0.5080080518408656
+Real discrimination mean: 0.5044467435115358
+
+2019-02-18 14:08:49,237:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6040
+Fake discrimination mean: 0.5058178931351311
+Real discrimination mean: 0.5024579667019888
+
+2019-02-18 14:08:50,363:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6050
+Fake discrimination mean: 0.5082426814807551
+Real discrimination mean: 0.5133555993031169
+
+2019-02-18 14:08:51,479:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6060
+Fake discrimination mean: 0.508175369610995
+Real discrimination mean: 0.5363046661057516
+
+2019-02-18 14:08:52,528:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6070
+Fake discrimination mean: 0.509929446603391
+Real discrimination mean: 0.5369414877207261
+
+2019-02-18 14:08:53,580:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6080
+Fake discrimination mean: 0.5109969794015816
+Real discrimination mean: 0.5258613551428986
+
+2019-02-18 14:08:54,635:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6090
+Fake discrimination mean: 0.5071059883358374
+Real discrimination mean: 0.4997460120368409
+
+2019-02-18 14:08:55,859:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6100
+Fake discrimination mean: 0.4936725001159473
+Real discrimination mean: 0.48464873441578055
+
+2019-02-18 14:08:56,816:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6110
+Fake discrimination mean: 0.4911105842825363
+Real discrimination mean: 0.4880723106647895
+
+2019-02-18 14:08:58,007:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6120
+Fake discrimination mean: 0.49992245949398056
+Real discrimination mean: 0.5013044404638833
+
+2019-02-18 14:08:59,213:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6130
+Fake discrimination mean: 0.5140010269167776
+Real discrimination mean: 0.5101587704508735
+
+2019-02-18 14:09:00,361:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6140
+Fake discrimination mean: 0.521453199671591
+Real discrimination mean: 0.5151797359982937
+
+2019-02-18 14:09:01,562:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6150
+Fake discrimination mean: 0.5259070626508283
+Real discrimination mean: 0.5170868592034098
+
+2019-02-18 14:09:02,691:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6160
+Fake discrimination mean: 0.5117390253196621
+Real discrimination mean: 0.5043416717598899
+
+2019-02-18 14:09:03,896:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6170
+Fake discrimination mean: 0.5060593440397111
+Real discrimination mean: 0.4865361150683594
+
+2019-02-18 14:09:05,090:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6180
+Fake discrimination mean: 0.504097207163398
+Real discrimination mean: 0.48584238603833924
+
+2019-02-18 14:09:06,304:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6190
+Fake discrimination mean: 0.49901963398449084
+Real discrimination mean: 0.4810805302846476
+
+2019-02-18 14:09:07,371:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6200
+Fake discrimination mean: 0.49357861810546283
+Real discrimination mean: 0.48797528602228524
+
+2019-02-18 14:09:08,486:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6210
+Fake discrimination mean: 0.49682682599219263
+Real discrimination mean: 0.4930032523555887
+
+2019-02-18 14:09:09,570:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6220
+Fake discrimination mean: 0.4907926443831011
+Real discrimination mean: 0.49914284660908537
+
+2019-02-18 14:09:10,694:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6230
+Fake discrimination mean: 0.4921099974748931
+Real discrimination mean: 0.50138341107867
+
+2019-02-18 14:09:11,697:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6240
+Fake discrimination mean: 0.49217312664532914
+Real discrimination mean: 0.5171895221750331
+
+2019-02-18 14:09:12,732:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6250
+Fake discrimination mean: 0.4949264568959191
+Real discrimination mean: 0.5266030048572662
+
+2019-02-18 14:09:13,779:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6260
+Fake discrimination mean: 0.5011054274449231
+Real discrimination mean: 0.5364160299885113
+
+2019-02-18 14:09:15,238:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6270
+Fake discrimination mean: 0.5040349718729202
+Real discrimination mean: 0.5318186414686179
+
+2019-02-18 14:09:16,375:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6280
+Fake discrimination mean: 0.48863475485107644
+Real discrimination mean: 0.5347695905540203
+
+2019-02-18 14:09:17,315:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6290
+Fake discrimination mean: 0.4738454786711319
+Real discrimination mean: 0.5408867285599038
+
+2019-02-18 14:09:18,336:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6300
+Fake discrimination mean: 0.488761393370101
+Real discrimination mean: 0.5333563102550465
+
+2019-02-18 14:09:19,264:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6310
+Fake discrimination mean: 0.49940714145036225
+Real discrimination mean: 0.5422671221951003
+
+2019-02-18 14:09:20,228:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6320
+Fake discrimination mean: 0.488255603007332
+Real discrimination mean: 0.528574754113466
+
+2019-02-18 14:09:21,152:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6330
+Fake discrimination mean: 0.5040384693229748
+Real discrimination mean: 0.5139020672670175
+
+2019-02-18 14:09:22,169:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6340
+Fake discrimination mean: 0.521079440731958
+Real discrimination mean: 0.4864698837486875
+
+2019-02-18 14:09:23,155:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6350
+Fake discrimination mean: 0.5248662567980763
+Real discrimination mean: 0.4760685927523643
+
+2019-02-18 14:09:24,108:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6360
+Fake discrimination mean: 0.5173210527387176
+Real discrimination mean: 0.4649839006666588
+
+2019-02-18 14:09:25,062:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6370
+Fake discrimination mean: 0.4934207158366967
+Real discrimination mean: 0.4670418807414399
+
+2019-02-18 14:09:26,176:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6380
+Fake discrimination mean: 0.4781972598838889
+Real discrimination mean: 0.48482657048373345
+
+2019-02-18 14:09:27,293:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6390
+Fake discrimination mean: 0.481698431925305
+Real discrimination mean: 0.4908956938140125
+
+2019-02-18 14:09:28,489:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6400
+Fake discrimination mean: 0.4834046479251146
+Real discrimination mean: 0.5022557705440527
+
+2019-02-18 14:09:29,469:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6410
+Fake discrimination mean: 0.49335681956610655
+Real discrimination mean: 0.5129085636656349
+
+2019-02-18 14:09:30,463:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6420
+Fake discrimination mean: 0.48457984089889655
+Real discrimination mean: 0.5163278984830225
+
+2019-02-18 14:09:31,495:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6430
+Fake discrimination mean: 0.5086689823498919
+Real discrimination mean: 0.5281724366251129
+
+2019-02-18 14:09:32,505:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6440
+Fake discrimination mean: 0.5189608705934474
+Real discrimination mean: 0.5220437422002671
+
+2019-02-18 14:09:33,421:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6450
+Fake discrimination mean: 0.5106974532305882
+Real discrimination mean: 0.5269979195052997
+
+2019-02-18 14:09:34,403:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6460
+Fake discrimination mean: 0.5046140987426666
+Real discrimination mean: 0.5233921499171801
+
+2019-02-18 14:09:35,384:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6470
+Fake discrimination mean: 0.5055294165961273
+Real discrimination mean: 0.5116816348699552
+
+2019-02-18 14:09:36,376:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6480
+Fake discrimination mean: 0.4960595569697643
+Real discrimination mean: 0.5159889879216055
+
+2019-02-18 14:09:37,518:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6490
+Fake discrimination mean: 0.5059793881416312
+Real discrimination mean: 0.5170929433409417
+
+2019-02-18 14:09:38,519:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6500
+Fake discrimination mean: 0.5005053715231051
+Real discrimination mean: 0.5222376645785692
+
+2019-02-18 14:09:39,558:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6510
+Fake discrimination mean: 0.5034022747528478
+Real discrimination mean: 0.517131477999724
+
+2019-02-18 14:09:40,726:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6520
+Fake discrimination mean: 0.48672264905913937
+Real discrimination mean: 0.5210244297159126
+
+2019-02-18 14:09:41,827:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6530
+Fake discrimination mean: 0.48082325454525365
+Real discrimination mean: 0.5365823680669863
+
+2019-02-18 14:09:42,829:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6540
+Fake discrimination mean: 0.49085967885211707
+Real discrimination mean: 0.5284770858254884
+
+2019-02-18 14:09:43,797:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6550
+Fake discrimination mean: 0.5201546133752077
+Real discrimination mean: 0.521001498268048
+
+2019-02-18 14:09:44,757:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6560
+Fake discrimination mean: 0.5173141294754477
+Real discrimination mean: 0.4936817112165465
+
+2019-02-18 14:09:45,696:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6570
+Fake discrimination mean: 0.5174392695648901
+Real discrimination mean: 0.48722705523195503
+
+2019-02-18 14:09:46,650:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6580
+Fake discrimination mean: 0.5134071446499914
+Real discrimination mean: 0.4786617236046361
+
+2019-02-18 14:09:47,646:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6590
+Fake discrimination mean: 0.49960883387617144
+Real discrimination mean: 0.48876017440207487
+
+2019-02-18 14:09:48,602:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6600
+Fake discrimination mean: 0.4970968397746748
+Real discrimination mean: 0.5055148450563135
+
+2019-02-18 14:09:49,547:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6610
+Fake discrimination mean: 0.5029707505773603
+Real discrimination mean: 0.51418840185686
+
+2019-02-18 14:09:50,486:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6620
+Fake discrimination mean: 0.5050091274864379
+Real discrimination mean: 0.5183117360591014
+
+2019-02-18 14:09:51,421:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6630
+Fake discrimination mean: 0.5027968057859936
+Real discrimination mean: 0.5150723650159328
+
+2019-02-18 14:09:52,380:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6640
+Fake discrimination mean: 0.5071269919189928
+Real discrimination mean: 0.5096770946437071
+
+2019-02-18 14:09:53,399:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6650
+Fake discrimination mean: 0.5125983375382827
+Real discrimination mean: 0.513722611357181
+
+2019-02-18 14:09:54,502:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6660
+Fake discrimination mean: 0.5145950649926861
+Real discrimination mean: 0.505269157809068
+
+2019-02-18 14:09:55,715:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6670
+Fake discrimination mean: 0.5102879947908231
+Real discrimination mean: 0.5078473307918877
+
+2019-02-18 14:09:56,724:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6680
+Fake discrimination mean: 0.50821618815005
+Real discrimination mean: 0.5047367006583279
+
+2019-02-18 14:09:57,847:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6690
+Fake discrimination mean: 0.5172279527617211
+Real discrimination mean: 0.5154601809867377
+
+2019-02-18 14:09:58,754:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6700
+Fake discrimination mean: 0.5196600771441527
+Real discrimination mean: 0.5109958408314134
+
+2019-02-18 14:09:59,686:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6710
+Fake discrimination mean: 0.5133501923184064
+Real discrimination mean: 0.5071323168273814
+
+2019-02-18 14:10:00,724:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6720
+Fake discrimination mean: 0.5084111215884092
+Real discrimination mean: 0.5100401826093416
+
+2019-02-18 14:10:01,803:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6730
+Fake discrimination mean: 0.5194710443492544
+Real discrimination mean: 0.5100004586722116
+
+2019-02-18 14:10:03,074:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6740
+Fake discrimination mean: 0.5071462347362282
+Real discrimination mean: 0.5041596914024262
+
+2019-02-18 14:10:04,474:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6750
+Fake discrimination mean: 0.49275061542485843
+Real discrimination mean: 0.5078512568518267
+
+2019-02-18 14:10:05,664:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6760
+Fake discrimination mean: 0.48847204727513327
+Real discrimination mean: 0.5065707930117693
+
+2019-02-18 14:10:06,813:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6770
+Fake discrimination mean: 0.4951504884651313
+Real discrimination mean: 0.5160953583431556
+
+2019-02-18 14:10:07,807:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6780
+Fake discrimination mean: 0.5091337797449682
+Real discrimination mean: 0.5140826441905731
+
+2019-02-18 14:10:08,744:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6790
+Fake discrimination mean: 0.4964915284944512
+Real discrimination mean: 0.4991582735134423
+
+2019-02-18 14:10:09,728:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6800
+Fake discrimination mean: 0.49407367519586715
+Real discrimination mean: 0.48766788575638015
+
+2019-02-18 14:10:10,673:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6810
+Fake discrimination mean: 0.4879541484317349
+Real discrimination mean: 0.49466825788404006
+
+2019-02-18 14:10:11,687:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6820
+Fake discrimination mean: 0.4921875388572847
+Real discrimination mean: 0.5002308877758953
+
+2019-02-18 14:10:12,590:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6830
+Fake discrimination mean: 0.4942486614051345
+Real discrimination mean: 0.49918034541972955
+
+2019-02-18 14:10:13,520:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6840
+Fake discrimination mean: 0.4991078663885742
+Real discrimination mean: 0.4994695413466744
+
+2019-02-18 14:10:14,467:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6850
+Fake discrimination mean: 0.49736066426298836
+Real discrimination mean: 0.5034428256336154
+
+2019-02-18 14:10:15,426:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6860
+Fake discrimination mean: 0.48936202578040494
+Real discrimination mean: 0.5092734767600189
+
+2019-02-18 14:10:16,375:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6870
+Fake discrimination mean: 0.4921495192650155
+Real discrimination mean: 0.5159804510468351
+
+2019-02-18 14:10:17,301:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6880
+Fake discrimination mean: 0.4964370900632269
+Real discrimination mean: 0.5135072649613863
+
+2019-02-18 14:10:18,222:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6890
+Fake discrimination mean: 0.5015633089028287
+Real discrimination mean: 0.5147738328095245
+
+2019-02-18 14:10:19,193:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6900
+Fake discrimination mean: 0.5083579374069987
+Real discrimination mean: 0.5141185587992051
+
+2019-02-18 14:10:20,195:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6910
+Fake discrimination mean: 0.5128281238920737
+Real discrimination mean: 0.5336103592163794
+
+2019-02-18 14:10:21,147:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6920
+Fake discrimination mean: 0.515492070743372
+Real discrimination mean: 0.5238270333820414
+
+2019-02-18 14:10:22,081:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6930
+Fake discrimination mean: 0.5032824250819753
+Real discrimination mean: 0.5215720363224972
+
+2019-02-18 14:10:23,353:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6940
+Fake discrimination mean: 0.48989117990282904
+Real discrimination mean: 0.5191846845529025
+
+2019-02-18 14:10:24,787:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6950
+Fake discrimination mean: 0.5076440386962063
+Real discrimination mean: 0.5082181556962813
+
+2019-02-18 14:10:26,178:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6960
+Fake discrimination mean: 0.5040805066505183
+Real discrimination mean: 0.5065934025508505
+
+2019-02-18 14:10:27,126:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6970
+Fake discrimination mean: 0.4770190195489761
+Real discrimination mean: 0.5040919202651558
+
+2019-02-18 14:10:28,133:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6980
+Fake discrimination mean: 0.46855901473394396
+Real discrimination mean: 0.516885098713066
+
+2019-02-18 14:10:29,127:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 6990
+Fake discrimination mean: 0.47275125430822434
+Real discrimination mean: 0.5257022681672698
+
+2019-02-18 14:10:30,041:VanillaGAN:INFO: Saving the model
+2019-02-18 14:10:30,289:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7000
+Fake discrimination mean: 0.47057675861031334
+Real discrimination mean: 0.5329241240650978
+
+2019-02-18 14:10:31,365:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7010
+Fake discrimination mean: 0.49803363507661463
+Real discrimination mean: 0.5195327898183063
+
+2019-02-18 14:10:32,350:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7020
+Fake discrimination mean: 0.4963874143539229
+Real discrimination mean: 0.5097058862360145
+
+2019-02-18 14:10:33,283:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7030
+Fake discrimination mean: 0.49844822042328724
+Real discrimination mean: 0.512811785550789
+
+2019-02-18 14:10:34,224:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7040
+Fake discrimination mean: 0.4916206779281271
+Real discrimination mean: 0.5114333757659323
+
+2019-02-18 14:10:35,131:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7050
+Fake discrimination mean: 0.4685866951842138
+Real discrimination mean: 0.5209437081262983
+
+2019-02-18 14:10:36,057:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7060
+Fake discrimination mean: 0.493798350974194
+Real discrimination mean: 0.5152659861604593
+
+2019-02-18 14:10:36,990:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7070
+Fake discrimination mean: 0.4921598539226499
+Real discrimination mean: 0.5285252494193192
+
+2019-02-18 14:10:38,050:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7080
+Fake discrimination mean: 0.5125117584214955
+Real discrimination mean: 0.5130314159019425
+
+2019-02-18 14:10:38,965:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7090
+Fake discrimination mean: 0.5323254098295448
+Real discrimination mean: 0.523141217410759
+
+2019-02-18 14:10:39,884:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7100
+Fake discrimination mean: 0.5364972507688442
+Real discrimination mean: 0.5080882012189858
+
+2019-02-18 14:10:41,019:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7110
+Fake discrimination mean: 0.501114630418166
+Real discrimination mean: 0.496437467653333
+
+2019-02-18 14:10:42,149:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7120
+Fake discrimination mean: 0.4946805156702048
+Real discrimination mean: 0.5065812818633507
+
+2019-02-18 14:10:43,351:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7130
+Fake discrimination mean: 0.518663378571651
+Real discrimination mean: 0.5186593897695455
+
+2019-02-18 14:10:44,584:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7140
+Fake discrimination mean: 0.5110167392721957
+Real discrimination mean: 0.51781785440721
+
+2019-02-18 14:10:45,576:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7150
+Fake discrimination mean: 0.5172042443853422
+Real discrimination mean: 0.5211204720041219
+
+2019-02-18 14:10:46,638:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7160
+Fake discrimination mean: 0.5143076171273594
+Real discrimination mean: 0.5167008694323824
+
+2019-02-18 14:10:47,679:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7170
+Fake discrimination mean: 0.49866758214380014
+Real discrimination mean: 0.5054397613661631
+
+2019-02-18 14:10:48,883:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7180
+Fake discrimination mean: 0.4925220856689616
+Real discrimination mean: 0.504774619029824
+
+2019-02-18 14:10:49,907:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7190
+Fake discrimination mean: 0.49676833398365217
+Real discrimination mean: 0.4978231472609982
+
+2019-02-18 14:10:51,156:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7200
+Fake discrimination mean: 0.4985665881811714
+Real discrimination mean: 0.49659950079924386
+
+2019-02-18 14:10:52,277:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7210
+Fake discrimination mean: 0.4901128992178013
+Real discrimination mean: 0.49509231417206706
+
+2019-02-18 14:10:53,538:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7220
+Fake discrimination mean: 0.4904981992134065
+Real discrimination mean: 0.4851983528615518
+
+2019-02-18 14:10:54,954:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7230
+Fake discrimination mean: 0.49469874189548974
+Real discrimination mean: 0.4980976494898402
+
+2019-02-18 14:10:56,528:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7240
+Fake discrimination mean: 0.5033675067779124
+Real discrimination mean: 0.5193594893602319
+
+2019-02-18 14:10:58,201:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7250
+Fake discrimination mean: 0.5061386553612021
+Real discrimination mean: 0.5213658385062957
+
+2019-02-18 14:10:59,651:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7260
+Fake discrimination mean: 0.5132106789841601
+Real discrimination mean: 0.5304297792030408
+
+2019-02-18 14:11:00,850:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7270
+Fake discrimination mean: 0.5057557789946291
+Real discrimination mean: 0.5309417412737588
+
+2019-02-18 14:11:01,804:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7280
+Fake discrimination mean: 0.5081411814049307
+Real discrimination mean: 0.5313505249204971
+
+2019-02-18 14:11:02,715:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7290
+Fake discrimination mean: 0.516018830398416
+Real discrimination mean: 0.5319391777308295
+
+2019-02-18 14:11:03,730:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7300
+Fake discrimination mean: 0.5295392827794871
+Real discrimination mean: 0.5242763084680937
+
+2019-02-18 14:11:04,686:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7310
+Fake discrimination mean: 0.5276426928341897
+Real discrimination mean: 0.5214430756315117
+
+2019-02-18 14:11:05,596:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7320
+Fake discrimination mean: 0.5217043049227658
+Real discrimination mean: 0.5205205948071449
+
+2019-02-18 14:11:06,684:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7330
+Fake discrimination mean: 0.5114622902992053
+Real discrimination mean: 0.505483858738979
+
+2019-02-18 14:11:07,768:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7340
+Fake discrimination mean: 0.501146030009474
+Real discrimination mean: 0.498761650767608
+
+2019-02-18 14:11:08,859:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7350
+Fake discrimination mean: 0.4960894683304477
+Real discrimination mean: 0.5042347192799316
+
+2019-02-18 14:11:09,850:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7360
+Fake discrimination mean: 0.5066414022536151
+Real discrimination mean: 0.5077614764064612
+
+2019-02-18 14:11:10,901:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7370
+Fake discrimination mean: 0.5028133200623686
+Real discrimination mean: 0.5002268131252473
+
+2019-02-18 14:11:12,058:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7380
+Fake discrimination mean: 0.4801155322711057
+Real discrimination mean: 0.5173532737012048
+
+2019-02-18 14:11:13,024:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7390
+Fake discrimination mean: 0.49930696386180545
+Real discrimination mean: 0.5240949554033267
+
+2019-02-18 14:11:14,089:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7400
+Fake discrimination mean: 0.5043550602240036
+Real discrimination mean: 0.5076382746124648
+
+2019-02-18 14:11:15,092:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7410
+Fake discrimination mean: 0.5017098805322843
+Real discrimination mean: 0.5100127690815338
+
+2019-02-18 14:11:16,236:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7420
+Fake discrimination mean: 0.4979899755862062
+Real discrimination mean: 0.49779084647808153
+
+2019-02-18 14:11:17,319:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7430
+Fake discrimination mean: 0.4924830285803244
+Real discrimination mean: 0.49491525606061937
+
+2019-02-18 14:11:18,423:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7440
+Fake discrimination mean: 0.4916169554968384
+Real discrimination mean: 0.5000098055672266
+
+2019-02-18 14:11:19,811:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7450
+Fake discrimination mean: 0.4858720221202831
+Real discrimination mean: 0.49945806028395184
+
+2019-02-18 14:11:21,305:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7460
+Fake discrimination mean: 0.4866203958455856
+Real discrimination mean: 0.4966404319873001
+
+2019-02-18 14:11:22,556:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7470
+Fake discrimination mean: 0.479941300687824
+Real discrimination mean: 0.49783648293906096
+
+2019-02-18 14:11:23,535:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7480
+Fake discrimination mean: 0.47523382966938243
+Real discrimination mean: 0.5047018726558754
+
+2019-02-18 14:11:24,527:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7490
+Fake discrimination mean: 0.4751063735398857
+Real discrimination mean: 0.5054942690461866
+
+2019-02-18 14:11:25,706:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7500
+Fake discrimination mean: 0.4854679666693879
+Real discrimination mean: 0.5137918404536147
+
+2019-02-18 14:11:26,694:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7510
+Fake discrimination mean: 0.49588793121651364
+Real discrimination mean: 0.5026942257719689
+
+2019-02-18 14:11:27,764:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7520
+Fake discrimination mean: 0.49659132361788094
+Real discrimination mean: 0.49752925410905263
+
+2019-02-18 14:11:28,688:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7530
+Fake discrimination mean: 0.4972413398416224
+Real discrimination mean: 0.5002788608517328
+
+2019-02-18 14:11:29,641:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7540
+Fake discrimination mean: 0.4998182260922654
+Real discrimination mean: 0.49885871668102155
+
+2019-02-18 14:11:30,620:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7550
+Fake discrimination mean: 0.5170229040017156
+Real discrimination mean: 0.5071838377907086
+
+2019-02-18 14:11:31,703:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7560
+Fake discrimination mean: 0.526614270102717
+Real discrimination mean: 0.5224546813417628
+
+2019-02-18 14:11:32,805:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7570
+Fake discrimination mean: 0.5357568148171132
+Real discrimination mean: 0.5246970162495416
+
+2019-02-18 14:11:34,245:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7580
+Fake discrimination mean: 0.5329060976256247
+Real discrimination mean: 0.5469527095143526
+
+2019-02-18 14:11:35,323:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7590
+Fake discrimination mean: 0.5141562700064227
+Real discrimination mean: 0.5523821783718955
+
+2019-02-18 14:11:36,489:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7600
+Fake discrimination mean: 0.4848141716923536
+Real discrimination mean: 0.5419424074337877
+
+2019-02-18 14:11:37,532:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7610
+Fake discrimination mean: 0.5103637855518481
+Real discrimination mean: 0.5473415237107778
+
+2019-02-18 14:11:38,610:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7620
+Fake discrimination mean: 0.5187348623542982
+Real discrimination mean: 0.5150522433656414
+
+2019-02-18 14:11:39,868:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7630
+Fake discrimination mean: 0.5119628226282525
+Real discrimination mean: 0.5018668361375787
+
+2019-02-18 14:11:41,224:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7640
+Fake discrimination mean: 0.5002463149445117
+Real discrimination mean: 0.482554532599471
+
+2019-02-18 14:11:42,573:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7650
+Fake discrimination mean: 0.4913825600269648
+Real discrimination mean: 0.48333458048382866
+
+2019-02-18 14:11:43,581:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7660
+Fake discrimination mean: 0.4754511637287155
+Real discrimination mean: 0.5014837274339246
+
+2019-02-18 14:11:44,520:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7670
+Fake discrimination mean: 0.49297167352930626
+Real discrimination mean: 0.5105706401267049
+
+2019-02-18 14:11:45,543:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7680
+Fake discrimination mean: 0.48792190462812046
+Real discrimination mean: 0.5070526385385294
+
+2019-02-18 14:11:46,538:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7690
+Fake discrimination mean: 0.4816124832779412
+Real discrimination mean: 0.5025460764755352
+
+2019-02-18 14:11:47,770:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7700
+Fake discrimination mean: 0.48668702545275466
+Real discrimination mean: 0.508809501016759
+
+2019-02-18 14:11:48,969:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7710
+Fake discrimination mean: 0.4942574523475681
+Real discrimination mean: 0.5074419511795629
+
+2019-02-18 14:11:49,967:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7720
+Fake discrimination mean: 0.49449383341318126
+Real discrimination mean: 0.5100452108568895
+
+2019-02-18 14:11:50,877:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7730
+Fake discrimination mean: 0.49838598335472717
+Real discrimination mean: 0.5154002734970399
+
+2019-02-18 14:11:51,800:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7740
+Fake discrimination mean: 0.5020329028255289
+Real discrimination mean: 0.5090645700869166
+
+2019-02-18 14:11:52,702:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7750
+Fake discrimination mean: 0.5020411668999514
+Real discrimination mean: 0.5078181179345197
+
+2019-02-18 14:11:53,672:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7760
+Fake discrimination mean: 0.5039815548666373
+Real discrimination mean: 0.5132803778553462
+
+2019-02-18 14:11:54,715:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7770
+Fake discrimination mean: 0.5003179236812553
+Real discrimination mean: 0.5208278626951812
+
+2019-02-18 14:11:55,809:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7780
+Fake discrimination mean: 0.48908674548590414
+Real discrimination mean: 0.5517822827213184
+
+2019-02-18 14:11:56,794:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7790
+Fake discrimination mean: 0.507361182665319
+Real discrimination mean: 0.5499244502939846
+
+2019-02-18 14:11:58,121:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7800
+Fake discrimination mean: 0.509489235431113
+Real discrimination mean: 0.5415910103738256
+
+2019-02-18 14:11:59,264:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7810
+Fake discrimination mean: 0.5290239127829024
+Real discrimination mean: 0.5051030338595982
+
+2019-02-18 14:12:00,472:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7820
+Fake discrimination mean: 0.507632250304467
+Real discrimination mean: 0.4891106729221668
+
+2019-02-18 14:12:01,479:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7830
+Fake discrimination mean: 0.4935661179489727
+Real discrimination mean: 0.4816971926464849
+
+2019-02-18 14:12:02,455:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7840
+Fake discrimination mean: 0.48301935044863925
+Real discrimination mean: 0.5007114944170364
+
+2019-02-18 14:12:03,373:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7850
+Fake discrimination mean: 0.4916326483807254
+Real discrimination mean: 0.5134712827686704
+
+2019-02-18 14:12:04,320:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7860
+Fake discrimination mean: 0.5089287830463324
+Real discrimination mean: 0.5347895846574672
+
+2019-02-18 14:12:05,259:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7870
+Fake discrimination mean: 0.5294790154507817
+Real discrimination mean: 0.5310187409295705
+
+2019-02-18 14:12:06,182:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7880
+Fake discrimination mean: 0.5326144668811991
+Real discrimination mean: 0.5435146129596912
+
+2019-02-18 14:12:07,156:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7890
+Fake discrimination mean: 0.5152355910427807
+Real discrimination mean: 0.5478817292336352
+
+2019-02-18 14:12:08,091:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7900
+Fake discrimination mean: 0.5072886274096943
+Real discrimination mean: 0.5422702196236168
+
+2019-02-18 14:12:09,023:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7910
+Fake discrimination mean: 0.5277511984442824
+Real discrimination mean: 0.5290130293809954
+
+2019-02-18 14:12:09,958:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7920
+Fake discrimination mean: 0.4974877095369524
+Real discrimination mean: 0.4982156785994239
+
+2019-02-18 14:12:10,866:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7930
+Fake discrimination mean: 0.4851795432514502
+Real discrimination mean: 0.47971842928263614
+
+2019-02-18 14:12:11,822:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7940
+Fake discrimination mean: 0.4817624297890418
+Real discrimination mean: 0.49057826234890833
+
+2019-02-18 14:12:12,948:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7950
+Fake discrimination mean: 0.4872012810691646
+Real discrimination mean: 0.4946171282377213
+
+2019-02-18 14:12:14,016:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7960
+Fake discrimination mean: 0.4869090016868291
+Real discrimination mean: 0.49459461597534843
+
+2019-02-18 14:12:14,952:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7970
+Fake discrimination mean: 0.4683671112229767
+Real discrimination mean: 0.499618663329741
+
+2019-02-18 14:12:15,867:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7980
+Fake discrimination mean: 0.45192460303916604
+Real discrimination mean: 0.5102858517216177
+
+2019-02-18 14:12:16,788:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 7990
+Fake discrimination mean: 0.4476999259231004
+Real discrimination mean: 0.5125496510024259
+
+2019-02-18 14:12:17,639:VanillaGAN:INFO: Saving the model
+2019-02-18 14:12:17,877:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8000
+Fake discrimination mean: 0.4443957174255533
+Real discrimination mean: 0.525465276782479
+
+2019-02-18 14:12:18,791:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8010
+Fake discrimination mean: 0.44864870585876204
+Real discrimination mean: 0.5324711659643843
+
+2019-02-18 14:12:19,853:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8020
+Fake discrimination mean: 0.46621563414712475
+Real discrimination mean: 0.5412810383331934
+
+2019-02-18 14:12:21,278:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8030
+Fake discrimination mean: 0.4663545422369578
+Real discrimination mean: 0.5314050509990011
+
+2019-02-18 14:12:22,346:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8040
+Fake discrimination mean: 0.48162947123992367
+Real discrimination mean: 0.5434604855492399
+
+2019-02-18 14:12:23,546:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8050
+Fake discrimination mean: 0.4789313773106298
+Real discrimination mean: 0.5487644055091436
+
+2019-02-18 14:12:24,751:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8060
+Fake discrimination mean: 0.5098074013096333
+Real discrimination mean: 0.5851699894174422
+
+2019-02-18 14:12:25,994:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8070
+Fake discrimination mean: 0.4771261737023203
+Real discrimination mean: 0.6297207775464431
+
+2019-02-18 14:12:27,144:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8080
+Fake discrimination mean: 0.4199156750543335
+Real discrimination mean: 0.6614457962489015
+
+2019-02-18 14:12:28,153:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8090
+Fake discrimination mean: 0.39545497387323647
+Real discrimination mean: 0.7138081520095233
+
+2019-02-18 14:12:29,139:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8100
+Fake discrimination mean: 0.35164483541587815
+Real discrimination mean: 0.7368977779366823
+
+2019-02-18 14:12:30,531:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8110
+Fake discrimination mean: 0.40443038352518174
+Real discrimination mean: 0.779314880783059
+
+2019-02-18 14:12:31,604:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8120
+Fake discrimination mean: 0.5524001359039841
+Real discrimination mean: 0.7142625321309484
+
+2019-02-18 14:12:32,587:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8130
+Fake discrimination mean: 0.5892684068509872
+Real discrimination mean: 0.6215942838620971
+
+2019-02-18 14:12:33,547:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8140
+Fake discrimination mean: 0.5674994970071768
+Real discrimination mean: 0.5106545177996731
+
+2019-02-18 14:12:34,815:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8150
+Fake discrimination mean: 0.5442943986780693
+Real discrimination mean: 0.4579965006502462
+
+2019-02-18 14:12:36,086:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8160
+Fake discrimination mean: 0.5147371117893138
+Real discrimination mean: 0.4555908225611558
+
+2019-02-18 14:12:37,254:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8170
+Fake discrimination mean: 0.5083349009576684
+Real discrimination mean: 0.45402462593065457
+
+2019-02-18 14:12:38,347:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8180
+Fake discrimination mean: 0.48060852496445977
+Real discrimination mean: 0.47330311125104785
+
+2019-02-18 14:12:39,233:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8190
+Fake discrimination mean: 0.4742360968249649
+Real discrimination mean: 0.49126781300212463
+
+2019-02-18 14:12:40,175:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8200
+Fake discrimination mean: 0.489297151555167
+Real discrimination mean: 0.508577308611439
+
+2019-02-18 14:12:41,098:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8210
+Fake discrimination mean: 0.48687115666108044
+Real discrimination mean: 0.49947957995504666
+
+2019-02-18 14:12:41,996:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8220
+Fake discrimination mean: 0.48453182494418345
+Real discrimination mean: 0.5160664148220659
+
+2019-02-18 14:12:43,002:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8230
+Fake discrimination mean: 0.508473769707428
+Real discrimination mean: 0.5029819715337592
+
+2019-02-18 14:12:43,953:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8240
+Fake discrimination mean: 0.49738981183230124
+Real discrimination mean: 0.49359287773528576
+
+2019-02-18 14:12:44,939:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8250
+Fake discrimination mean: 0.5057950781039746
+Real discrimination mean: 0.5022519191720832
+
+2019-02-18 14:12:46,001:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8260
+Fake discrimination mean: 0.5054535464387174
+Real discrimination mean: 0.505344358139003
+
+2019-02-18 14:12:46,982:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8270
+Fake discrimination mean: 0.49240557227348136
+Real discrimination mean: 0.5161317509905978
+
+2019-02-18 14:12:48,085:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8280
+Fake discrimination mean: 0.4953612537432929
+Real discrimination mean: 0.525688482857849
+
+2019-02-18 14:12:49,411:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8290
+Fake discrimination mean: 0.4931769323140794
+Real discrimination mean: 0.5263298597746016
+
+2019-02-18 14:12:50,496:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8300
+Fake discrimination mean: 0.5005611525791472
+Real discrimination mean: 0.5462708141646473
+
+2019-02-18 14:12:51,762:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8310
+Fake discrimination mean: 0.5017054959575638
+Real discrimination mean: 0.5348561388085564
+
+2019-02-18 14:12:53,213:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8320
+Fake discrimination mean: 0.5062588684837875
+Real discrimination mean: 0.5357676834022087
+
+2019-02-18 14:12:54,632:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8330
+Fake discrimination mean: 0.5217416488297466
+Real discrimination mean: 0.5203474587880915
+
+2019-02-18 14:12:56,070:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8340
+Fake discrimination mean: 0.5103456356665736
+Real discrimination mean: 0.49779863136770613
+
+2019-02-18 14:12:57,249:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8350
+Fake discrimination mean: 0.4941742201700694
+Real discrimination mean: 0.49376140321827333
+
+2019-02-18 14:12:58,458:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8360
+Fake discrimination mean: 0.4954430648022521
+Real discrimination mean: 0.4911136780219053
+
+2019-02-18 14:12:59,479:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8370
+Fake discrimination mean: 0.4966139671750787
+Real discrimination mean: 0.4906962797520042
+
+2019-02-18 14:13:00,793:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8380
+Fake discrimination mean: 0.5079229340657585
+Real discrimination mean: 0.4934712031607176
+
+2019-02-18 14:13:02,148:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8390
+Fake discrimination mean: 0.512075176390375
+Real discrimination mean: 0.5002245690104533
+
+2019-02-18 14:13:03,485:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8400
+Fake discrimination mean: 0.4955787354081354
+Real discrimination mean: 0.4984179824856221
+
+2019-02-18 14:13:04,870:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8410
+Fake discrimination mean: 0.5008629851588363
+Real discrimination mean: 0.5091363894974568
+
+2019-02-18 14:13:05,975:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8420
+Fake discrimination mean: 0.5014178810956292
+Real discrimination mean: 0.5240539683384196
+
+2019-02-18 14:13:08,125:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8430
+Fake discrimination mean: 0.49788546044522825
+Real discrimination mean: 0.5490740733366523
+
+2019-02-18 14:13:09,876:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8440
+Fake discrimination mean: 0.5148746115602275
+Real discrimination mean: 0.5624125457380764
+
+2019-02-18 14:13:11,567:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8450
+Fake discrimination mean: 0.538421759153656
+Real discrimination mean: 0.5503037218501388
+
+2019-02-18 14:13:12,988:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8460
+Fake discrimination mean: 0.5374462398686972
+Real discrimination mean: 0.5318743834811278
+
+2019-02-18 14:13:14,602:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8470
+Fake discrimination mean: 0.5354750144241931
+Real discrimination mean: 0.490513912977222
+
+2019-02-18 14:13:16,035:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8480
+Fake discrimination mean: 0.49859690533412715
+Real discrimination mean: 0.4709082512212256
+
+2019-02-18 14:13:17,512:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8490
+Fake discrimination mean: 0.464739054624667
+Real discrimination mean: 0.47908459992544783
+
+2019-02-18 14:13:18,822:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8500
+Fake discrimination mean: 0.46423907360772737
+Real discrimination mean: 0.48676458587975846
+
+2019-02-18 14:13:19,960:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8510
+Fake discrimination mean: 0.4765723986676081
+Real discrimination mean: 0.49624373929586285
+
+2019-02-18 14:13:21,018:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8520
+Fake discrimination mean: 0.4835820248177485
+Real discrimination mean: 0.5122349347865329
+
+2019-02-18 14:13:21,999:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8530
+Fake discrimination mean: 0.5236126343998859
+Real discrimination mean: 0.4807832902730011
+
+2019-02-18 14:13:22,961:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8540
+Fake discrimination mean: 0.5291077743547881
+Real discrimination mean: 0.49005082736213873
+
+2019-02-18 14:13:23,947:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8550
+Fake discrimination mean: 0.5181512724490855
+Real discrimination mean: 0.4882701953460714
+
+2019-02-18 14:13:24,939:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8560
+Fake discrimination mean: 0.5108928309049351
+Real discrimination mean: 0.5001697238848711
+
+2019-02-18 14:13:26,206:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8570
+Fake discrimination mean: 0.4864444121967893
+Real discrimination mean: 0.5271026216363548
+
+2019-02-18 14:13:27,458:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8580
+Fake discrimination mean: 0.46686824155162965
+Real discrimination mean: 0.5510031340744109
+
+2019-02-18 14:13:28,608:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8590
+Fake discrimination mean: 0.47732274386813217
+Real discrimination mean: 0.5431528164325323
+
+2019-02-18 14:13:29,657:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8600
+Fake discrimination mean: 0.49806749517785404
+Real discrimination mean: 0.5422310980907485
+
+2019-02-18 14:13:30,758:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8610
+Fake discrimination mean: 0.49025733921677017
+Real discrimination mean: 0.523968856685941
+
+2019-02-18 14:13:31,742:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8620
+Fake discrimination mean: 0.5052615792624215
+Real discrimination mean: 0.5236845547275962
+
+2019-02-18 14:13:33,091:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8630
+Fake discrimination mean: 0.5245566913222796
+Real discrimination mean: 0.509600733050872
+
+2019-02-18 14:13:34,162:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8640
+Fake discrimination mean: 0.5282487100940786
+Real discrimination mean: 0.49023267437311463
+
+2019-02-18 14:13:35,300:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8650
+Fake discrimination mean: 0.5040876622987827
+Real discrimination mean: 0.4804611244491306
+
+2019-02-18 14:13:36,616:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8660
+Fake discrimination mean: 0.4866859889087641
+Real discrimination mean: 0.4848149740588879
+
+2019-02-18 14:13:37,893:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8670
+Fake discrimination mean: 0.4785702125025681
+Real discrimination mean: 0.48028233216137073
+
+2019-02-18 14:13:39,032:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8680
+Fake discrimination mean: 0.48100618009221063
+Real discrimination mean: 0.49073444098950925
+
+2019-02-18 14:13:40,300:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8690
+Fake discrimination mean: 0.48198231115789425
+Real discrimination mean: 0.5002056348807632
+
+2019-02-18 14:13:41,380:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8700
+Fake discrimination mean: 0.4949282887154549
+Real discrimination mean: 0.5156472423896498
+
+2019-02-18 14:13:42,373:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8710
+Fake discrimination mean: 0.48686174983396585
+Real discrimination mean: 0.5058006401941157
+
+2019-02-18 14:13:43,432:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8720
+Fake discrimination mean: 0.5023507680035628
+Real discrimination mean: 0.5247077981906888
+
+2019-02-18 14:13:44,449:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8730
+Fake discrimination mean: 0.499636059908385
+Real discrimination mean: 0.5323540278786699
+
+2019-02-18 14:13:45,500:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8740
+Fake discrimination mean: 0.5067557602810373
+Real discrimination mean: 0.5368421738567863
+
+2019-02-18 14:13:46,629:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8750
+Fake discrimination mean: 0.508244798982707
+Real discrimination mean: 0.5336802483507845
+
+2019-02-18 14:13:47,946:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8760
+Fake discrimination mean: 0.5239444534440615
+Real discrimination mean: 0.5254899160335308
+
+2019-02-18 14:13:49,140:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8770
+Fake discrimination mean: 0.5176307360563256
+Real discrimination mean: 0.5138228906751182
+
+2019-02-18 14:13:50,422:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8780
+Fake discrimination mean: 0.5090990371053494
+Real discrimination mean: 0.5072417139617685
+
+2019-02-18 14:13:51,395:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8790
+Fake discrimination mean: 0.507016883106322
+Real discrimination mean: 0.5052376235527829
+
+2019-02-18 14:13:52,383:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8800
+Fake discrimination mean: 0.5041734247496593
+Real discrimination mean: 0.4873920005358468
+
+2019-02-18 14:13:53,389:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8810
+Fake discrimination mean: 0.501167143416111
+Real discrimination mean: 0.48138174025612535
+
+2019-02-18 14:13:54,402:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8820
+Fake discrimination mean: 0.5028518091824415
+Real discrimination mean: 0.4814077705565147
+
+2019-02-18 14:13:55,635:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8830
+Fake discrimination mean: 0.5084407281999879
+Real discrimination mean: 0.4822964027599952
+
+2019-02-18 14:13:56,941:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8840
+Fake discrimination mean: 0.5064325962930165
+Real discrimination mean: 0.4892369360146671
+
+2019-02-18 14:13:57,909:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8850
+Fake discrimination mean: 0.4947727720582872
+Real discrimination mean: 0.49829410645906935
+
+2019-02-18 14:13:58,993:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8860
+Fake discrimination mean: 0.491154905276035
+Real discrimination mean: 0.5117889545005664
+
+2019-02-18 14:14:00,105:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8870
+Fake discrimination mean: 0.4863531524463094
+Real discrimination mean: 0.514483784011846
+
+2019-02-18 14:14:01,205:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8880
+Fake discrimination mean: 0.5087444931351044
+Real discrimination mean: 0.5118837422761989
+
+2019-02-18 14:14:02,438:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8890
+Fake discrimination mean: 0.5038901085543673
+Real discrimination mean: 0.4884698330329121
+
+2019-02-18 14:14:03,522:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8900
+Fake discrimination mean: 0.4981074642278076
+Real discrimination mean: 0.4834220686906814
+
+2019-02-18 14:14:04,667:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8910
+Fake discrimination mean: 0.4784978425115812
+Real discrimination mean: 0.4725602970251128
+
+2019-02-18 14:14:05,817:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8920
+Fake discrimination mean: 0.4856235963483641
+Real discrimination mean: 0.4737978928184319
+
+2019-02-18 14:14:06,815:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8930
+Fake discrimination mean: 0.4811560365653355
+Real discrimination mean: 0.48705011027488543
+
+2019-02-18 14:14:07,861:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8940
+Fake discrimination mean: 0.4878358074336443
+Real discrimination mean: 0.4935816491273728
+
+2019-02-18 14:14:08,768:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8950
+Fake discrimination mean: 0.4943308033992032
+Real discrimination mean: 0.49365155672159916
+
+2019-02-18 14:14:09,696:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8960
+Fake discrimination mean: 0.4864219604301033
+Real discrimination mean: 0.5087730548359345
+
+2019-02-18 14:14:10,736:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8970
+Fake discrimination mean: 0.5018543515032324
+Real discrimination mean: 0.5139944444336518
+
+2019-02-18 14:14:11,824:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8980
+Fake discrimination mean: 0.5200775199331253
+Real discrimination mean: 0.527894481265849
+
+2019-02-18 14:14:12,902:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 8990
+Fake discrimination mean: 0.5122494119630915
+Real discrimination mean: 0.5271186463600537
+
+2019-02-18 14:14:13,980:VanillaGAN:INFO: Saving the model
+2019-02-18 14:14:14,223:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9000
+Fake discrimination mean: 0.5182186420681155
+Real discrimination mean: 0.5277449564359351
+
+2019-02-18 14:14:15,436:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9010
+Fake discrimination mean: 0.5003968805576229
+Real discrimination mean: 0.5333641222693433
+
+2019-02-18 14:14:16,402:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9020
+Fake discrimination mean: 0.5051845579065514
+Real discrimination mean: 0.5386950373360897
+
+2019-02-18 14:14:17,338:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9030
+Fake discrimination mean: 0.5179202629109423
+Real discrimination mean: 0.5472429009382936
+
+2019-02-18 14:14:18,278:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9040
+Fake discrimination mean: 0.5261403176019651
+Real discrimination mean: 0.5284090199588266
+
+2019-02-18 14:14:19,192:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9050
+Fake discrimination mean: 0.5259784449282939
+Real discrimination mean: 0.5179487848418445
+
+2019-02-18 14:14:20,089:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9060
+Fake discrimination mean: 0.5128459455375257
+Real discrimination mean: 0.49130505362508387
+
+2019-02-18 14:14:21,013:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9070
+Fake discrimination mean: 0.5023537051689777
+Real discrimination mean: 0.4967138353998209
+
+2019-02-18 14:14:21,958:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9080
+Fake discrimination mean: 0.49717357987433736
+Real discrimination mean: 0.4918601129373581
+
+2019-02-18 14:14:22,882:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9090
+Fake discrimination mean: 0.49561988812892027
+Real discrimination mean: 0.48730528560722647
+
+2019-02-18 14:14:23,802:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9100
+Fake discrimination mean: 0.4924152938314601
+Real discrimination mean: 0.4816088855393595
+
+2019-02-18 14:14:24,717:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9110
+Fake discrimination mean: 0.49268265719255666
+Real discrimination mean: 0.48505002787552187
+
+2019-02-18 14:14:25,785:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9120
+Fake discrimination mean: 0.4866970974099056
+Real discrimination mean: 0.4842097518765418
+
+2019-02-18 14:14:26,719:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9130
+Fake discrimination mean: 0.48906620488271796
+Real discrimination mean: 0.48626572635692894
+
+2019-02-18 14:14:27,673:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9140
+Fake discrimination mean: 0.49264544182216397
+Real discrimination mean: 0.4928877496413939
+
+2019-02-18 14:14:28,574:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9150
+Fake discrimination mean: 0.5087424139988254
+Real discrimination mean: 0.5056590312361774
+
+2019-02-18 14:14:29,480:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9160
+Fake discrimination mean: 0.5071244768178793
+Real discrimination mean: 0.5039642905010048
+
+2019-02-18 14:14:30,370:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9170
+Fake discrimination mean: 0.5133375980824995
+Real discrimination mean: 0.5025241355529886
+
+2019-02-18 14:14:31,300:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9180
+Fake discrimination mean: 0.5115692549818073
+Real discrimination mean: 0.4951154470983359
+
+2019-02-18 14:14:32,232:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9190
+Fake discrimination mean: 0.5132467984191211
+Real discrimination mean: 0.5036211285994286
+
+2019-02-18 14:14:33,332:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9200
+Fake discrimination mean: 0.5058084771005704
+Real discrimination mean: 0.4926188351943518
+
+2019-02-18 14:14:34,420:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9210
+Fake discrimination mean: 0.4959749475380931
+Real discrimination mean: 0.48589262548003304
+
+2019-02-18 14:14:35,523:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9220
+Fake discrimination mean: 0.4911172063183443
+Real discrimination mean: 0.4956281217240256
+
+2019-02-18 14:14:36,575:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9230
+Fake discrimination mean: 0.48683948190220555
+Real discrimination mean: 0.5025452717413402
+
+2019-02-18 14:14:37,674:VanillaGAN:INFO: 
+--------------------------------------------------
+Current step: 9240
+Fake discrimination mean: 0.4949801533285044
+Real discrimination mean: 0.5059250725562725
+
