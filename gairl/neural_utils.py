@@ -14,8 +14,10 @@ class DenseNetworkUtils:
         return reduce(lambda x, y: x.extend(list(y)) or list(x), params, [])
 
     @staticmethod
-    def create_network_params(input_shape, hidden_layers, outputs_num, dtype,
-                              trainable=True, name=None):
+    def create_network_params(input_shape, hidden_layers,
+                              outputs_num, dtype,
+                              trainable=True, name=None,
+                              stddev=1e-5, mean=3e-5):
         """
         Crates tensorflow variables for dense feedforward neural network.
         :param input_shape: tuple of ints; shape of the input to the network.
@@ -26,6 +28,9 @@ class DenseNetworkUtils:
         :param trainable: bool; will these params be trainable, i.e.
             if they can be updated by tensorflow training algorithms.
         :param name: string; name scope under which variables will be created.
+        :param mean: float; mean for the biases distribution.
+        :param stddev: float; standard deviation for both weights
+            and biases distribution.
         :return: list of gairl..DenseLayerParams; tensorflow variables
             representing network weights and biases.
         """
@@ -34,9 +39,10 @@ class DenseNetworkUtils:
         for i in range(1, len(layers)):
             with tf.name_scope(f'{name}_layer{i}'):
                 weights = gen_rand_weights((layers[i - 1], layers[i]), dtype,
-                                           trainable=trainable)
+                                           trainable=trainable, stddev=stddev)
                 biases = gen_rand_biases((layers[i],), dtype,
-                                         trainable=trainable)
+                                         trainable=trainable,
+                                         stddev=stddev, mean=mean)
                 params.append(DenseLayerParams(weights, biases))
 
         return params
@@ -79,14 +85,14 @@ class DenseNetworkUtils:
         return out
 
 
-def gen_rand_weights(size, dtype, trainable=True):
-    distribution = tf.truncated_normal(size, stddev=0.00001, dtype=dtype)
+def gen_rand_weights(size, dtype, trainable=True, stddev=1e-5):
+    distribution = tf.truncated_normal(size, stddev=stddev, dtype=dtype)
     return tf.Variable(distribution, trainable=trainable, name='weights')
 
 
-def gen_rand_biases(size, dtype, trainable=True):
-    distribution = tf.truncated_normal(size, stddev=0.00001,
-                                       mean=0.00003, dtype=dtype)
+def gen_rand_biases(size, dtype, trainable=True, stddev=1e-5, mean=3e-5):
+    distribution = tf.truncated_normal(size, dtype=dtype,
+                                       stddev=stddev, mean=mean)
     return tf.Variable(distribution, trainable=trainable, name='biases')
 
 
