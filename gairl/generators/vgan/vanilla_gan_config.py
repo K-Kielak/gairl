@@ -7,7 +7,7 @@ from gairl.config import OUTPUTS_DIR
 
 
 OUTPUT_DIRECTORY = os.path.join(OUTPUTS_DIR, 'generation', 'mnist',
-                                'test')
+                                'vgan', 'test')
 DTYPE = tf.float64
 G_LAYERS = (256, 512, 1024)
 G_ACTIVATION = tf.nn.leaky_relu
