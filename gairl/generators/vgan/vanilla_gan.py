@@ -117,6 +117,22 @@ class VanillaGAN:
         self._initialize_vars()
         self._set_up_outputs(output_directory, logging_level, max_checkpoints)
 
+        self._logger.info(
+            f'\nCreating GAN with:\n'
+            f'Data shape {data_shape}\n'
+            f'Noise size {noise_size}\n'
+            f'Dtype: {dtype}\n'
+            f'Generator layers: {g_layers}\n'
+            f'Generator activation function: {g_activation.__name__}\n'
+            f'Generator dropout probability: {g_dropout}\n'
+            f'Generator optimizer: {g_optimizer.__class__.__name__}\n'
+            f'Discriminator layers: {d_layers}\n'
+            f'Discriminator activation function: {d_activation.__name__}\n'
+            f'Discriminator dropout probability: {d_dropout}\n'
+            f'Discriminator optimizer: {d_optimizer.__class__.__name__}\n'
+            f'K: {k}'
+        )
+
     def _create_generator_network(self, layers, activation, dropout, dtype):
         self._g_params = Dnu.create_network_params(self._noise_size,
                                                    layers,
