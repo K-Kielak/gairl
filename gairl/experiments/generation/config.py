@@ -1,3 +1,3 @@
 
 
-GAN_STR = 'gan'
+GAN_STR = 'wgan'
