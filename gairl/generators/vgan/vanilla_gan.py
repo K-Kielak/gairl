@@ -341,3 +341,12 @@ class VanillaGAN:
             f'Real discrimination mean: {real_discrim_mean}\n'
             '\n--------------------------------------------------\n'
         )
+
+    def generate(self, noise_batch):
+        assert (noise_batch.shape[1] == self._noise_size), \
+            f'Expected ({self._noise_size}) and received ' \
+            f'({noise_batch.shape[1]}) noise sizes do not match'
+
+        return self._sess.run(self._generated_data, feed_dict={
+                                  self._noise: noise_batch
+                              })
