@@ -12,6 +12,8 @@ from gairl.neural_utils import summarize_ndarray
 
 
 IMGS_TO_VIS = 5
+PARAMS_INIT_STDDEV = 1e-3
+PARAMS_INIT_MEAN = 0
 
 
 # TODO add loading
@@ -85,6 +87,7 @@ class VanillaGAN:
         self._sess = session
         self._data_shape = data_shape
         self._flat_data_size = reduce(mul, data_shape)
+        self._noise_size = noise_size
         self._g_optimizer = g_optimizer
         self._d_optimizer = d_optimizer
         self._k = k
@@ -95,62 +98,81 @@ class VanillaGAN:
         self._steps_so_far = 0
 
         # Set up input placeholders
-        self._noise = tf.placeholder(shape=(None, noise_size),
+        self._noise = tf.placeholder(shape=(None, self._noise_size),
                                      dtype=dtype, name='noise')
         self._real_data = tf.placeholder(shape=(None, self._flat_data_size),
                                          dtype=dtype, name='real_data')
 
-        # Set up generator network
-        self._g_params = Dnu.create_network_params(noise_size,
-                                                   g_layers,
+        # Create networks
+        self._create_generator_network(g_layers, g_activation,
+                                       g_dropout, dtype)
+        self._create_discriminator_network(d_layers, d_activation,
+                                           d_dropout, dtype)
+
+        # Define objectives
+        self._define_generator_objective(g_optimizer)
+        self._define_discriminator_objective(d_optimizer)
+
+        self._add_summaries()
+        self._initialize_vars()
+        self._set_up_outputs(output_directory, logging_level, max_checkpoints)
+
+    def _create_generator_network(self, layers, activation, dropout, dtype):
+        self._g_params = Dnu.create_network_params(self._noise_size,
+                                                   layers,
                                                    self._flat_data_size,
                                                    dtype,
                                                    name='generator_params',
-                                                   stddev=1e-3, mean=0)
+                                                   stddev=PARAMS_INIT_STDDEV,
+                                                   mean=PARAMS_INIT_MEAN)
         self._generated_data = Dnu.model_output(self._noise,
                                                 self._g_params,
-                                                g_activation,
-                                                dropout_prob=g_dropout,
+                                                activation,
+                                                dropout_prob=dropout,
                                                 out_activation_fn=tf.nn.tanh,
                                                 name='generator_out')
 
-        # Set up discriminator network
+    def _create_discriminator_network(self, layers, activation, dropout, dtype):
         self._d_params = Dnu.create_network_params(self._flat_data_size,
-                                                   d_layers,
+                                                   layers,
                                                    1,  # 0 - fake, 1 - real
                                                    dtype,
                                                    name='discriminator_params',
-                                                   stddev=1e-3, mean=0)
+                                                   stddev=PARAMS_INIT_STDDEV,
+                                                   mean=PARAMS_INIT_MEAN)
         self._fake_discrim = Dnu.model_output(self._generated_data,
                                               self._d_params,
-                                              d_activation,
-                                              dropout_prob=d_dropout,
+                                              activation,
+                                              dropout_prob=dropout,
                                               out_activation_fn=tf.nn.sigmoid,
                                               name='fake_discrimination')
         self._fake_discrim_mean = tf.reduce_mean(self._fake_discrim)
         self._real_discrim = Dnu.model_output(self._real_data,
                                               self._d_params,
-                                              d_activation,
-                                              dropout_prob=d_dropout,
+                                              activation,
+                                              dropout_prob=dropout,
                                               out_activation_fn=tf.nn.sigmoid,
                                               name='real_discrimination')
         self._real_discrim_mean = tf.reduce_mean(self._real_discrim)
 
+    def _define_generator_objective(self, optimizer):
         # Generator objective: min log(1 - fake_discrim) =~
         # =~ max log(fake_discrim) = min -log(fake_discrim)
         unpacked_g_params = Dnu.unpack_params(self._g_params) + \
-                            g_optimizer.variables()
+                            optimizer.variables()
         fake_discrim_log = tf.log(self._fake_discrim,
                                   name='fake_discrimination_log')
         self._g_loss = tf.negative(tf.reduce_mean(fake_discrim_log),
                                    name='g_loss')
-        self._g_train_step = g_optimizer.minimize(self._g_loss,
-                                                  var_list=unpacked_g_params)
+        self._g_train_step = optimizer.minimize(self._g_loss,
+                                                var_list=unpacked_g_params)
 
+    def _define_discriminator_objective(self, optimizer):
         # Discriminator objective:
-        # max log(real_discrim) + log(1 - fake_discrim) = min -...
+        # max log(real_discrim) + log(1 - fake_discrim) =
+        # = min -(log(real_discrim) - log(1 - fake_discrim))
         unpacked_d_params = Dnu.unpack_params(self._d_params) + \
-                            d_optimizer.variables()
+                            optimizer.variables()
         real_discrim_log = tf.log(self._real_discrim,
                                   name='real_discrimination_log')
         self._real_d_loss = tf.negative(tf.reduce_mean(real_discrim_log),
@@ -161,12 +183,8 @@ class VanillaGAN:
                                         name='fake_data_d_loss')
         self._d_loss = tf.add(self._real_d_loss, self._fake_d_loss,
                               name='d_loss')
-        self._d_train_step = d_optimizer.minimize(self._d_loss,
-                                                  var_list=unpacked_d_params)
-
-        self._add_summaries()
-        self._initialize_vars()
-        self._set_up_outputs(output_directory, logging_level, max_checkpoints)
+        self._d_train_step = optimizer.minimize(self._d_loss,
+                                                var_list=unpacked_d_params)
 
     def _add_summaries(self):
         training_summs = []
@@ -250,6 +268,13 @@ class VanillaGAN:
                                                      self._sess.graph)
 
     def train_step(self, data_batch, noise_batch):
+        assert (data_batch.shape[1:] == self._data_shape), \
+            f'Expected ({self._data_shape}) and received ' \
+            f'({data_batch.shape[1:]}) data shapes do not match'
+        assert (noise_batch.shape[1] == self._noise_size), \
+            f'Expected ({self._noise_size}) and received ' \
+            f'({noise_batch.shape[1]}) noise sizes do not match'
+
         batch_size = len(data_batch)
         flat_data = data_batch.reshape(batch_size, self._flat_data_size)
         norm_data = np.interp(flat_data, (flat_data.min(), flat_data.max()),
