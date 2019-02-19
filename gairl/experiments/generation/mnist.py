@@ -5,7 +5,7 @@ import tensorflow as tf
 from tensorflow.contrib.learn.python.learn.datasets.mnist import extract_images
 
 from gairl.config import RESOURCES_DIR
-from gairl.experiments.generation.config import GAN_STR
+from gairl.config import GAN_STR
 from gairl.generators import create_gan
 
 

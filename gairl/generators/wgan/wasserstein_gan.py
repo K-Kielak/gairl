@@ -25,7 +25,7 @@ class WassersteinGAN(VanillaGAN):
                  d_activation=tf.nn.leaky_relu,
                  d_dropout=0.8,
                  d_optimizer=tf.train.RMSPropOptimizer(learning_rate=5e-5),
-                 k=1,
+                 k=5,
                  clip_bounds=(-0.01, 0.01),
                  logging_freq=100,
                  visualisation_freq=1000,
@@ -33,7 +33,7 @@ class WassersteinGAN(VanillaGAN):
                  max_checkpoints=5,
                  save_freq=1000):
         """
-        Initializes feed-forward version of vanilla GAN
+        Initializes feed-forward version of Wasserstein GAN.
         :param noise_size: int; describes the size of the noise that
             will be fed as an input to the generator.
         :param data_shape: tuple of int; describes the size of the

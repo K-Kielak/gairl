@@ -4,8 +4,7 @@ import tensorflow as tf
 from gym.envs.classic_control import CartPoleEnv
 
 from gairl.agents import create_agent
-from gairl.experiments.reinforcement.config import AGENT_STR, \
-    DELAY_BETWEEN_RENDERS, RENDER
+from gairl.config import AGENT_STR, DELAY_BETWEEN_RENDERS, RENDER
 
 EPISODES_NUM = 10000
 MAX_STEPS_PER_EPISODE = 200

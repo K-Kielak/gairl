@@ -4,8 +4,7 @@ import tensorflow as tf
 from gym.envs.box2d import LunarLander
 
 from gairl.agents import create_agent
-from gairl.experiments.reinforcement.config import AGENT_STR, \
-    DELAY_BETWEEN_RENDERS, RENDER
+from gairl.config import AGENT_STR, DELAY_BETWEEN_RENDERS, RENDER
 
 EPISODES_NUM = 5000
 
