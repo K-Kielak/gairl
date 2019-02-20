@@ -88,8 +88,11 @@ class VanillaGAN:
         self._data_shape = data_shape
         self._flat_data_size = reduce(mul, data_shape)
         self._noise_size = noise_size
+        self._dtype = dtype
         self._g_optimizer = g_optimizer
+        self._g_activation = g_activation
         self._d_optimizer = d_optimizer
+        self._d_activation = d_activation
         self._k = k
         self._logging_freq = logging_freq
         self._visual_freq = visualisation_freq
