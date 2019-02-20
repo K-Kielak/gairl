@@ -2,6 +2,8 @@ from gairl.generators.vgan import vanilla_gan_config as vgan_conf
 from gairl.generators.vgan.vanilla_gan import VanillaGAN
 from gairl.generators.wgan.wasserstein_gan import WassersteinGAN
 from gairl.generators.wgan import wasserstein_gan_config as wgan_conf
+from gairl.generators.wgan_gp.wasserstein_gan_gp import WassersteinGANGP
+from gairl.generators.wgan_gp import wasserstein_gan_gp_config as wgan_gp_conf
 
 
 def create_gan(gan_name, data_shape, noise_size, session):
@@ -58,7 +60,31 @@ def _create_wasserstein_gan(data_shape, noise_size, session):
                           save_freq=wgan_conf.SAVE_FREQ)
 
 
+def _create_wasserstein_gan_gp(data_shape, noise_size, session):
+    return WassersteinGANGP(data_shape,
+                            noise_size,
+                            session,
+                            wgan_gp_conf.OUTPUT_DIRECTORY,
+                            dtype=wgan_gp_conf.DTYPE,
+                            g_layers=wgan_gp_conf.G_LAYERS,
+                            g_activation=wgan_gp_conf.G_ACTIVATION,
+                            g_dropout=wgan_gp_conf.G_DROPOUT,
+                            g_optimizer=wgan_gp_conf.G_OPTIMIZER,
+                            d_layers=wgan_gp_conf.D_LAYERS,
+                            d_activation=wgan_gp_conf.D_ACTIVATION,
+                            d_dropout=wgan_gp_conf.D_DROPOUT,
+                            d_optimizer=wgan_gp_conf.D_OPTIMIZER,
+                            k=wgan_gp_conf.K,
+                            penalty_coeff=wgan_gp_conf.PENALTY_COEFF,
+                            logging_freq=wgan_gp_conf.LOGGING_FREQ,
+                            visualisation_freq=wgan_gp_conf.VISUALIZATION_FREQ,
+                            logging_level=wgan_gp_conf.LOGGING_LEVEL,
+                            max_checkpoints=wgan_gp_conf.MAX_CHECKPOINTS,
+                            save_freq=wgan_gp_conf.SAVE_FREQ)
+
+
 _STR_TO_GAN = {
     'vgan': _create_vanilla_gan,
-    'wgan': _create_wasserstein_gan
+    'wgan': _create_wasserstein_gan,
+    'wgan_gp': _create_wasserstein_gan_gp
 }

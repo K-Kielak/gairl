@@ -7,7 +7,7 @@ OUTPUTS_DIR = os.path.join(PROJECT_ROOT_DIR, 'outputs')
 RESOURCES_DIR = os.path.join(PROJECT_ROOT_DIR, 'resources')
 
 # Used gan
-GAN_STR = 'wgan'
+GAN_STR = 'wgan_gp'
 
 # Used reinforcement learning agent
 AGENT_STR = 'dqn'
