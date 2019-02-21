@@ -13,7 +13,7 @@ class WassersteinGANGP(WassersteinGAN):
                  noise_size,
                  session,
                  output_directory,
-                 name='WassersteinGAN',
+                 name='WassersteinGANGP',
                  dtype=tf.float64,
                  g_layers=(256, 512, 1024),
                  g_activation=tf.nn.leaky_relu,
