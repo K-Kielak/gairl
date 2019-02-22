@@ -9,8 +9,8 @@ from gairl.config import GAN_STR
 from gairl.generators import create_gan
 
 
-MNIST_DATA_PATH = os.path.join(RESOURCES_DIR, 'mnist.gz')
-TRAINING_STEPS = 100000
+MNIST_DATA_PATH = os.path.join(RESOURCES_DIR, 'mnist_imgs.gz')
+TRAINING_STEPS = 1000000
 BATCH_SIZE = 100
 NOISE_SIZE = 100
 

@@ -55,7 +55,7 @@ Paper on Improved Training of WGANs (https://arxiv.org/pdf/1704.00028.pdf)
 proposed to use gradient clipping instead. Therefore I moved my research into
 that area.
 
-Summary of experiments with WGANGP
+### Summary of experiments with WGANGP
 WGAN had high problems with convergence. It was either converging too fast
 without generating realistic images, not converging well enough, or being not
 stable enough.
@@ -68,5 +68,5 @@ overpower Generator to work properly.
 Last problem was caused by to high learning rate.
 
 As per https://arxiv.org/pdf/1801.04406.pdf, WGAN with proper weights clipping
-(or penalty gradient) always converges given strong enough Critic and low
+(or with gradient penalty) always converges given strong enough Critic and low
 enough learning rate.
