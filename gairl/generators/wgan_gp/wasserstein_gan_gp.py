@@ -14,6 +14,7 @@ class WassersteinGANGP(WassersteinGAN):
                  session,
                  output_directory,
                  name='WassersteinGANGP',
+                 labels_num=None,
                  dtype=tf.float64,
                  g_layers=(256, 512, 1024),
                  g_activation=tf.nn.leaky_relu,
@@ -82,6 +83,7 @@ class WassersteinGANGP(WassersteinGAN):
                          session,
                          output_directory,
                          name=name,
+                         labels_num=labels_num,
                          dtype=dtype,
                          g_layers=g_layers,
                          g_activation=g_activation,
@@ -123,10 +125,13 @@ class WassersteinGANGP(WassersteinGAN):
         )
         interpolates = tf.add(self._real_data, random_scaling*differences,
                               name='interpolates')
-        interpolates_discrim = Dnu.model_output(interpolates,
+        labeled_interpolates = tf.concat([interpolates,
+                                          self._labels_onehot], axis=1)
+        interpolates_discrim = Dnu.model_output(labeled_interpolates,
                                                 self._d_params,
                                                 self._d_activation,
                                                 name='interpolates_discrim')
+        # TODO shouldn't we propagate labels further as well?
         interp_grads = tf.gradients(interpolates_discrim, [interpolates],
                                     name='interpolates_gradients')[0]
         slopes = tf.sqrt(tf.reduce_sum(tf.square(interp_grads),

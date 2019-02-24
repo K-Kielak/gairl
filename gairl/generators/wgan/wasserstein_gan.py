@@ -16,6 +16,7 @@ class WassersteinGAN(VanillaGAN):
                  session,
                  output_directory,
                  name='WassersteinGAN',
+                 labels_num=None,
                  dtype=tf.float64,
                  g_layers=(256, 512, 1024),
                  g_activation=tf.nn.leaky_relu,
@@ -43,6 +44,8 @@ class WassersteinGAN(VanillaGAN):
         :param output_directory: string; directory to which all of the
             network outputs (logs, checkpoints) will be saved.
         :param name: string; name of the model.
+        :param labels_num: int; describes number of labels used for
+            conditional GAN, None or 0 if non-conditional GAN.
         :param dtype: tensorflow.DType; type used for the model.
         :param g_layers: tuple of ints; describes number of nodes
             in each hidden layer of the generator network.
@@ -80,6 +83,7 @@ class WassersteinGAN(VanillaGAN):
                          session,
                          output_directory,
                          name=name,
+                         labels_num=labels_num,
                          dtype=dtype,
                          g_layers=g_layers,
                          g_activation=g_activation,
@@ -101,21 +105,27 @@ class WassersteinGAN(VanillaGAN):
         )
 
     def _create_discriminator_network(self, layers, activation, dropout, dtype):
-        self._d_params = Dnu.create_network_params(self._flat_data_size,
+        self._d_params = Dnu.create_network_params(self._flat_data_size +
+                                                   self._labels_num,
                                                    layers,
                                                    1,  # < 0 - fake, > 0 - real
                                                    dtype,
                                                    name='discriminator_params',
                                                    stddev=PARAMS_INIT_STDDEV,
                                                    mean=PARAMS_INIT_MEAN)
-        self._fake_discrim = Dnu.model_output(self._generated_data,
+        fake_discrim_in = tf.concat([self._generated_data,
+                                     self._labels_onehot], axis=1)
+        self._fake_discrim = Dnu.model_output(fake_discrim_in,
                                               self._d_params,
                                               activation,
                                               dropout_prob=dropout,
                                               out_activation_fn=None,  # Linear
                                               name='fake_discrimination')
         self._fake_discrim_mean = tf.reduce_mean(self._fake_discrim)
-        self._real_discrim = Dnu.model_output(self._real_data,
+
+        real_discrim_in = tf.concat([self._real_data,
+                                     self._labels_onehot], axis=1)
+        self._real_discrim = Dnu.model_output(real_discrim_in,
                                               self._d_params,
                                               activation,
                                               dropout_prob=dropout,

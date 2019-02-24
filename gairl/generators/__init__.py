@@ -6,20 +6,21 @@ from gairl.generators.wgan_gp.wasserstein_gan_gp import WassersteinGANGP
 from gairl.generators.wgan_gp import wasserstein_gan_gp_config as wgan_gp_conf
 
 
-def create_gan(gan_name, data_shape, noise_size, session):
+def create_gan(gan_name, data_shape, noise_size, session, labels_num=None):
     if gan_name not in _STR_TO_GAN.keys():
         raise AttributeError(f"There's no agent like {gan_name}. You "
                              f"can choose only from {_STR_TO_GAN.keys()}")
 
     creation_method = _STR_TO_GAN[gan_name]
-    return creation_method(data_shape, noise_size, session)
+    return creation_method(data_shape, noise_size, session, labels_num)
 
 
-def _create_vanilla_gan(data_shape, noise_size, session):
+def _create_vanilla_gan(data_shape, noise_size, session, labels_num):
     return VanillaGAN(data_shape,
                       noise_size,
                       session,
                       vgan_conf.OUTPUT_DIRECTORY,
+                      labels_num=labels_num,
                       dtype=vgan_conf.DTYPE,
                       g_layers=vgan_conf.G_LAYERS,
                       g_activation=vgan_conf.G_ACTIVATION,
@@ -37,11 +38,12 @@ def _create_vanilla_gan(data_shape, noise_size, session):
                       save_freq=vgan_conf.SAVE_FREQ)
 
 
-def _create_wasserstein_gan(data_shape, noise_size, session):
+def _create_wasserstein_gan(data_shape, noise_size, session, labels_num):
     return WassersteinGAN(data_shape,
                           noise_size,
                           session,
                           wgan_conf.OUTPUT_DIRECTORY,
+                          labels_num=labels_num,
                           dtype=wgan_conf.DTYPE,
                           g_layers=wgan_conf.G_LAYERS,
                           g_activation=wgan_conf.G_ACTIVATION,
@@ -60,11 +62,12 @@ def _create_wasserstein_gan(data_shape, noise_size, session):
                           save_freq=wgan_conf.SAVE_FREQ)
 
 
-def _create_wasserstein_gan_gp(data_shape, noise_size, session):
+def _create_wasserstein_gan_gp(data_shape, noise_size, session, labels_num):
     return WassersteinGANGP(data_shape,
                             noise_size,
                             session,
                             wgan_gp_conf.OUTPUT_DIRECTORY,
+                            labels_num=labels_num,
                             dtype=wgan_gp_conf.DTYPE,
                             g_layers=wgan_gp_conf.G_LAYERS,
                             g_activation=wgan_gp_conf.G_ACTIVATION,
