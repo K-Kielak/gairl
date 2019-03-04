@@ -14,7 +14,7 @@ class WassersteinGANGP(WassersteinGAN):
                  session,
                  output_directory,
                  name='WassersteinGANGP',
-                 labels_num=None,
+                 cond_in_size=None,
                  dtype=tf.float64,
                  g_layers=(256, 512, 1024),
                  g_activation=tf.nn.leaky_relu,
@@ -35,7 +35,6 @@ class WassersteinGANGP(WassersteinGAN):
                  k=5,
                  penalty_coeff=10,
                  logging_freq=100,
-                 visualisation_freq=1000,
                  logging_level=logging.INFO,
                  max_checkpoints=5,
                  save_freq=1000):
@@ -43,8 +42,8 @@ class WassersteinGANGP(WassersteinGAN):
         Initializes feed-forward version of Wasserstein GAN with Gradient Penalty
         :param noise_size: int; describes the size of the noise that
             will be fed as an input to the generator.
-        :param data_shape: tuple of int; describes the size of the
-            data that GAN is supposed to generate.
+        :param cond_in_size: int; describes size of the conditional
+            input used for GAN, None or 0 if non-conditional GAN.
         :param session: tensorflow..Session; tensorflow session that
             will be used to run the model.
         :param output_directory: string; directory to which all of the
@@ -71,8 +70,6 @@ class WassersteinGANGP(WassersteinGAN):
             per generator iteration.
         :param logging_freq: int; frequency of progress logging and
             writing tensorflow summaries.
-        :param visualisation_freq: int; frequency of saving generator
-            generator images with their discrimination.
         :param logging_level: logging.LEVEL; level of the internal logger.
         :param max_checkpoints: int; number of checkpoints to keep.
         :param save_freq: int; how often the model will be saved.
@@ -83,7 +80,7 @@ class WassersteinGANGP(WassersteinGAN):
                          session,
                          output_directory,
                          name=name,
-                         labels_num=labels_num,
+                         cond_in_size=cond_in_size,
                          dtype=dtype,
                          g_layers=g_layers,
                          g_activation=g_activation,
@@ -95,7 +92,6 @@ class WassersteinGANGP(WassersteinGAN):
                          d_optimizer=d_optimizer,
                          k=k,
                          logging_freq=logging_freq,
-                         visualisation_freq=visualisation_freq,
                          logging_level=logging_level,
                          max_checkpoints=max_checkpoints,
                          save_freq=save_freq)
@@ -126,7 +122,7 @@ class WassersteinGANGP(WassersteinGAN):
         interpolates = tf.add(self._real_data, random_scaling*differences,
                               name='interpolates')
         labeled_interpolates = tf.concat([interpolates,
-                                          self._labels_onehot], axis=1)
+                                          self._d_condition], axis=1)
         interpolates_discrim = Dnu.model_output(labeled_interpolates,
                                                 self._d_params,
                                                 self._d_activation,

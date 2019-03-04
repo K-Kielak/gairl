@@ -20,7 +20,6 @@ D_OPTIMIZER = tf.train.AdamOptimizer(learning_rate=2e-4, beta1=0.5, beta2=0.9)
 K = 10
 PENALTY_COEFF = 10
 LOGGING_FREQ = 50
-VISUALIZATION_FREQ = 5000
 LOGGING_LEVEL = logging.INFO
 MAX_CHECKPOINTS = 5
 SAVE_FREQ = 1000

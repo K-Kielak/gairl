@@ -11,7 +11,7 @@ from gairl.neural_utils import DenseNetworkUtils as Dnu
 from gairl.neural_utils import summarize_ndarray
 
 
-IMGS_TO_VIS_NO_LABELS = 5
+MAX_IMGS_TO_VIS = 10
 PARAMS_INIT_STDDEV = 1e-3
 PARAMS_INIT_MEAN = 0
 
@@ -25,7 +25,7 @@ class VanillaGAN:
                  session,
                  output_directory,
                  name='VanillaGAN',
-                 labels_num=None,
+                 cond_in_size=None,
                  dtype=tf.float64,
                  g_layers=(256, 512, 1024),
                  g_activation=tf.nn.leaky_relu,
@@ -42,7 +42,6 @@ class VanillaGAN:
                  ),
                  k=1,
                  logging_freq=100,
-                 visualisation_freq=1000,
                  logging_level=logging.INFO,
                  max_checkpoints=5,
                  save_freq=1000):
@@ -57,8 +56,10 @@ class VanillaGAN:
         :param output_directory: string; directory to which all of the
             network outputs (logs, checkpoints) will be saved.
         :param name: string; name of the model.
-        :param labels_num: int; describes number of labels used for
-            conditional GAN, None or 0 if non-conditional GAN.
+        :param cond_in_size: int; describes size of the conditional
+            input used for GAN, None or 0 if non-conditional GAN.
+        :param is_cond_one_hot: bool; describes if conditional input
+            is a discrete one-hot encoded label or continous data.
         :param dtype: tensorflow.DType; type used for the model.
         :param g_layers: tuple of ints; describes number of nodes
             in each hidden layer of the generator network.
@@ -80,8 +81,6 @@ class VanillaGAN:
             per generator iteration.
         :param logging_freq: int; frequency of progress logging and
             writing tensorflow summaries.
-        :param visualisation_freq: int; frequency of saving generator
-            generator images with their discrimination.
         :param logging_level: logging.LEVEL; level of the internal logger.
         :param max_checkpoints: int; number of checkpoints to keep.
         :param save_freq: int; how often the model will be saved.
@@ -89,7 +88,7 @@ class VanillaGAN:
         self._name = name
         self._sess = session
         self._data_shape = data_shape
-        self._labels_num = labels_num if labels_num else 0
+        self._cond_in_size = cond_in_size if cond_in_size else 0
         self._flat_data_size = reduce(mul, data_shape)
         self._noise_size = noise_size
         self._dtype = dtype
@@ -99,7 +98,6 @@ class VanillaGAN:
         self._d_activation = d_activation
         self._k = k
         self._logging_freq = logging_freq
-        self._visual_freq = visualisation_freq
         self._save_freq = save_freq
 
         self._steps_so_far = 0
@@ -109,10 +107,10 @@ class VanillaGAN:
                                      dtype=dtype, name='noise')
         self._real_data = tf.placeholder(shape=(None, self._flat_data_size),
                                          dtype=dtype, name='real_data')
-        self._labels = tf.placeholder(shape=(None,),
-                                      dtype=tf.int32, name='labels')
-        self._labels_onehot = tf.one_hot(self._labels, self._labels_num,
-                                         dtype=dtype)
+        self._g_condition = tf.placeholder(shape=(None, self._cond_in_size,),
+                                           dtype=dtype, name='labels')
+        self._d_condition = tf.placeholder(shape=(None, self._cond_in_size,),
+                                           dtype=dtype, name='labels')
 
         # Create networks
         self._create_generator_network(g_layers, g_activation,
@@ -142,19 +140,19 @@ class VanillaGAN:
             f'Discriminator dropout probability: {d_dropout}\n'
             f'Discriminator optimizer: {d_optimizer.__class__.__name__}\n'
             f'K: {k}\n'
-            f'Labels num: {labels_num}'
+            f'Labels num: {cond_in_size}'
         )
 
     def _create_generator_network(self, layers, activation, dropout, dtype):
         self._g_params = Dnu.create_network_params(self._noise_size +
-                                                   self._labels_num,
+                                                   self._cond_in_size,
                                                    layers,
                                                    self._flat_data_size,
                                                    dtype,
                                                    name='generator_params',
                                                    stddev=PARAMS_INIT_STDDEV,
                                                    mean=PARAMS_INIT_MEAN)
-        gen_in = tf.concat([self._noise, self._labels_onehot], axis=1)
+        gen_in = tf.concat([self._noise, self._g_condition], axis=1)
         self._generated_data = Dnu.model_output(gen_in,
                                                 self._g_params,
                                                 activation,
@@ -164,7 +162,7 @@ class VanillaGAN:
 
     def _create_discriminator_network(self, layers, activation, dropout, dtype):
         self._d_params = Dnu.create_network_params(self._flat_data_size +
-                                                   self._labels_num,
+                                                   self._cond_in_size,
                                                    layers,
                                                    1,  # 0 - fake, 1 - real
                                                    dtype,
@@ -172,7 +170,7 @@ class VanillaGAN:
                                                    stddev=PARAMS_INIT_STDDEV,
                                                    mean=PARAMS_INIT_MEAN)
         fake_discrim_in = tf.concat([self._generated_data,
-                                     self._labels_onehot], axis=1)
+                                     self._d_condition], axis=1)
         self._fake_discrim = Dnu.model_output(fake_discrim_in,
                                               self._d_params,
                                               activation,
@@ -182,7 +180,7 @@ class VanillaGAN:
         self._fake_discrim_mean = tf.reduce_mean(self._fake_discrim)
 
         real_discrim_in = tf.concat([self._real_data,
-                                     self._labels_onehot], axis=1)
+                                     self._d_condition], axis=1)
         self._real_discrim = Dnu.model_output(real_discrim_in,
                                               self._d_params,
                                               activation,
@@ -251,28 +249,14 @@ class VanillaGAN:
             training_summs.append(tf.summary.scalar('fake_avg',
                                                     self._fake_discrim_mean))
 
-        visualise_summs = []
-        # Prepare images to visualize
-        images_to_vis = self._generated_data
-        images_shape = [tf.shape(images_to_vis)[0], *self._data_shape]
-        while len(images_shape) < 4:
-            images_shape.append([1])
-        images_to_vis = tf.reshape(images_to_vis, images_shape)
-        # Add top row depending on discrimination
-        discriminations = self._fake_discrim
-        discriminations = tf.reshape(discriminations, [images_shape[0], 1, 1, 1])
-        discriminations = tf.tile(discriminations, [1, 1, images_shape[1], 1])
-        images_to_vis = tf.concat([discriminations, images_to_vis], axis=1)
-        with tf.name_scope('generated-imgs-discriminated'):
-            max_imgs = self._labels_num
-            if max_imgs == 0:
-                max_imgs = IMGS_TO_VIS_NO_LABELS
-            image_summary = tf.summary.image('generated-imgs', images_to_vis,
-                                             max_outputs=max_imgs)
-            visualise_summs.append(image_summary)
-
         self._training_summary = tf.summary.merge(training_summs)
-        self._visualise_summary = tf.summary.merge(visualise_summs)
+        vis_shape = [tf.shape(self._real_data)[0], *self._data_shape]
+        while len(vis_shape) < 4:
+            vis_shape.append(1)
+        vis_data = tf.reshape(self._real_data, vis_shape)
+        self._visualise_summary = tf.summary.image('generated-imgs',
+                                                   vis_data,
+                                                   max_outputs=MAX_IMGS_TO_VIS)
 
     def _initialize_vars(self):
         init_ops = tf.variables_initializer(
@@ -306,7 +290,8 @@ class VanillaGAN:
         self._summary_writer = tf.summary.FileWriter(sumaries_dir,
                                                      self._sess.graph)
 
-    def train_step(self, data_batch, noise_batch, labels=None):
+    def train_step(self, data_batch, noise_batch,
+                   g_condition=None, d_condition=None):
         assert data_batch.shape[1:] == self._data_shape, \
             f'Expected ({self._data_shape}) and received ' \
             f'({data_batch.shape[1:]}) data shapes do not match'
@@ -315,9 +300,14 @@ class VanillaGAN:
             f'({noise_batch.shape[1]}) noise sizes do not match'
         assert data_batch.shape[0] == noise_batch.shape[0], \
             'You need to pass the same amount of noise as data!'
-        if labels is None:
-            labels = np.zeros(data_batch.shape[0])
-        assert data_batch.shape[0] == labels.shape[0], \
+        if g_condition is None:
+            g_condition = np.zeros((data_batch.shape[0], 0))
+            d_condition = g_condition
+        elif d_condition is None:
+            d_condition = g_condition
+        assert data_batch.shape[0] == g_condition.shape[0], \
+            'You need to pass the same amount of labels as data!'
+        assert data_batch.shape[0] == d_condition.shape[0], \
             'You need to pass the same amount of labels as data!'
 
         batch_size = len(data_batch)
@@ -329,7 +319,8 @@ class VanillaGAN:
         self._sess.run(self._d_train_step, feed_dict={
                            self._noise: noise_batch,
                            self._real_data: norm_data,
-                           self._labels: labels
+                           self._g_condition: g_condition,
+                           self._d_condition: d_condition
                        })
         self._steps_so_far += 1
 
@@ -337,7 +328,8 @@ class VanillaGAN:
         if self._steps_so_far % self._k == 0:
             self._sess.run(self._g_train_step, feed_dict={
                                 self._noise: noise_batch,
-                                self._labels: labels
+                                self._g_condition: g_condition,
+                                self._d_condition: d_condition
                            })
 
         # Save model
@@ -347,20 +339,19 @@ class VanillaGAN:
                              global_step=self._steps_so_far)
 
         if self._steps_so_far % self._logging_freq == 0:
-            self._log_step(norm_data, noise_batch, labels)
+            self._log_step(norm_data, noise_batch, g_condition, d_condition)
 
-    def _log_step(self, norm_data_batch, noise_batch, labels):
+    def _log_step(self, norm_data_batch, noise_batch,
+                  g_condition, d_condition):
         train_summ, fake_discrim_mean, real_discrim_mean = \
             self._sess.run([self._training_summary, self._fake_discrim_mean,
                             self._real_discrim_mean], feed_dict={
                                self._noise: noise_batch,
                                self._real_data: norm_data_batch,
-                               self._labels: labels
+                               self._g_condition: g_condition,
+                               self._d_condition: d_condition
                            })
         self._summary_writer.add_summary(train_summ, self._steps_so_far)
-
-        if self._steps_so_far % self._visual_freq < self._logging_freq:
-            self._visualize_generated_data()
 
         self._logger.info(
             f'Current step: {self._steps_so_far}\n'
@@ -369,29 +360,23 @@ class VanillaGAN:
             '\n--------------------------------------------------\n'
         )
 
-    def _visualize_generated_data(self):
-        self._logger.info('Visualising generated data\n')
-        labels_to_vis = np.arange(self._labels_num)
-        if len(labels_to_vis) == 0:
-            labels_to_vis = np.zeros(IMGS_TO_VIS_NO_LABELS)
-
-        noise = np.random.normal(0, 1, size=(len(labels_to_vis), 100))
+    def visualize_data(self, data):
+        self._logger.info('Visualising data\n')
         vis_summ = self._sess.run(self._visualise_summary, feed_dict={
-            self._noise: noise,
-            self._labels: labels_to_vis
+            self._real_data: data,
         })
         self._summary_writer.add_summary(vis_summ, self._steps_so_far)
 
-    def generate(self, noise_batch, labels=None):
+    def generate(self, noise_batch, g_condition=None):
         assert (noise_batch.shape[1] == self._noise_size), \
             f'Expected ({self._noise_size}) and received ' \
             f'({noise_batch.shape[1]}) noise sizes do not match'
-        if labels is None:
-            labels = np.zeros(noise_batch.shape[0])
-        assert noise_batch.shape[0] == labels.shape[0], \
+        if g_condition is None:
+            g_condition = np.zeros((noise_batch.shape[0], 0))
+        assert noise_batch.shape[0] == g_condition.shape[0], \
             'You need to pass the same amount of labels as noise!'
 
         return self._sess.run(self._generated_data, feed_dict={
                                   self._noise: noise_batch,
-                                  self._labels: labels
+                                  self._g_condition: g_condition
                               })

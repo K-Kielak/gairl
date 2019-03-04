@@ -16,7 +16,7 @@ class WassersteinGAN(VanillaGAN):
                  session,
                  output_directory,
                  name='WassersteinGAN',
-                 labels_num=None,
+                 cond_in_size=None,
                  dtype=tf.float64,
                  g_layers=(256, 512, 1024),
                  g_activation=tf.nn.leaky_relu,
@@ -29,7 +29,6 @@ class WassersteinGAN(VanillaGAN):
                  k=5,
                  clip_bounds=(-0.01, 0.01),
                  logging_freq=100,
-                 visualisation_freq=1000,
                  logging_level=logging.INFO,
                  max_checkpoints=5,
                  save_freq=1000):
@@ -44,8 +43,8 @@ class WassersteinGAN(VanillaGAN):
         :param output_directory: string; directory to which all of the
             network outputs (logs, checkpoints) will be saved.
         :param name: string; name of the model.
-        :param labels_num: int; describes number of labels used for
-            conditional GAN, None or 0 if non-conditional GAN.
+        :param cond_in_size: int; describes size of the conditional
+            input used for GAN, None or 0 if non-conditional GAN.
         :param dtype: tensorflow.DType; type used for the model.
         :param g_layers: tuple of ints; describes number of nodes
             in each hidden layer of the generator network.
@@ -67,8 +66,6 @@ class WassersteinGAN(VanillaGAN):
             per generator iteration.
         :param logging_freq: int; frequency of progress logging and
             writing tensorflow summaries.
-        :param visualisation_freq: int; frequency of saving generator
-            generator images with their discrimination.
         :param logging_level: logging.LEVEL; level of the internal logger.
         :param max_checkpoints: int; number of checkpoints to keep.
         :param save_freq: int; how often the model will be saved.
@@ -83,7 +80,7 @@ class WassersteinGAN(VanillaGAN):
                          session,
                          output_directory,
                          name=name,
-                         labels_num=labels_num,
+                         cond_in_size=cond_in_size,
                          dtype=dtype,
                          g_layers=g_layers,
                          g_activation=g_activation,
@@ -95,7 +92,6 @@ class WassersteinGAN(VanillaGAN):
                          d_optimizer=d_optimizer,
                          k=k,
                          logging_freq=logging_freq,
-                         visualisation_freq=visualisation_freq,
                          logging_level=logging_level,
                          max_checkpoints=max_checkpoints,
                          save_freq=save_freq)
@@ -106,7 +102,7 @@ class WassersteinGAN(VanillaGAN):
 
     def _create_discriminator_network(self, layers, activation, dropout, dtype):
         self._d_params = Dnu.create_network_params(self._flat_data_size +
-                                                   self._labels_num,
+                                                   self._cond_in_size,
                                                    layers,
                                                    1,  # < 0 - fake, > 0 - real
                                                    dtype,
@@ -114,7 +110,7 @@ class WassersteinGAN(VanillaGAN):
                                                    stddev=PARAMS_INIT_STDDEV,
                                                    mean=PARAMS_INIT_MEAN)
         fake_discrim_in = tf.concat([self._generated_data,
-                                     self._labels_onehot], axis=1)
+                                     self._g_condition], axis=1)
         self._fake_discrim = Dnu.model_output(fake_discrim_in,
                                               self._d_params,
                                               activation,
@@ -124,7 +120,7 @@ class WassersteinGAN(VanillaGAN):
         self._fake_discrim_mean = tf.reduce_mean(self._fake_discrim)
 
         real_discrim_in = tf.concat([self._real_data,
-                                     self._labels_onehot], axis=1)
+                                     self._d_condition], axis=1)
         self._real_discrim = Dnu.model_output(real_discrim_in,
                                               self._d_params,
                                               activation,
