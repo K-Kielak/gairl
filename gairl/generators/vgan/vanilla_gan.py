@@ -82,6 +82,7 @@ class VanillaGAN:
         :param logging_freq: int; frequency of progress logging and
             writing tensorflow summaries.
         :param logging_level: logging.LEVEL; level of the internal logger.
+            None if it already reuses existing logger.
         :param max_checkpoints: int; number of checkpoints to keep.
         :param save_freq: int; how often the model will be saved.
         """
@@ -108,9 +109,9 @@ class VanillaGAN:
         self._real_data = tf.placeholder(shape=(None, self._flat_data_size),
                                          dtype=dtype, name='real_data')
         self._g_condition = tf.placeholder(shape=(None, self._cond_in_size,),
-                                           dtype=dtype, name='labels')
+                                           dtype=dtype, name='g_condition')
         self._d_condition = tf.placeholder(shape=(None, self._cond_in_size,),
-                                           dtype=dtype, name='labels')
+                                           dtype=dtype, name='d_condition')
 
         # Create networks
         self._create_generator_network(g_layers, g_activation,
@@ -273,7 +274,6 @@ class VanillaGAN:
 
     def _set_up_outputs(self, output_dir, logging_level, max_checkpoints):
         os.mkdir(output_dir)
-        logs_filepath = os.path.join(output_dir, 'logs.log')
         sumaries_dir = os.path.join(output_dir, 'tensorboard')
         checkpoints_dir = os.path.join(output_dir, 'checkpoints')
         os.mkdir(checkpoints_dir)
@@ -281,15 +281,17 @@ class VanillaGAN:
         self._saver = tf.train.Saver(max_to_keep=max_checkpoints)
 
         self._logger = logging.getLogger(self._name)
-        formatter = logging.Formatter('%(asctime)s:%(name)s:'
-                                      '%(levelname)s: %(message)s')
-        file_handler = logging.FileHandler(logs_filepath)
-        file_handler.setFormatter(formatter)
-        self._logger.addHandler(file_handler)
-        console_handler = logging.StreamHandler(sys.stdout)
-        console_handler.setFormatter(formatter)
-        self._logger.addHandler(console_handler)
-        self._logger.setLevel(logging_level)
+        if logging_level:  # Set up separate logger if not None
+            logs_filepath = os.path.join(output_dir, 'logs.log')
+            formatter = logging.Formatter('%(asctime)s:%(name)s:'
+                                          '%(levelname)s: %(message)s')
+            file_handler = logging.FileHandler(logs_filepath)
+            file_handler.setFormatter(formatter)
+            self._logger.addHandler(file_handler)
+            console_handler = logging.StreamHandler(sys.stdout)
+            console_handler.setFormatter(formatter)
+            self._logger.addHandler(console_handler)
+            self._logger.setLevel(logging_level)
 
         self._summary_writer = tf.summary.FileWriter(sumaries_dir,
                                                      self._sess.graph)

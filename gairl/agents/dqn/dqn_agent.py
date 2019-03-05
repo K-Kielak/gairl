@@ -79,7 +79,8 @@ class DQNAgent(AbstractAgent):
             updates the agent will perform in-between target network updates.
         :param logging_freq: int; frequency of progress logging and
             writing tensorflow summaries.
-        :param logging_level: logging.LEVEL; level of the internal logger.
+        :param logging_level: logging.LEVEL; level of the internal logger,
+            None if it already reuses existing logger.
         :param max_checkpoints: int; number of checkpoints to keep.
         :param save_freq: int; how often the model will be saved.
         :param model_path: string; path of the model to load. If None
@@ -151,7 +152,12 @@ class DQNAgent(AbstractAgent):
 
         self._set_up_outputs(output_directory, logging_level, max_checkpoints)
         self._add_summaries()
-        self._initialize_vars()
+
+        # Initialize vars
+        init_ops = tf.variables_initializer(self._unpacked_params)
+        self._sess.run(init_ops)
+
+        # Load network if load_path specified
         if load_path:
             self._logger.info(f'Loading the model from {load_path}')
             self._saver.restore(self._sess, load_path)
@@ -190,6 +196,9 @@ class DQNAgent(AbstractAgent):
             Dnu.unpack_params(self._online_params),
             Dnu.unpack_params(self._target_params)
         )
+        self._unpacked_params = Dnu.unpack_params(self._online_params) + \
+                                Dnu.unpack_params(self._target_params) + \
+                                self._optimizer.variables()
 
     def _create_outputs(self):
         self._online_start_qs = Dnu.model_output(self._start_states,
@@ -220,7 +229,8 @@ class DQNAgent(AbstractAgent):
         weighted_td_errors = tf.multiply(self._is_weights, self._td_errors,
                                          name='weighted_td_errors')
         self._loss = tf.reduce_mean(weighted_td_errors, name='loss')
-        grads = self._optimizer.compute_gradients(self._loss)
+        grads = self._optimizer.compute_gradients(self._loss,
+                                                  var_list=self._unpacked_params)
         grads = [(tf.clip_by_value(grad,
                                    -self._gradient_clip,
                                    self._gradient_clip), var)
@@ -240,7 +250,6 @@ class DQNAgent(AbstractAgent):
 
     def _set_up_outputs(self, output_dir, logging_level, max_checkpoints):
         os.mkdir(output_dir)
-        logs_filepath = os.path.join(output_dir, 'logs.log')
         sumaries_dir = os.path.join(output_dir, 'tensorboard')
         checkpoints_dir = os.path.join(output_dir, 'checkpoints')
         os.mkdir(checkpoints_dir)
@@ -248,15 +257,17 @@ class DQNAgent(AbstractAgent):
         self._saver = tf.train.Saver(max_to_keep=max_checkpoints)
 
         self._logger = logging.getLogger(self._name)
-        formatter = logging.Formatter('%(asctime)s:%(name)s:'
-                                      '%(levelname)s: %(message)s')
-        file_handler = logging.FileHandler(logs_filepath)
-        file_handler.setFormatter(formatter)
-        self._logger.addHandler(file_handler)
-        console_handler = logging.StreamHandler(sys.stdout)
-        console_handler.setFormatter(formatter)
-        self._logger.addHandler(console_handler)
-        self._logger.setLevel(logging_level)
+        if logging_level:  # Set up separate logger if not None
+            logs_filepath = os.path.join(output_dir, 'logs.log')
+            formatter = logging.Formatter('%(asctime)s:%(name)s:'
+                                          '%(levelname)s: %(message)s')
+            file_handler = logging.FileHandler(logs_filepath)
+            file_handler.setFormatter(formatter)
+            self._logger.addHandler(file_handler)
+            console_handler = logging.StreamHandler(sys.stdout)
+            console_handler.setFormatter(formatter)
+            self._logger.addHandler(console_handler)
+            self._logger.setLevel(logging_level)
 
         self._summary_writer = tf.summary.FileWriter(sumaries_dir,
                                                      self._sess.graph)
@@ -297,14 +308,6 @@ class DQNAgent(AbstractAgent):
         self._training_summary = tf.summary.merge(training_summs)
         self._output_summary = tf.summary.merge(output_summs)
         self._ep_summary = tf.summary.merge(ep_summs)
-
-    def _initialize_vars(self):
-        init_ops = tf.variables_initializer(
-            Dnu.unpack_params(self._online_params) +
-            Dnu.unpack_params(self._target_params) +
-            self._optimizer.variables()
-        )
-        self._sess.run(init_ops)
 
     def step(self, state, reward=0, is_terminal=False):
         action = self._choose_action(state)
