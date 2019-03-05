@@ -243,6 +243,10 @@ class VanillaGAN:
                                                     self._real_d_loss))
             training_summs.append(tf.summary.scalar('discriminator-loss',
                                                     self._d_loss))
+            gen_real_diff = tf.abs(self._generated_data - self._real_data)
+
+            l1_loss = tf.reduce_sum(tf.reduce_mean(gen_real_diff, axis=1))
+            training_summs.append(tf.summary.scalar('L1-loss', l1_loss))
         with tf.name_scope('discriminations'):
             training_summs.append(tf.summary.scalar('real_avg',
                                                     self._real_discrim_mean))
