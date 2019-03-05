@@ -11,11 +11,23 @@ from gairl.agents.random_agent import RandomAgent
 from gairl.generators import create_gan
 
 
-def create_agent(agent_name, actions_num, state_size, session=None,
-                 name=None, output_dir=None, separate_logging=True):
+def create_agent(agent_name,
+                 actions_num,
+                 state_size,
+                 session=None,
+                 name=None,
+                 output_dir=None,
+                 separate_logging=True,
+                 data_range=(-1, 1)):
     if agent_name not in _STR_TO_AGENT.keys():
         raise AttributeError(f"There's no agent like {agent_name}. You "
                              f"can choose only from {_STR_TO_AGENT.keys()}")
+
+    if agent_name == 'gairl':
+        return _create_gairl_agent(actions_num, state_size, session,
+                                   name=name, output_dir=output_dir,
+                                   separate_logging=separate_logging,
+                                   data_range=data_range)
 
     creation_method = _STR_TO_AGENT[agent_name]
     if 'session' in getfullargspec(creation_method).args:
@@ -97,8 +109,13 @@ def _create_rainbowdqn_agent(actions_num, state_size, session, name='RainbowDQN'
                            load_path=rainbow_conf.MODEL_LOAD_PATH)
 
 
-def _create_gairl_agent(actions_num, state_size, session, name='GAIRL',
-                        output_dir=None, separate_logging=True):
+def _create_gairl_agent(actions_num,
+                        state_size,
+                        session,
+                        name='GAIRL',
+                        output_dir=None,
+                        separate_logging=True,
+                        data_range=(-1, 1)):
     if not output_dir:
         output_dir = gairl_conf.OUTPUT_DIRECTORY
 
@@ -113,6 +130,7 @@ def _create_gairl_agent(actions_num, state_size, session, name='GAIRL',
                                   0,
                                   session,
                                   cond_in_size=cond_data_size,
+                                  data_range=data_range,
                                   name=name,
                                   output_dir=gen_output_dir,
                                   separate_logging=False)

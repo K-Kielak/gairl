@@ -15,6 +15,7 @@ class WassersteinGANGP(WassersteinGAN):
                  output_directory,
                  name='WassersteinGANGP',
                  cond_in_size=None,
+                 data_range=(-1, 1),
                  dtype=tf.float64,
                  g_layers=(256, 512, 1024),
                  g_activation=tf.nn.leaky_relu,
@@ -46,6 +47,8 @@ class WassersteinGANGP(WassersteinGAN):
             will be fed as an input to the generator.
         :param cond_in_size: int; describes size of the conditional
             input used for GAN, None or 0 if non-conditional GAN.
+        :param data_range: tuple of ints; specifies what is the range of
+            data that needs to be generated in terms of max and min values.
         :param session: tensorflow..Session; tensorflow session that
             will be used to run the model.
         :param output_directory: string; directory to which all of the
@@ -83,6 +86,7 @@ class WassersteinGANGP(WassersteinGAN):
                          output_directory,
                          name=name,
                          cond_in_size=cond_in_size,
+                         data_range=data_range,
                          dtype=dtype,
                          g_layers=g_layers,
                          g_activation=g_activation,
@@ -115,13 +119,15 @@ class WassersteinGANGP(WassersteinGAN):
                                     name='non_penalized_loss')
 
         # Calculate gradient penalty
-        differences = tf.subtract(self._generated_data, self._real_data,
+        differences = tf.subtract(self._generated_data_flat,
+                                  self._real_data_preproc,
                                   name='differences')
         random_scaling = tf.random_uniform(
-            shape=[tf.shape(self._real_data)[0], 1],
+            shape=[tf.shape(self._real_data_preproc)[0], 1],
             dtype=self._dtype, minval=0, maxval=1
         )
-        interpolates = tf.add(self._real_data, random_scaling*differences,
+        interpolates = tf.add(self._real_data_preproc,
+                              random_scaling*differences,
                               name='interpolates')
         labeled_interpolates = tf.concat([interpolates,
                                           self._d_condition], axis=1)

@@ -20,7 +20,8 @@ def main():
         data = extract_images(mnist_file)
 
     with tf.Session() as sess:
-        gan = create_gan(GAN_STR, data.shape[1:], NOISE_SIZE, sess)
+        gan = create_gan(GAN_STR, data.shape[1:], NOISE_SIZE, sess,
+                         data_range=(data.min(), data.max()))
         for t in range(TRAINING_STEPS):
             batch_indices = np.random.randint(data.shape[0], size=BATCH_SIZE)
             batch_data = data[batch_indices, :]

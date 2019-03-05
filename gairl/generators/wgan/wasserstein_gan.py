@@ -17,6 +17,7 @@ class WassersteinGAN(VanillaGAN):
                  output_directory,
                  name='WassersteinGAN',
                  cond_in_size=None,
+                 data_range=(-1, 1),
                  dtype=tf.float64,
                  g_layers=(256, 512, 1024),
                  g_activation=tf.nn.leaky_relu,
@@ -45,6 +46,8 @@ class WassersteinGAN(VanillaGAN):
         :param name: string; name of the model.
         :param cond_in_size: int; describes size of the conditional
             input used for GAN, None or 0 if non-conditional GAN.
+        :param data_range: tuple of ints; specifies what is the range of
+            data that needs to be generated in terms of max and min values.
         :param dtype: tensorflow.DType; type used for the model.
         :param g_layers: tuple of ints; describes number of nodes
             in each hidden layer of the generator network.
@@ -81,6 +84,7 @@ class WassersteinGAN(VanillaGAN):
                          output_directory,
                          name=name,
                          cond_in_size=cond_in_size,
+                         data_range=data_range,
                          dtype=dtype,
                          g_layers=g_layers,
                          g_activation=g_activation,
@@ -109,7 +113,7 @@ class WassersteinGAN(VanillaGAN):
                                                    name='discriminator_params',
                                                    stddev=PARAMS_INIT_STDDEV,
                                                    mean=PARAMS_INIT_MEAN)
-        fake_discrim_in = tf.concat([self._generated_data,
+        fake_discrim_in = tf.concat([self._generated_data_flat,
                                      self._g_condition], axis=1)
         self._fake_discrim = Dnu.model_output(fake_discrim_in,
                                               self._d_params,
@@ -119,7 +123,7 @@ class WassersteinGAN(VanillaGAN):
                                               name='fake_discrimination')
         self._fake_discrim_mean = tf.reduce_mean(self._fake_discrim)
 
-        real_discrim_in = tf.concat([self._real_data,
+        real_discrim_in = tf.concat([self._real_data_preproc,
                                      self._d_condition], axis=1)
         self._real_discrim = Dnu.model_output(real_discrim_in,
                                               self._d_params,

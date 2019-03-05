@@ -131,3 +131,23 @@ def summarize_vector(vec):
     summaries.append(tf.summary.scalar('max', tf.reduce_max(vec)))
     summaries.append(tf.summary.scalar('mean', tf.reduce_mean(vec)))
     return summaries
+
+
+# TODO right now normalizes based on total data range,
+# TODO make it normalizable for specifiable ranges per feature
+def normalize(data_batch, data_range=None, target_range=(0, 1), name=None):
+    """
+    :param data_batch: tensor with data to normalize
+    :param data_range: tuple representing (min, max) of the possible
+        data values.
+    :param target_range: tuple representing (min, max) of the
+        possible data values after normalization.
+    :param name: name for the final output tensor
+    :return: Normalized tensor containing the data
+    """
+    if not data_range:
+        data_range = tf.reduce_min(data_batch), tf.reduce_max(data_batch)
+
+    data_normed = (data_batch - data_range[0]) / (data_range[1] - data_range[0])
+    data_normed = data_normed * (target_range[1] - target_range[0])
+    return tf.add(data_normed, target_range[0], name=name)

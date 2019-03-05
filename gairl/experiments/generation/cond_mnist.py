@@ -26,7 +26,8 @@ def main():
 
     with tf.Session() as sess:
         gan = create_gan(GAN_STR, imgs.shape[1:], NOISE_SIZE,
-                         sess, cond_in_size=LABELS_NUM)
+                         sess, cond_in_size=LABELS_NUM,
+                         data_range=(imgs.min(), imgs.max()))
         for t in range(TRAINING_STEPS):
             batch_indices = np.random.randint(imgs.shape[0], size=BATCH_SIZE)
             batch_imgs = imgs[batch_indices, :]
@@ -38,6 +39,7 @@ def main():
                 noise = np.random.normal(0, 1, (LABELS_NUM, NOISE_SIZE))
                 labels_to_vis = np.eye(LABELS_NUM)
                 gen_images = gan.generate(noise, g_condition=labels_to_vis)
+                print(gen_images.min(), gen_images.max())
                 gan.visualize_data(gen_images)
 
 if __name__ == '__main__':

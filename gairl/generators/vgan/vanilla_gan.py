@@ -8,15 +8,16 @@ import numpy as np
 import tensorflow as tf
 
 from gairl.neural_utils import DenseNetworkUtils as Dnu
-from gairl.neural_utils import summarize_ndarray
+from gairl.neural_utils import summarize_ndarray, normalize
 
 
 MAX_IMGS_TO_VIS = 10
 PARAMS_INIT_STDDEV = 1e-3
 PARAMS_INIT_MEAN = 0
+GENERATOR_OUT_RANGE = (-1, 1)  # (-1, 1) because tanh final activation
 
 
-# TODO add loading
+# TODO add loading and per feature + condition norm/denorm!
 class VanillaGAN:
 
     def __init__(self,
@@ -26,6 +27,7 @@ class VanillaGAN:
                  output_directory,
                  name='VanillaGAN',
                  cond_in_size=None,
+                 data_range=(-1, 1),
                  dtype=tf.float64,
                  g_layers=(256, 512, 1024),
                  g_activation=tf.nn.leaky_relu,
@@ -58,6 +60,8 @@ class VanillaGAN:
         :param name: string; name of the model.
         :param cond_in_size: int; describes size of the conditional
             input used for GAN, None or 0 if non-conditional GAN.
+        :param data_range: tuple of ints; specifies what is the range of
+            data that needs to be generated in terms of max and min values.
         :param dtype: tensorflow.DType; type used for the model.
         :param g_layers: tuple of ints; describes number of nodes
             in each hidden layer of the generator network.
@@ -88,6 +92,7 @@ class VanillaGAN:
         self._sess = session
         self._data_shape = data_shape
         self._cond_in_size = cond_in_size if cond_in_size else 0
+        self._data_range = data_range
         self._flat_data_size = reduce(mul, data_shape)
         self._noise_size = noise_size
         self._dtype = dtype
@@ -104,12 +109,20 @@ class VanillaGAN:
         # Set up inputs
         self._noise = tf.placeholder(shape=(None, self._noise_size),
                                      dtype=dtype, name='noise')
-        self._real_data = tf.placeholder(shape=(None, self._flat_data_size),
+        self._real_data = tf.placeholder(shape=(None, *self._data_shape),
                                          dtype=dtype, name='real_data')
         self._g_condition = tf.placeholder(shape=(None, self._cond_in_size,),
                                            dtype=dtype, name='g_condition')
         self._d_condition = tf.placeholder(shape=(None, self._cond_in_size,),
                                            dtype=dtype, name='d_condition')
+        self._batch_size = tf.shape(self._noise)[0]
+        real_data_flat = tf.reshape(self._real_data,
+                                    (self._batch_size, self._flat_data_size),
+                                    name='real_data_flat')
+        self._real_data_preproc = normalize(real_data_flat,
+                                            data_range=self._data_range,
+                                            target_range=GENERATOR_OUT_RANGE,
+                                            name='real_data_preproc')
 
         # Create networks
         self._create_generator_network(g_layers, g_activation,
@@ -127,8 +140,9 @@ class VanillaGAN:
 
         self._logger.info(
             f'\nCreating GAN with:\n'
-            f'Data shape {data_shape}\n'
-            f'Noise size {noise_size}\n'
+            f'Data shape: {data_shape}\n'
+            f'Noise size: {noise_size}\n'
+            f'Data range: {data_range}\n'
             f'Dtype: {dtype}\n'
             f'Generator layers: {g_layers}\n'
             f'Generator activation function: {g_activation.__name__}\n'
@@ -152,12 +166,21 @@ class VanillaGAN:
                                                    stddev=PARAMS_INIT_STDDEV,
                                                    mean=PARAMS_INIT_MEAN)
         gen_in = tf.concat([self._noise, self._g_condition], axis=1)
-        self._generated_data = Dnu.model_output(gen_in,
-                                                self._g_params,
-                                                activation,
-                                                dropout_prob=dropout,
-                                                out_activation_fn=tf.nn.tanh,
-                                                name='generator_out')
+        self._generated_data_flat = Dnu.model_output(gen_in,
+                                                     self._g_params,
+                                                     activation,
+                                                     dropout_prob=dropout,
+                                                     out_activation_fn=tf.nn.tanh,
+                                                     name='generator_out_flat')
+        # Put back to proper shape
+        self._generated_data = tf.reshape(self._generated_data_flat,
+                                          (self._batch_size,
+                                           *self._data_shape))
+        # Denormalize
+        self._generated_data = normalize(self._generated_data,
+                                         data_range=GENERATOR_OUT_RANGE,
+                                         target_range=self._data_range,
+                                         name='generator_out')
 
     def _create_discriminator_network(self, layers, activation, dropout, dtype):
         self._d_params = Dnu.create_network_params(self._flat_data_size +
@@ -168,7 +191,7 @@ class VanillaGAN:
                                                    name='discriminator_params',
                                                    stddev=PARAMS_INIT_STDDEV,
                                                    mean=PARAMS_INIT_MEAN)
-        fake_discrim_in = tf.concat([self._generated_data,
+        fake_discrim_in = tf.concat([self._generated_data_flat,
                                      self._d_condition], axis=1)
         self._fake_discrim = Dnu.model_output(fake_discrim_in,
                                               self._d_params,
@@ -178,7 +201,7 @@ class VanillaGAN:
                                               name='fake_discrimination')
         self._fake_discrim_mean = tf.reduce_mean(self._fake_discrim)
 
-        real_discrim_in = tf.concat([self._real_data,
+        real_discrim_in = tf.concat([self._real_data_preproc,
                                      self._d_condition], axis=1)
         self._real_discrim = Dnu.model_output(real_discrim_in,
                                               self._d_params,
@@ -242,9 +265,12 @@ class VanillaGAN:
                                                     self._real_d_loss))
             training_summs.append(tf.summary.scalar('discriminator-loss',
                                                     self._d_loss))
-            gen_real_diff = tf.abs(self._generated_data - self._real_data)
-            l1_loss = tf.reduce_sum(tf.reduce_mean(gen_real_diff, axis=1))
-            training_summs.append(tf.summary.scalar('L1-loss', l1_loss))
+            gen_real_diff = tf.abs(self._generated_data_flat -
+                                   self._real_data_preproc,
+                                   name='gen_real_diff')
+            l1_loss = tf.reduce_sum(tf.reduce_mean(gen_real_diff, axis=1),
+                                    name='l1_loss')
+            training_summs.append(tf.summary.scalar('l1-loss', l1_loss))
         with tf.name_scope('discriminations'):
             training_summs.append(tf.summary.scalar('real_avg',
                                                     self._real_discrim_mean))
@@ -313,15 +339,10 @@ class VanillaGAN:
         assert data_batch.shape[0] == d_condition.shape[0], \
             'You need to pass the same amount of labels as data!'
 
-        batch_size = len(data_batch)
-        flat_data = data_batch.reshape(batch_size, self._flat_data_size)
-        norm_data = np.interp(flat_data, (flat_data.min(), flat_data.max()),
-                              (-1, +1))
-
         # Train Discriminator
         self._sess.run(self._d_train_step, feed_dict={
                            self._noise: noise_batch,
-                           self._real_data: norm_data,
+                           self._real_data: data_batch,
                            self._g_condition: g_condition,
                            self._d_condition: d_condition
                        })
@@ -342,15 +363,15 @@ class VanillaGAN:
                              global_step=self._steps_so_far)
 
         if self._steps_so_far % self._logging_freq == 0:
-            self._log_step(norm_data, noise_batch, g_condition, d_condition)
+            self._log_step(data_batch, noise_batch, g_condition, d_condition)
 
-    def _log_step(self, norm_data_batch, noise_batch,
+    def _log_step(self, data_batch, noise_batch,
                   g_condition, d_condition):
         train_summ, fake_discrim_mean, real_discrim_mean = \
             self._sess.run([self._training_summary, self._fake_discrim_mean,
                             self._real_discrim_mean], feed_dict={
                                self._noise: noise_batch,
-                               self._real_data: norm_data_batch,
+                               self._real_data: data_batch,
                                self._g_condition: g_condition,
                                self._d_condition: d_condition
                            })

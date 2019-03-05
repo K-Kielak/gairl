@@ -6,8 +6,15 @@ from gairl.generators.wgan_gp.wasserstein_gan_gp import WassersteinGANGP
 from gairl.generators.wgan_gp import wasserstein_gan_gp_config as wgan_gp_conf
 
 
-def create_gan(gan_name, data_shape, noise_size, session, name=None,
-               cond_in_size=None, output_dir=None, separate_logging=True):
+def create_gan(gan_name,
+               data_shape,
+               noise_size,
+               session,
+               name=None,
+               cond_in_size=None,
+               data_range=(-1, 1),
+               output_dir=None,
+               separate_logging=True):
     if gan_name not in _STR_TO_GAN.keys():
         raise AttributeError(f"There's no agent like {gan_name}. You "
                              f"can choose only from {_STR_TO_GAN.keys()}")
@@ -15,12 +22,15 @@ def create_gan(gan_name, data_shape, noise_size, session, name=None,
     creation_method = _STR_TO_GAN[gan_name]
     if name:
         return creation_method(data_shape, noise_size, session,
-                               cond_in_size=cond_in_size, name=name,
+                               cond_in_size=cond_in_size,
+                               data_range=data_range,
+                               name=name,
                                output_dir=output_dir,
                                separate_logging=separate_logging)
 
     return creation_method(data_shape, noise_size, session,
                            cond_in_size=cond_in_size,
+                           data_range=data_range,
                            output_dir=output_dir,
                            separate_logging=separate_logging)
 
@@ -30,6 +40,7 @@ def _create_vanilla_gan(data_shape,
                         session,
                         name='VanillaGAN',
                         cond_in_size=None,
+                        data_range=(-1, 1),
                         output_dir=None,
                         separate_logging=True):
     if not output_dir:
@@ -40,8 +51,9 @@ def _create_vanilla_gan(data_shape,
                       noise_size,
                       session,
                       output_dir,
-                      cond_in_size=cond_in_size,
                       name=name,
+                      cond_in_size=cond_in_size,
+                      data_range=data_range,
                       dtype=vgan_conf.DTYPE,
                       g_layers=vgan_conf.G_LAYERS,
                       g_activation=vgan_conf.G_ACTIVATION,
@@ -63,6 +75,7 @@ def _create_wasserstein_gan(data_shape,
                             session,
                             name='WassersteinGAN',
                             cond_in_size=None,
+                            data_range=(-1, 1),
                             output_dir=None,
                             separate_logging=True):
     if not output_dir:
@@ -75,6 +88,7 @@ def _create_wasserstein_gan(data_shape,
                           output_dir,
                           name=name,
                           cond_in_size=cond_in_size,
+                          data_range=data_range,
                           dtype=wgan_conf.DTYPE,
                           g_layers=wgan_conf.G_LAYERS,
                           g_activation=wgan_conf.G_ACTIVATION,
@@ -95,8 +109,9 @@ def _create_wasserstein_gan(data_shape,
 def _create_wasserstein_gan_gp(data_shape,
                                noise_size,
                                session,
-                               cond_in_size=None,
                                name='WassersteinGAN with GP',
+                               cond_in_size=None,
+                               data_range=(-1, 1),
                                output_dir=None,
                                separate_logging=True):
     if not output_dir:
@@ -107,8 +122,9 @@ def _create_wasserstein_gan_gp(data_shape,
                             noise_size,
                             session,
                             output_dir,
-                            cond_in_size=cond_in_size,
                             name=name,
+                            cond_in_size=cond_in_size,
+                            data_range=data_range,
                             dtype=wgan_gp_conf.DTYPE,
                             g_layers=wgan_gp_conf.G_LAYERS,
                             g_activation=wgan_gp_conf.G_ACTIVATION,
