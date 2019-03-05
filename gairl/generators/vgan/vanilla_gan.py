@@ -47,10 +47,10 @@ class VanillaGAN:
                  save_freq=1000):
         """
         Initializes feed-forward version of vanilla GAN
-        :param noise_size: int; describes the size of the noise that
-            will be fed as an input to the generator.
         :param data_shape: tuple of int; describes the size of the
             data that GAN is supposed to generate.
+        :param noise_size: int; describes the size of the noise that
+            will be fed as an input to the generator.
         :param session: tensorflow..Session; tensorflow session that
             will be used to run the model.
         :param output_directory: string; directory to which all of the
@@ -58,8 +58,6 @@ class VanillaGAN:
         :param name: string; name of the model.
         :param cond_in_size: int; describes size of the conditional
             input used for GAN, None or 0 if non-conditional GAN.
-        :param is_cond_one_hot: bool; describes if conditional input
-            is a discrete one-hot encoded label or continous data.
         :param dtype: tensorflow.DType; type used for the model.
         :param g_layers: tuple of ints; describes number of nodes
             in each hidden layer of the generator network.
@@ -245,7 +243,6 @@ class VanillaGAN:
             training_summs.append(tf.summary.scalar('discriminator-loss',
                                                     self._d_loss))
             gen_real_diff = tf.abs(self._generated_data - self._real_data)
-
             l1_loss = tf.reduce_sum(tf.reduce_mean(gen_real_diff, axis=1))
             training_summs.append(tf.summary.scalar('L1-loss', l1_loss))
         with tf.name_scope('discriminations'):

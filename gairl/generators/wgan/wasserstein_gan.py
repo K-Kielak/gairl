@@ -34,10 +34,10 @@ class WassersteinGAN(VanillaGAN):
                  save_freq=1000):
         """
         Initializes feed-forward version of Wasserstein GAN.
-        :param noise_size: int; describes the size of the noise that
-            will be fed as an input to the generator.
         :param data_shape: tuple of int; describes the size of the
             data that GAN is supposed to generate.
+        :param noise_size: int; describes the size of the noise that
+            will be fed as an input to the generator.
         :param session: tensorflow..Session; tensorflow session that
             will be used to run the model.
         :param output_directory: string; directory to which all of the

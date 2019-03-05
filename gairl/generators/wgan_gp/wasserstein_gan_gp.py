@@ -40,6 +40,8 @@ class WassersteinGANGP(WassersteinGAN):
                  save_freq=1000):
         """
         Initializes feed-forward version of Wasserstein GAN with Gradient Penalty
+        :param data_shape: tuple of int; describes the size of the
+            data that GAN is supposed to generate.
         :param noise_size: int; describes the size of the noise that
             will be fed as an input to the generator.
         :param cond_in_size: int; describes size of the conditional
