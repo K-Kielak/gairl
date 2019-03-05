@@ -1,20 +1,31 @@
+import os
 from inspect import getfullargspec
 
 from gairl.agents.dqn import dqn_config as dqn_conf
 from gairl.agents.dqn.dqn_agent import DQNAgent
+from gairl.agents.gairl import gairl_config as gairl_conf
+from gairl.agents.gairl.gairl_agent import GAIRLAgent
 from gairl.agents.rainbow import rainbow_config as rainbow_conf
 from gairl.agents.rainbow.rainbow_agent import RainbowDQNAgent
 from gairl.agents.random_agent import RandomAgent
+from gairl.generators import create_gan
 
 
-def create_agent(agent_name, actions_num, state_size, session=None):
+def create_agent(agent_name, actions_num, state_size, session=None,
+                 name=None, output_dir=None, separate_logging=True):
     if agent_name not in _STR_TO_AGENT.keys():
         raise AttributeError(f"There's no agent like {agent_name}. You "
                              f"can choose only from {_STR_TO_AGENT.keys()}")
 
     creation_method = _STR_TO_AGENT[agent_name]
     if 'session' in getfullargspec(creation_method).args:
-        return creation_method(actions_num, state_size, session=session)
+        if name:
+            return creation_method(actions_num, state_size, session,
+                                   name=name, output_dir=output_dir,
+                                   separate_logging=separate_logging)
+        return creation_method(actions_num, state_size, session,
+                               output_dir=output_dir,
+                               separate_logging=separate_logging)
 
     return creation_method(actions_num, state_size)
 
@@ -23,12 +34,18 @@ def _create_random_agent(actions_num, state_size):
     return RandomAgent(actions_num, state_size)
 
 
-def _create_dqn_agent(actions_num, state_size, session):
+def _create_dqn_agent(actions_num, state_size, session, name='DQN',
+                      output_dir=None, separate_logging=True):
+    if not output_dir:
+        output_dir = dqn_conf.OUTPUT_DIRECTORY
+
+    logging_level = dqn_conf.LOGGING_LEVEL if separate_logging else None
     return DQNAgent(actions_num,
                     state_size,
                     dqn_conf.HIDDEN_LAYERS,
                     session,
-                    dqn_conf.OUTPUT_DIRECTORY,
+                    output_dir,
+                    name=name,
                     dtype=dqn_conf.DTYPE,
                     activation_fn=dqn_conf.ACTIVATION_FN,
                     optimizer=dqn_conf.OPTIMIZER,
@@ -42,18 +59,25 @@ def _create_dqn_agent(actions_num, state_size, session):
                     update_freq=dqn_conf.UPDATE_FREQ,
                     target_update_freq=dqn_conf.TARGET_UPDATE_FREQ,
                     logging_freq=dqn_conf.LOGGING_FREQ,
-                    logging_level=dqn_conf.LOGGING_LEVEL,
+                    logging_level=logging_level,
                     max_checkpoints=dqn_conf.MAX_CHECKPOINTS,
                     save_freq=dqn_conf.SAVE_FREQUENCY,
                     load_path=dqn_conf.MODEL_LOAD_PATH)
 
 
-def _create_rainbowdqn_agent(actions_num, state_size, session):
+def _create_rainbowdqn_agent(actions_num, state_size, session, name='RainbowDQN',
+                             output_dir=None, separate_logging=True):
+    if not output_dir:
+        output_dir = dqn_conf.OUTPUT_DIRECTORY
+
+    logging_level = rainbow_conf.LOGGING_LEVEL if separate_logging else None
+
     return RainbowDQNAgent(actions_num,
                            state_size,
                            rainbow_conf.HIDDEN_LAYERS,
                            session,
-                           rainbow_conf.OUTPUT_DIRECTORY,
+                           output_dir,
+                           name=name,
                            dtype=rainbow_conf.DTYPE,
                            activation_fn=rainbow_conf.ACTIVATION_FN,
                            optimizer=rainbow_conf.OPTIMIZER,
@@ -67,14 +91,57 @@ def _create_rainbowdqn_agent(actions_num, state_size, session):
                            update_freq=rainbow_conf.UPDATE_FREQ,
                            target_update_freq=rainbow_conf.TARGET_UPDATE_FREQ,
                            logging_freq=rainbow_conf.LOGGING_FREQ,
-                           logging_level=rainbow_conf.LOGGING_LEVEL,
+                           logging_level=logging_level,
                            max_checkpoints=rainbow_conf.MAX_CHECKPOINTS,
                            save_freq=rainbow_conf.SAVE_FREQUENCY,
                            load_path=rainbow_conf.MODEL_LOAD_PATH)
 
 
+def _create_gairl_agent(actions_num, state_size, session, name='GAIRL',
+                        output_dir=None, separate_logging=True):
+    if not output_dir:
+        output_dir = gairl_conf.OUTPUT_DIRECTORY
+
+    # Create directory for RL agent and generative model
+    os.mkdir(output_dir)
+
+    gen_data_size = (state_size + 1,)  # + 1 for is_terminal flag
+    cond_data_size = state_size + actions_num
+    gen_output_dir = os.path.join(output_dir, 'model')
+    generative_model = create_gan(gairl_conf.GENERATIVE_MODEL_STR,
+                                  gen_data_size,
+                                  0,
+                                  session,
+                                  cond_in_size=cond_data_size,
+                                  name=name,
+                                  output_dir=gen_output_dir,
+                                  separate_logging=False)
+
+    rl_output_dir = os.path.join(output_dir, 'agent')
+    rl_agent = create_agent(gairl_conf.RL_AGENT_STR,
+                            actions_num,
+                            state_size,
+                            session=session,
+                            name=name,
+                            output_dir=rl_output_dir,
+                            separate_logging=False)
+
+    logging_level = gairl_conf.LOGGING_LEVEL if separate_logging else None
+    return GAIRLAgent(actions_num,
+                      state_size,
+                      rl_agent,
+                      generative_model,
+                      output_dir,
+                      replay_buffer=gairl_conf.REPLAY_BUFFER,
+                      model_free_steps=gairl_conf.MODEL_FREE_STEPS,
+                      model_training_steps=gairl_conf.MODEL_TRAINING_STEPS,
+                      model_based_steps=gairl_conf.MODEL_BASED_STEPS,
+                      logging_level=logging_level)
+
+
 _STR_TO_AGENT = {
     'random': _create_random_agent,
     'dqn': _create_dqn_agent,
-    'rainbowdqn': _create_rainbowdqn_agent
+    'rainbowdqn': _create_rainbowdqn_agent,
+    'gairl': _create_gairl_agent
 }
