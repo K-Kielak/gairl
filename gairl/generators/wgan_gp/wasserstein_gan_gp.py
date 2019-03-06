@@ -15,7 +15,7 @@ class WassersteinGANGP(WassersteinGAN):
                  output_directory,
                  name='WassersteinGANGP',
                  cond_in_size=None,
-                 data_range=(-1, 1),
+                 data_ranges=(-1, 1),
                  dtype=tf.float64,
                  g_layers=(256, 512, 1024),
                  g_activation=tf.nn.leaky_relu,
@@ -47,7 +47,7 @@ class WassersteinGANGP(WassersteinGAN):
             will be fed as an input to the generator.
         :param cond_in_size: int; describes size of the conditional
             input used for GAN, None or 0 if non-conditional GAN.
-        :param data_range: tuple of ints; specifies what is the range of
+        :param data_ranges: tuple of ints; specifies what is the range of
             data that needs to be generated in terms of max and min values.
         :param session: tensorflow..Session; tensorflow session that
             will be used to run the model.
@@ -86,7 +86,7 @@ class WassersteinGANGP(WassersteinGAN):
                          output_directory,
                          name=name,
                          cond_in_size=cond_in_size,
-                         data_range=data_range,
+                         data_ranges=data_ranges,
                          dtype=dtype,
                          g_layers=g_layers,
                          g_activation=g_activation,

@@ -8,7 +8,7 @@ import numpy as np
 import tensorflow as tf
 
 from gairl.neural_utils import DenseNetworkUtils as Dnu
-from gairl.neural_utils import summarize_ndarray, normalize
+from gairl.neural_utils import normalize, summarize_ndarray
 
 
 MAX_IMGS_TO_VIS = 10
@@ -27,7 +27,7 @@ class VanillaGAN:
                  output_directory,
                  name='VanillaGAN',
                  cond_in_size=None,
-                 data_range=(-1, 1),
+                 data_ranges=(-1, 1),
                  dtype=tf.float64,
                  g_layers=(256, 512, 1024),
                  g_activation=tf.nn.leaky_relu,
@@ -60,8 +60,11 @@ class VanillaGAN:
         :param name: string; name of the model.
         :param cond_in_size: int; describes size of the conditional
             input used for GAN, None or 0 if non-conditional GAN.
-        :param data_range: tuple of ints; specifies what is the range of
-            data that needs to be generated in terms of max and min values.
+        :param data_ranges: list of tuples of floats; specifies what
+            is the range of data that needs to be generated in terms
+            of max and min values. If single tuple then applies single
+            range to whole data, if multiple then for each feature
+            separately.
         :param dtype: tensorflow.DType; type used for the model.
         :param g_layers: tuple of ints; describes number of nodes
             in each hidden layer of the generator network.
@@ -92,7 +95,7 @@ class VanillaGAN:
         self._sess = session
         self._data_shape = data_shape
         self._cond_in_size = cond_in_size if cond_in_size else 0
-        self._data_range = data_range
+        self._data_ranges = data_ranges
         self._flat_data_size = reduce(mul, data_shape)
         self._noise_size = noise_size
         self._dtype = dtype
@@ -120,8 +123,8 @@ class VanillaGAN:
                                     (self._batch_size, self._flat_data_size),
                                     name='real_data_flat')
         self._real_data_preproc = normalize(real_data_flat,
-                                            data_range=self._data_range,
-                                            target_range=GENERATOR_OUT_RANGE,
+                                            data_ranges=self._data_ranges,
+                                            target_ranges=GENERATOR_OUT_RANGE,
                                             name='real_data_preproc')
 
         # Create networks
@@ -142,7 +145,7 @@ class VanillaGAN:
             f'\nCreating GAN with:\n'
             f'Data shape: {data_shape}\n'
             f'Noise size: {noise_size}\n'
-            f'Data range: {data_range}\n'
+            f'Data range: {data_ranges}\n'
             f'Dtype: {dtype}\n'
             f'Generator layers: {g_layers}\n'
             f'Generator activation function: {g_activation.__name__}\n'
@@ -178,8 +181,8 @@ class VanillaGAN:
                                            *self._data_shape))
         # Denormalize
         self._generated_data = normalize(self._generated_data,
-                                         data_range=GENERATOR_OUT_RANGE,
-                                         target_range=self._data_range,
+                                         data_ranges=GENERATOR_OUT_RANGE,
+                                         target_ranges=self._data_ranges,
                                          name='generator_out')
 
     def _create_discriminator_network(self, layers, activation, dropout, dtype):

@@ -27,7 +27,7 @@ def main():
     with tf.Session() as sess:
         gan = create_gan(GAN_STR, imgs.shape[1:], NOISE_SIZE,
                          sess, cond_in_size=LABELS_NUM,
-                         data_range=(imgs.min(), imgs.max()))
+                         data_ranges=(imgs.min(), imgs.max()))
         for t in range(TRAINING_STEPS):
             batch_indices = np.random.randint(imgs.shape[0], size=BATCH_SIZE)
             batch_imgs = imgs[batch_indices, :]

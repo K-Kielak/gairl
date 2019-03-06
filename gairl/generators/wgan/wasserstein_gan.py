@@ -17,7 +17,7 @@ class WassersteinGAN(VanillaGAN):
                  output_directory,
                  name='WassersteinGAN',
                  cond_in_size=None,
-                 data_range=(-1, 1),
+                 data_ranges=(-1, 1),
                  dtype=tf.float64,
                  g_layers=(256, 512, 1024),
                  g_activation=tf.nn.leaky_relu,
@@ -46,7 +46,7 @@ class WassersteinGAN(VanillaGAN):
         :param name: string; name of the model.
         :param cond_in_size: int; describes size of the conditional
             input used for GAN, None or 0 if non-conditional GAN.
-        :param data_range: tuple of ints; specifies what is the range of
+        :param data_ranges: tuple of ints; specifies what is the range of
             data that needs to be generated in terms of max and min values.
         :param dtype: tensorflow.DType; type used for the model.
         :param g_layers: tuple of ints; describes number of nodes
@@ -84,7 +84,7 @@ class WassersteinGAN(VanillaGAN):
                          output_directory,
                          name=name,
                          cond_in_size=cond_in_size,
-                         data_range=data_range,
+                         data_ranges=data_ranges,
                          dtype=dtype,
                          g_layers=g_layers,
                          g_activation=g_activation,

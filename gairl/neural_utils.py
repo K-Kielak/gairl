@@ -1,6 +1,7 @@
 from collections import namedtuple
 from functools import reduce
 
+import numpy as np
 import tensorflow as tf
 
 
@@ -133,21 +134,32 @@ def summarize_vector(vec):
     return summaries
 
 
-# TODO right now normalizes based on total data range,
-# TODO make it normalizable for specifiable ranges per feature
-def normalize(data_batch, data_range=None, target_range=(0, 1), name=None):
+def normalize(data_batch, data_ranges=None, target_ranges=(0, 1), name=None):
     """
     :param data_batch: tensor with data to normalize
-    :param data_range: tuple representing (min, max) of the possible
-        data values.
-    :param target_range: tuple representing (min, max) of the
-        possible data values after normalization.
+    :param data_ranges: list of tuples of ints; specifies what
+            is the range of data in terms of max and min values.
+            If single tuple then applies single range to whole data,
+            if multiple then for each feature separately.
+    :param target_ranges: list of tuples of ints; specifies what
+            is the target range of data in terms of max and min values.
+            If single tuple then applies single range to whole data,
+            if multiple then for each feature separately.
     :param name: name for the final output tensor
     :return: Normalized tensor containing the data
     """
-    if not data_range:
-        data_range = tf.reduce_min(data_batch), tf.reduce_max(data_batch)
+    if not data_ranges:
+        data_ranges = tf.reduce_min(data_batch), tf.reduce_max(data_batch)
 
-    data_normed = (data_batch - data_range[0]) / (data_range[1] - data_range[0])
-    data_normed = data_normed * (target_range[1] - target_range[0])
-    return tf.add(data_normed, target_range[0], name=name)
+    data_ranges = np.array(data_ranges)
+    while len(data_ranges.shape) != len(data_batch.shape) - 1:
+        data_ranges = np.expand_dims(data_ranges, 0)
+
+    target_ranges = np.array(target_ranges)
+    while len(target_ranges.shape) != len(data_batch.shape) - 1:
+        target_ranges = np.expand_dims(target_ranges, 0)
+
+    data_normed = (data_batch - data_ranges[..., 0])
+    data_normed = data_normed / (data_ranges[..., 1] - data_ranges[..., 0])
+    data_normed = data_normed * (target_ranges[..., 1] - target_ranges[..., 0])
+    return tf.add(data_normed, target_ranges[..., 0], name=name)

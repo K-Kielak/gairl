@@ -12,7 +12,7 @@ def create_gan(gan_name,
                session,
                name=None,
                cond_in_size=None,
-               data_range=(-1, 1),
+               data_ranges=(-1, 1),
                output_dir=None,
                separate_logging=True):
     if gan_name not in _STR_TO_GAN.keys():
@@ -20,17 +20,10 @@ def create_gan(gan_name,
                              f"can choose only from {_STR_TO_GAN.keys()}")
 
     creation_method = _STR_TO_GAN[gan_name]
-    if name:
-        return creation_method(data_shape, noise_size, session,
-                               cond_in_size=cond_in_size,
-                               data_range=data_range,
-                               name=name,
-                               output_dir=output_dir,
-                               separate_logging=separate_logging)
-
     return creation_method(data_shape, noise_size, session,
                            cond_in_size=cond_in_size,
-                           data_range=data_range,
+                           data_ranges=data_ranges,
+                           name=name,
                            output_dir=output_dir,
                            separate_logging=separate_logging)
 
@@ -38,22 +31,22 @@ def create_gan(gan_name,
 def _create_vanilla_gan(data_shape,
                         noise_size,
                         session,
-                        name='VanillaGAN',
+                        name=None,
                         cond_in_size=None,
-                        data_range=(-1, 1),
+                        data_ranges=(-1, 1),
                         output_dir=None,
                         separate_logging=True):
-    if not output_dir:
-        output_dir = vgan_conf.OUTPUT_DIRECTORY
-
+    output_dir = output_dir if output_dir else vgan_conf.OUTPUT_DIRECTORY
+    name = name if name else 'VanillaGAN'
     logging_level = vgan_conf.LOGGING_LEVEL if separate_logging else None
+
     return VanillaGAN(data_shape,
                       noise_size,
                       session,
                       output_dir,
                       name=name,
                       cond_in_size=cond_in_size,
-                      data_range=data_range,
+                      data_ranges=data_ranges,
                       dtype=vgan_conf.DTYPE,
                       g_layers=vgan_conf.G_LAYERS,
                       g_activation=vgan_conf.G_ACTIVATION,
@@ -73,22 +66,22 @@ def _create_vanilla_gan(data_shape,
 def _create_wasserstein_gan(data_shape,
                             noise_size,
                             session,
-                            name='WassersteinGAN',
+                            name=None,
                             cond_in_size=None,
-                            data_range=(-1, 1),
+                            data_ranges=(-1, 1),
                             output_dir=None,
                             separate_logging=True):
-    if not output_dir:
-        output_dir = wgan_conf.OUTPUT_DIRECTORY
-
+    output_dir = output_dir if output_dir else wgan_conf.OUTPUT_DIRECTORY
+    name = name if name else 'WassersteinGAN'
     logging_level = wgan_conf.LOGGING_LEVEL if separate_logging else None
+
     return WassersteinGAN(data_shape,
                           noise_size,
                           session,
                           output_dir,
                           name=name,
                           cond_in_size=cond_in_size,
-                          data_range=data_range,
+                          data_ranges=data_ranges,
                           dtype=wgan_conf.DTYPE,
                           g_layers=wgan_conf.G_LAYERS,
                           g_activation=wgan_conf.G_ACTIVATION,
@@ -109,22 +102,22 @@ def _create_wasserstein_gan(data_shape,
 def _create_wasserstein_gan_gp(data_shape,
                                noise_size,
                                session,
-                               name='WassersteinGAN with GP',
+                               name=None,
                                cond_in_size=None,
-                               data_range=(-1, 1),
+                               data_ranges=(-1, 1),
                                output_dir=None,
                                separate_logging=True):
-    if not output_dir:
-        output_dir = wgan_gp_conf.OUTPUT_DIRECTORY
-
+    output_dir = output_dir if output_dir else wgan_gp_conf.OUTPUT_DIRECTORY
+    name = name if name else 'WassersteinGAN with GP'
     logging_level = wgan_gp_conf.LOGGING_LEVEL if separate_logging else None
+
     return WassersteinGANGP(data_shape,
                             noise_size,
                             session,
                             output_dir,
                             name=name,
                             cond_in_size=cond_in_size,
-                            data_range=data_range,
+                            data_ranges=data_ranges,
                             dtype=wgan_gp_conf.DTYPE,
                             g_layers=wgan_gp_conf.G_LAYERS,
                             g_activation=wgan_gp_conf.G_ACTIVATION,

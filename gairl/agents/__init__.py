@@ -18,7 +18,7 @@ def create_agent(agent_name,
                  name=None,
                  output_dir=None,
                  separate_logging=True,
-                 data_range=(-1, 1)):
+                 data_ranges=(-1, 1)):
     if agent_name not in _STR_TO_AGENT.keys():
         raise AttributeError(f"There's no agent like {agent_name}. You "
                              f"can choose only from {_STR_TO_AGENT.keys()}")
@@ -27,16 +27,12 @@ def create_agent(agent_name,
         return _create_gairl_agent(actions_num, state_size, session,
                                    name=name, output_dir=output_dir,
                                    separate_logging=separate_logging,
-                                   data_range=data_range)
+                                   data_ranges=data_ranges)
 
     creation_method = _STR_TO_AGENT[agent_name]
     if 'session' in getfullargspec(creation_method).args:
-        if name:
-            return creation_method(actions_num, state_size, session,
-                                   name=name, output_dir=output_dir,
-                                   separate_logging=separate_logging)
         return creation_method(actions_num, state_size, session,
-                               output_dir=output_dir,
+                               name=name, output_dir=output_dir,
                                separate_logging=separate_logging)
 
     return creation_method(actions_num, state_size)
@@ -46,12 +42,12 @@ def _create_random_agent(actions_num, state_size):
     return RandomAgent(actions_num, state_size)
 
 
-def _create_dqn_agent(actions_num, state_size, session, name='DQN',
+def _create_dqn_agent(actions_num, state_size, session, name=None,
                       output_dir=None, separate_logging=True):
-    if not output_dir:
-        output_dir = dqn_conf.OUTPUT_DIRECTORY
-
+    output_dir = output_dir if output_dir else dqn_conf.OUTPUT_DIRECTORY
+    name = name if name else 'DQN'
     logging_level = dqn_conf.LOGGING_LEVEL if separate_logging else None
+
     return DQNAgent(actions_num,
                     state_size,
                     dqn_conf.HIDDEN_LAYERS,
@@ -77,11 +73,10 @@ def _create_dqn_agent(actions_num, state_size, session, name='DQN',
                     load_path=dqn_conf.MODEL_LOAD_PATH)
 
 
-def _create_rainbowdqn_agent(actions_num, state_size, session, name='RainbowDQN',
+def _create_rainbowdqn_agent(actions_num, state_size, session, name=None,
                              output_dir=None, separate_logging=True):
-    if not output_dir:
-        output_dir = dqn_conf.OUTPUT_DIRECTORY
-
+    output_dir = output_dir if output_dir else dqn_conf.OUTPUT_DIRECTORY
+    name = name if name else 'RainbowDQN'
     logging_level = rainbow_conf.LOGGING_LEVEL if separate_logging else None
 
     return RainbowDQNAgent(actions_num,
@@ -112,12 +107,12 @@ def _create_rainbowdqn_agent(actions_num, state_size, session, name='RainbowDQN'
 def _create_gairl_agent(actions_num,
                         state_size,
                         session,
-                        name='GAIRL',
+                        name=None,
                         output_dir=None,
                         separate_logging=True,
-                        data_range=(-1, 1)):
-    if not output_dir:
-        output_dir = gairl_conf.OUTPUT_DIRECTORY
+                        data_ranges=(-1, 1)):
+    output_dir = output_dir if output_dir else gairl_conf.OUTPUT_DIRECTORY
+    name = name if name else 'GAIRL'
 
     # Create directory for RL agent and generative model
     os.mkdir(output_dir)
@@ -130,7 +125,7 @@ def _create_gairl_agent(actions_num,
                                   0,
                                   session,
                                   cond_in_size=cond_data_size,
-                                  data_range=data_range,
+                                  data_ranges=data_ranges,
                                   name=name,
                                   output_dir=gen_output_dir,
                                   separate_logging=False)
