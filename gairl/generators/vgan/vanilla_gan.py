@@ -17,7 +17,7 @@ PARAMS_INIT_MEAN = 0
 GENERATOR_OUT_RANGE = (-1, 1)  # (-1, 1) because tanh final activation
 
 
-# TODO add loading and per feature + condition norm/denorm!
+# TODO add loading
 class VanillaGAN:
 
     def __init__(self,
@@ -25,9 +25,10 @@ class VanillaGAN:
                  session,
                  output_directory,
                  name='VanillaGAN',
-                 noise_size=100,
-                 cond_in_size=None,
                  data_ranges=(-1, 1),
+                 noise_size=100,
+                 conditional_shape=None,
+                 conditional_ranges=(-1, 1),
                  dtype=tf.float64,
                  g_layers=(256, 512, 1024),
                  g_activation=tf.nn.leaky_relu,
@@ -56,12 +57,17 @@ class VanillaGAN:
         :param output_directory: string; directory to which all of the
             network outputs (logs, checkpoints) will be saved.
         :param name: string; name of the model.
-        :param noise_size: int; describes the size of the noise that
-            will be fed as an input to the generator.
-        :param cond_in_size: int; describes size of the conditional
-            input used for GAN, None or 0 if non-conditional GAN.
         :param data_ranges: list of tuples of floats; specifies what
             is the range of data that needs to be generated in terms
+            of max and min values. If single tuple then applies single
+            range to whole data, if multiple then for each feature
+            separately.
+        :param noise_size: int; describes the size of the noise that
+            will be fed as an input to the generator.
+        :param conditional_shape: list of ints; describes size of the
+            conditional input used for GAN, None or 0 if non-conditional GAN.
+        :param conditional_ranges: list of tuples of floats; specifies what
+            is the range of conditions that are fed to the GAN in terms
             of max and min values. If single tuple then applies single
             range to whole data, if multiple then for each feature
             separately.
@@ -94,10 +100,12 @@ class VanillaGAN:
         self._name = name
         self._sess = session
         self._data_shape = data_shape
-        self._cond_in_size = cond_in_size if cond_in_size else 0
         self._data_ranges = data_ranges
         self._flat_data_size = reduce(mul, data_shape)
         self._noise_size = noise_size
+        self._conditional_shape = conditional_shape if conditional_shape else (0,)
+        self._conditional_ranges = conditional_ranges
+        self._flat_condition_size = reduce(mul, self._conditional_shape)
         self._dtype = dtype
         self._g_optimizer = g_optimizer
         self._g_activation = g_activation
@@ -114,9 +122,11 @@ class VanillaGAN:
                                      dtype=dtype, name='noise')
         self._real_data = tf.placeholder(shape=(None, *self._data_shape),
                                          dtype=dtype, name='real_data')
-        self._g_condition = tf.placeholder(shape=(None, self._cond_in_size,),
+        self._g_condition = tf.placeholder(shape=(None,
+                                                  *self._conditional_shape,),
                                            dtype=dtype, name='g_condition')
-        self._d_condition = tf.placeholder(shape=(None, self._cond_in_size,),
+        self._d_condition = tf.placeholder(shape=(None,
+                                                  *self._conditional_shape,),
                                            dtype=dtype, name='d_condition')
         self._batch_size = tf.shape(self._noise)[0]
         real_data_flat = tf.reshape(self._real_data,
@@ -126,6 +136,24 @@ class VanillaGAN:
                                             data_ranges=self._data_ranges,
                                             target_ranges=GENERATOR_OUT_RANGE,
                                             name='real_data_preproc')
+
+        g_condition_flat = tf.reshape(self._g_condition,
+                                      (self._batch_size,
+                                       self._flat_condition_size),
+                                      name='g_condition_flat')
+        self._g_condition_preproc = normalize(g_condition_flat,
+                                              data_ranges=self._conditional_ranges,
+                                              target_ranges=GENERATOR_OUT_RANGE,
+                                              name='g_condition_preproc')
+
+        d_condition_flat = tf.reshape(self._d_condition,
+                                      (self._batch_size,
+                                       self._flat_condition_size),
+                                      name='g_condition_flat')
+        self._d_condition_preproc = normalize(d_condition_flat,
+                                              data_ranges=self._conditional_ranges,
+                                              target_ranges=GENERATOR_OUT_RANGE,
+                                              name='d_condition_preproc')
 
         # Create networks
         self._create_generator_network(g_layers, g_activation,
@@ -156,38 +184,38 @@ class VanillaGAN:
             f'Discriminator dropout probability: {d_dropout}\n'
             f'Discriminator optimizer: {d_optimizer.__class__.__name__}\n'
             f'K: {k}\n'
-            f'Labels num: {cond_in_size}'
+            f'Condition size: {conditional_shape}'
         )
 
     def _create_generator_network(self, layers, activation, dropout, dtype):
         self._g_params = Dnu.create_network_params(self._noise_size +
-                                                   self._cond_in_size,
+                                                   self._flat_condition_size,
                                                    layers,
                                                    self._flat_data_size,
                                                    dtype,
                                                    name='generator_params',
                                                    stddev=PARAMS_INIT_STDDEV,
                                                    mean=PARAMS_INIT_MEAN)
-        gen_in = tf.concat([self._noise, self._g_condition], axis=1)
+        gen_in = tf.concat([self._noise, self._g_condition_preproc], axis=1)
         self._generated_data_flat = Dnu.model_output(gen_in,
                                                      self._g_params,
                                                      activation,
                                                      dropout_prob=dropout,
                                                      out_activation_fn=tf.nn.tanh,
                                                      name='generator_out_flat')
-        # Put back to proper shape
-        self._generated_data = tf.reshape(self._generated_data_flat,
-                                          (self._batch_size,
-                                           *self._data_shape))
         # Denormalize
-        self._generated_data = normalize(self._generated_data,
+        self._generated_data = normalize(self._generated_data_flat,
                                          data_ranges=GENERATOR_OUT_RANGE,
                                          target_ranges=self._data_ranges,
                                          name='generator_out')
+        # Put back to proper shape
+        self._generated_data = tf.reshape(self._generated_data,
+                                          (self._batch_size,
+                                           *self._data_shape))
 
     def _create_discriminator_network(self, layers, activation, dropout, dtype):
         self._d_params = Dnu.create_network_params(self._flat_data_size +
-                                                   self._cond_in_size,
+                                                   self._flat_condition_size,
                                                    layers,
                                                    1,  # 0 - fake, 1 - real
                                                    dtype,
@@ -195,7 +223,7 @@ class VanillaGAN:
                                                    stddev=PARAMS_INIT_STDDEV,
                                                    mean=PARAMS_INIT_MEAN)
         fake_discrim_in = tf.concat([self._generated_data_flat,
-                                     self._d_condition], axis=1)
+                                     self._d_condition_preproc], axis=1)
         self._fake_discrim = Dnu.model_output(fake_discrim_in,
                                               self._d_params,
                                               activation,
@@ -205,7 +233,7 @@ class VanillaGAN:
         self._fake_discrim_mean = tf.reduce_mean(self._fake_discrim)
 
         real_discrim_in = tf.concat([self._real_data_preproc,
-                                     self._d_condition], axis=1)
+                                     self._d_condition_preproc], axis=1)
         self._real_discrim = Dnu.model_output(real_discrim_in,
                                               self._d_params,
                                               activation,
@@ -322,18 +350,13 @@ class VanillaGAN:
         self._summary_writer = tf.summary.FileWriter(sumaries_dir,
                                                      self._sess.graph)
 
-    def train_step(self, data_batch, g_condition=None, d_condition=None):
+    def train_step(self, data_batch, condition=None):
         assert data_batch.shape[1:] == self._data_shape, \
             f'Expected ({self._data_shape}) and received ' \
             f'({data_batch.shape[1:]}) data shapes do not match'
-        if g_condition is None:
-            g_condition = np.zeros((data_batch.shape[0], 0))
-            d_condition = g_condition
-        elif d_condition is None:
-            d_condition = g_condition
-        assert data_batch.shape[0] == g_condition.shape[0], \
-            'You need to pass the same amount of labels as data!'
-        assert data_batch.shape[0] == d_condition.shape[0], \
+        if condition is None:
+            condition = np.zeros((data_batch.shape[0], 0))
+        assert data_batch.shape[0] == condition.shape[0], \
             'You need to pass the same amount of labels as data!'
 
         batch_size = data_batch.shape[0]
@@ -343,8 +366,8 @@ class VanillaGAN:
         self._sess.run(self._d_train_step, feed_dict={
                            self._noise: noise,
                            self._real_data: data_batch,
-                           self._g_condition: g_condition,
-                           self._d_condition: d_condition
+                           self._g_condition: condition,
+                           self._d_condition: condition
                        })
         self._steps_so_far += 1
 
@@ -352,8 +375,8 @@ class VanillaGAN:
         if self._steps_so_far % self._k == 0:
             self._sess.run(self._g_train_step, feed_dict={
                                 self._noise: noise,
-                                self._g_condition: g_condition,
-                                self._d_condition: d_condition
+                                self._g_condition: condition,
+                                self._d_condition: condition
                            })
 
         # Save model
@@ -363,17 +386,16 @@ class VanillaGAN:
                              global_step=self._steps_so_far)
 
         if self._steps_so_far % self._logging_freq == 0:
-            self._log_step(data_batch, noise, g_condition, d_condition)
+            self._log_step(data_batch, noise, condition)
 
-    def _log_step(self, data_batch, noise_batch,
-                  g_condition, d_condition):
+    def _log_step(self, data_batch, noise_batch, condition):
         train_summ, fake_discrim_mean, real_discrim_mean = \
             self._sess.run([self._training_summary, self._fake_discrim_mean,
                             self._real_discrim_mean], feed_dict={
                                self._noise: noise_batch,
                                self._real_data: data_batch,
-                               self._g_condition: g_condition,
-                               self._d_condition: d_condition
+                               self._g_condition: condition,
+                               self._d_condition: condition
                            })
         self._summary_writer.add_summary(train_summ, self._steps_so_far)
 
@@ -391,15 +413,16 @@ class VanillaGAN:
         })
         self._summary_writer.add_summary(vis_summ, self._steps_so_far)
 
-    def generate(self, how_many, g_condition=None):
-        if g_condition is None:
-            g_condition = np.zeros((how_many, 0))
-        assert how_many == g_condition.shape[0], \
-            'You need to pass the same amount of labels as noise!'
+    def generate(self, how_many, condition=None):
+        if condition is None:
+            condition = np.zeros((how_many, 0))
+        assert how_many == condition.shape[0], \
+            'You need to pass the same amount of labels as you expect' \
+            'generated images!'
 
         noise = np.random.normal(0, 1, (how_many, self._noise_size))
 
         return self._sess.run(self._generated_data, feed_dict={
                                   self._noise: noise,
-                                  self._g_condition: g_condition
+                                  self._g_condition: condition
                               })

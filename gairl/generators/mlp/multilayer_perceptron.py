@@ -94,9 +94,9 @@ class MultilayerPerceptron:
         self._steps_so_far = 0
 
         # Set up placeholders
-        self._input_data = tf.placeholder(shape=(None, *output_shape),
+        self._input_data = tf.placeholder(shape=(None, *input_shape),
                                           dtype=dtype, name='input')
-        self._real_output = tf.placeholder(shape=(None, *input_shape),
+        self._real_output = tf.placeholder(shape=(None, *output_shape),
                                            dtype=dtype, name='real_output')
 
         # Preprocess placeholders
@@ -140,20 +140,20 @@ class MultilayerPerceptron:
                                             (batch_size, *output_shape),
                                             name='generated_output')
 
-        self._unpacked_params = Dnu.unpack_params(self._params) + \
-                                optimizer.variables()
-
         # Define objective
         gen_real_diff = tf.abs(generated_out - real_output_preproc,
                                name='absolute_difference')
         self._loss = tf.reduce_sum(tf.reduce_mean(gen_real_diff, axis=1),
                                    name='l1_loss')
-        self._train_step = optimizer.minimize(self._loss,
-                                              var_list=self._unpacked_params)
+        self._train_step = optimizer.minimize(
+            self._loss,
+            var_list=Dnu.unpack_params(self._params)
+        )
 
         self._add_summaries()
         # Initialize vars
-        init_ops = tf.variables_initializer(self._unpacked_params)
+        init_ops = tf.variables_initializer(Dnu.unpack_params(self._params) +
+                                            optimizer.variables())
         self._sess.run(init_ops)
         self._set_up_outputs(output_directory, logging_level, max_checkpoints)
 
@@ -176,12 +176,12 @@ class MultilayerPerceptron:
                     training_summs.extend(summarize_ndarray(layer.weights))
                 with tf.name_scope(f'{i}/biases'):
                     training_summs.extend(summarize_ndarray(layer.biases))
-        with tf.name_scope('loss'):
+        with tf.name_scope('losses'):
             training_summs.append(tf.summary.scalar('loss', self._loss))
 
         self._training_summary = tf.summary.merge(training_summs)
 
-        vis_shape = [tf.shape(self._real_output)[0], *self._real_output]
+        vis_shape = [tf.shape(self._real_output)[0], *self._output_shape]
         while len(vis_shape) < 4:
             vis_shape.append(1)
         vis_data = tf.reshape(self._real_output, vis_shape)
@@ -213,22 +213,24 @@ class MultilayerPerceptron:
         self._summary_writer = tf.summary.FileWriter(sumaries_dir,
                                                      self._sess.graph)
 
-    def train_step(self, input_batch, expected_output):
-        assert input_batch.shape[1:] == self._input_shape, \
+    def train_step(self, expected_output, condition=None):
+        assert condition is not None, 'Condition for MLP has to exist!'
+        assert condition.shape[1:] == self._input_shape, \
             f'Expected ({self._input_shape}) and received ' \
-            f'({input_batch.shape[1:]}) data shapes do not match'
-        assert expected_output.shape[1] == self._output_shape, \
+            f'({condition.shape[1:]}) data shapes do not match'
+        assert expected_output.shape[1:] == self._output_shape, \
             f'Expected ({self._output_shape}) and received ' \
-            f'({expected_output.shape[1]}) noise sizes do not match'
-
-        assert input_batch.shape[0] == expected_output.shape[0], \
+            f'({expected_output.shape[1]}) sizes do not match'
+        assert condition.shape[0] == expected_output.shape[0], \
             'You need to pass the same amount of labels as data!'
 
         # Train network
         self._sess.run(self._train_step, feed_dict={
-            self._input_data: input_batch,
+            self._input_data: condition,
             self._real_output: expected_output
         })
+
+        self._steps_so_far += 1
 
         # Save model
         if self._steps_so_far % self._save_freq == 0:
@@ -237,13 +239,13 @@ class MultilayerPerceptron:
                              global_step=self._steps_so_far)
 
         if self._steps_so_far % self._logging_freq == 0:
-            self._log_step(input_batch, expected_output)
+            self._log_step(expected_output, condition)
 
-    def _log_step(self, input_batch, expected_output):
+    def _log_step(self, expected_output, condition):
         train_summ, loss = \
             self._sess.run(
                 [self._training_summary, self._loss], feed_dict={
-                    self._input_data: input_batch,
+                    self._input_data: condition,
                     self._real_output: expected_output
                 })
         self._summary_writer.add_summary(train_summ, self._steps_so_far)
@@ -261,11 +263,15 @@ class MultilayerPerceptron:
         })
         self._summary_writer.add_summary(vis_summ, self._steps_so_far)
 
-    def generate(self, input_batch):
-        assert input_batch.shape[1:] == self._input_shape, \
+    def generate(self, how_many, condition=None):
+        assert condition is not None, 'Condition for MLP has to exist!'
+        assert condition.shape[1:] == self._input_shape, \
             f'Expected ({self._input_shape}) and received ' \
             f'({input_batch.shape[1:]}) data shapes do not match'
+        assert how_many == condition.shape[0], \
+            'You need to pass the same amount of labels as you expect' \
+            'generated images!'
 
         return self._sess.run(self._generated_output, feed_dict={
-            self._input_data: input_batch
+            self._input_data: condition
         })

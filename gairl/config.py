@@ -16,7 +16,3 @@ AGENT_STR = 'gairl'
 # OpenAI Gym config
 DELAY_BETWEEN_RENDERS = 0  # So render can be slowed down [s]
 RENDER = True
-
-# GAIRL config
-MODEL_FREE_STEPS = 1000
-GENERATIVE_MODEL_STEPS = 10000

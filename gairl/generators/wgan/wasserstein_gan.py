@@ -15,9 +15,10 @@ class WassersteinGAN(VanillaGAN):
                  session,
                  output_directory,
                  name='WassersteinGAN',
-                 noise_size=100,
-                 cond_in_size=None,
                  data_ranges=(-1, 1),
+                 noise_size=100,
+                 conditional_shape=None,
+                 conditional_ranges=(-1, 1),
                  dtype=tf.float64,
                  g_layers=(256, 512, 1024),
                  g_activation=tf.nn.leaky_relu,
@@ -42,12 +43,20 @@ class WassersteinGAN(VanillaGAN):
         :param output_directory: string; directory to which all of the
             network outputs (logs, checkpoints) will be saved.
         :param name: string; name of the model.
+        :param data_ranges: list of tuples of floats; specifies what
+            is the range of data that needs to be generated in terms
+            of max and min values. If single tuple then applies single
+            range to whole data, if multiple then for each feature
+            separately.
         :param noise_size: int; describes the size of the noise that
             will be fed as an input to the generator.
-        :param cond_in_size: int; describes size of the conditional
-            input used for GAN, None or 0 if non-conditional GAN.
-        :param data_ranges: tuple of ints; specifies what is the range of
-            data that needs to be generated in terms of max and min values.
+        :param conditional_shape: list of ints; describes size of the
+            conditional input used for GAN, None or 0 if non-conditional GAN.
+        :param conditional_ranges: list of tuples of floats; specifies what
+            is the range of conditions that are fed to the GAN in terms
+            of max and min values. If single tuple then applies single
+            range to whole data, if multiple then for each feature
+            separately.
         :param dtype: tensorflow.DType; type used for the model.
         :param g_layers: tuple of ints; describes number of nodes
             in each hidden layer of the generator network.
@@ -82,9 +91,10 @@ class WassersteinGAN(VanillaGAN):
                          session,
                          output_directory,
                          name=name,
-                         noise_size=noise_size,
-                         cond_in_size=cond_in_size,
                          data_ranges=data_ranges,
+                         noise_size=noise_size,
+                         conditional_shape=conditional_shape,
+                         conditional_ranges=conditional_ranges,
                          dtype=dtype,
                          g_layers=g_layers,
                          g_activation=g_activation,
@@ -106,7 +116,7 @@ class WassersteinGAN(VanillaGAN):
 
     def _create_discriminator_network(self, layers, activation, dropout, dtype):
         self._d_params = Dnu.create_network_params(self._flat_data_size +
-                                                   self._cond_in_size,
+                                                   self._flat_condition_size,
                                                    layers,
                                                    1,  # < 0 - fake, > 0 - real
                                                    dtype,
@@ -114,7 +124,7 @@ class WassersteinGAN(VanillaGAN):
                                                    stddev=PARAMS_INIT_STDDEV,
                                                    mean=PARAMS_INIT_MEAN)
         fake_discrim_in = tf.concat([self._generated_data_flat,
-                                     self._g_condition], axis=1)
+                                     self._g_condition_preproc], axis=1)
         self._fake_discrim = Dnu.model_output(fake_discrim_in,
                                               self._d_params,
                                               activation,
@@ -124,7 +134,7 @@ class WassersteinGAN(VanillaGAN):
         self._fake_discrim_mean = tf.reduce_mean(self._fake_discrim)
 
         real_discrim_in = tf.concat([self._real_data_preproc,
-                                     self._d_condition], axis=1)
+                                     self._d_condition_preproc], axis=1)
         self._real_discrim = Dnu.model_output(real_discrim_in,
                                               self._d_params,
                                               activation,

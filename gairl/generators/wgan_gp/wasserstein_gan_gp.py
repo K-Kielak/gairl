@@ -13,9 +13,10 @@ class WassersteinGANGP(WassersteinGAN):
                  session,
                  output_directory,
                  name='WassersteinGANGP',
-                 noise_size=100,
-                 cond_in_size=None,
                  data_ranges=(-1, 1),
+                 noise_size=100,
+                 conditional_shape=None,
+                 conditional_ranges=(-1, 1),
                  dtype=tf.float64,
                  g_layers=(256, 512, 1024),
                  g_activation=tf.nn.leaky_relu,
@@ -43,19 +44,25 @@ class WassersteinGANGP(WassersteinGAN):
         Initializes feed-forward version of Wasserstein GAN with Gradient Penalty
         :param data_shape: tuple of int; describes the size of the
             data that GAN is supposed to generate.
-        :param cond_in_size: int; describes size of the conditional
-            input used for GAN, None or 0 if non-conditional GAN.
-        :param data_ranges: tuple of ints; specifies what is the range of
-            data that needs to be generated in terms of max and min values.
         :param session: tensorflow..Session; tensorflow session that
             will be used to run the model.
         :param output_directory: string; directory to which all of the
             network outputs (logs, checkpoints) will be saved.
         :param name: string; name of the model.
+        :param data_ranges: list of tuples of floats; specifies what
+            is the range of data that needs to be generated in terms
+            of max and min values. If single tuple then applies single
+            range to whole data, if multiple then for each feature
+            separately.
         :param noise_size: int; describes the size of the noise that
             will be fed as an input to the generator.
-        :param cond_in_size: int; describes size of the conditional
-            input used for GAN, None or 0 if non-conditional GAN.
+        :param conditional_shape: list of ints; describes size of the
+            conditional input used for GAN, None or 0 if non-conditional GAN.
+        :param conditional_ranges: list of tuples of floats; specifies what
+            is the range of conditions that are fed to the GAN in terms
+            of max and min values. If single tuple then applies single
+            range to whole data, if multiple then for each feature
+            separately.
         :param dtype: tensorflow.DType; type used for the model.
         :param g_layers: tuple of ints; describes number of nodes
             in each hidden layer of the generator network.
@@ -86,9 +93,10 @@ class WassersteinGANGP(WassersteinGAN):
                          session,
                          output_directory,
                          name=name,
-                         noise_size=noise_size,
-                         cond_in_size=cond_in_size,
                          data_ranges=data_ranges,
+                         noise_size=noise_size,
+                         conditional_shape=conditional_shape,
+                         conditional_ranges=conditional_ranges,
                          dtype=dtype,
                          g_layers=g_layers,
                          g_activation=g_activation,
@@ -132,7 +140,7 @@ class WassersteinGANGP(WassersteinGAN):
                               random_scaling*differences,
                               name='interpolates')
         labeled_interpolates = tf.concat([interpolates,
-                                          self._d_condition], axis=1)
+                                          self._d_condition_preproc], axis=1)
         interpolates_discrim = Dnu.model_output(labeled_interpolates,
                                                 self._d_params,
                                                 self._d_activation,
