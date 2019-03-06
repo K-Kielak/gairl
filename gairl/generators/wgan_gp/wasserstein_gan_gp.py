@@ -10,10 +10,10 @@ class WassersteinGANGP(WassersteinGAN):
 
     def __init__(self,
                  data_shape,
-                 noise_size,
                  session,
                  output_directory,
                  name='WassersteinGANGP',
+                 noise_size=100,
                  cond_in_size=None,
                  data_ranges=(-1, 1),
                  dtype=tf.float64,
@@ -43,8 +43,6 @@ class WassersteinGANGP(WassersteinGAN):
         Initializes feed-forward version of Wasserstein GAN with Gradient Penalty
         :param data_shape: tuple of int; describes the size of the
             data that GAN is supposed to generate.
-        :param noise_size: int; describes the size of the noise that
-            will be fed as an input to the generator.
         :param cond_in_size: int; describes size of the conditional
             input used for GAN, None or 0 if non-conditional GAN.
         :param data_ranges: tuple of ints; specifies what is the range of
@@ -54,6 +52,10 @@ class WassersteinGANGP(WassersteinGAN):
         :param output_directory: string; directory to which all of the
             network outputs (logs, checkpoints) will be saved.
         :param name: string; name of the model.
+        :param noise_size: int; describes the size of the noise that
+            will be fed as an input to the generator.
+        :param cond_in_size: int; describes size of the conditional
+            input used for GAN, None or 0 if non-conditional GAN.
         :param dtype: tensorflow.DType; type used for the model.
         :param g_layers: tuple of ints; describes number of nodes
             in each hidden layer of the generator network.
@@ -81,10 +83,10 @@ class WassersteinGANGP(WassersteinGAN):
         """
         self._penalty_coeff = penalty_coeff
         super().__init__(data_shape,
-                         noise_size,
                          session,
                          output_directory,
                          name=name,
+                         noise_size=noise_size,
                          cond_in_size=cond_in_size,
                          data_ranges=data_ranges,
                          dtype=dtype,

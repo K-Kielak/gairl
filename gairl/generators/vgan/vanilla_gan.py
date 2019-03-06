@@ -22,10 +22,10 @@ class VanillaGAN:
 
     def __init__(self,
                  data_shape,
-                 noise_size,
                  session,
                  output_directory,
                  name='VanillaGAN',
+                 noise_size=100,
                  cond_in_size=None,
                  data_ranges=(-1, 1),
                  dtype=tf.float64,
@@ -51,13 +51,13 @@ class VanillaGAN:
         Initializes feed-forward version of vanilla GAN
         :param data_shape: tuple of int; describes the size of the
             data that GAN is supposed to generate.
-        :param noise_size: int; describes the size of the noise that
-            will be fed as an input to the generator.
         :param session: tensorflow..Session; tensorflow session that
             will be used to run the model.
         :param output_directory: string; directory to which all of the
             network outputs (logs, checkpoints) will be saved.
         :param name: string; name of the model.
+        :param noise_size: int; describes the size of the noise that
+            will be fed as an input to the generator.
         :param cond_in_size: int; describes size of the conditional
             input used for GAN, None or 0 if non-conditional GAN.
         :param data_ranges: list of tuples of floats; specifies what
@@ -322,16 +322,10 @@ class VanillaGAN:
         self._summary_writer = tf.summary.FileWriter(sumaries_dir,
                                                      self._sess.graph)
 
-    def train_step(self, data_batch, noise_batch,
-                   g_condition=None, d_condition=None):
+    def train_step(self, data_batch, g_condition=None, d_condition=None):
         assert data_batch.shape[1:] == self._data_shape, \
             f'Expected ({self._data_shape}) and received ' \
             f'({data_batch.shape[1:]}) data shapes do not match'
-        assert noise_batch.shape[1] == self._noise_size, \
-            f'Expected ({self._noise_size}) and received ' \
-            f'({noise_batch.shape[1]}) noise sizes do not match'
-        assert data_batch.shape[0] == noise_batch.shape[0], \
-            'You need to pass the same amount of noise as data!'
         if g_condition is None:
             g_condition = np.zeros((data_batch.shape[0], 0))
             d_condition = g_condition
@@ -342,9 +336,12 @@ class VanillaGAN:
         assert data_batch.shape[0] == d_condition.shape[0], \
             'You need to pass the same amount of labels as data!'
 
+        batch_size = data_batch.shape[0]
+        noise = np.random.normal(0, 1, (batch_size, self._noise_size))
+
         # Train Discriminator
         self._sess.run(self._d_train_step, feed_dict={
-                           self._noise: noise_batch,
+                           self._noise: noise,
                            self._real_data: data_batch,
                            self._g_condition: g_condition,
                            self._d_condition: d_condition
@@ -354,7 +351,7 @@ class VanillaGAN:
         # Train Generator
         if self._steps_so_far % self._k == 0:
             self._sess.run(self._g_train_step, feed_dict={
-                                self._noise: noise_batch,
+                                self._noise: noise,
                                 self._g_condition: g_condition,
                                 self._d_condition: d_condition
                            })
@@ -366,7 +363,7 @@ class VanillaGAN:
                              global_step=self._steps_so_far)
 
         if self._steps_so_far % self._logging_freq == 0:
-            self._log_step(data_batch, noise_batch, g_condition, d_condition)
+            self._log_step(data_batch, noise, g_condition, d_condition)
 
     def _log_step(self, data_batch, noise_batch,
                   g_condition, d_condition):
@@ -394,16 +391,15 @@ class VanillaGAN:
         })
         self._summary_writer.add_summary(vis_summ, self._steps_so_far)
 
-    def generate(self, noise_batch, g_condition=None):
-        assert (noise_batch.shape[1] == self._noise_size), \
-            f'Expected ({self._noise_size}) and received ' \
-            f'({noise_batch.shape[1]}) noise sizes do not match'
+    def generate(self, how_many, g_condition=None):
         if g_condition is None:
-            g_condition = np.zeros((noise_batch.shape[0], 0))
-        assert noise_batch.shape[0] == g_condition.shape[0], \
+            g_condition = np.zeros((how_many, 0))
+        assert how_many == g_condition.shape[0], \
             'You need to pass the same amount of labels as noise!'
 
+        noise = np.random.normal(0, 1, (how_many, self._noise_size))
+
         return self._sess.run(self._generated_data, feed_dict={
-                                  self._noise: noise_batch,
+                                  self._noise: noise,
                                   self._g_condition: g_condition
                               })

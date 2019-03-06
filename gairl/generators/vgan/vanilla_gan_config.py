@@ -8,6 +8,7 @@ from gairl.config import OUTPUTS_DIR
 
 OUTPUT_DIRECTORY = os.path.join(OUTPUTS_DIR, 'generation', 'cond_mnist',
                                 'vgan', 'test')
+NOISE_SIZE = 100
 DTYPE = tf.float64
 G_LAYERS = (256, 512, 1024)
 G_ACTIVATION = tf.nn.leaky_relu

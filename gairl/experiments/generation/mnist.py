@@ -12,7 +12,6 @@ from gairl.generators import create_gan
 MNIST_DATA_PATH = os.path.join(RESOURCES_DIR, 'mnist_imgs.gz')
 TRAINING_STEPS = 1000000
 BATCH_SIZE = 100
-NOISE_SIZE = 100
 
 
 def main():
@@ -20,16 +19,14 @@ def main():
         data = extract_images(mnist_file)
 
     with tf.Session() as sess:
-        gan = create_gan(GAN_STR, data.shape[1:], NOISE_SIZE, sess,
-                         data_range=(data.min(), data.max()))
+        gan = create_gan(GAN_STR, data.shape[1:], sess,
+                         data_ranges=(data.min(), data.max()))
         for t in range(TRAINING_STEPS):
             batch_indices = np.random.randint(data.shape[0], size=BATCH_SIZE)
             batch_data = data[batch_indices, :]
-            noise = np.random.normal(0, 1, (BATCH_SIZE, NOISE_SIZE))
-            gan.train_step(batch_data, noise)
+            gan.train_step(batch_data)
             if t % GAN_VIS_FREQ == 0:
-                noise = np.random.normal(0, 1, (4, NOISE_SIZE))
-                gen_images = gan.generate(noise)
+                gen_images = gan.generate(4)
                 gan.visualize_data(gen_images)
 
 if __name__ == '__main__':

@@ -8,7 +8,6 @@ from gairl.generators.wgan_gp import wasserstein_gan_gp_config as wgan_gp_conf
 
 def create_gan(gan_name,
                data_shape,
-               noise_size,
                session,
                name=None,
                cond_in_size=None,
@@ -20,7 +19,7 @@ def create_gan(gan_name,
                              f"can choose only from {_STR_TO_GAN.keys()}")
 
     creation_method = _STR_TO_GAN[gan_name]
-    return creation_method(data_shape, noise_size, session,
+    return creation_method(data_shape, session,
                            cond_in_size=cond_in_size,
                            data_ranges=data_ranges,
                            name=name,
@@ -29,7 +28,6 @@ def create_gan(gan_name,
 
 
 def _create_vanilla_gan(data_shape,
-                        noise_size,
                         session,
                         name=None,
                         cond_in_size=None,
@@ -41,12 +39,12 @@ def _create_vanilla_gan(data_shape,
     logging_level = vgan_conf.LOGGING_LEVEL if separate_logging else None
 
     return VanillaGAN(data_shape,
-                      noise_size,
                       session,
                       output_dir,
                       name=name,
-                      cond_in_size=cond_in_size,
                       data_ranges=data_ranges,
+                      noise_size=vgan_conf.NOISE_SIZE,
+                      cond_in_size=cond_in_size,
                       dtype=vgan_conf.DTYPE,
                       g_layers=vgan_conf.G_LAYERS,
                       g_activation=vgan_conf.G_ACTIVATION,
@@ -64,7 +62,6 @@ def _create_vanilla_gan(data_shape,
 
 
 def _create_wasserstein_gan(data_shape,
-                            noise_size,
                             session,
                             name=None,
                             cond_in_size=None,
@@ -76,12 +73,12 @@ def _create_wasserstein_gan(data_shape,
     logging_level = wgan_conf.LOGGING_LEVEL if separate_logging else None
 
     return WassersteinGAN(data_shape,
-                          noise_size,
                           session,
                           output_dir,
                           name=name,
-                          cond_in_size=cond_in_size,
                           data_ranges=data_ranges,
+                          noise_size=wgan_conf.NOISE_SIZE,
+                          cond_in_size=cond_in_size,
                           dtype=wgan_conf.DTYPE,
                           g_layers=wgan_conf.G_LAYERS,
                           g_activation=wgan_conf.G_ACTIVATION,
@@ -100,7 +97,6 @@ def _create_wasserstein_gan(data_shape,
 
 
 def _create_wasserstein_gan_gp(data_shape,
-                               noise_size,
                                session,
                                name=None,
                                cond_in_size=None,
@@ -112,12 +108,12 @@ def _create_wasserstein_gan_gp(data_shape,
     logging_level = wgan_gp_conf.LOGGING_LEVEL if separate_logging else None
 
     return WassersteinGANGP(data_shape,
-                            noise_size,
                             session,
                             output_dir,
                             name=name,
-                            cond_in_size=cond_in_size,
                             data_ranges=data_ranges,
+                            noise_size=wgan_gp_conf.NOISE_SIZE,
+                            cond_in_size=cond_in_size,
                             dtype=wgan_gp_conf.DTYPE,
                             g_layers=wgan_gp_conf.G_LAYERS,
                             g_activation=wgan_gp_conf.G_ACTIVATION,

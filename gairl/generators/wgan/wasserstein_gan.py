@@ -12,10 +12,10 @@ class WassersteinGAN(VanillaGAN):
 
     def __init__(self,
                  data_shape,
-                 noise_size,
                  session,
                  output_directory,
                  name='WassersteinGAN',
+                 noise_size=100,
                  cond_in_size=None,
                  data_ranges=(-1, 1),
                  dtype=tf.float64,
@@ -37,13 +37,13 @@ class WassersteinGAN(VanillaGAN):
         Initializes feed-forward version of Wasserstein GAN.
         :param data_shape: tuple of int; describes the size of the
             data that GAN is supposed to generate.
-        :param noise_size: int; describes the size of the noise that
-            will be fed as an input to the generator.
         :param session: tensorflow..Session; tensorflow session that
             will be used to run the model.
         :param output_directory: string; directory to which all of the
             network outputs (logs, checkpoints) will be saved.
         :param name: string; name of the model.
+        :param noise_size: int; describes the size of the noise that
+            will be fed as an input to the generator.
         :param cond_in_size: int; describes size of the conditional
             input used for GAN, None or 0 if non-conditional GAN.
         :param data_ranges: tuple of ints; specifies what is the range of
@@ -79,10 +79,10 @@ class WassersteinGAN(VanillaGAN):
                                                 'smaller than maximum clip.'
         self._clip_bounds = clip_bounds
         super().__init__(data_shape,
-                         noise_size,
                          session,
                          output_directory,
                          name=name,
+                         noise_size=noise_size,
                          cond_in_size=cond_in_size,
                          data_ranges=data_ranges,
                          dtype=dtype,

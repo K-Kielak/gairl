@@ -8,7 +8,7 @@ from gairl.agents.gairl.gairl_agent import GAIRLAgent
 from gairl.agents.rainbow import rainbow_config as rainbow_conf
 from gairl.agents.rainbow.rainbow_agent import RainbowDQNAgent
 from gairl.agents.random_agent import RandomAgent
-from gairl.generators import create_gan
+from gairl.generators import create_generator
 
 
 def create_agent(agent_name,
@@ -20,8 +20,7 @@ def create_agent(agent_name,
                  separate_logging=True,
                  data_ranges=(-1, 1)):
     if agent_name not in _STR_TO_AGENT.keys():
-        raise AttributeError(f"There's no agent like {agent_name}. You "
-                             f"can choose only from {_STR_TO_AGENT.keys()}")
+        raise AttributeError(f"There's no agent like {agent_name}.")
 
     if agent_name == 'gairl':
         return _create_gairl_agent(actions_num, state_size, session,
@@ -120,15 +119,14 @@ def _create_gairl_agent(actions_num,
     gen_data_size = (state_size + 1,)  # + 1 for is_terminal flag
     cond_data_size = state_size + actions_num
     gen_output_dir = os.path.join(output_dir, 'model')
-    generative_model = create_gan(gairl_conf.GENERATIVE_MODEL_STR,
-                                  gen_data_size,
-                                  0,
-                                  session,
-                                  cond_in_size=cond_data_size,
-                                  data_ranges=data_ranges,
-                                  name=name,
-                                  output_dir=gen_output_dir,
-                                  separate_logging=False)
+    generative_model = create_generator(gairl_conf.GENERATIVE_MODEL_STR,
+                                        gen_data_size,
+                                        session,
+                                        cond_in_size=cond_data_size,
+                                        data_ranges=data_ranges,
+                                        name=name,
+                                        output_dir=gen_output_dir,
+                                        separate_logging=False)
 
     rl_output_dir = os.path.join(output_dir, 'agent')
     rl_agent = create_agent(gairl_conf.RL_AGENT_STR,
