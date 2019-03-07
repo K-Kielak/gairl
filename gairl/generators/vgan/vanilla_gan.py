@@ -172,7 +172,7 @@ class VanillaGAN(AbstractGenerator):
         gen_real_diff = tf.abs(self._generated_data_flat -
                                self._real_data_preproc,
                                name='gen_real_diff')
-        self._l1_loss = tf.reduce_sum(tf.reduce_mean(gen_real_diff, axis=1),
+        self._l1_loss = tf.reduce_sum(tf.reduce_mean(gen_real_diff, axis=0),
                                       name='l1_loss')
 
         self._add_summaries()
@@ -341,17 +341,16 @@ class VanillaGAN(AbstractGenerator):
         self._saver = tf.train.Saver(max_to_keep=max_checkpoints)
 
         self._logger = logging.getLogger(self._name)
-        if logging_level:  # Set up separate logger if not None
-            logs_filepath = os.path.join(output_dir, 'logs.log')
-            formatter = logging.Formatter('%(asctime)s:%(name)s:'
-                                          '%(levelname)s: %(message)s')
-            file_handler = logging.FileHandler(logs_filepath)
-            file_handler.setFormatter(formatter)
-            self._logger.addHandler(file_handler)
-            console_handler = logging.StreamHandler(sys.stdout)
-            console_handler.setFormatter(formatter)
-            self._logger.addHandler(console_handler)
-            self._logger.setLevel(logging_level)
+        logs_filepath = os.path.join(output_dir, 'logs.log')
+        formatter = logging.Formatter('%(asctime)s:%(name)s:'
+                                      '%(levelname)s: %(message)s')
+        file_handler = logging.FileHandler(logs_filepath)
+        file_handler.setFormatter(formatter)
+        self._logger.addHandler(file_handler)
+        console_handler = logging.StreamHandler(sys.stdout)
+        console_handler.setFormatter(formatter)
+        self._logger.addHandler(console_handler)
+        self._logger.setLevel(logging_level)
 
         self._summary_writer = tf.summary.FileWriter(sumaries_dir,
                                                      self._sess.graph)

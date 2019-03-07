@@ -98,6 +98,7 @@ class DQNAgent(AbstractAgent):
         super().__init__(actions_num, state_size)
 
         # Set up important variables
+
         self._name = name
         self._sess = session
         self._dtype = dtype
@@ -257,17 +258,16 @@ class DQNAgent(AbstractAgent):
         self._saver = tf.train.Saver(max_to_keep=max_checkpoints)
 
         self._logger = logging.getLogger(self._name)
-        if logging_level:  # Set up separate logger if not None
-            logs_filepath = os.path.join(output_dir, 'logs.log')
-            formatter = logging.Formatter('%(asctime)s:%(name)s:'
-                                          '%(levelname)s: %(message)s')
-            file_handler = logging.FileHandler(logs_filepath)
-            file_handler.setFormatter(formatter)
-            self._logger.addHandler(file_handler)
-            console_handler = logging.StreamHandler(sys.stdout)
-            console_handler.setFormatter(formatter)
-            self._logger.addHandler(console_handler)
-            self._logger.setLevel(logging_level)
+        logs_filepath = os.path.join(output_dir, 'logs.log')
+        formatter = logging.Formatter('%(asctime)s:%(name)s:'
+                                      '%(levelname)s: %(message)s')
+        file_handler = logging.FileHandler(logs_filepath)
+        file_handler.setFormatter(formatter)
+        self._logger.addHandler(file_handler)
+        console_handler = logging.StreamHandler(sys.stdout)
+        console_handler.setFormatter(formatter)
+        self._logger.addHandler(console_handler)
+        self._logger.setLevel(logging_level)
 
         self._summary_writer = tf.summary.FileWriter(sumaries_dir,
                                                      self._sess.graph)

@@ -15,8 +15,7 @@ def create_generator(generator_name,
                      data_ranges=(-1, 1),
                      conditional_shape=None,
                      conditional_ranges=(-1, 1),
-                     output_dir=None,
-                     separate_logging=True):
+                     output_dir=None):
     if generator_name not in _STR_TO_GENERATOR.keys():
         raise AttributeError(f"There's no generator like {generator_name}.")
 
@@ -30,8 +29,7 @@ def create_generator(generator_name,
                                              name=name,
                                              input_ranges=conditional_ranges,
                                              output_ranges=data_ranges,
-                                             output_dir=output_dir,
-                                             separate_logging=separate_logging)
+                                             output_dir=output_dir,)
 
     creation_method = _STR_TO_GENERATOR[generator_name]
     return creation_method(data_shape, session,
@@ -39,8 +37,7 @@ def create_generator(generator_name,
                            conditional_shape=conditional_shape,
                            conditional_ranges=conditional_ranges,
                            name=name,
-                           output_dir=output_dir,
-                           separate_logging=separate_logging)
+                           output_dir=output_dir)
 
 
 def _create_vanilla_gan(data_shape,
@@ -49,12 +46,9 @@ def _create_vanilla_gan(data_shape,
                         data_ranges=(-1, 1),
                         conditional_shape=None,
                         conditional_ranges=(-1, 1),
-                        output_dir=None,
-                        separate_logging=True):
+                        output_dir=None):
     output_dir = output_dir if output_dir else vgan_conf.OUTPUT_DIRECTORY
     name = name if name else 'VanillaGAN'
-    logging_level = vgan_conf.LOGGING_LEVEL if separate_logging else None
-
     return VanillaGAN(data_shape,
                       session,
                       output_dir,
@@ -74,7 +68,7 @@ def _create_vanilla_gan(data_shape,
                       d_optimizer=vgan_conf.D_OPTIMIZER,
                       k=vgan_conf.K,
                       logging_freq=vgan_conf.LOGGING_FREQ,
-                      logging_level=logging_level,
+                      logging_level=vgan_conf.LOGGING_LEVEL,
                       max_checkpoints=vgan_conf.MAX_CHECKPOINTS,
                       save_freq=vgan_conf.SAVE_FREQ)
 
@@ -85,12 +79,9 @@ def _create_wasserstein_gan(data_shape,
                             data_ranges=(-1, 1),
                             conditional_shape=None,
                             conditional_ranges=(-1, 1),
-                            output_dir=None,
-                            separate_logging=True):
+                            output_dir=None):
     output_dir = output_dir if output_dir else wgan_conf.OUTPUT_DIRECTORY
     name = name if name else 'WassersteinGAN'
-    logging_level = wgan_conf.LOGGING_LEVEL if separate_logging else None
-
     return WassersteinGAN(data_shape,
                           session,
                           output_dir,
@@ -111,7 +102,7 @@ def _create_wasserstein_gan(data_shape,
                           k=wgan_conf.K,
                           clip_bounds=wgan_conf.CLIP_BOUNDS,
                           logging_freq=wgan_conf.LOGGING_FREQ,
-                          logging_level=logging_level,
+                          logging_level=wgan_conf.LOGGING_LEVEL,
                           max_checkpoints=wgan_conf.MAX_CHECKPOINTS,
                           save_freq=wgan_conf.SAVE_FREQ)
 
@@ -122,12 +113,9 @@ def _create_wasserstein_gan_gp(data_shape,
                                data_ranges=(-1, 1),
                                conditional_shape=None,
                                conditional_ranges=(-1, 1),
-                               output_dir=None,
-                               separate_logging=True):
+                               output_dir=None):
     output_dir = output_dir if output_dir else wgan_gp_conf.OUTPUT_DIRECTORY
     name = name if name else 'WassersteinGAN with GP'
-    logging_level = wgan_gp_conf.LOGGING_LEVEL if separate_logging else None
-
     return WassersteinGANGP(data_shape,
                             session,
                             output_dir,
@@ -148,7 +136,7 @@ def _create_wasserstein_gan_gp(data_shape,
                             k=wgan_gp_conf.K,
                             penalty_coeff=wgan_gp_conf.PENALTY_COEFF,
                             logging_freq=wgan_gp_conf.LOGGING_FREQ,
-                            logging_level=logging_level,
+                            logging_level=wgan_gp_conf.LOGGING_LEVEL,
                             max_checkpoints=wgan_gp_conf.MAX_CHECKPOINTS,
                             save_freq=wgan_gp_conf.SAVE_FREQ)
 
@@ -159,11 +147,9 @@ def _create_multilayer_perceptron(input_shape,
                                   name=None,
                                   input_ranges=(-1, 1),
                                   output_ranges=(-1, 1),
-                                  output_dir=None,
-                                  separate_logging=True):
+                                  output_dir=None):
     output_dir = output_dir if output_dir else mlp_conf.OUTPUT_DIRECTORY
     name = name if name else 'Multilayer Perceptron'
-    logging_level = mlp_conf.LOGGING_LEVEL if separate_logging else None
     return MultilayerPerceptron(input_shape,
                                 output_shape,
                                 session,
@@ -179,7 +165,7 @@ def _create_multilayer_perceptron(input_shape,
                                 dropout=mlp_conf.DROPOUT,
                                 optimizer=mlp_conf.OPTIMIZER,
                                 logging_freq=mlp_conf.LOGGING_FREQ,
-                                logging_level=logging_level,
+                                logging_level=mlp_conf.LOGGING_LEVEL,
                                 max_checkpoints=mlp_conf.MAX_CHECKPOINTS,
                                 save_freq=mlp_conf.SAVE_FREQ)
 

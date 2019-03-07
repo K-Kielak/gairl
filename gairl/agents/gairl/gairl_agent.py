@@ -1,6 +1,8 @@
 import logging
 import os
 import sys
+from random import random
+
 import numpy as np
 
 from gairl.agents.abstract_agent import AbstractAgent
@@ -16,35 +18,63 @@ class GAIRLAgent(AbstractAgent):
                  generative_model,
                  output_directory,
                  name='GAIRL',
-                 replay_buffer=ReplayBuffer(1000000, 256, 256),
                  model_free_steps=1000,
                  model_training_steps=10000,
+                 model_mem_size=100000,
+                 model_batch_size=256,
+                 model_test_size=0.2,
                  model_based_steps=10000,
+                 logging_freq=5000,
                  logging_level=logging.INFO):
         """
         Initializes GAIRL agent
         :param actions_num: int; describes number of actions the
             agent can choose from.
         :param state_size: int; describes size of the state vector.
-        :param rl_agent: gairl..agent;
-        :param generative_model:
-        :param replay_buffer:
-        :param model_free_steps:
-        :param model_training_steps:
-        :param model_based_steps:
+        :param rl_agent: gairl..agent; reinforcement learning agent
+            used as a part of GAIRL.
+        :param generative_model: garil..generator; generator used for
+            state prediction as part of gairl.
+        :param output_directory: string; directory to which all of the
+            network outputs (logs, checkpoints) will be saved.
+        :param name: string; name of the network.
+        :param model_free_steps: int; how many model-free steps are
+            performed over single GAIRL iteration.
+        :param model_training_steps: int; how many model training
+            iterations are performed over single GAIRL iteration.
+        :param model_mem_size: int; size of the total GAIRL memory.
+        :param model_batch_size: int; batch size used for training
+            model generator.
+        :param model_test_size: int in (0, 1); what part of total
+            memory will be used as a test set for generator evaluation.
+        :param model_based_steps: int; how many reinforcement
+            learning steps will be performed on generator model
+            over single GAIRL iteration.
+        :param logging_freq: int; frequency of progress logging and
+            writing tensorflow summaries.
+        :param logging_level: logging.LEVEL; level of the internal logger,
+            None if it already reuses existing logger.
         """
         super().__init__(actions_num, state_size)
 
         self._name = name
         self._rl_agent = rl_agent
         self._generative_model = generative_model
-        self._replay_buffer = replay_buffer
 
         self._model_free_steps = model_free_steps
         self._model_training_steps = model_training_steps
+        train_mem_size = model_mem_size * (1-model_test_size)
+        self._training_memory = ReplayBuffer(train_mem_size,
+                                             model_batch_size,
+                                             model_batch_size)
+        self._model_test_size = model_test_size
+        test_mem_size = model_mem_size * model_test_size
+        self._test_memory = ReplayBuffer(test_mem_size,
+                                         min((model_batch_size, test_mem_size)),
+                                         min((model_batch_size, test_mem_size)))
+        self._model_batch_size = model_batch_size
         self._model_based_steps = model_based_steps
 
-        self._model_batch_size = replay_buffer._replay_batch_size
         self._action_onehot_opts = np.eye(actions_num)
 
         self._real_steps_so_far = 0
@@ -60,23 +90,28 @@ class GAIRLAgent(AbstractAgent):
             os.mkdir(output_dir)
 
         self._logger = logging.getLogger(self._name)
-        if logging_level:  # Set up separate logger if not None
-            logs_filepath = os.path.join(output_dir, 'logs.log')
-            formatter = logging.Formatter('%(asctime)s:%(name)s:'
-                                          '%(levelname)s: %(message)s')
-            file_handler = logging.FileHandler(logs_filepath)
-            file_handler.setFormatter(formatter)
-            self._logger.addHandler(file_handler)
-            console_handler = logging.StreamHandler(sys.stdout)
-            console_handler.setFormatter(formatter)
-            self._logger.addHandler(console_handler)
-            self._logger.setLevel(logging_level)
+        logs_filepath = os.path.join(output_dir, 'logs.log')
+        formatter = logging.Formatter('%(asctime)s:%(name)s:'
+                                      '%(levelname)s: %(message)s')
+        file_handler = logging.FileHandler(logs_filepath)
+        file_handler.setFormatter(formatter)
+        self._logger.addHandler(file_handler)
+        console_handler = logging.StreamHandler(sys.stdout)
+        console_handler.setFormatter(formatter)
+        self._logger.addHandler(console_handler)
+        self._logger.setLevel(logging_level)
 
     def step(self, state, reward=0, is_terminal=False):
         if not self._was_terminal:
-            self._replay_buffer.add_experience(self._prev_state,
-                                               self._prev_action,
-                                               reward, state, is_terminal)
+            # Add experience with proportional probability
+            if random() < self._model_test_size:
+                self._test_memory.add_experience(self._prev_state,
+                                                 self._prev_action,
+                                                 reward, state, is_terminal)
+            else:
+                self._training_memory.add_experience(self._prev_state,
+                                                     self._prev_action,
+                                                     reward, state, is_terminal)
 
         action = self._rl_agent.step(state, reward=reward,
                                      is_terminal=is_terminal)
@@ -105,7 +140,7 @@ class GAIRLAgent(AbstractAgent):
         return action
 
     def _train_generative_model(self):
-        experience = self._replay_buffer.replay_experience()
+        experience = self._training_memory.replay_experience()
         start_states = np.vstack(experience[:, 0])
         actions = np.stack(experience[:, 1])
         actions_onehot = self._action_onehot_opts[actions]

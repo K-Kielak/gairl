@@ -19,7 +19,6 @@ def create_agent(agent_name,
                  session=None,
                  name=None,
                  output_dir=None,
-                 separate_logging=True,
                  state_ranges=(-1, 1),
                  action_ranges=(-1, 1)):
     if agent_name not in _STR_TO_AGENT.keys():
@@ -28,15 +27,13 @@ def create_agent(agent_name,
     if agent_name == 'gairl':
         return _create_gairl_agent(actions_num, state_size, session,
                                    name=name, output_dir=output_dir,
-                                   separate_logging=separate_logging,
                                    state_ranges=state_ranges,
                                    action_ranges=action_ranges)
 
     creation_method = _STR_TO_AGENT[agent_name]
     if 'session' in getfullargspec(creation_method).args:
         return creation_method(actions_num, state_size, session,
-                               name=name, output_dir=output_dir,
-                               separate_logging=separate_logging)
+                               name=name, output_dir=output_dir)
 
     return creation_method(actions_num, state_size)
 
@@ -45,11 +42,10 @@ def _create_random_agent(actions_num, state_size):
     return RandomAgent(actions_num, state_size)
 
 
-def _create_dqn_agent(actions_num, state_size, session, name=None,
-                      output_dir=None, separate_logging=True):
+def _create_dqn_agent(actions_num, state_size, session,
+                      name=None, output_dir=None):
     output_dir = output_dir if output_dir else dqn_conf.OUTPUT_DIRECTORY
     name = name if name else 'DQN'
-    logging_level = dqn_conf.LOGGING_LEVEL if separate_logging else None
 
     return DQNAgent(actions_num,
                     state_size,
@@ -70,17 +66,16 @@ def _create_dqn_agent(actions_num, state_size, session, name=None,
                     update_freq=dqn_conf.UPDATE_FREQ,
                     target_update_freq=dqn_conf.TARGET_UPDATE_FREQ,
                     logging_freq=dqn_conf.LOGGING_FREQ,
-                    logging_level=logging_level,
+                    logging_level=dqn_conf.LOGGING_LEVEL,
                     max_checkpoints=dqn_conf.MAX_CHECKPOINTS,
                     save_freq=dqn_conf.SAVE_FREQUENCY,
                     load_path=dqn_conf.MODEL_LOAD_PATH)
 
 
-def _create_rainbowdqn_agent(actions_num, state_size, session, name=None,
-                             output_dir=None, separate_logging=True):
+def _create_rainbowdqn_agent(actions_num, state_size, session,
+                             name=None, output_dir=None):
     output_dir = output_dir if output_dir else dqn_conf.OUTPUT_DIRECTORY
     name = name if name else 'RainbowDQN'
-    logging_level = rainbow_conf.LOGGING_LEVEL if separate_logging else None
 
     return RainbowDQNAgent(actions_num,
                            state_size,
@@ -101,7 +96,7 @@ def _create_rainbowdqn_agent(actions_num, state_size, session, name=None,
                            update_freq=rainbow_conf.UPDATE_FREQ,
                            target_update_freq=rainbow_conf.TARGET_UPDATE_FREQ,
                            logging_freq=rainbow_conf.LOGGING_FREQ,
-                           logging_level=logging_level,
+                           logging_level=rainbow_conf.LOGGING_LEVEL,
                            max_checkpoints=rainbow_conf.MAX_CHECKPOINTS,
                            save_freq=rainbow_conf.SAVE_FREQUENCY,
                            load_path=rainbow_conf.MODEL_LOAD_PATH)
@@ -112,7 +107,6 @@ def _create_gairl_agent(actions_num,
                         session,
                         name=None,
                         output_dir=None,
-                        separate_logging=True,
                         state_ranges=(-1, 1),
                         action_ranges=(-1, 1)):
     output_dir = output_dir if output_dir else gairl_conf.OUTPUT_DIRECTORY
@@ -134,21 +128,22 @@ def _create_gairl_agent(actions_num,
                             actions_num,
                             state_size,
                             session=session,
-                            name=name,
-                            output_dir=rl_output_dir,
-                            separate_logging=False)
+                            name=f'{name} - {gairl_conf.RL_AGENT_STR}',
+                            output_dir=rl_output_dir)
 
-    logging_level = gairl_conf.LOGGING_LEVEL if separate_logging else None
     return GAIRLAgent(actions_num,
                       state_size,
                       rl_agent,
                       generative_model,
                       output_dir,
-                      replay_buffer=gairl_conf.REPLAY_BUFFER,
                       model_free_steps=gairl_conf.MODEL_FREE_STEPS,
                       model_training_steps=gairl_conf.MODEL_TRAINING_STEPS,
+                      model_mem_size=gairl_conf.MODEL_MEMORY_SIZE,
+                      model_batch_size=gairl_conf.MODEL_BATCH_SIZE,
+                      model_test_size=gairl_conf.MODEL_TEST_SIZE,
                       model_based_steps=gairl_conf.MODEL_BASED_STEPS,
-                      logging_level=logging_level)
+                      logging_freq=gairl_conf.LOGGING_FREQUENCY,
+                      logging_level=gairl_conf.LOGGING_LEVEL)
 
 
 def _create_generative_for_gairl(actions_num, state_size,
@@ -171,15 +166,15 @@ def _create_generative_for_gairl(actions_num, state_size,
         full_a_ranges = np.vstack((full_a_ranges, action_ranges))
     condtional_ranges = np.vstack((full_s_ranges, full_a_ranges))
 
+    gen_name = f'{name} - {gairl_conf.GENERATIVE_MODEL_STR}'
     generative_model = create_generator(gairl_conf.GENERATIVE_MODEL_STR,
                                         gen_data_shape,
                                         session,
-                                        name=name,
+                                        name=gen_name,
                                         data_ranges=full_s_ranges,
                                         conditional_shape=cond_data_shape,
                                         conditional_ranges=condtional_ranges,
-                                        output_dir=gen_output_dir,
-                                        separate_logging=False)
+                                        output_dir=gen_output_dir)
     return generative_model
 
 
