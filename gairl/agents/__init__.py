@@ -116,7 +116,8 @@ def _create_gairl_agent(actions_num,
     # Create directory for RL agent and generative model
     os.mkdir(output_dir)
 
-    gen_data_shape = (state_size + 1,)  # + 1 for is_terminal flag
+    # Create states generative model
+    gen_data_shape = (state_size,)
     cond_data_shape = (state_size + actions_num,)
     gen_output_dir = os.path.join(output_dir, 'model')
     generative_model = create_generator(gairl_conf.GENERATIVE_MODEL_STR,

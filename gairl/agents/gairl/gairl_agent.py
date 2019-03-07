@@ -45,7 +45,6 @@ class GAIRLAgent(AbstractAgent):
         self._model_based_steps = model_based_steps
 
         self._model_batch_size = replay_buffer._replay_batch_size
-        self._noise_size = self._generative_model._noise_size
         self._action_onehot_opts = np.eye(actions_num)
 
         self._real_steps_so_far = 0
@@ -89,23 +88,18 @@ class GAIRLAgent(AbstractAgent):
         if self._real_steps_so_far % self._model_free_steps == 0:
             # Train generative model based on aggregated data
             self._logger.info(
-                f'\n********************************************************\n'
-                f'********************************************************\n'
-                f'**************  Training generative model  *************\n'
-                f'********************************************************\n'
-                f'********************************************************\n'
+                f'\n******************************************************\n'
+                f'************  Training generative model  *************\n'
+                f'******************************************************\n'
             )
             for _ in range(self._model_training_steps):
                 self._train_generative_model()
 
             self._logger.info(
-                f'\n********************************************************\n'
-                f'********************************************************\n\n'
-                f'\n********************************************************\n'
-                f'********************************************************\n'
-                f'**************  Back to real environment  **************\n'
-                f'********************************************************\n'
-                f'********************************************************\n'
+                f'\n******************************************************\n\n'
+                f'\n******************************************************\n'
+                f'************  Back to real environment  **************\n'
+                f'******************************************************\n'
             )
 
         return action
@@ -118,10 +112,6 @@ class GAIRLAgent(AbstractAgent):
         conditional_in = np.concatenate((start_states, actions_onehot), axis=1)
 
         next_states = np.vstack(experience[:, 3])
-        are_terminal = np.vstack(experience[:, 4])
-        to_generate = np.concatenate((next_states, are_terminal), axis=1)
 
-        noise = np.random.normal(0, 1, (self._model_batch_size,
-                                        self._noise_size))
-        self._generative_model.train_step(to_generate, noise,
-                                          g_condition=conditional_in)
+        self._generative_model.train_step(next_states,
+                                          condition=conditional_in)
