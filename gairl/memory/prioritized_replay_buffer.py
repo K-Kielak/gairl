@@ -52,9 +52,13 @@ class PrioritizedReplayBuffer(ReplayBuffer):
         priority = self._buffer.priorities_range[1] ** self._alpha
         self._buffer.add(exp_tuple, priority)
 
-    def replay_experience(self):
+    def replay_experience(self, return_if_not_enough=False):
+        replay_size = self._replay_batch_size
         if len(self._buffer) < self._min_capacity:
-            return None
+            if not return_if_not_enough:
+                return None
+
+            replay_size = len(self._buffer)
 
         self._beta = min([1, self._beta + self._beta_step])
 
@@ -63,8 +67,8 @@ class PrioritizedReplayBuffer(ReplayBuffer):
         is_weights = []
         min_priority = self._buffer.priorities_range[0]
         max_isw = (1 / len(self._buffer) / min_priority) ** self._beta
-        range_size = self._buffer.total_priority / self._replay_batch_size
-        for i in range(self._replay_batch_size):
+        range_size = self._buffer.total_priority / replay_size
+        for i in range(replay_size):
             start = int(i * range_size)
             end = int((i + 1) * range_size)
             data, index, priority = self._buffer.get_data(uniform(start, end))

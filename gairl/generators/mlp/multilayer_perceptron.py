@@ -271,11 +271,24 @@ class MultilayerPerceptron(AbstractGenerator):
         assert condition is not None, 'Condition for MLP has to exist!'
         assert condition.shape[1:] == self._input_shape, \
             f'Expected ({self._input_shape}) and received ' \
-            f'({input_batch.shape[1:]}) data shapes do not match'
+            f'({condition.shape[1:]}) data shapes do not match'
         assert how_many == condition.shape[0], \
             'You need to pass the same amount of labels as you expect' \
             'generated images!'
 
         return self._sess.run(self._generated_output, feed_dict={
             self._input_data: condition
+        })
+
+    def calculate_l1_loss(self, expected_output, condition):
+        assert condition is not None, 'Condition for MLP has to exist!'
+        assert expected_output.shape[1:] == self._data_shape, \
+            f'Expected ({self._data_shape}) and received ' \
+            f'({expected_output.shape[1:]}) data shapes do not match'
+        assert expected_output.shape[0] == condition.shape[0], \
+            'You need to pass the same amount of labels as data!'
+
+        return self._sess.run(self._loss, feed_dict={
+            self._real_output: expected_output,
+            self._input_data: condition,
         })

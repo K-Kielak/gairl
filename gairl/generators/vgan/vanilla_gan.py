@@ -433,3 +433,18 @@ class VanillaGAN(AbstractGenerator):
             self._real_data: data,
         })
         self._summary_writer.add_summary(vis_summ, self._steps_so_far)
+
+    def calculate_l1_loss(self, expected_output, condition):
+        assert expected_output.shape[1:] == self._data_shape, \
+            f'Expected ({self._data_shape}) and received ' \
+            f'({expected_output.shape[1:]}) data shapes do not match'
+        if condition is None:
+            condition = np.zeros((expected_output.shape[0], 0))
+        assert expected_output.shape[0] == condition.shape[0], \
+            'You need to pass the same amount of labels as data!'
+
+        return self._sess.run(self._l1_loss, feed_dict={
+            self._real_data: expected_output,
+            self._g_condition: condition,
+            self._d_condition: condition
+        })

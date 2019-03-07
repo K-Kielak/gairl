@@ -40,3 +40,13 @@ class AbstractGenerator(ABC):
         :return: None.
         """
         pass
+
+    @abstractmethod
+    def calculate_l1_loss(self, expected_output, condition):
+        """
+        Calculates l1 loss between real data and generated data
+        :param expected_output: Real data that should be generated.
+        :param condition: Condition based on which generation is conditioned.
+        :return: l1 loss as a scalar value.
+        """
+        pass

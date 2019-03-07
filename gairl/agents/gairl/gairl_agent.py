@@ -72,15 +72,17 @@ class GAIRLAgent(AbstractAgent):
         self._model_free_steps = model_free_steps
         self._model_training_steps = model_training_steps
         train_mem_size = model_mem_size * (1-model_test_size)
+        self._model_train_batch_size = model_batch_size
         self._training_memory = ReplayBuffer(train_mem_size,
-                                             model_batch_size,
-                                             model_batch_size)
+                                             self._model_train_batch_size,
+                                             self._model_train_batch_size)
         self._model_test_size = model_test_size
         test_mem_size = model_mem_size * model_test_size
+        self._model_test_batch_size = min((model_batch_size, test_mem_size))
         self._test_memory = ReplayBuffer(test_mem_size,
-                                         min((model_batch_size, test_mem_size)),
-                                         min((model_batch_size, test_mem_size)))
-        self._model_batch_size = model_batch_size
+                                         self._model_test_batch_size,
+                                         self._model_test_batch_size)
+
         self._model_based_steps = model_based_steps
         self._logging_freq = logging_freq
 
@@ -212,9 +214,43 @@ class GAIRLAgent(AbstractAgent):
         actions = np.stack(experience[:, 1])
         actions_onehot = self._action_onehot_opts[actions]
         conditional_in = np.concatenate((start_states, actions_onehot), axis=1)
-
         next_states = np.vstack(experience[:, 3])
 
         self._generative_model.train_step(next_states,
                                           condition=conditional_in)
         self._model_training_steps_so_far += 1
+
+        if self._model_training_steps_so_far % self._logging_freq == 0:
+            test_experience = \
+                self._test_memory.replay_experience(return_if_not_enough=True)
+            # Calc train loss
+            train_loss = self._generative_model\
+                .calculate_l1_loss(next_states, condition=conditional_in)
+
+            # Calc test loss
+            test_experience = self._test_memory.replay_experience()
+            start_states_test = np.vstack(test_experience[:, 0])
+            actions_test = np.stack(experience[:, 1])
+            actions_onehot_test = self._action_onehot_opts[actions_test]
+            conditional_in_test = np.concatenate((start_states_test,
+                                                  actions_onehot_test), axis=1)
+            next_states_test = np.vstack(experience[:, 3])
+            test_loss = self._generative_model\
+                .calculate_l1_loss(next_states_test,
+                                   condition=conditional_in_test)
+
+            # Save summary
+            gen_summ = self._sess.run(self._gen_summary, feed_dict={
+                self._gen_train_loss_ph: train_loss,
+                self._gen_test_loss_ph: test_loss
+            })
+            self._summary_writer.add_summary(gen_summ,
+                                             self._model_training_steps_so_far)
+
+            # Log
+            self._logger.info(
+                f'Current model step: {self._model_training_steps_so_far}\n'
+                f'Training loss: {train_loss}\n'
+                f'Test loss: {test_loss}'
+                '\n--------------------------------------------------\n'
+            )

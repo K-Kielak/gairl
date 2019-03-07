@@ -45,15 +45,19 @@ class ReplayBuffer:
         if len(self._buffer) > self._max_capacity:
             self._buffer.pop()
 
-    def replay_experience(self):
+    def replay_experience(self, return_if_not_enough=False):
         """
         :return: self._replay_batch_size randomly sampled experience
             tuples (s_{t}, a_{t}, r_{t+1}, s_{t+1}, it_{t+1}) from the buffer.
         """
+        replay_size = self._replay_batch_size
         if len(self._buffer) < self._min_capacity:
-            return None
+            if not return_if_not_enough:
+                return None
 
-        samples = sample(self._buffer, self._replay_batch_size)
+            replay_size = len(self._buffer)
+
+        samples = sample(self._buffer, replay_size)
         return np.array(samples)
 
     @property
