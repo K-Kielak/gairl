@@ -7,8 +7,8 @@ OUTPUTS_DIR = os.path.join(PROJECT_ROOT_DIR, 'outputs')
 RESOURCES_DIR = os.path.join(PROJECT_ROOT_DIR, 'resources')
 
 # Used gan
-GAN_STR = 'wgan_gp'
-GAN_VIS_FREQ = 5000
+GENERATOR_STR = 'wgan_gp'
+GENERATOR_VIS_FREQ = 5000
 
 # Used reinforcement learning agent
 AGENT_STR = 'gairl'
