@@ -109,7 +109,8 @@ class MultilayerPerceptron(AbstractGenerator):
         input_preproc = normalize(flat_in,
                                   data_ranges=self._input_ranges,
                                   target_ranges=norm_range,
-                                  name='input_preproc')
+                                  name='input_preproc',
+                                  dtype=dtype)
 
         flat_out_size = reduce(mul, data_shape)
         flat_real_out = tf.reshape(self._real_output,
@@ -118,7 +119,8 @@ class MultilayerPerceptron(AbstractGenerator):
         real_output_preproc = normalize(flat_real_out,
                                         data_ranges=self._output_ranges,
                                         target_ranges=norm_range,
-                                        name='real_output_preproc')
+                                        name='real_output_preproc',
+                                        dtype=dtype)
 
         # Create network
         self._params = Dnu.create_network_params(flat_in_size,
@@ -137,7 +139,8 @@ class MultilayerPerceptron(AbstractGenerator):
         denorm_generated_out = normalize(generated_out,
                                          data_ranges=norm_range,
                                          target_ranges=self._output_ranges,
-                                         name='denorm_generated_out')
+                                         name='denorm_generated_out',
+                                         dtype=dtype)
         self._generated_output = tf.reshape(denorm_generated_out,
                                             (batch_size, *data_shape),
                                             name='generated_output')

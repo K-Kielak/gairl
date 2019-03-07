@@ -1,7 +1,6 @@
 from collections import namedtuple
 from functools import reduce
 
-import numpy as np
 import tensorflow as tf
 
 
@@ -134,30 +133,37 @@ def summarize_vector(vec):
     return summaries
 
 
-def normalize(data_batch, data_ranges=None, target_ranges=(0, 1), name=None):
+def normalize(data_batch, data_ranges=None,
+              target_ranges=(0, 1), name=None, dtype=tf.float32):
     """
     :param data_batch: tensor with data to normalize
-    :param data_ranges: list of tuples of ints; specifies what
+    :param data_ranges: list of tuples of floats; specifies what
             is the range of data in terms of max and min values.
             If single tuple then applies single range to whole data,
             if multiple then for each feature separately.
-    :param target_ranges: list of tuples of ints; specifies what
+    :param target_ranges: list of tuples of floats; specifies what
             is the target range of data in terms of max and min values.
             If single tuple then applies single range to whole data,
             if multiple then for each feature separately.
-    :param name: name for the final output tensor
+    :param name: name for the final output tensor.
+    :param dtype: dtype used for normalization.
     :return: Normalized tensor containing the data
     """
-    if not data_ranges:
-        data_ranges = tf.reduce_min(data_batch), tf.reduce_max(data_batch)
+    if data_ranges is None:
+        data_ranges = tf.stack((tf.reduce_min(data_batch),
+                               tf.reduce_max(data_batch)))
 
-    data_ranges = np.array(data_ranges)
-    while len(data_ranges.shape) != len(data_batch.shape) - 1:
-        data_ranges = np.expand_dims(data_ranges, 0)
+    # Make sure data ranges are appropriately shaped
+    data_ranges = tf.convert_to_tensor(data_ranges, dtype=dtype)
+    lacking_dims = tf.tile([1], [tf.rank(data_batch) - tf.rank(data_ranges)])
+    final_shape = tf.concat((lacking_dims, tf.shape(data_ranges)), 0)
+    data_ranges = tf.reshape(data_ranges, final_shape)
 
-    target_ranges = np.array(target_ranges)
-    while len(target_ranges.shape) != len(data_batch.shape) - 1:
-        target_ranges = np.expand_dims(target_ranges, 0)
+    # Make sure target ranges are appropriately shaped
+    target_ranges = tf.convert_to_tensor(target_ranges, dtype=dtype)
+    lacking_dims = tf.tile([1], [tf.rank(data_batch) - tf.rank(target_ranges)])
+    final_shape = tf.concat((lacking_dims, tf.shape(target_ranges)), 0)
+    target_ranges = tf.reshape(target_ranges, final_shape)
 
     data_normed = (data_batch - data_ranges[..., 0])
     data_normed = data_normed / (data_ranges[..., 1] - data_ranges[..., 0])

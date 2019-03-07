@@ -136,7 +136,8 @@ class VanillaGAN(AbstractGenerator):
         self._real_data_preproc = normalize(real_data_flat,
                                             data_ranges=self._data_ranges,
                                             target_ranges=GENERATOR_OUT_RANGE,
-                                            name='real_data_preproc')
+                                            name='real_data_preproc',
+                                            dtype=dtype)
 
         g_condition_flat = tf.reshape(self._g_condition,
                                       (self._batch_size,
@@ -145,7 +146,8 @@ class VanillaGAN(AbstractGenerator):
         self._g_condition_preproc = normalize(g_condition_flat,
                                               data_ranges=self._conditional_ranges,
                                               target_ranges=GENERATOR_OUT_RANGE,
-                                              name='g_condition_preproc')
+                                              name='g_condition_preproc',
+                                              dtype=dtype)
 
         d_condition_flat = tf.reshape(self._d_condition,
                                       (self._batch_size,
@@ -154,7 +156,8 @@ class VanillaGAN(AbstractGenerator):
         self._d_condition_preproc = normalize(d_condition_flat,
                                               data_ranges=self._conditional_ranges,
                                               target_ranges=GENERATOR_OUT_RANGE,
-                                              name='d_condition_preproc')
+                                              name='d_condition_preproc',
+                                              dtype=dtype)
 
         # Create networks
         self._create_generator_network(g_layers, g_activation,
@@ -208,7 +211,8 @@ class VanillaGAN(AbstractGenerator):
         self._generated_data = normalize(self._generated_data_flat,
                                          data_ranges=GENERATOR_OUT_RANGE,
                                          target_ranges=self._data_ranges,
-                                         name='generator_out')
+                                         name='generator_out',
+                                         dtype=dtype)
         # Put back to proper shape
         self._generated_data = tf.reshape(self._generated_data,
                                           (self._batch_size,
