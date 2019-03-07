@@ -6,6 +6,7 @@ from operator import mul
 
 import tensorflow as tf
 
+from gairl.generators.abstract_generator import AbstractGenerator
 from gairl.neural_utils import DenseNetworkUtils as Dnu
 from gairl.neural_utils import normalize, summarize_ndarray
 
@@ -16,10 +17,11 @@ PARAMS_INIT_MEAN = 0
 
 
 # TODO add loading
-class MultilayerPerceptron:
+class MultilayerPerceptron(AbstractGenerator):
+
     def __init__(self,
                  input_shape,
-                 output_shape,
+                 data_shape,
                  session,
                  output_directory,
                  name='MultilayerPerceptron',
@@ -42,9 +44,9 @@ class MultilayerPerceptron:
         """
         Initializes multilayer perceptron conditional generator that
         uses L1 loss as a generation obejctive
-        :param input_shape: tuple of int; describes size of the
+        :param data_shape: tuple of int; describes size of the
             conditional input used by the MLP.
-        :param output_shape: tuple of int; describes the size of the
+        :param data_shape: tuple of int; describes the size of the
             data that MLP is supposed to generate.
         :param session: tensorflow..Session; tensorflow session that
             will be used to run the model.
@@ -81,11 +83,11 @@ class MultilayerPerceptron:
         :param max_checkpoints: int; number of checkpoints to keep.
         :param save_freq: int; how often the model will be saved.
         """
+        super().__init__(data_shape)
         self._name = name
         self._sess = session
         self._dtype = dtype
         self._input_shape = input_shape
-        self._output_shape = output_shape
         self._input_ranges = input_ranges
         self._output_ranges = output_ranges
         self._logging_freq = logging_freq
@@ -96,7 +98,7 @@ class MultilayerPerceptron:
         # Set up placeholders
         self._input_data = tf.placeholder(shape=(None, *input_shape),
                                           dtype=dtype, name='input')
-        self._real_output = tf.placeholder(shape=(None, *output_shape),
+        self._real_output = tf.placeholder(shape=(None, *data_shape),
                                            dtype=dtype, name='real_output')
 
         # Preprocess placeholders
@@ -109,7 +111,7 @@ class MultilayerPerceptron:
                                   target_ranges=norm_range,
                                   name='input_preproc')
 
-        flat_out_size = reduce(mul, output_shape)
+        flat_out_size = reduce(mul, data_shape)
         flat_real_out = tf.reshape(self._real_output,
                                    (batch_size, flat_out_size),
                                    'flat_real_output')
@@ -137,7 +139,7 @@ class MultilayerPerceptron:
                                          target_ranges=self._output_ranges,
                                          name='denorm_generated_out')
         self._generated_output = tf.reshape(denorm_generated_out,
-                                            (batch_size, *output_shape),
+                                            (batch_size, *data_shape),
                                             name='generated_output')
 
         # Define objective
@@ -160,7 +162,7 @@ class MultilayerPerceptron:
         self._logger.info(
             f'\nCreating MLP with:\n'
             f'Input shape {input_shape}\n'
-            f'Output shape {output_shape}\n'
+            f'Output shape {data_shape}\n'
             f'Dtype: {dtype}\n'
             f'Network layers: {layers}\n'
             f'Activation function: {activation.__name__}\n'
@@ -181,7 +183,7 @@ class MultilayerPerceptron:
 
         self._training_summary = tf.summary.merge(training_summs)
 
-        vis_shape = [tf.shape(self._real_output)[0], *self._output_shape]
+        vis_shape = [tf.shape(self._real_output)[0], *self._data_shape]
         while len(vis_shape) < 4:
             vis_shape.append(1)
         vis_data = tf.reshape(self._real_output, vis_shape)
@@ -218,8 +220,8 @@ class MultilayerPerceptron:
         assert condition.shape[1:] == self._input_shape, \
             f'Expected ({self._input_shape}) and received ' \
             f'({condition.shape[1:]}) data shapes do not match'
-        assert expected_output.shape[1:] == self._output_shape, \
-            f'Expected ({self._output_shape}) and received ' \
+        assert expected_output.shape[1:] == self._data_shape, \
+            f'Expected ({self._data_shape}) and received ' \
             f'({expected_output.shape[1]}) sizes do not match'
         assert condition.shape[0] == expected_output.shape[0], \
             'You need to pass the same amount of labels as data!'

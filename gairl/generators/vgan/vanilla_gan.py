@@ -7,6 +7,7 @@ from operator import mul
 import numpy as np
 import tensorflow as tf
 
+from gairl.generators.abstract_generator import AbstractGenerator
 from gairl.neural_utils import DenseNetworkUtils as Dnu
 from gairl.neural_utils import normalize, summarize_ndarray
 
@@ -18,7 +19,7 @@ GENERATOR_OUT_RANGE = (-1, 1)  # (-1, 1) because tanh final activation
 
 
 # TODO add loading
-class VanillaGAN:
+class VanillaGAN(AbstractGenerator):
 
     def __init__(self,
                  data_shape,
@@ -97,9 +98,9 @@ class VanillaGAN:
         :param max_checkpoints: int; number of checkpoints to keep.
         :param save_freq: int; how often the model will be saved.
         """
+        super().__init__(data_shape)
         self._name = name
         self._sess = session
-        self._data_shape = data_shape
         self._data_ranges = data_ranges
         self._flat_data_size = reduce(mul, data_shape)
         self._noise_size = noise_size
@@ -350,22 +351,22 @@ class VanillaGAN:
         self._summary_writer = tf.summary.FileWriter(sumaries_dir,
                                                      self._sess.graph)
 
-    def train_step(self, data_batch, condition=None):
-        assert data_batch.shape[1:] == self._data_shape, \
+    def train_step(self, expected_output, condition=None):
+        assert expected_output.shape[1:] == self._data_shape, \
             f'Expected ({self._data_shape}) and received ' \
-            f'({data_batch.shape[1:]}) data shapes do not match'
+            f'({expected_output.shape[1:]}) data shapes do not match'
         if condition is None:
-            condition = np.zeros((data_batch.shape[0], 0))
-        assert data_batch.shape[0] == condition.shape[0], \
+            condition = np.zeros((expected_output.shape[0], 0))
+        assert expected_output.shape[0] == condition.shape[0], \
             'You need to pass the same amount of labels as data!'
 
-        batch_size = data_batch.shape[0]
+        batch_size = expected_output.shape[0]
         noise = np.random.normal(0, 1, (batch_size, self._noise_size))
 
         # Train Discriminator
         self._sess.run(self._d_train_step, feed_dict={
                            self._noise: noise,
-                           self._real_data: data_batch,
+                           self._real_data: expected_output,
                            self._g_condition: condition,
                            self._d_condition: condition
                        })
@@ -386,7 +387,7 @@ class VanillaGAN:
                              global_step=self._steps_so_far)
 
         if self._steps_so_far % self._logging_freq == 0:
-            self._log_step(data_batch, noise, condition)
+            self._log_step(expected_output, noise, condition)
 
     def _log_step(self, data_batch, noise_batch, condition):
         train_summ, fake_discrim_mean, real_discrim_mean = \
@@ -406,13 +407,6 @@ class VanillaGAN:
             '\n--------------------------------------------------\n'
         )
 
-    def visualize_data(self, data):
-        self._logger.info('Visualising data\n')
-        vis_summ = self._sess.run(self._visualise_summary, feed_dict={
-            self._real_data: data,
-        })
-        self._summary_writer.add_summary(vis_summ, self._steps_so_far)
-
     def generate(self, how_many, condition=None):
         if condition is None:
             condition = np.zeros((how_many, 0))
@@ -426,3 +420,10 @@ class VanillaGAN:
                                   self._noise: noise,
                                   self._g_condition: condition
                               })
+
+    def visualize_data(self, data):
+        self._logger.info('Visualising data\n')
+        vis_summ = self._sess.run(self._visualise_summary, feed_dict={
+            self._real_data: data,
+        })
+        self._summary_writer.add_summary(vis_summ, self._steps_so_far)
