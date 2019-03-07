@@ -172,8 +172,7 @@ class VanillaGAN(AbstractGenerator):
         gen_real_diff = tf.abs(self._generated_data_flat -
                                self._real_data_preproc,
                                name='gen_real_diff')
-        self._l1_loss = tf.reduce_sum(tf.reduce_mean(gen_real_diff, axis=0),
-                                      name='l1_loss')
+        self._l1_loss = tf.reduce_mean(gen_real_diff, name='l1_loss')
 
         self._add_summaries()
         self._initialize_vars()

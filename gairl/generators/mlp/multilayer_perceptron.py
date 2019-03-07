@@ -148,8 +148,8 @@ class MultilayerPerceptron(AbstractGenerator):
         # Define objective
         gen_real_diff = tf.abs(generated_out - real_output_preproc,
                                name='absolute_difference')
-        self._loss = tf.reduce_sum(tf.reduce_mean(gen_real_diff, axis=0),
-                                   name='l1_loss')
+        self._loss = tf.reduce_mean(gen_real_diff, name='l1_loss')
+
         self._train_step = optimizer.minimize(
             self._loss,
             var_list=Dnu.unpack_params(self._params)

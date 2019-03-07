@@ -221,8 +221,6 @@ class GAIRLAgent(AbstractAgent):
         self._model_training_steps_so_far += 1
 
         if self._model_training_steps_so_far % self._logging_freq == 0:
-            test_experience = \
-                self._test_memory.replay_experience(return_if_not_enough=True)
             # Calc train loss
             train_loss = self._generative_model\
                 .calculate_l1_loss(next_states, condition=conditional_in)
@@ -250,7 +248,9 @@ class GAIRLAgent(AbstractAgent):
             # Log
             self._logger.info(
                 f'Current model step: {self._model_training_steps_so_far}\n'
+                f'Training set size: {len(self._training_memory._buffer)}\n'
                 f'Training loss: {train_loss}\n'
+                f'Test set size: {len(self._test_memory._buffer)}\n'
                 f'Test loss: {test_loss}'
                 '\n--------------------------------------------------\n'
             )
