@@ -1,6 +1,8 @@
 import os
 from inspect import getfullargspec
 
+import numpy as np
+
 from gairl.agents.dqn import dqn_config as dqn_conf
 from gairl.agents.dqn.dqn_agent import DQNAgent
 from gairl.agents.gairl import gairl_config as gairl_conf
@@ -18,7 +20,8 @@ def create_agent(agent_name,
                  name=None,
                  output_dir=None,
                  separate_logging=True,
-                 data_ranges=(-1, 1)):
+                 state_ranges=(-1, 1),
+                 action_ranges=(-1, 1)):
     if agent_name not in _STR_TO_AGENT.keys():
         raise AttributeError(f"There's no agent like {agent_name}.")
 
@@ -26,7 +29,8 @@ def create_agent(agent_name,
         return _create_gairl_agent(actions_num, state_size, session,
                                    name=name, output_dir=output_dir,
                                    separate_logging=separate_logging,
-                                   data_ranges=data_ranges)
+                                   state_ranges=state_ranges,
+                                   action_ranges=action_ranges)
 
     creation_method = _STR_TO_AGENT[agent_name]
     if 'session' in getfullargspec(creation_method).args:
@@ -109,25 +113,21 @@ def _create_gairl_agent(actions_num,
                         name=None,
                         output_dir=None,
                         separate_logging=True,
-                        data_ranges=(-1, 1)):
+                        state_ranges=(-1, 1),
+                        action_ranges=(-1, 1)):
     output_dir = output_dir if output_dir else gairl_conf.OUTPUT_DIRECTORY
     name = name if name else 'GAIRL'
 
     # Create directory for RL agent and generative model
     os.mkdir(output_dir)
 
-    # Create states generative model
-    gen_data_shape = (state_size,)
-    cond_data_shape = (state_size + actions_num,)
-    gen_output_dir = os.path.join(output_dir, 'model')
-    generative_model = create_generator(gairl_conf.GENERATIVE_MODEL_STR,
-                                        gen_data_shape,
-                                        session,
-                                        data_ranges=data_ranges,
-                                        conditional_shape=cond_data_shape,
-                                        name=name,
-                                        output_dir=gen_output_dir,
-                                        separate_logging=False)
+    generative_model = _create_generative_for_gairl(actions_num,
+                                                    state_size,
+                                                    session,
+                                                    name,
+                                                    output_dir,
+                                                    state_ranges=state_ranges,
+                                                    action_ranges=action_ranges)
 
     rl_output_dir = os.path.join(output_dir, 'agent')
     rl_agent = create_agent(gairl_conf.RL_AGENT_STR,
@@ -149,6 +149,38 @@ def _create_gairl_agent(actions_num,
                       model_training_steps=gairl_conf.MODEL_TRAINING_STEPS,
                       model_based_steps=gairl_conf.MODEL_BASED_STEPS,
                       logging_level=logging_level)
+
+
+def _create_generative_for_gairl(actions_num, state_size,
+                                 session, name, output_dir,
+                                 state_ranges=(-1, 1),
+                                 action_ranges=(-1, 1)):
+    # Define output dir
+    gen_output_dir = os.path.join(output_dir, 'model')
+
+    # Prepare shapes
+    gen_data_shape = (state_size,)
+    cond_data_shape = (state_size + actions_num,)
+
+    # Make sure state ranges are of correct size
+    full_s_ranges = np.array(state_ranges)
+    while len(full_s_ranges.shape) == 1 or len(full_s_ranges) < state_size:
+        full_s_ranges = np.vstack((full_s_ranges, state_ranges))
+    full_a_ranges = np.array(action_ranges)
+    while len(full_a_ranges.shape) == 1 or len(full_a_ranges) < actions_num:
+        full_a_ranges = np.vstack((full_a_ranges, action_ranges))
+    condtional_ranges = np.vstack((full_s_ranges, full_a_ranges))
+
+    generative_model = create_generator(gairl_conf.GENERATIVE_MODEL_STR,
+                                        gen_data_shape,
+                                        session,
+                                        name=name,
+                                        data_ranges=full_s_ranges,
+                                        conditional_shape=cond_data_shape,
+                                        conditional_ranges=condtional_ranges,
+                                        output_dir=gen_output_dir,
+                                        separate_logging=False)
+    return generative_model
 
 
 _STR_TO_AGENT = {

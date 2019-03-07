@@ -169,6 +169,12 @@ class VanillaGAN(AbstractGenerator):
         self._define_generator_objective(g_optimizer)
         self._define_discriminator_objective(d_optimizer)
 
+        gen_real_diff = tf.abs(self._generated_data_flat -
+                               self._real_data_preproc,
+                               name='gen_real_diff')
+        self._l1_loss = tf.reduce_sum(tf.reduce_mean(gen_real_diff, axis=1),
+                                      name='l1_loss')
+
         self._add_summaries()
         self._initialize_vars()
         self._set_up_outputs(output_directory, logging_level, max_checkpoints)
@@ -301,12 +307,7 @@ class VanillaGAN(AbstractGenerator):
                                                     self._real_d_loss))
             training_summs.append(tf.summary.scalar('discriminator-loss',
                                                     self._d_loss))
-            gen_real_diff = tf.abs(self._generated_data_flat -
-                                   self._real_data_preproc,
-                                   name='gen_real_diff')
-            l1_loss = tf.reduce_sum(tf.reduce_mean(gen_real_diff, axis=1),
-                                    name='l1_loss')
-            training_summs.append(tf.summary.scalar('l1-loss', l1_loss))
+            training_summs.append(tf.summary.scalar('l1-loss', self._l1_loss))
         with tf.name_scope('discriminations'):
             training_summs.append(tf.summary.scalar('real_avg',
                                                     self._real_discrim_mean))
@@ -394,9 +395,10 @@ class VanillaGAN(AbstractGenerator):
             self._log_step(expected_output, noise, condition)
 
     def _log_step(self, data_batch, noise_batch, condition):
-        train_summ, fake_discrim_mean, real_discrim_mean = \
+        train_summ, fake_discrim_mean, real_discrim_mean, l1_loss = \
             self._sess.run([self._training_summary, self._fake_discrim_mean,
-                            self._real_discrim_mean], feed_dict={
+                            self._real_discrim_mean, self._l1_loss],
+                           feed_dict={
                                self._noise: noise_batch,
                                self._real_data: data_batch,
                                self._g_condition: condition,
@@ -408,6 +410,7 @@ class VanillaGAN(AbstractGenerator):
             f'Current step: {self._steps_so_far}\n'
             f'Fake discrimination mean: {fake_discrim_mean}\n'
             f'Real discrimination mean: {real_discrim_mean}\n'
+            f'L1 loss: {l1_loss}\n'
             '\n--------------------------------------------------\n'
         )
 
