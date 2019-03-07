@@ -135,7 +135,10 @@ def _create_gairl_agent(actions_num,
                       state_size,
                       rl_agent,
                       generative_model,
+                      session,
                       output_dir,
+                      name=name,
+                      dtype=gairl_conf.DTYPE,
                       model_free_steps=gairl_conf.MODEL_FREE_STEPS,
                       model_training_steps=gairl_conf.MODEL_TRAINING_STEPS,
                       model_mem_size=gairl_conf.MODEL_MEMORY_SIZE,
@@ -164,7 +167,7 @@ def _create_generative_for_gairl(actions_num, state_size,
     full_a_ranges = np.array(action_ranges)
     while len(full_a_ranges.shape) == 1 or len(full_a_ranges) < actions_num:
         full_a_ranges = np.vstack((full_a_ranges, action_ranges))
-    condtional_ranges = np.vstack((full_s_ranges, full_a_ranges))
+    conditional_ranges = np.vstack((full_s_ranges, full_a_ranges))
 
     gen_name = f'{name} - {gairl_conf.GENERATIVE_MODEL_STR}'
     generative_model = create_generator(gairl_conf.GENERATIVE_MODEL_STR,
@@ -173,7 +176,7 @@ def _create_generative_for_gairl(actions_num, state_size,
                                         name=gen_name,
                                         data_ranges=full_s_ranges,
                                         conditional_shape=cond_data_shape,
-                                        conditional_ranges=condtional_ranges,
+                                        conditional_ranges=conditional_ranges,
                                         output_dir=gen_output_dir)
     return generative_model
 

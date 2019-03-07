@@ -324,8 +324,7 @@ class DQNAgent(AbstractAgent):
                                         self._avg_episode_length +
                                         self._steps_per_episode) / \
                                        (self._episodes_so_far + 1)
-            reward_summary = \
-                self._sess.run(self._ep_summary, feed_dict={
+            reward_summary = self._sess.run(self._ep_summary, feed_dict={
                     self._ep_reward_ph: self._100_episode_rewards[-1],
                     self._avg_ep_reward_ph: np.mean(self._100_episode_rewards),
                     self._avg_ep_length_ph: self._avg_episode_length
