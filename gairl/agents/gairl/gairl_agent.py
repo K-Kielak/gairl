@@ -200,16 +200,24 @@ class GAIRLAgent(AbstractAgent):
         if not self._was_terminal:
             self._100_episode_rewards[-1] += reward
 
+            # Multiply terminal states as they usually are very sparse
+            multiply_experience = 1
+            if is_terminal:
+                multiply_experience = round(self._avg_episode_length)
+
             # Add experience with proportional probability
             if random() < self._model_test_size:
-                self._test_memory.add_experience(self._prev_state,
-                                                 self._prev_action,
-                                                 reward, state,
-                                                 is_terminal)
-            else:
-                self._training_memory.add_experience(self._prev_state,
+                for i in range(multiply_experience):
+                    self._test_memory.add_experience(self._prev_state,
                                                      self._prev_action,
-                                                     reward, state, is_terminal)
+                                                     reward, state,
+                                                     is_terminal)
+            else:
+                for i in range(multiply_experience):
+                    self._training_memory.add_experience(self._prev_state,
+                                                         self._prev_action,
+                                                         reward, state,
+                                                         is_terminal)
 
         if is_terminal:
             self._avg_episode_length = (self._episodes_so_far *
