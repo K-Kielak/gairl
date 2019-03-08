@@ -1,0 +1,5426 @@
+2019-03-08 22:58:28,890:GAIRL:INFO: 
+******************************************************
+************  Training generative model  *************
+******************************************************
+
+2019-03-08 22:58:32,998:GAIRL:INFO: Current model step: 500
+
+Train -----------Set size: 27256
+State loss: 0.2030296585404672
+Reward loss: 0.1881258438514919
+Terminal loss: 0.17416028059328761
+Terminal recall: 0.8279569892473119
+Terminal precision: 0.9058823529411765
+Generated reward: [-0.13458327]
+Generated terminal: [1.17889382]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.203241083825787
+Reward loss: 0.1807836690943554
+Terminal loss: 0.1743651639575362
+Terminal recall: 0.839622641509434
+Terminal precision: 0.978021978021978
+Generated reward: [-0.30836424]
+Generated terminal: [0.81463408]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 22:58:36,990:GAIRL:INFO: Current model step: 1000
+
+Train -----------Set size: 27256
+State loss: 0.19461700187059824
+Reward loss: 0.16717235532617888
+Terminal loss: 0.15397192219210884
+Terminal recall: 0.9252336448598131
+Terminal precision: 0.9339622641509434
+Generated reward: [-0.92304084]
+Generated terminal: [0.000808]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.21057625297194582
+Reward loss: 0.24719427035895702
+Terminal loss: 0.25524262965572736
+Terminal recall: 0.7394957983193278
+Terminal precision: 0.967032967032967
+Generated reward: [-0.96581916]
+Generated terminal: [-0.02477986]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 22:58:40,280:GAIRL:INFO: Current model step: 1500
+
+Train -----------Set size: 27256
+State loss: 0.18636907265355038
+Reward loss: 0.14941433869621262
+Terminal loss: 0.1385271447212431
+Terminal recall: 0.9099099099099099
+Terminal precision: 0.9619047619047619
+Generated reward: [0.28128671]
+Generated terminal: [2.00575776]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.199219750166114
+Reward loss: 0.2594347699767118
+Terminal loss: 0.2333570037571974
+Terminal recall: 0.6639344262295082
+Terminal precision: 0.9529411764705882
+Generated reward: [-0.99379298]
+Generated terminal: [-0.02137223]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 22:58:44,393:GAIRL:INFO: Current model step: 2000
+
+Train -----------Set size: 27256
+State loss: 0.17130328153237606
+Reward loss: 0.13740656445969546
+Terminal loss: 0.13597400749850008
+Terminal recall: 0.900990099009901
+Terminal precision: 0.9381443298969072
+Generated reward: [-0.34765192]
+Generated terminal: [0.48401727]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.20010274522573165
+Reward loss: 0.24819713042435476
+Terminal loss: 0.23793714560490717
+Terminal recall: 0.7983870967741935
+Terminal precision: 0.9428571428571428
+Generated reward: [-1.02728383]
+Generated terminal: [-0.06572409]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 22:58:48,385:GAIRL:INFO: Current model step: 2500
+
+Train -----------Set size: 27256
+State loss: 0.16110851789742928
+Reward loss: 0.11998301736772299
+Terminal loss: 0.13027873926638223
+Terminal recall: 0.9494949494949495
+Terminal precision: 0.94
+Generated reward: [0.03103613]
+Generated terminal: [1.43704846]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.1901245331692485
+Reward loss: 0.21565447289835005
+Terminal loss: 0.2132407526503512
+Terminal recall: 0.7946428571428571
+Terminal precision: 0.9468085106382979
+Generated reward: [-0.29240337]
+Generated terminal: [0.78221274]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 22:58:52,178:GAIRL:INFO: Current model step: 3000
+
+Train -----------Set size: 27256
+State loss: 0.15146730492581006
+Reward loss: 0.12541923207192923
+Terminal loss: 0.11872202048867807
+Terminal recall: 0.9595959595959596
+Terminal precision: 0.9313725490196079
+Generated reward: [-1.00403735]
+Generated terminal: [0.04462021]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.1889103703223626
+Reward loss: 0.1861324779286022
+Terminal loss: 0.14101343472017155
+Terminal recall: 0.8518518518518519
+Terminal precision: 0.968421052631579
+Generated reward: [-1.0142066]
+Generated terminal: [0.03658425]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 22:58:55,488:GAIRL:INFO: Current model step: 3500
+
+Train -----------Set size: 27256
+State loss: 0.1449335184308473
+Reward loss: 0.11607845098072743
+Terminal loss: 0.1016930160175785
+Terminal recall: 0.9902912621359223
+Terminal precision: 0.9807692307692307
+Generated reward: [0.36686439]
+Generated terminal: [0.91649871]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.17774247978891608
+Reward loss: 0.19213315036816114
+Terminal loss: 0.1568241617954363
+Terminal recall: 0.9035087719298246
+Terminal precision: 0.9716981132075472
+Generated reward: [-0.99008305]
+Generated terminal: [0.0263636]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 22:58:59,372:GAIRL:INFO: Current model step: 4000
+
+Train -----------Set size: 27256
+State loss: 0.12517302665370544
+Reward loss: 0.10810251440302765
+Terminal loss: 0.09711732417881017
+Terminal recall: 1.0
+Terminal precision: 0.9607843137254902
+Generated reward: [-0.94023175]
+Generated terminal: [-0.01110111]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.1805815665528165
+Reward loss: 0.20003720760084887
+Terminal loss: 0.14434028871873317
+Terminal recall: 0.9298245614035088
+Terminal precision: 0.9464285714285714
+Generated reward: [-0.97549722]
+Generated terminal: [-0.04967559]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 22:59:02,642:GAIRL:INFO: Current model step: 4500
+
+Train -----------Set size: 27256
+State loss: 0.14500302714676297
+Reward loss: 0.13670365442128124
+Terminal loss: 0.1222012723322492
+Terminal recall: 0.9907407407407407
+Terminal precision: 0.8991596638655462
+Generated reward: [-1.03236342]
+Generated terminal: [0.02894331]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.17392857264787573
+Reward loss: 0.17247245722067503
+Terminal loss: 0.12381981847170893
+Terminal recall: 0.9910714285714286
+Terminal precision: 0.9910714285714286
+Generated reward: [0.82371472]
+Generated terminal: [1.37454532]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 22:59:06,469:GAIRL:INFO: Current model step: 5000
+
+Train -----------Set size: 27256
+State loss: 0.13686988992920862
+Reward loss: 0.1161899767684629
+Terminal loss: 0.09913484904089494
+Terminal recall: 1.0
+Terminal precision: 0.9363636363636364
+Generated reward: [-0.00704437]
+Generated terminal: [0.93008399]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.17707537305222365
+Reward loss: 0.1739757716943521
+Terminal loss: 0.1147745131024076
+Terminal recall: 0.9741379310344828
+Terminal precision: 0.9741379310344828
+Generated reward: [-1.00985878]
+Generated terminal: [-0.07197001]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 22:59:09,707:GAIRL:INFO: Current model step: 5500
+
+Train -----------Set size: 27256
+State loss: 0.13604210137170644
+Reward loss: 0.1313640862766005
+Terminal loss: 0.10332237903290342
+Terminal recall: 1.0
+Terminal precision: 0.9504132231404959
+Generated reward: [-0.94011454]
+Generated terminal: [0.01531438]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.17238866979250247
+Reward loss: 0.17622555961679665
+Terminal loss: 0.12066573164364927
+Terminal recall: 0.9906542056074766
+Terminal precision: 0.954954954954955
+Generated reward: [-0.99448289]
+Generated terminal: [0.03975645]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 22:59:13,913:GAIRL:INFO: Current model step: 6000
+
+Train -----------Set size: 27256
+State loss: 0.12127046788002878
+Reward loss: 0.12380430371833913
+Terminal loss: 0.10410079220743332
+Terminal recall: 0.9914529914529915
+Terminal precision: 0.9586776859504132
+Generated reward: [-0.11196733]
+Generated terminal: [0.67906068]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.16729909977057145
+Reward loss: 0.14668542423484887
+Terminal loss: 0.11314984624405924
+Terminal recall: 0.9913793103448276
+Terminal precision: 0.9829059829059829
+Generated reward: [-0.61097936]
+Generated terminal: [0.73135514]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 22:59:17,894:GAIRL:INFO: Current model step: 6500
+
+Train -----------Set size: 27256
+State loss: 0.1077534005638418
+Reward loss: 0.10701577611449588
+Terminal loss: 0.09675474354975362
+Terminal recall: 1.0
+Terminal precision: 0.9487179487179487
+Generated reward: [-0.91815908]
+Generated terminal: [0.07556428]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.167408676008196
+Reward loss: 0.14783505502963476
+Terminal loss: 0.11532710745443543
+Terminal recall: 0.9908256880733946
+Terminal precision: 0.9473684210526315
+Generated reward: [-0.82149256]
+Generated terminal: [0.14416402]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 22:59:22,117:GAIRL:INFO: Current model step: 7000
+
+Train -----------Set size: 27256
+State loss: 0.1121232461929312
+Reward loss: 0.09856825738106385
+Terminal loss: 0.08858216049137728
+Terminal recall: 1.0
+Terminal precision: 0.9907407407407407
+Generated reward: [-1.02783647]
+Generated terminal: [-0.0171013]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.16009764082227398
+Reward loss: 0.10749596767101359
+Terminal loss: 0.10582905019673924
+Terminal recall: 1.0
+Terminal precision: 0.9813084112149533
+Generated reward: [-0.94459519]
+Generated terminal: [-0.01282641]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 22:59:25,717:GAIRL:INFO: Current model step: 7500
+
+Train -----------Set size: 27256
+State loss: 0.11517754129454753
+Reward loss: 0.09216002834426706
+Terminal loss: 0.10333825656037877
+Terminal recall: 1.0
+Terminal precision: 0.9813084112149533
+Generated reward: [-0.97971681]
+Generated terminal: [-0.03310473]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.15960473162206953
+Reward loss: 0.10537710281180636
+Terminal loss: 0.09980119964321016
+Terminal recall: 0.9903846153846154
+Terminal precision: 0.9809523809523809
+Generated reward: [-1.00083779]
+Generated terminal: [-0.0653967]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 22:59:29,830:GAIRL:INFO: Current model step: 8000
+
+Train -----------Set size: 27256
+State loss: 0.11316308620877373
+Reward loss: 0.09332235288882199
+Terminal loss: 0.09004114818011953
+Terminal recall: 1.0
+Terminal precision: 0.9824561403508771
+Generated reward: [-0.16159951]
+Generated terminal: [0.82910473]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.15446808332146375
+Reward loss: 0.10465469511371844
+Terminal loss: 0.10429290038516406
+Terminal recall: 0.9901960784313726
+Terminal precision: 0.9619047619047619
+Generated reward: [-0.97324039]
+Generated terminal: [-0.0206757]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 22:59:33,241:GAIRL:INFO: Current model step: 8500
+
+Train -----------Set size: 27256
+State loss: 0.10825388567133676
+Reward loss: 0.10117604042172074
+Terminal loss: 0.09610724577328499
+Terminal recall: 1.0
+Terminal precision: 0.9655172413793104
+Generated reward: [-0.97985528]
+Generated terminal: [0.03093615]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.16314293351774237
+Reward loss: 0.09545479043288788
+Terminal loss: 0.110415583364489
+Terminal recall: 0.9907407407407407
+Terminal precision: 0.9553571428571429
+Generated reward: [-0.98370631]
+Generated terminal: [-0.05774128]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 22:59:37,481:GAIRL:INFO: Current model step: 9000
+
+Train -----------Set size: 27256
+State loss: 0.11151470931425277
+Reward loss: 0.09472631033627511
+Terminal loss: 0.091084179422386
+Terminal recall: 1.0
+Terminal precision: 0.9727272727272728
+Generated reward: [-0.13666611]
+Generated terminal: [0.94491769]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.1701008734285391
+Reward loss: 0.10939117842016083
+Terminal loss: 0.10394075645065187
+Terminal recall: 0.9917355371900827
+Terminal precision: 0.975609756097561
+Generated reward: [0.02992691]
+Generated terminal: [0.8537416]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 22:59:41,274:GAIRL:INFO: Current model step: 9500
+
+Train -----------Set size: 27256
+State loss: 0.10853287598246648
+Reward loss: 0.09562298630958625
+Terminal loss: 0.08704697610953388
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-0.85507121]
+Generated terminal: [0.14802334]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.1627999218349999
+Reward loss: 0.10774406164762354
+Terminal loss: 0.10129580643474308
+Terminal recall: 0.9827586206896551
+Terminal precision: 0.9827586206896551
+Generated reward: [-0.09549282]
+Generated terminal: [1.03786037]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 22:59:45,867:GAIRL:INFO: Current model step: 10000
+
+Train -----------Set size: 27256
+State loss: 0.1080115049641762
+Reward loss: 0.09353841595161574
+Terminal loss: 0.08571679391090303
+Terminal recall: 1.0
+Terminal precision: 0.9907407407407407
+Generated reward: [-0.03815991]
+Generated terminal: [0.80914188]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.16313756256618678
+Reward loss: 0.09315034726431651
+Terminal loss: 0.10379822131700978
+Terminal recall: 0.9907407407407407
+Terminal precision: 0.9727272727272728
+Generated reward: [0.10565756]
+Generated terminal: [1.13602079]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 22:59:50,083:GAIRL:INFO: Current model step: 10500
+
+Train -----------Set size: 27256
+State loss: 0.11062022030153401
+Reward loss: 0.09827812026172969
+Terminal loss: 0.09037147325915199
+Terminal recall: 1.0
+Terminal precision: 0.9910714285714286
+Generated reward: [-0.94430112]
+Generated terminal: [0.10024535]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.15888612726361248
+Reward loss: 0.0984101749630337
+Terminal loss: 0.10125936058343084
+Terminal recall: 0.9904761904761905
+Terminal precision: 0.9719626168224299
+Generated reward: [-0.94210647]
+Generated terminal: [0.06529085]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 22:59:54,401:GAIRL:INFO: Current model step: 11000
+
+Train -----------Set size: 27256
+State loss: 0.11459292306124702
+Reward loss: 0.106300194345482
+Terminal loss: 0.09967865253832267
+Terminal recall: 1.0
+Terminal precision: 0.9615384615384616
+Generated reward: [-1.00384712]
+Generated terminal: [0.08043329]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.16249627167628677
+Reward loss: 0.11228444089521553
+Terminal loss: 0.1183366929896438
+Terminal recall: 0.991304347826087
+Terminal precision: 0.926829268292683
+Generated reward: [-0.98659229]
+Generated terminal: [0.04179698]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 22:59:58,087:GAIRL:INFO: Current model step: 11500
+
+Train -----------Set size: 27256
+State loss: 0.10516973365852285
+Reward loss: 0.0956962913669501
+Terminal loss: 0.0994390682264894
+Terminal recall: 1.0
+Terminal precision: 0.9893617021276596
+Generated reward: [0.13221772]
+Generated terminal: [0.96018703]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.1783290676338883
+Reward loss: 0.09046990271466651
+Terminal loss: 0.10315354709663647
+Terminal recall: 1.0
+Terminal precision: 0.9910714285714286
+Generated reward: [0.05616672]
+Generated terminal: [0.98532989]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:00:02,426:GAIRL:INFO: Current model step: 12000
+
+Train -----------Set size: 27256
+State loss: 0.10447367165959422
+Reward loss: 0.0969329179640447
+Terminal loss: 0.08292245883698032
+Terminal recall: 1.0
+Terminal precision: 0.94
+Generated reward: [-0.94687671]
+Generated terminal: [-0.03147371]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.16595037408288912
+Reward loss: 0.11022035741743075
+Terminal loss: 0.10761633260044809
+Terminal recall: 0.990909090909091
+Terminal precision: 0.956140350877193
+Generated reward: [-0.99651862]
+Generated terminal: [0.06066106]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:00:05,903:GAIRL:INFO: Current model step: 12500
+
+Train -----------Set size: 27256
+State loss: 0.10121182822818993
+Reward loss: 0.09572474388271618
+Terminal loss: 0.09092084326531606
+Terminal recall: 1.0
+Terminal precision: 0.9829059829059829
+Generated reward: [0.17138588]
+Generated terminal: [0.90119315]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.17250808336672
+Reward loss: 0.10844422192780001
+Terminal loss: 0.10840163667182888
+Terminal recall: 0.9611650485436893
+Terminal precision: 0.99
+Generated reward: [-0.98030806]
+Generated terminal: [-0.08649529]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:00:09,980:GAIRL:INFO: Current model step: 13000
+
+Train -----------Set size: 27256
+State loss: 0.10392205554197582
+Reward loss: 0.08883337869495243
+Terminal loss: 0.07821311434148634
+Terminal recall: 1.0
+Terminal precision: 0.98
+Generated reward: [-0.97466822]
+Generated terminal: [0.06489961]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.1682881951230335
+Reward loss: 0.09641416115918547
+Terminal loss: 0.10370724551032225
+Terminal recall: 0.9894736842105263
+Terminal precision: 0.9791666666666666
+Generated reward: [-0.92374352]
+Generated terminal: [0.00182825]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:00:13,460:GAIRL:INFO: Current model step: 13500
+
+Train -----------Set size: 27256
+State loss: 0.09878728347373905
+Reward loss: 0.08708855562359502
+Terminal loss: 0.09184349755583503
+Terminal recall: 1.0
+Terminal precision: 0.9896907216494846
+Generated reward: [-0.15227312]
+Generated terminal: [0.88132503]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.16322089666086895
+Reward loss: 0.11327978904233067
+Terminal loss: 0.09362333710528793
+Terminal recall: 0.9824561403508771
+Terminal precision: 0.9911504424778761
+Generated reward: [0.01159845]
+Generated terminal: [1.03272125]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:00:18,543:GAIRL:INFO: Current model step: 14000
+
+Train -----------Set size: 27256
+State loss: 0.10033272702875068
+Reward loss: 0.10686290049444527
+Terminal loss: 0.09906989689943774
+Terminal recall: 1.0
+Terminal precision: 0.9724770642201835
+Generated reward: [-0.94164051]
+Generated terminal: [-0.05528862]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.1669337849919358
+Reward loss: 0.09134651137734666
+Terminal loss: 0.09101668999568543
+Terminal recall: 0.9722222222222222
+Terminal precision: 0.9905660377358491
+Generated reward: [-1.09052358]
+Generated terminal: [0.04022505]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:00:21,918:GAIRL:INFO: Current model step: 14500
+
+Train -----------Set size: 27256
+State loss: 0.09818139564441396
+Reward loss: 0.10463724612918629
+Terminal loss: 0.08679499975349583
+Terminal recall: 1.0
+Terminal precision: 0.9907407407407407
+Generated reward: [-1.0858303]
+Generated terminal: [0.08337319]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.18658293983541072
+Reward loss: 0.1054062765255725
+Terminal loss: 0.11580320972822816
+Terminal recall: 0.9672131147540983
+Terminal precision: 0.9752066115702479
+Generated reward: [-0.99963042]
+Generated terminal: [0.03669142]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:00:26,252:GAIRL:INFO: Current model step: 15000
+
+Train -----------Set size: 27256
+State loss: 0.09746332512745126
+Reward loss: 0.09031650917989995
+Terminal loss: 0.09098516426745093
+Terminal recall: 1.0
+Terminal precision: 0.9896907216494846
+Generated reward: [0.09737217]
+Generated terminal: [1.1668211]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.17779940221944565
+Reward loss: 0.10466161585372796
+Terminal loss: 0.10380898825994223
+Terminal recall: 0.9915254237288136
+Terminal precision: 0.9831932773109243
+Generated reward: [-0.85212256]
+Generated terminal: [0.12609376]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:00:29,723:GAIRL:INFO: Current model step: 15500
+
+Train -----------Set size: 27256
+State loss: 0.09884637897218752
+Reward loss: 0.08873389663997222
+Terminal loss: 0.09291673762247395
+Terminal recall: 1.0
+Terminal precision: 0.9906542056074766
+Generated reward: [-0.99377541]
+Generated terminal: [-0.06163678]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.18049862161892935
+Reward loss: 0.11355783089280821
+Terminal loss: 0.11218713424175573
+Terminal recall: 1.0
+Terminal precision: 0.992
+Generated reward: [-0.11354636]
+Generated terminal: [1.03304647]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:00:33,700:GAIRL:INFO: Current model step: 16000
+
+Train -----------Set size: 27256
+State loss: 0.09693686686728493
+Reward loss: 0.09273947840013871
+Terminal loss: 0.08086318209129217
+Terminal recall: 1.0
+Terminal precision: 0.97
+Generated reward: [-0.80040852]
+Generated terminal: [0.0037833]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.17754409919255595
+Reward loss: 0.09912737107284422
+Terminal loss: 0.10351551301284855
+Terminal recall: 0.9912280701754386
+Terminal precision: 0.9741379310344828
+Generated reward: [-0.00354989]
+Generated terminal: [0.73905313]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:00:36,992:GAIRL:INFO: Current model step: 16500
+
+Train -----------Set size: 27256
+State loss: 0.08954782149023154
+Reward loss: 0.09239557776299473
+Terminal loss: 0.08003773877393716
+Terminal recall: 1.0
+Terminal precision: 0.9809523809523809
+Generated reward: [-1.01511444]
+Generated terminal: [0.50181823]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.17467574069469705
+Reward loss: 0.10522815021760976
+Terminal loss: 0.108521276612706
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-0.72564576]
+Generated terminal: [0.19673104]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:00:40,861:GAIRL:INFO: Current model step: 17000
+
+Train -----------Set size: 27256
+State loss: 0.09552581840323204
+Reward loss: 0.10853647915348913
+Terminal loss: 0.09435314800821969
+Terminal recall: 1.0
+Terminal precision: 0.9809523809523809
+Generated reward: [-0.08275974]
+Generated terminal: [0.9566684]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.15668157887938214
+Reward loss: 0.10087188679905137
+Terminal loss: 0.10693084276357143
+Terminal recall: 0.9906542056074766
+Terminal precision: 0.9636363636363636
+Generated reward: [-0.11515054]
+Generated terminal: [0.82313189]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:00:44,543:GAIRL:INFO: Current model step: 17500
+
+Train -----------Set size: 27256
+State loss: 0.09628630342297241
+Reward loss: 0.09643502715055391
+Terminal loss: 0.098997725116525
+Terminal recall: 1.0
+Terminal precision: 0.959349593495935
+Generated reward: [-0.96745837]
+Generated terminal: [-0.01633781]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.16807346887633265
+Reward loss: 0.10486969293718476
+Terminal loss: 0.10547353591736074
+Terminal recall: 0.9915254237288136
+Terminal precision: 0.9831932773109243
+Generated reward: [-0.01068003]
+Generated terminal: [0.94600167]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:00:49,899:GAIRL:INFO: Current model step: 18000
+
+Train -----------Set size: 27256
+State loss: 0.09813041716949565
+Reward loss: 0.08591820173891376
+Terminal loss: 0.07997621698398569
+Terminal recall: 1.0
+Terminal precision: 0.970873786407767
+Generated reward: [-0.96118762]
+Generated terminal: [0.11143295]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.14852811252158837
+Reward loss: 0.1056848306663172
+Terminal loss: 0.10957137005369752
+Terminal recall: 1.0
+Terminal precision: 0.9722222222222222
+Generated reward: [0.01097151]
+Generated terminal: [1.04437908]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:00:53,152:GAIRL:INFO: Current model step: 18500
+
+Train -----------Set size: 27256
+State loss: 0.09806559038992153
+Reward loss: 0.08843911084977957
+Terminal loss: 0.09025940945287146
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-0.00288137]
+Generated terminal: [0.87259031]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.15124987058658992
+Reward loss: 0.1073737902507107
+Terminal loss: 0.10823076187970392
+Terminal recall: 0.9747899159663865
+Terminal precision: 0.9830508474576272
+Generated reward: [-0.97286027]
+Generated terminal: [0.01639538]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:00:57,026:GAIRL:INFO: Current model step: 19000
+
+Train -----------Set size: 27256
+State loss: 0.09641331480194727
+Reward loss: 0.08585887112309137
+Terminal loss: 0.09371862679248814
+Terminal recall: 1.0
+Terminal precision: 0.9814814814814815
+Generated reward: [-1.06780035]
+Generated terminal: [-0.16944228]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.13923917922773432
+Reward loss: 0.08949864765500701
+Terminal loss: 0.10477723513058691
+Terminal recall: 0.9901960784313726
+Terminal precision: 0.9901960784313726
+Generated reward: [-1.01335626]
+Generated terminal: [-0.00525698]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:01:00,311:GAIRL:INFO: Current model step: 19500
+
+Train -----------Set size: 27256
+State loss: 0.0917131197347727
+Reward loss: 0.09056157785227005
+Terminal loss: 0.08551838579926466
+Terminal recall: 1.0
+Terminal precision: 0.9795918367346939
+Generated reward: [-0.85239632]
+Generated terminal: [0.11831965]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.1370090737910817
+Reward loss: 0.10215266378564823
+Terminal loss: 0.09657843076975522
+Terminal recall: 0.99
+Terminal precision: 0.9801980198019802
+Generated reward: [-0.13434329]
+Generated terminal: [0.87471319]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:01:04,227:GAIRL:INFO: Current model step: 20000
+
+Train -----------Set size: 27256
+State loss: 0.09192592753732727
+Reward loss: 0.08960278922722258
+Terminal loss: 0.08658215942880973
+Terminal recall: 1.0
+Terminal precision: 0.9821428571428571
+Generated reward: [0.00178717]
+Generated terminal: [0.77036205]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.1434274472462134
+Reward loss: 0.09356123466839446
+Terminal loss: 0.09760608051549663
+Terminal recall: 1.0
+Terminal precision: 0.9736842105263158
+Generated reward: [-0.96056024]
+Generated terminal: [0.18340913]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:01:07,494:GAIRL:INFO: Current model step: 20500
+
+Train -----------Set size: 27256
+State loss: 0.0905496939711311
+Reward loss: 0.10710223511383998
+Terminal loss: 0.09013593337255088
+Terminal recall: 1.0
+Terminal precision: 0.9612403100775194
+Generated reward: [0.0147524]
+Generated terminal: [0.83227166]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.14163963492671394
+Reward loss: 0.09237940511617564
+Terminal loss: 0.1003720356191709
+Terminal recall: 0.9907407407407407
+Terminal precision: 1.0
+Generated reward: [-0.41619475]
+Generated terminal: [1.25604638]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:01:11,467:GAIRL:INFO: Current model step: 21000
+
+Train -----------Set size: 27256
+State loss: 0.0913139370208867
+Reward loss: 0.07990179547015451
+Terminal loss: 0.09385984823396046
+Terminal recall: 1.0
+Terminal precision: 0.9888888888888889
+Generated reward: [-0.99867972]
+Generated terminal: [0.03675557]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.1301125560351145
+Reward loss: 0.10344416993355397
+Terminal loss: 0.09646216930038251
+Terminal recall: 0.9907407407407407
+Terminal precision: 0.9907407407407407
+Generated reward: [0.02938967]
+Generated terminal: [1.03216275]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:01:15,549:GAIRL:INFO: Current model step: 21500
+
+Train -----------Set size: 27256
+State loss: 0.09092718354087537
+Reward loss: 0.09802953499581564
+Terminal loss: 0.09429459281103812
+Terminal recall: 1.0
+Terminal precision: 0.9813084112149533
+Generated reward: [-0.02490848]
+Generated terminal: [0.83785554]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.13460818933683563
+Reward loss: 0.09923506146306793
+Terminal loss: 0.09959291525696354
+Terminal recall: 0.9824561403508771
+Terminal precision: 1.0
+Generated reward: [-1.03117745]
+Generated terminal: [-0.03961808]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:01:19,576:GAIRL:INFO: Current model step: 22000
+
+Train -----------Set size: 27256
+State loss: 0.0858286665573386
+Reward loss: 0.09725124504072556
+Terminal loss: 0.0935046793274085
+Terminal recall: 0.9915254237288136
+Terminal precision: 0.9590163934426229
+Generated reward: [-0.01697254]
+Generated terminal: [0.88901168]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.12717422698806058
+Reward loss: 0.1055913075803225
+Terminal loss: 0.0999158323152147
+Terminal recall: 0.9814814814814815
+Terminal precision: 0.9724770642201835
+Generated reward: [-1.05426341]
+Generated terminal: [-0.06949732]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:01:23,001:GAIRL:INFO: Current model step: 22500
+
+Train -----------Set size: 27256
+State loss: 0.09399579902563755
+Reward loss: 0.09703170993903872
+Terminal loss: 0.09229460585572576
+Terminal recall: 1.0
+Terminal precision: 0.9805825242718447
+Generated reward: [-0.99250645]
+Generated terminal: [-0.06984169]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.12387436100760775
+Reward loss: 0.110309102406938
+Terminal loss: 0.09786084581238969
+Terminal recall: 1.0
+Terminal precision: 0.9826086956521739
+Generated reward: [-0.03763308]
+Generated terminal: [1.14616653]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:01:27,144:GAIRL:INFO: Current model step: 23000
+
+Train -----------Set size: 27256
+State loss: 0.08734778762158463
+Reward loss: 0.09019273132696604
+Terminal loss: 0.0880547471276169
+Terminal recall: 1.0
+Terminal precision: 0.9910714285714286
+Generated reward: [0.09377932]
+Generated terminal: [0.79595263]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.12264536821284448
+Reward loss: 0.11087953352443508
+Terminal loss: 0.09673179125113696
+Terminal recall: 0.9636363636363636
+Terminal precision: 1.0
+Generated reward: [-0.76997585]
+Generated terminal: [0.02681708]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:01:30,541:GAIRL:INFO: Current model step: 23500
+
+Train -----------Set size: 27256
+State loss: 0.08739495924243072
+Reward loss: 0.09541957833388781
+Terminal loss: 0.07466129726780646
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [0.02897859]
+Generated terminal: [1.00048298]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.12981699363507074
+Reward loss: 0.09789543580813548
+Terminal loss: 0.10208720693670358
+Terminal recall: 0.9907407407407407
+Terminal precision: 0.981651376146789
+Generated reward: [0.17523422]
+Generated terminal: [1.10592907]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:01:34,519:GAIRL:INFO: Current model step: 24000
+
+Train -----------Set size: 27256
+State loss: 0.09050890489123803
+Reward loss: 0.09249269026942235
+Terminal loss: 0.09295085641765012
+Terminal recall: 1.0
+Terminal precision: 0.9914529914529915
+Generated reward: [-0.92958819]
+Generated terminal: [0.02425182]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.12138771671320048
+Reward loss: 0.11604663348077263
+Terminal loss: 0.09061961228606547
+Terminal recall: 0.9904761904761905
+Terminal precision: 0.9904761904761905
+Generated reward: [-0.13510329]
+Generated terminal: [0.99052899]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:01:38,027:GAIRL:INFO: Current model step: 24500
+
+Train -----------Set size: 27256
+State loss: 0.09150800609311954
+Reward loss: 0.07672739881658526
+Terminal loss: 0.07639137096157197
+Terminal recall: 0.9895833333333334
+Terminal precision: 0.979381443298969
+Generated reward: [-0.04326103]
+Generated terminal: [1.03593609]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.11969980459180585
+Reward loss: 0.10087649099112579
+Terminal loss: 0.10951932035169003
+Terminal recall: 0.9900990099009901
+Terminal precision: 0.9900990099009901
+Generated reward: [-0.03230743]
+Generated terminal: [0.98116376]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:01:42,395:GAIRL:INFO: Current model step: 25000
+
+Train -----------Set size: 27256
+State loss: 0.08911341490814438
+Reward loss: 0.09119299174710085
+Terminal loss: 0.07635992987994272
+Terminal recall: 1.0
+Terminal precision: 0.990990990990991
+Generated reward: [-0.94528269]
+Generated terminal: [0.02419885]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.13068914429322684
+Reward loss: 0.1073389606846694
+Terminal loss: 0.1043358341990446
+Terminal recall: 0.984375
+Terminal precision: 1.0
+Generated reward: [0.0238889]
+Generated terminal: [1.33584113]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:01:46,522:GAIRL:INFO: Current model step: 25500
+
+Train -----------Set size: 27256
+State loss: 0.09211699724360385
+Reward loss: 0.09108291801214063
+Terminal loss: 0.0884894225205467
+Terminal recall: 1.0
+Terminal precision: 0.9813084112149533
+Generated reward: [-1.01704025]
+Generated terminal: [-0.0784517]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.12045673799164806
+Reward loss: 0.10823697763661927
+Terminal loss: 0.10206381877915328
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [0.03151992]
+Generated terminal: [1.15147986]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:01:50,718:GAIRL:INFO: Current model step: 26000
+
+Train -----------Set size: 27256
+State loss: 0.08757292536833784
+Reward loss: 0.10571188805555728
+Terminal loss: 0.08656597850908455
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-1.02396628]
+Generated terminal: [0.04680885]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.12726882459648312
+Reward loss: 0.11854092732797936
+Terminal loss: 0.11104720631323897
+Terminal recall: 0.984375
+Terminal precision: 0.9767441860465116
+Generated reward: [-1.01858421]
+Generated terminal: [0.04734232]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:01:54,235:GAIRL:INFO: Current model step: 26500
+
+Train -----------Set size: 27256
+State loss: 0.08813735181239905
+Reward loss: 0.09476020757461934
+Terminal loss: 0.09393872625768455
+Terminal recall: 0.9905660377358491
+Terminal precision: 0.963302752293578
+Generated reward: [-0.40538208]
+Generated terminal: [0.06787804]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.12297546745583661
+Reward loss: 0.10803466175459761
+Terminal loss: 0.1079255779298568
+Terminal recall: 0.983739837398374
+Terminal precision: 0.9918032786885246
+Generated reward: [-0.07923528]
+Generated terminal: [1.47555174]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:01:58,229:GAIRL:INFO: Current model step: 27000
+
+Train -----------Set size: 27256
+State loss: 0.09135994746658387
+Reward loss: 0.09623607349422764
+Terminal loss: 0.0759676359376343
+Terminal recall: 0.9908256880733946
+Terminal precision: 0.9642857142857143
+Generated reward: [-1.03655789]
+Generated terminal: [0.01139395]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.12751635549612703
+Reward loss: 0.10034882201744136
+Terminal loss: 0.109169067881942
+Terminal recall: 0.9841269841269841
+Terminal precision: 0.9612403100775194
+Generated reward: [0.1006073]
+Generated terminal: [0.93545277]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:02:01,796:GAIRL:INFO: Current model step: 27500
+
+Train -----------Set size: 27256
+State loss: 0.08464057364616777
+Reward loss: 0.08302429616266839
+Terminal loss: 0.08211423320640174
+Terminal recall: 1.0
+Terminal precision: 0.9894736842105263
+Generated reward: [-1.01550164]
+Generated terminal: [-0.02623101]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.12607874498150026
+Reward loss: 0.1092013543501891
+Terminal loss: 0.11237520883886941
+Terminal recall: 0.9921259842519685
+Terminal precision: 1.0
+Generated reward: [-0.96022645]
+Generated terminal: [-0.07355746]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:02:06,105:GAIRL:INFO: Current model step: 28000
+
+Train -----------Set size: 27256
+State loss: 0.08597746142045255
+Reward loss: 0.09457359262116541
+Terminal loss: 0.08186765582651881
+Terminal recall: 1.0
+Terminal precision: 0.9622641509433962
+Generated reward: [-1.05753285]
+Generated terminal: [0.01053126]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.121289186463031
+Reward loss: 0.10291372031415066
+Terminal loss: 0.10590210420982436
+Terminal recall: 0.9830508474576272
+Terminal precision: 0.9830508474576272
+Generated reward: [-0.04615369]
+Generated terminal: [0.91273043]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:02:09,481:GAIRL:INFO: Current model step: 28500
+
+Train -----------Set size: 27256
+State loss: 0.08427862288590245
+Reward loss: 0.09810328823969058
+Terminal loss: 0.08941048032099566
+Terminal recall: 1.0
+Terminal precision: 0.9622641509433962
+Generated reward: [-1.05361585]
+Generated terminal: [-0.01866001]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.12706670305797405
+Reward loss: 0.10595165627998733
+Terminal loss: 0.10526025639731099
+Terminal recall: 0.9666666666666667
+Terminal precision: 0.9830508474576272
+Generated reward: [-0.77232123]
+Generated terminal: [0.2365267]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:02:13,493:GAIRL:INFO: Current model step: 29000
+
+Train -----------Set size: 27256
+State loss: 0.08785349251908565
+Reward loss: 0.0947292102482451
+Terminal loss: 0.08825169243333851
+Terminal recall: 1.0
+Terminal precision: 0.9915966386554622
+Generated reward: [-0.55612239]
+Generated terminal: [0.4743715]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.1163399271763006
+Reward loss: 0.1014685035219651
+Terminal loss: 0.12121041303919607
+Terminal recall: 0.972972972972973
+Terminal precision: 0.972972972972973
+Generated reward: [-0.19520063]
+Generated terminal: [1.15058115]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:02:17,280:GAIRL:INFO: Current model step: 29500
+
+Train -----------Set size: 27256
+State loss: 0.08410328869577126
+Reward loss: 0.08279218563621242
+Terminal loss: 0.08630270593148562
+Terminal recall: 1.0
+Terminal precision: 0.9888888888888889
+Generated reward: [-0.1834689]
+Generated terminal: [0.74941282]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.12312099520618293
+Reward loss: 0.11254900855496928
+Terminal loss: 0.11520995938110806
+Terminal recall: 0.9669421487603306
+Terminal precision: 1.0
+Generated reward: [0.05015425]
+Generated terminal: [1.20976356]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:02:21,166:GAIRL:INFO: Current model step: 30000
+
+Train -----------Set size: 27256
+State loss: 0.08574099430463573
+Reward loss: 0.08442114085273568
+Terminal loss: 0.07883478556648138
+Terminal recall: 1.0
+Terminal precision: 0.9885057471264368
+Generated reward: [0.18683432]
+Generated terminal: [1.16820613]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.11975773487274398
+Reward loss: 0.10478197897118921
+Terminal loss: 0.11419910184254958
+Terminal recall: 0.9454545454545454
+Terminal precision: 0.9719626168224299
+Generated reward: [-0.88631337]
+Generated terminal: [-0.01983616]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:02:24,475:GAIRL:INFO: Current model step: 30500
+
+Train -----------Set size: 27256
+State loss: 0.08611042008783897
+Reward loss: 0.10405353654135135
+Terminal loss: 0.08263705942788839
+Terminal recall: 1.0
+Terminal precision: 0.9902912621359223
+Generated reward: [-0.91307772]
+Generated terminal: [0.11134227]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.12294703997533618
+Reward loss: 0.10436699716633141
+Terminal loss: 0.11165480872415917
+Terminal recall: 0.9655172413793104
+Terminal precision: 0.9824561403508771
+Generated reward: [-0.11462538]
+Generated terminal: [0.97474653]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:02:28,556:GAIRL:INFO: Current model step: 31000
+
+Train -----------Set size: 27256
+State loss: 0.08861769817160851
+Reward loss: 0.09030425562914537
+Terminal loss: 0.08606028908643878
+Terminal recall: 0.9902912621359223
+Terminal precision: 0.9714285714285714
+Generated reward: [-1.10076424]
+Generated terminal: [-0.01020095]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.12226617649797718
+Reward loss: 0.10891677616574727
+Terminal loss: 0.09701287161525339
+Terminal recall: 1.0
+Terminal precision: 0.9908256880733946
+Generated reward: [-0.59455719]
+Generated terminal: [0.609094]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:02:31,995:GAIRL:INFO: Current model step: 31500
+
+Train -----------Set size: 27256
+State loss: 0.08923073340324188
+Reward loss: 0.0912694670134892
+Terminal loss: 0.07825393162572451
+Terminal recall: 1.0
+Terminal precision: 0.9908256880733946
+Generated reward: [-0.96293183]
+Generated terminal: [0.05062557]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.12213306929900845
+Reward loss: 0.1139393742534267
+Terminal loss: 0.10764467560493361
+Terminal recall: 0.9747899159663865
+Terminal precision: 0.9830508474576272
+Generated reward: [-0.12827209]
+Generated terminal: [1.04882458]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:02:36,163:GAIRL:INFO: Current model step: 32000
+
+Train -----------Set size: 27256
+State loss: 0.08005643527661434
+Reward loss: 0.08844552940395274
+Terminal loss: 0.08534294638922542
+Terminal recall: 1.0
+Terminal precision: 0.9901960784313726
+Generated reward: [-1.00113146]
+Generated terminal: [0.016907]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.12062060119323888
+Reward loss: 0.10690449826305676
+Terminal loss: 0.10726231017696078
+Terminal recall: 0.9826086956521739
+Terminal precision: 0.9658119658119658
+Generated reward: [-1.03629921]
+Generated terminal: [-0.01313535]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:02:39,737:GAIRL:INFO: Current model step: 32500
+
+Train -----------Set size: 27256
+State loss: 0.08536511651390048
+Reward loss: 0.08898699954338465
+Terminal loss: 0.08585885507581767
+Terminal recall: 1.0
+Terminal precision: 0.9914529914529915
+Generated reward: [-0.17470777]
+Generated terminal: [1.04810377]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.11871485041766829
+Reward loss: 0.11114266573533554
+Terminal loss: 0.11429460800256881
+Terminal recall: 0.9711538461538461
+Terminal precision: 0.9901960784313726
+Generated reward: [-0.99125487]
+Generated terminal: [0.07336542]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:02:43,988:GAIRL:INFO: Current model step: 33000
+
+Train -----------Set size: 27256
+State loss: 0.0849035919476671
+Reward loss: 0.09966230913478648
+Terminal loss: 0.08131301472252758
+Terminal recall: 1.0
+Terminal precision: 0.9904761904761905
+Generated reward: [-0.99185495]
+Generated terminal: [0.06229519]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.11726123352226009
+Reward loss: 0.10467824362746692
+Terminal loss: 0.09529586139405723
+Terminal recall: 0.9801980198019802
+Terminal precision: 0.9705882352941176
+Generated reward: [0.13707208]
+Generated terminal: [1.18073221]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:02:48,168:GAIRL:INFO: Current model step: 33500
+
+Train -----------Set size: 27256
+State loss: 0.08013398339221178
+Reward loss: 0.0981334338182618
+Terminal loss: 0.08139905047154072
+Terminal recall: 1.0
+Terminal precision: 0.981651376146789
+Generated reward: [0.00383469]
+Generated terminal: [0.98549527]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.12068778964862725
+Reward loss: 0.11041839705489476
+Terminal loss: 0.10461782270567369
+Terminal recall: 0.9586776859504132
+Terminal precision: 0.9830508474576272
+Generated reward: [0.16356749]
+Generated terminal: [1.57667253]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:02:52,427:GAIRL:INFO: Current model step: 34000
+
+Train -----------Set size: 27256
+State loss: 0.08966896859306912
+Reward loss: 0.08938051681804055
+Terminal loss: 0.0867456414981991
+Terminal recall: 1.0
+Terminal precision: 0.9829059829059829
+Generated reward: [0.16588874]
+Generated terminal: [1.24429276]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.12159568860237306
+Reward loss: 0.11196430907084529
+Terminal loss: 0.11214469735759366
+Terminal recall: 0.976
+Terminal precision: 0.9838709677419355
+Generated reward: [-0.9302822]
+Generated terminal: [0.01737382]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:02:55,773:GAIRL:INFO: Current model step: 34500
+
+Train -----------Set size: 27256
+State loss: 0.08363407524824684
+Reward loss: 0.09153133699087244
+Terminal loss: 0.08397151070914995
+Terminal recall: 1.0
+Terminal precision: 0.9838709677419355
+Generated reward: [0.01827603]
+Generated terminal: [1.06545779]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.11877810237164936
+Reward loss: 0.10025651396064367
+Terminal loss: 0.11220897725654255
+Terminal recall: 0.9444444444444444
+Terminal precision: 0.9902912621359223
+Generated reward: [-1.02614278]
+Generated terminal: [-0.02941453]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:02:59,910:GAIRL:INFO: Current model step: 35000
+
+Train -----------Set size: 27256
+State loss: 0.08160130786110728
+Reward loss: 0.08647596923627285
+Terminal loss: 0.08094870372210577
+Terminal recall: 1.0
+Terminal precision: 0.9900990099009901
+Generated reward: [-1.0237083]
+Generated terminal: [0.00885996]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.11984453383833088
+Reward loss: 0.10687397253097239
+Terminal loss: 0.1170827601806064
+Terminal recall: 0.9739130434782609
+Terminal precision: 0.9911504424778761
+Generated reward: [-0.06900144]
+Generated terminal: [0.89943076]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:03:03,416:GAIRL:INFO: Current model step: 35500
+
+Train -----------Set size: 27256
+State loss: 0.08367646269453316
+Reward loss: 0.07848476097734257
+Terminal loss: 0.0810714126529799
+Terminal recall: 1.0
+Terminal precision: 0.9903846153846154
+Generated reward: [-1.01974719]
+Generated terminal: [0.03192914]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.11615305774356956
+Reward loss: 0.10595124479731226
+Terminal loss: 0.08992054505664165
+Terminal recall: 0.9732142857142857
+Terminal precision: 1.0
+Generated reward: [-0.34366904]
+Generated terminal: [1.12493422]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:03:07,537:GAIRL:INFO: Current model step: 36000
+
+Train -----------Set size: 27256
+State loss: 0.08129294094558452
+Reward loss: 0.09306424334279759
+Terminal loss: 0.08876800424110817
+Terminal recall: 1.0
+Terminal precision: 0.9774436090225563
+Generated reward: [-0.29012991]
+Generated terminal: [1.17895117]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.11389224971514328
+Reward loss: 0.10004064023515058
+Terminal loss: 0.10319856731216037
+Terminal recall: 0.9809523809523809
+Terminal precision: 1.0
+Generated reward: [-0.05751808]
+Generated terminal: [1.12867998]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:03:11,098:GAIRL:INFO: Current model step: 36500
+
+Train -----------Set size: 27256
+State loss: 0.08133642728291908
+Reward loss: 0.0904716492935714
+Terminal loss: 0.08339028169818076
+Terminal recall: 1.0
+Terminal precision: 0.9906542056074766
+Generated reward: [-0.9133877]
+Generated terminal: [0.0646079]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.11582645974352669
+Reward loss: 0.1016437877077262
+Terminal loss: 0.11552935856723526
+Terminal recall: 0.976
+Terminal precision: 0.991869918699187
+Generated reward: [-0.02293824]
+Generated terminal: [1.12472162]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:03:15,724:GAIRL:INFO: Current model step: 37000
+
+Train -----------Set size: 27256
+State loss: 0.08361892224727223
+Reward loss: 0.10233702872464075
+Terminal loss: 0.09306414865749152
+Terminal recall: 1.0
+Terminal precision: 0.9557522123893806
+Generated reward: [0.04821025]
+Generated terminal: [1.00812521]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.10928236092940864
+Reward loss: 0.10338116007417052
+Terminal loss: 0.10143485721114165
+Terminal recall: 0.9636363636363636
+Terminal precision: 1.0
+Generated reward: [-0.11902857]
+Generated terminal: [1.00759393]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:03:19,261:GAIRL:INFO: Current model step: 37500
+
+Train -----------Set size: 27256
+State loss: 0.07787603450872206
+Reward loss: 0.10045195551268027
+Terminal loss: 0.08635092404762268
+Terminal recall: 1.0
+Terminal precision: 0.9741379310344828
+Generated reward: [-1.02713304]
+Generated terminal: [0.00054402]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.11368215745422107
+Reward loss: 0.10932672138127501
+Terminal loss: 0.0999645074992912
+Terminal recall: 0.9611650485436893
+Terminal precision: 0.9705882352941176
+Generated reward: [-1.11262284]
+Generated terminal: [-0.11186263]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:03:23,468:GAIRL:INFO: Current model step: 38000
+
+Train -----------Set size: 27256
+State loss: 0.08292607218836097
+Reward loss: 0.09321005840675783
+Terminal loss: 0.08242838536308993
+Terminal recall: 1.0
+Terminal precision: 0.9829059829059829
+Generated reward: [-0.00080652]
+Generated terminal: [1.02339098]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.1149668225786837
+Reward loss: 0.10712708797069787
+Terminal loss: 0.12098783656078153
+Terminal recall: 0.9745762711864406
+Terminal precision: 0.9913793103448276
+Generated reward: [-1.02841739]
+Generated terminal: [0.03944928]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:03:27,231:GAIRL:INFO: Current model step: 38500
+
+Train -----------Set size: 27256
+State loss: 0.07981565071058412
+Reward loss: 0.08912366236436693
+Terminal loss: 0.0840667828052946
+Terminal recall: 1.0
+Terminal precision: 0.9902912621359223
+Generated reward: [-0.97901196]
+Generated terminal: [0.00728649]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.12166803540863769
+Reward loss: 0.10623849315657458
+Terminal loss: 0.12071826380596595
+Terminal recall: 0.975
+Terminal precision: 0.9831932773109243
+Generated reward: [-0.06581321]
+Generated terminal: [1.21116098]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:03:31,259:GAIRL:INFO: Current model step: 39000
+
+Train -----------Set size: 27256
+State loss: 0.08107848831195867
+Reward loss: 0.09979786739506219
+Terminal loss: 0.09365306792110992
+Terminal recall: 1.0
+Terminal precision: 0.990909090909091
+Generated reward: [-1.01348787]
+Generated terminal: [0.10988621]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.11195629431254567
+Reward loss: 0.11184161614739888
+Terminal loss: 0.10920243795397436
+Terminal recall: 0.9576271186440678
+Terminal precision: 0.9658119658119658
+Generated reward: [-1.08077798]
+Generated terminal: [0.02672603]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:03:34,609:GAIRL:INFO: Current model step: 39500
+
+Train -----------Set size: 27256
+State loss: 0.0844005829901641
+Reward loss: 0.08839054199162251
+Terminal loss: 0.0847449475938051
+Terminal recall: 0.9903846153846154
+Terminal precision: 0.9903846153846154
+Generated reward: [-1.07408722]
+Generated terminal: [-0.04645918]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.12050102950052133
+Reward loss: 0.11032487655746503
+Terminal loss: 0.1118306829141393
+Terminal recall: 0.9913793103448276
+Terminal precision: 0.9913793103448276
+Generated reward: [-0.03296397]
+Generated terminal: [0.85735715]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:03:38,509:GAIRL:INFO: Current model step: 40000
+
+Train -----------Set size: 27256
+State loss: 0.08055644562089148
+Reward loss: 0.08412908971577251
+Terminal loss: 0.08740849096174856
+Terminal recall: 1.0
+Terminal precision: 0.98989898989899
+Generated reward: [-1.01652238]
+Generated terminal: [-0.08373604]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.1145198909338749
+Reward loss: 0.11037639258523749
+Terminal loss: 0.11691972629443934
+Terminal recall: 0.990909090909091
+Terminal precision: 1.0
+Generated reward: [-0.92822359]
+Generated terminal: [0.01888012]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:03:41,797:GAIRL:INFO: Current model step: 40500
+
+Train -----------Set size: 27256
+State loss: 0.08013086682175063
+Reward loss: 0.09695721770559777
+Terminal loss: 0.08052277299406754
+Terminal recall: 0.991869918699187
+Terminal precision: 1.0
+Generated reward: [-0.04203957]
+Generated terminal: [0.9714054]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.11497262818957465
+Reward loss: 0.11342714135222848
+Terminal loss: 0.10896090310015093
+Terminal recall: 0.9908256880733946
+Terminal precision: 0.9908256880733946
+Generated reward: [-0.12948287]
+Generated terminal: [0.98903874]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:03:46,127:GAIRL:INFO: Current model step: 41000
+
+Train -----------Set size: 27256
+State loss: 0.07513857422203257
+Reward loss: 0.09575122702179265
+Terminal loss: 0.08420970617230016
+Terminal recall: 1.0
+Terminal precision: 0.98
+Generated reward: [-1.06185809]
+Generated terminal: [-0.01092018]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.11679804596849497
+Reward loss: 0.10741105913604787
+Terminal loss: 0.10375453152672579
+Terminal recall: 0.9814814814814815
+Terminal precision: 0.9906542056074766
+Generated reward: [-1.01052073]
+Generated terminal: [0.06289166]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:03:49,402:GAIRL:INFO: Current model step: 41500
+
+Train -----------Set size: 27256
+State loss: 0.08145762591541848
+Reward loss: 0.09846355379510013
+Terminal loss: 0.07996565552069093
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-0.65616188]
+Generated terminal: [0.2490997]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.11474635923708011
+Reward loss: 0.10082193916757262
+Terminal loss: 0.10720743096372005
+Terminal recall: 0.991304347826087
+Terminal precision: 0.9827586206896551
+Generated reward: [-0.1823076]
+Generated terminal: [0.97814757]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:03:53,363:GAIRL:INFO: Current model step: 42000
+
+Train -----------Set size: 27256
+State loss: 0.08433630752341492
+Reward loss: 0.09599759821308573
+Terminal loss: 0.08533546998720408
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-0.06649692]
+Generated terminal: [0.77310038]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.11702248064122954
+Reward loss: 0.10200274547962687
+Terminal loss: 0.09789775033054263
+Terminal recall: 0.9911504424778761
+Terminal precision: 0.9911504424778761
+Generated reward: [0.3199585]
+Generated terminal: [1.29455999]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:03:56,593:GAIRL:INFO: Current model step: 42500
+
+Train -----------Set size: 27256
+State loss: 0.08180079517265963
+Reward loss: 0.09029103427328423
+Terminal loss: 0.08170980519880167
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-0.96319578]
+Generated terminal: [0.01720303]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.10628915191319166
+Reward loss: 0.10778811802459314
+Terminal loss: 0.100714360940131
+Terminal recall: 0.9752066115702479
+Terminal precision: 0.9752066115702479
+Generated reward: [-1.03813366]
+Generated terminal: [-0.13254993]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:04:00,388:GAIRL:INFO: Current model step: 43000
+
+Train -----------Set size: 27256
+State loss: 0.0854469919142656
+Reward loss: 0.08691587582414032
+Terminal loss: 0.0870542170570243
+Terminal recall: 1.0
+Terminal precision: 0.9553571428571429
+Generated reward: [-1.01820608]
+Generated terminal: [0.01075836]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.11403683236994434
+Reward loss: 0.10056817046816152
+Terminal loss: 0.10063873285788619
+Terminal recall: 0.98
+Terminal precision: 0.9702970297029703
+Generated reward: [-0.99027722]
+Generated terminal: [0.00026756]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:04:03,651:GAIRL:INFO: Current model step: 43500
+
+Train -----------Set size: 27256
+State loss: 0.08174700222288395
+Reward loss: 0.09511980542385685
+Terminal loss: 0.08136776559657047
+Terminal recall: 0.98
+Terminal precision: 0.98
+Generated reward: [-1.01204735]
+Generated terminal: [-0.03758509]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.11151041279451135
+Reward loss: 0.10662245308284543
+Terminal loss: 0.12059561743764587
+Terminal recall: 0.9818181818181818
+Terminal precision: 0.972972972972973
+Generated reward: [-0.26716614]
+Generated terminal: [1.10574622]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:04:07,512:GAIRL:INFO: Current model step: 44000
+
+Train -----------Set size: 27256
+State loss: 0.08329365590009559
+Reward loss: 0.10438328144378015
+Terminal loss: 0.09799823039866913
+Terminal recall: 1.0
+Terminal precision: 0.990909090909091
+Generated reward: [-0.91847868]
+Generated terminal: [0.00143804]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.11192430205021053
+Reward loss: 0.10606314531576366
+Terminal loss: 0.10954621999826959
+Terminal recall: 0.990909090909091
+Terminal precision: 0.990909090909091
+Generated reward: [0.02957998]
+Generated terminal: [1.02835133]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:04:10,872:GAIRL:INFO: Current model step: 44500
+
+Train -----------Set size: 27256
+State loss: 0.08518146247785359
+Reward loss: 0.0932880298941205
+Terminal loss: 0.08625412158261293
+Terminal recall: 1.0
+Terminal precision: 0.9911504424778761
+Generated reward: [-0.98338132]
+Generated terminal: [0.0362687]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.1181682534593901
+Reward loss: 0.10259781475628657
+Terminal loss: 0.1151111034371638
+Terminal recall: 0.9821428571428571
+Terminal precision: 1.0
+Generated reward: [-0.97073143]
+Generated terminal: [0.02765013]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:04:15,234:GAIRL:INFO: Current model step: 45000
+
+Train -----------Set size: 27256
+State loss: 0.08099072076936632
+Reward loss: 0.09500259585552594
+Terminal loss: 0.08900373204511701
+Terminal recall: 1.0
+Terminal precision: 0.9905660377358491
+Generated reward: [-1.04149995]
+Generated terminal: [0.10812492]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.11632730887997601
+Reward loss: 0.10975228386188401
+Terminal loss: 0.10193217299418283
+Terminal recall: 0.9722222222222222
+Terminal precision: 0.9813084112149533
+Generated reward: [-0.25326159]
+Generated terminal: [0.91475429]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:04:18,499:GAIRL:INFO: Current model step: 45500
+
+Train -----------Set size: 27256
+State loss: 0.07891942282151458
+Reward loss: 0.08889724782747727
+Terminal loss: 0.07829585331940764
+Terminal recall: 1.0
+Terminal precision: 0.9896907216494846
+Generated reward: [-0.72589688]
+Generated terminal: [0.09557288]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.11716776916080913
+Reward loss: 0.10485822687890428
+Terminal loss: 0.11932463268318802
+Terminal recall: 0.9836065573770492
+Terminal precision: 0.967741935483871
+Generated reward: [-0.94076329]
+Generated terminal: [0.00218059]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:04:22,486:GAIRL:INFO: Current model step: 46000
+
+Train -----------Set size: 27256
+State loss: 0.08034421382542718
+Reward loss: 0.09173797027247999
+Terminal loss: 0.08767096792679298
+Terminal recall: 1.0
+Terminal precision: 0.981651376146789
+Generated reward: [0.13348646]
+Generated terminal: [0.96043159]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.11727985373793949
+Reward loss: 0.11127286575094984
+Terminal loss: 0.12017929367611577
+Terminal recall: 0.9416666666666667
+Terminal precision: 1.0
+Generated reward: [-1.13747053]
+Generated terminal: [-0.07793015]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:04:25,814:GAIRL:INFO: Current model step: 46500
+
+Train -----------Set size: 27256
+State loss: 0.08165196766741634
+Reward loss: 0.08098613205152932
+Terminal loss: 0.08617890853417842
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [0.02409346]
+Generated terminal: [1.17154149]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.10769255295930674
+Reward loss: 0.09480254650492059
+Terminal loss: 0.1011605834937662
+Terminal recall: 1.0
+Terminal precision: 0.99
+Generated reward: [-0.23549838]
+Generated terminal: [1.02806955]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:04:29,638:GAIRL:INFO: Current model step: 47000
+
+Train -----------Set size: 27256
+State loss: 0.08184488146065998
+Reward loss: 0.095808476639626
+Terminal loss: 0.08316112002428297
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-0.9602789]
+Generated terminal: [0.05127077]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.11999677854981596
+Reward loss: 0.12490350671664115
+Terminal loss: 0.12175503813839171
+Terminal recall: 0.9736842105263158
+Terminal precision: 0.9652173913043478
+Generated reward: [0.1096977]
+Generated terminal: [1.03090563]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:04:32,914:GAIRL:INFO: Current model step: 47500
+
+Train -----------Set size: 27256
+State loss: 0.08328296448340228
+Reward loss: 0.08026528229042568
+Terminal loss: 0.0806401080971536
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [0.00402155]
+Generated terminal: [1.03259142]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.1148962487139988
+Reward loss: 0.10071851042851554
+Terminal loss: 0.09365181578729359
+Terminal recall: 0.9809523809523809
+Terminal precision: 0.9903846153846154
+Generated reward: [-0.02535158]
+Generated terminal: [0.71182156]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:04:36,997:GAIRL:INFO: Current model step: 48000
+
+Train -----------Set size: 27256
+State loss: 0.08247594811385617
+Reward loss: 0.09654535164410526
+Terminal loss: 0.08868831608268365
+Terminal recall: 1.0
+Terminal precision: 0.9906542056074766
+Generated reward: [-0.06661032]
+Generated terminal: [1.13839088]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.11690105024367492
+Reward loss: 0.10844445826395553
+Terminal loss: 0.10649280966685276
+Terminal recall: 0.9716981132075472
+Terminal precision: 0.9903846153846154
+Generated reward: [0.00498033]
+Generated terminal: [1.00783357]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:04:40,496:GAIRL:INFO: Current model step: 48500
+
+Train -----------Set size: 27256
+State loss: 0.07904174758810525
+Reward loss: 0.08248482976363658
+Terminal loss: 0.08948206598149061
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-1.02273796]
+Generated terminal: [0.22520389]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.11670106736752679
+Reward loss: 0.11777211904901647
+Terminal loss: 0.11128558966970248
+Terminal recall: 0.9649122807017544
+Terminal precision: 1.0
+Generated reward: [-0.19068633]
+Generated terminal: [0.939802]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:04:44,592:GAIRL:INFO: Current model step: 49000
+
+Train -----------Set size: 27256
+State loss: 0.08747234990500369
+Reward loss: 0.10412662215971416
+Terminal loss: 0.0900753860368094
+Terminal recall: 1.0
+Terminal precision: 0.9711538461538461
+Generated reward: [-0.9651404]
+Generated terminal: [-0.01673203]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 7059
+State loss: 0.1154056244406139
+Reward loss: 0.10519035286150026
+Terminal loss: 0.11423747585527112
+Terminal recall: 0.9833333333333333
+Terminal precision: 0.9672131147540983
+Generated reward: [-0.94347603]
+Generated terminal: [0.08374143]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:04:47,886:GAIRL:INFO: Current model step: 49500
+
+Train -----------Set size: 27256
+State loss: 0.07913887832437626
+Reward loss: 0.09112389500318202
+Terminal loss: 0.08597502819681735
+Terminal recall: 1.0
+Terminal precision: 0.9912280701754386
+Generated reward: [-0.03179681]
+Generated terminal: [0.86758321]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.12704204539733047
+Reward loss: 0.11704597955588039
+Terminal loss: 0.12061105125900966
+Terminal recall: 0.968503937007874
+Terminal precision: 0.984
+Generated reward: [-0.15785956]
+Generated terminal: [0.89655573]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:04:52,421:GAIRL:INFO: Current model step: 50000
+
+Train -----------Set size: 27256
+State loss: 0.07783877938465357
+Reward loss: 0.09288575447089173
+Terminal loss: 0.08516939382995306
+Terminal recall: 1.0
+Terminal precision: 0.9636363636363636
+Generated reward: [-0.24887613]
+Generated terminal: [0.95633961]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 7059
+State loss: 0.12008214958305093
+Reward loss: 0.1046365057890339
+Terminal loss: 0.11332924329339107
+Terminal recall: 0.9736842105263158
+Terminal precision: 0.9568965517241379
+Generated reward: [0.22720261]
+Generated terminal: [1.06709728]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:04:52,421:GAIRL:INFO: 
+******************************************************
+
+
+******************************************************
+************  Back to real environment  **************
+******************************************************
+
+2019-03-08 23:05:34,690:GAIRL:INFO: 
+******************************************************
+************  Training generative model  *************
+******************************************************
+
+2019-03-08 23:05:38,119:GAIRL:INFO: Current model step: 50500
+
+Train -----------Set size: 56955
+State loss: 0.0915870473788738
+Reward loss: 0.08688022599623632
+Terminal loss: 0.1061464348834657
+Terminal recall: 0.9917355371900827
+Terminal precision: 0.96
+Generated reward: [-0.94657284]
+Generated terminal: [0.08081728]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10125625678234322
+Reward loss: 0.09932255318650315
+Terminal loss: 0.08912769321143957
+Terminal recall: 0.9363636363636364
+Terminal precision: 0.9903846153846154
+Generated reward: [-0.1769184]
+Generated terminal: [0.7002902]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:05:42,170:GAIRL:INFO: Current model step: 51000
+
+Train -----------Set size: 56955
+State loss: 0.09214755693822933
+Reward loss: 0.09625123676395721
+Terminal loss: 0.08500854575646515
+Terminal recall: 1.0
+Terminal precision: 0.97
+Generated reward: [-0.13697576]
+Generated terminal: [1.03935389]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.10349090172592296
+Reward loss: 0.10751924973702578
+Terminal loss: 0.1087643632988268
+Terminal recall: 0.9848484848484849
+Terminal precision: 0.9923664122137404
+Generated reward: [0.02391152]
+Generated terminal: [0.95443961]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:05:45,840:GAIRL:INFO: Current model step: 51500
+
+Train -----------Set size: 56955
+State loss: 0.08331784675080446
+Reward loss: 0.09542329710616576
+Terminal loss: 0.09172466383108105
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-0.58723666]
+Generated terminal: [0.528127]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09833238433037918
+Reward loss: 0.09272842158586855
+Terminal loss: 0.11325950883644537
+Terminal recall: 0.9672131147540983
+Terminal precision: 0.9833333333333333
+Generated reward: [-0.1770125]
+Generated terminal: [1.18579179]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:05:49,893:GAIRL:INFO: Current model step: 52000
+
+Train -----------Set size: 56955
+State loss: 0.08470760572287876
+Reward loss: 0.09484204837286746
+Terminal loss: 0.09602046014233383
+Terminal recall: 1.0
+Terminal precision: 0.990990990990991
+Generated reward: [-0.91752552]
+Generated terminal: [0.01618606]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10046742646710403
+Reward loss: 0.1152515466063006
+Terminal loss: 0.1257026118932082
+Terminal recall: 0.9838709677419355
+Terminal precision: 0.976
+Generated reward: [-0.99687517]
+Generated terminal: [0.05093298]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:05:53,498:GAIRL:INFO: Current model step: 52500
+
+Train -----------Set size: 56955
+State loss: 0.08295233920532137
+Reward loss: 0.10610371809428507
+Terminal loss: 0.09929426013040044
+Terminal recall: 1.0
+Terminal precision: 0.991304347826087
+Generated reward: [-1.04077147]
+Generated terminal: [-0.00450987]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10283498391999263
+Reward loss: 0.1153987045650187
+Terminal loss: 0.1287836728226059
+Terminal recall: 0.9523809523809523
+Terminal precision: 0.9836065573770492
+Generated reward: [-0.1266653]
+Generated terminal: [0.77954918]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:05:57,523:GAIRL:INFO: Current model step: 53000
+
+Train -----------Set size: 56955
+State loss: 0.0900843280813517
+Reward loss: 0.1018396219789714
+Terminal loss: 0.1073847880593047
+Terminal recall: 1.0
+Terminal precision: 0.9914529914529915
+Generated reward: [-0.82834266]
+Generated terminal: [0.05960929]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.0997698260622605
+Reward loss: 0.1120544882556054
+Terminal loss: 0.12373410043453144
+Terminal recall: 0.9763779527559056
+Terminal precision: 0.9538461538461539
+Generated reward: [-1.04260343]
+Generated terminal: [0.04764729]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:06:01,112:GAIRL:INFO: Current model step: 53500
+
+Train -----------Set size: 56955
+State loss: 0.0865894785151627
+Reward loss: 0.09785598339236826
+Terminal loss: 0.08115720224645659
+Terminal recall: 1.0
+Terminal precision: 0.9719626168224299
+Generated reward: [-0.93724206]
+Generated terminal: [0.02593233]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10041096938503861
+Reward loss: 0.1157290764225739
+Terminal loss: 0.13544322335847547
+Terminal recall: 0.9923076923076923
+Terminal precision: 1.0
+Generated reward: [-0.83902369]
+Generated terminal: [0.09904473]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:06:05,328:GAIRL:INFO: Current model step: 54000
+
+Train -----------Set size: 56955
+State loss: 0.08505027434346472
+Reward loss: 0.09771969965192039
+Terminal loss: 0.08585267923151023
+Terminal recall: 1.0
+Terminal precision: 0.9916666666666667
+Generated reward: [-1.04447912]
+Generated terminal: [0.07110008]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09427951940547437
+Reward loss: 0.11609980781949929
+Terminal loss: 0.11589212758673034
+Terminal recall: 0.9830508474576272
+Terminal precision: 0.9830508474576272
+Generated reward: [0.01750616]
+Generated terminal: [0.81597081]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:06:08,784:GAIRL:INFO: Current model step: 54500
+
+Train -----------Set size: 56955
+State loss: 0.08626709757438544
+Reward loss: 0.08985011247370417
+Terminal loss: 0.08553835868339119
+Terminal recall: 1.0
+Terminal precision: 0.9907407407407407
+Generated reward: [-0.96731607]
+Generated terminal: [0.05464866]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.106846356647614
+Reward loss: 0.10512322821784281
+Terminal loss: 0.12469341350741278
+Terminal recall: 0.9846153846153847
+Terminal precision: 0.9922480620155039
+Generated reward: [-0.92209643]
+Generated terminal: [0.00543003]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:06:12,868:GAIRL:INFO: Current model step: 55000
+
+Train -----------Set size: 56955
+State loss: 0.08490328122600416
+Reward loss: 0.10010086777445051
+Terminal loss: 0.08642065340720193
+Terminal recall: 0.9830508474576272
+Terminal precision: 1.0
+Generated reward: [-0.12356038]
+Generated terminal: [0.93683255]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09825203628275302
+Reward loss: 0.1186155177699798
+Terminal loss: 0.1157492173567059
+Terminal recall: 0.9836065573770492
+Terminal precision: 0.975609756097561
+Generated reward: [-0.97610774]
+Generated terminal: [-0.04522213]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:06:16,514:GAIRL:INFO: Current model step: 55500
+
+Train -----------Set size: 56955
+State loss: 0.08055784309081983
+Reward loss: 0.09717987711311268
+Terminal loss: 0.08356197126230139
+Terminal recall: 1.0
+Terminal precision: 0.9629629629629629
+Generated reward: [-0.86024306]
+Generated terminal: [0.023558]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09942170288057195
+Reward loss: 0.11498539879310926
+Terminal loss: 0.13191954844456671
+Terminal recall: 0.9921875
+Terminal precision: 0.9548872180451128
+Generated reward: [-0.94261206]
+Generated terminal: [-0.01597882]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:06:20,532:GAIRL:INFO: Current model step: 56000
+
+Train -----------Set size: 56955
+State loss: 0.08669468796791073
+Reward loss: 0.09706348533476875
+Terminal loss: 0.08774737044677325
+Terminal recall: 1.0
+Terminal precision: 0.9823008849557522
+Generated reward: [-0.99065848]
+Generated terminal: [0.00351351]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09585913557227747
+Reward loss: 0.10786385586100047
+Terminal loss: 0.11343548269549646
+Terminal recall: 0.9831932773109243
+Terminal precision: 0.9831932773109243
+Generated reward: [-0.31050894]
+Generated terminal: [0.98060889]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:06:23,965:GAIRL:INFO: Current model step: 56500
+
+Train -----------Set size: 56955
+State loss: 0.08859046210663646
+Reward loss: 0.08690624467950557
+Terminal loss: 0.09701073431601312
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-0.04779271]
+Generated terminal: [0.95470431]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09962512488972623
+Reward loss: 0.1033367029025516
+Terminal loss: 0.11636730652320432
+Terminal recall: 0.9769230769230769
+Terminal precision: 0.9844961240310077
+Generated reward: [-0.92269196]
+Generated terminal: [0.01463334]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:06:28,234:GAIRL:INFO: Current model step: 57000
+
+Train -----------Set size: 56955
+State loss: 0.0830739260457561
+Reward loss: 0.0853619152771765
+Terminal loss: 0.08001338619180395
+Terminal recall: 1.0
+Terminal precision: 0.9807692307692307
+Generated reward: [0.18283186]
+Generated terminal: [0.62125224]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.10384083494926737
+Reward loss: 0.11060177847986301
+Terminal loss: 0.10969497532493637
+Terminal recall: 0.9847328244274809
+Terminal precision: 0.9772727272727273
+Generated reward: [-0.96267722]
+Generated terminal: [0.12834527]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:06:31,690:GAIRL:INFO: Current model step: 57500
+
+Train -----------Set size: 56955
+State loss: 0.08787473004471608
+Reward loss: 0.099603046920912
+Terminal loss: 0.10740595828079147
+Terminal recall: 1.0
+Terminal precision: 0.9924812030075187
+Generated reward: [-0.84594546]
+Generated terminal: [0.1137181]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09592140795412624
+Reward loss: 0.12009780452541438
+Terminal loss: 0.12418111778093509
+Terminal recall: 0.9913793103448276
+Terminal precision: 0.9663865546218487
+Generated reward: [-0.00918104]
+Generated terminal: [0.94426899]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:06:35,735:GAIRL:INFO: Current model step: 58000
+
+Train -----------Set size: 56955
+State loss: 0.08619451447513495
+Reward loss: 0.08769659912285369
+Terminal loss: 0.08816303309753501
+Terminal recall: 1.0
+Terminal precision: 0.991304347826087
+Generated reward: [-0.12336778]
+Generated terminal: [0.75128576]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09996501876312265
+Reward loss: 0.1066142685042793
+Terminal loss: 0.11441635627764822
+Terminal recall: 0.9827586206896551
+Terminal precision: 0.957983193277311
+Generated reward: [-0.99778173]
+Generated terminal: [0.03013205]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:06:39,217:GAIRL:INFO: Current model step: 58500
+
+Train -----------Set size: 56955
+State loss: 0.08305631506068405
+Reward loss: 0.09278144217185914
+Terminal loss: 0.09021510458247717
+Terminal recall: 1.0
+Terminal precision: 0.9902912621359223
+Generated reward: [-0.11901702]
+Generated terminal: [0.86283752]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09493933209678719
+Reward loss: 0.1014459373594875
+Terminal loss: 0.11661743943688457
+Terminal recall: 0.9813084112149533
+Terminal precision: 0.9545454545454546
+Generated reward: [-1.00678802]
+Generated terminal: [0.05075678]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:06:43,647:GAIRL:INFO: Current model step: 59000
+
+Train -----------Set size: 56955
+State loss: 0.086076217965764
+Reward loss: 0.09387352461453864
+Terminal loss: 0.0899043742413203
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-0.99981311]
+Generated terminal: [0.01393514]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09975386803755232
+Reward loss: 0.12166905633855721
+Terminal loss: 0.11802543658245578
+Terminal recall: 0.9913793103448276
+Terminal precision: 0.9663865546218487
+Generated reward: [-0.9891743]
+Generated terminal: [0.05496351]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:06:47,614:GAIRL:INFO: Current model step: 59500
+
+Train -----------Set size: 56955
+State loss: 0.09149412843622122
+Reward loss: 0.09465199134907562
+Terminal loss: 0.0952716690893243
+Terminal recall: 1.0
+Terminal precision: 0.963963963963964
+Generated reward: [-0.05766305]
+Generated terminal: [1.00520955]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09725960690299935
+Reward loss: 0.10993012726525903
+Terminal loss: 0.11119270019751326
+Terminal recall: 0.990990990990991
+Terminal precision: 0.9734513274336283
+Generated reward: [-1.00967961]
+Generated terminal: [0.03928318]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:06:51,973:GAIRL:INFO: Current model step: 60000
+
+Train -----------Set size: 56955
+State loss: 0.08364442957712072
+Reward loss: 0.08496303934111069
+Terminal loss: 0.09406930311350631
+Terminal recall: 1.0
+Terminal precision: 0.9901960784313726
+Generated reward: [0.10902709]
+Generated terminal: [1.13895254]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.10000861734763315
+Reward loss: 0.1085883127577959
+Terminal loss: 0.111867913744531
+Terminal recall: 0.991869918699187
+Terminal precision: 0.991869918699187
+Generated reward: [-0.83488799]
+Generated terminal: [0.00100495]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:06:55,680:GAIRL:INFO: Current model step: 60500
+
+Train -----------Set size: 56955
+State loss: 0.08129818088411042
+Reward loss: 0.09372940920424999
+Terminal loss: 0.08431391977281492
+Terminal recall: 1.0
+Terminal precision: 0.9747899159663865
+Generated reward: [-0.11541451]
+Generated terminal: [0.815385]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.10012722390498013
+Reward loss: 0.1220895350876475
+Terminal loss: 0.12342315370267928
+Terminal recall: 0.9606299212598425
+Terminal precision: 0.9457364341085271
+Generated reward: [-0.87474967]
+Generated terminal: [-0.00656514]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:07:00,329:GAIRL:INFO: Current model step: 61000
+
+Train -----------Set size: 56955
+State loss: 0.0857435202311494
+Reward loss: 0.08667509225107885
+Terminal loss: 0.09127162513896356
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-1.04551964]
+Generated terminal: [-0.01139502]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09838117423723557
+Reward loss: 0.12351910528797891
+Terminal loss: 0.1263906791841202
+Terminal recall: 0.992
+Terminal precision: 0.9841269841269841
+Generated reward: [-0.13392711]
+Generated terminal: [1.03068857]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:07:04,211:GAIRL:INFO: Current model step: 61500
+
+Train -----------Set size: 56955
+State loss: 0.08593050433519911
+Reward loss: 0.07734223935639009
+Terminal loss: 0.08285996558103592
+Terminal recall: 1.0
+Terminal precision: 0.9818181818181818
+Generated reward: [-0.94258215]
+Generated terminal: [0.05745238]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.1043527641537683
+Reward loss: 0.10978463843376182
+Terminal loss: 0.11385592814522531
+Terminal recall: 0.9913793103448276
+Terminal precision: 0.9913793103448276
+Generated reward: [0.05878716]
+Generated terminal: [1.1047417]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:07:08,538:GAIRL:INFO: Current model step: 62000
+
+Train -----------Set size: 56955
+State loss: 0.08640323268476809
+Reward loss: 0.09535634463438256
+Terminal loss: 0.09263687672032851
+Terminal recall: 1.0
+Terminal precision: 0.968
+Generated reward: [-0.43852597]
+Generated terminal: [0.41264858]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09722762412294815
+Reward loss: 0.10226788438853002
+Terminal loss: 0.10541045319700734
+Terminal recall: 0.9838709677419355
+Terminal precision: 0.991869918699187
+Generated reward: [-0.04560477]
+Generated terminal: [1.09801863]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:07:12,319:GAIRL:INFO: Current model step: 62500
+
+Train -----------Set size: 56955
+State loss: 0.08180580338840637
+Reward loss: 0.09000605300520519
+Terminal loss: 0.08690835073598416
+Terminal recall: 1.0
+Terminal precision: 0.9805825242718447
+Generated reward: [-0.92065121]
+Generated terminal: [0.01582762]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09623795669820372
+Reward loss: 0.09662249041614676
+Terminal loss: 0.10867009143442447
+Terminal recall: 0.9913793103448276
+Terminal precision: 0.9829059829059829
+Generated reward: [-0.1718636]
+Generated terminal: [0.70007875]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:07:17,265:GAIRL:INFO: Current model step: 63000
+
+Train -----------Set size: 56955
+State loss: 0.08559957991520266
+Reward loss: 0.09376052181594896
+Terminal loss: 0.09619793197501827
+Terminal recall: 1.0
+Terminal precision: 0.9732142857142857
+Generated reward: [0.05531649]
+Generated terminal: [1.03097689]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.10467105642686259
+Reward loss: 0.10533483254911247
+Terminal loss: 0.11958912251732001
+Terminal recall: 0.9743589743589743
+Terminal precision: 0.9743589743589743
+Generated reward: [-0.91279832]
+Generated terminal: [0.03446237]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:07:20,861:GAIRL:INFO: Current model step: 63500
+
+Train -----------Set size: 56955
+State loss: 0.08488498461201617
+Reward loss: 0.08476766499167548
+Terminal loss: 0.09986313255414303
+Terminal recall: 1.0
+Terminal precision: 0.9824561403508771
+Generated reward: [-0.2694719]
+Generated terminal: [0.87653143]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09729560353584872
+Reward loss: 0.10833338627924606
+Terminal loss: 0.10363194488557978
+Terminal recall: 1.0
+Terminal precision: 0.991304347826087
+Generated reward: [-1.04791514]
+Generated terminal: [-0.06013072]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:07:25,329:GAIRL:INFO: Current model step: 64000
+
+Train -----------Set size: 56955
+State loss: 0.08824405918773919
+Reward loss: 0.09355184966709242
+Terminal loss: 0.10019200641819036
+Terminal recall: 1.0
+Terminal precision: 0.9818181818181818
+Generated reward: [-0.94385052]
+Generated terminal: [-0.00016261]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09957581628415428
+Reward loss: 0.11436670936005508
+Terminal loss: 0.1068080377670816
+Terminal recall: 0.9523809523809523
+Terminal precision: 0.9917355371900827
+Generated reward: [-0.32109958]
+Generated terminal: [0.47234193]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:07:29,078:GAIRL:INFO: Current model step: 64500
+
+Train -----------Set size: 56955
+State loss: 0.08014006909495161
+Reward loss: 0.09195469052995153
+Terminal loss: 0.08579080066093185
+Terminal recall: 1.0
+Terminal precision: 0.9900990099009901
+Generated reward: [-0.16722695]
+Generated terminal: [0.95423899]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.1004090454103989
+Reward loss: 0.10743146771799555
+Terminal loss: 0.11324449512156727
+Terminal recall: 0.9834710743801653
+Terminal precision: 0.9834710743801653
+Generated reward: [0.13236497]
+Generated terminal: [1.18910544]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:07:33,263:GAIRL:INFO: Current model step: 65000
+
+Train -----------Set size: 56955
+State loss: 0.08817649188100656
+Reward loss: 0.0927289355997507
+Terminal loss: 0.09438097574630794
+Terminal recall: 1.0
+Terminal precision: 0.9741379310344828
+Generated reward: [-1.02509222]
+Generated terminal: [0.03195329]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.1009286001260874
+Reward loss: 0.13336302322126564
+Terminal loss: 0.11242517836831988
+Terminal recall: 0.9770992366412213
+Terminal precision: 0.9846153846153847
+Generated reward: [-0.84505615]
+Generated terminal: [0.05463493]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:07:36,853:GAIRL:INFO: Current model step: 65500
+
+Train -----------Set size: 56955
+State loss: 0.0786270154837077
+Reward loss: 0.09336122543990535
+Terminal loss: 0.09020520395603102
+Terminal recall: 1.0
+Terminal precision: 0.9745762711864406
+Generated reward: [-0.96656213]
+Generated terminal: [0.06653982]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09818660645708273
+Reward loss: 0.11009257065589503
+Terminal loss: 0.11591872004714143
+Terminal recall: 0.9752066115702479
+Terminal precision: 0.9833333333333333
+Generated reward: [-0.99241974]
+Generated terminal: [-0.01177029]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:07:41,051:GAIRL:INFO: Current model step: 66000
+
+Train -----------Set size: 56955
+State loss: 0.08572538371017345
+Reward loss: 0.09089349612312968
+Terminal loss: 0.0908301658923084
+Terminal recall: 0.9914529914529915
+Terminal precision: 0.9914529914529915
+Generated reward: [-0.9715877]
+Generated terminal: [0.13427868]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.0988463202929899
+Reward loss: 0.11098729784923969
+Terminal loss: 0.11400702920671375
+Terminal recall: 0.9917355371900827
+Terminal precision: 1.0
+Generated reward: [-0.017903]
+Generated terminal: [1.04409252]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:07:44,741:GAIRL:INFO: Current model step: 66500
+
+Train -----------Set size: 56955
+State loss: 0.08433698192124432
+Reward loss: 0.10904281811253039
+Terminal loss: 0.0974521762923173
+Terminal recall: 1.0
+Terminal precision: 0.9545454545454546
+Generated reward: [-0.01260735]
+Generated terminal: [0.85324104]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.10208901090817006
+Reward loss: 0.13678000430349868
+Terminal loss: 0.11858424744607438
+Terminal recall: 0.9708029197080292
+Terminal precision: 0.9708029197080292
+Generated reward: [-0.09078981]
+Generated terminal: [1.09213608]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:07:48,802:GAIRL:INFO: Current model step: 67000
+
+Train -----------Set size: 56955
+State loss: 0.0825316970510874
+Reward loss: 0.09550688171911234
+Terminal loss: 0.09208957529833575
+Terminal recall: 1.0
+Terminal precision: 0.9716981132075472
+Generated reward: [-0.0987684]
+Generated terminal: [1.03675544]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.1003620152620182
+Reward loss: 0.10951463287928902
+Terminal loss: 0.10570506033997476
+Terminal recall: 1.0
+Terminal precision: 0.9829059829059829
+Generated reward: [-0.99399142]
+Generated terminal: [0.03714586]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:07:52,179:GAIRL:INFO: Current model step: 67500
+
+Train -----------Set size: 56955
+State loss: 0.08344736809919384
+Reward loss: 0.08509959287900547
+Terminal loss: 0.0896073852459676
+Terminal recall: 1.0
+Terminal precision: 0.9752066115702479
+Generated reward: [0.09165584]
+Generated terminal: [0.90523284]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.10592156479737785
+Reward loss: 0.12099988005000062
+Terminal loss: 0.12363071315736682
+Terminal recall: 0.9710144927536232
+Terminal precision: 0.9781021897810219
+Generated reward: [-1.08169616]
+Generated terminal: [-0.01921956]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:07:56,217:GAIRL:INFO: Current model step: 68000
+
+Train -----------Set size: 56955
+State loss: 0.08761362547138811
+Reward loss: 0.09437460077520873
+Terminal loss: 0.08783505594128409
+Terminal recall: 1.0
+Terminal precision: 0.9826086956521739
+Generated reward: [0.02193752]
+Generated terminal: [0.62280224]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09763629063555966
+Reward loss: 0.1011529291602043
+Terminal loss: 0.1079822091079307
+Terminal recall: 0.9741379310344828
+Terminal precision: 0.9741379310344828
+Generated reward: [-0.95392508]
+Generated terminal: [0.05093768]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:07:59,661:GAIRL:INFO: Current model step: 68500
+
+Train -----------Set size: 56955
+State loss: 0.08197251028592262
+Reward loss: 0.09275510784694616
+Terminal loss: 0.08937034194458662
+Terminal recall: 1.0
+Terminal precision: 0.9829059829059829
+Generated reward: [-0.98176297]
+Generated terminal: [0.05644312]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09869437245111772
+Reward loss: 0.11339623836965604
+Terminal loss: 0.11599039749514163
+Terminal recall: 0.9908256880733946
+Terminal precision: 0.9818181818181818
+Generated reward: [-0.99570494]
+Generated terminal: [0.02098021]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:08:03,669:GAIRL:INFO: Current model step: 69000
+
+Train -----------Set size: 56955
+State loss: 0.08927999723261383
+Reward loss: 0.09498743723836878
+Terminal loss: 0.08800060727994295
+Terminal recall: 1.0
+Terminal precision: 0.9811320754716981
+Generated reward: [-0.96905962]
+Generated terminal: [-0.01174606]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09870741068672408
+Reward loss: 0.11813901679487285
+Terminal loss: 0.11886087055996405
+Terminal recall: 0.984
+Terminal precision: 0.984
+Generated reward: [-0.83697602]
+Generated terminal: [0.02164083]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:08:07,109:GAIRL:INFO: Current model step: 69500
+
+Train -----------Set size: 56955
+State loss: 0.0844388618327145
+Reward loss: 0.09681144372608533
+Terminal loss: 0.08482224880970016
+Terminal recall: 1.0
+Terminal precision: 0.9827586206896551
+Generated reward: [-0.06501111]
+Generated terminal: [1.12634184]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.10253450989558804
+Reward loss: 0.12205767409602833
+Terminal loss: 0.11308272568341665
+Terminal recall: 0.9841269841269841
+Terminal precision: 0.992
+Generated reward: [-0.95623539]
+Generated terminal: [-0.09166905]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:08:11,220:GAIRL:INFO: Current model step: 70000
+
+Train -----------Set size: 56955
+State loss: 0.08780921370113565
+Reward loss: 0.10498262830515392
+Terminal loss: 0.0929396815905999
+Terminal recall: 1.0
+Terminal precision: 0.9734513274336283
+Generated reward: [-0.95164086]
+Generated terminal: [-0.10827653]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10272497061831866
+Reward loss: 0.12451821068240104
+Terminal loss: 0.1137021187342382
+Terminal recall: 0.9741379310344828
+Terminal precision: 0.9826086956521739
+Generated reward: [0.41150337]
+Generated terminal: [0.85124572]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:08:14,972:GAIRL:INFO: Current model step: 70500
+
+Train -----------Set size: 56955
+State loss: 0.08663165562497828
+Reward loss: 0.09095036191894193
+Terminal loss: 0.08869571496848641
+Terminal recall: 1.0
+Terminal precision: 0.9658119658119658
+Generated reward: [-0.9000077]
+Generated terminal: [0.02494972]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10343853098626066
+Reward loss: 0.11321907423209593
+Terminal loss: 0.11407130435988974
+Terminal recall: 0.9922480620155039
+Terminal precision: 0.9922480620155039
+Generated reward: [-1.02702531]
+Generated terminal: [0.10800164]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:08:19,008:GAIRL:INFO: Current model step: 71000
+
+Train -----------Set size: 56955
+State loss: 0.07994183891462915
+Reward loss: 0.08967609340214472
+Terminal loss: 0.08608003486230273
+Terminal recall: 1.0
+Terminal precision: 0.9834710743801653
+Generated reward: [-0.07091959]
+Generated terminal: [1.02428495]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09195897984650202
+Reward loss: 0.09868349274889641
+Terminal loss: 0.09453366230561401
+Terminal recall: 0.9823008849557522
+Terminal precision: 0.9910714285714286
+Generated reward: [-1.0219582]
+Generated terminal: [0.02900693]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:08:22,429:GAIRL:INFO: Current model step: 71500
+
+Train -----------Set size: 56955
+State loss: 0.08249196948779469
+Reward loss: 0.09564823875010911
+Terminal loss: 0.09698394410715294
+Terminal recall: 1.0
+Terminal precision: 0.9754098360655737
+Generated reward: [0.03736376]
+Generated terminal: [1.24944153]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09214535280597608
+Reward loss: 0.09381880846694807
+Terminal loss: 0.10318986559446479
+Terminal recall: 0.9911504424778761
+Terminal precision: 1.0
+Generated reward: [-1.01558968]
+Generated terminal: [0.03629765]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:08:26,387:GAIRL:INFO: Current model step: 72000
+
+Train -----------Set size: 56955
+State loss: 0.08619520952875137
+Reward loss: 0.09372775076846226
+Terminal loss: 0.09083074150772745
+Terminal recall: 1.0
+Terminal precision: 0.9833333333333333
+Generated reward: [-0.95823544]
+Generated terminal: [0.11696252]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10481330233962276
+Reward loss: 0.12545716418444902
+Terminal loss: 0.11224804660174438
+Terminal recall: 0.983739837398374
+Terminal precision: 0.9758064516129032
+Generated reward: [-0.03743755]
+Generated terminal: [0.91261547]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:08:29,774:GAIRL:INFO: Current model step: 72500
+
+Train -----------Set size: 56955
+State loss: 0.08324569476281683
+Reward loss: 0.10793414099937651
+Terminal loss: 0.08757042772990938
+Terminal recall: 1.0
+Terminal precision: 0.9913793103448276
+Generated reward: [-0.00636431]
+Generated terminal: [0.88924054]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.10402240321207319
+Reward loss: 0.12297244689922338
+Terminal loss: 0.11190792926848656
+Terminal recall: 0.9847328244274809
+Terminal precision: 0.9847328244274809
+Generated reward: [-0.04066642]
+Generated terminal: [0.93267078]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:08:33,769:GAIRL:INFO: Current model step: 73000
+
+Train -----------Set size: 56955
+State loss: 0.0767142004572358
+Reward loss: 0.08994787635297319
+Terminal loss: 0.087424592543419
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-1.00133715]
+Generated terminal: [-0.01927782]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10212429230247703
+Reward loss: 0.12488631814810237
+Terminal loss: 0.12842023456335286
+Terminal recall: 1.0
+Terminal precision: 0.9777777777777777
+Generated reward: [-1.04479222]
+Generated terminal: [0.0697435]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:08:37,254:GAIRL:INFO: Current model step: 73500
+
+Train -----------Set size: 56955
+State loss: 0.08479359780489944
+Reward loss: 0.1021943201569954
+Terminal loss: 0.0934208017791251
+Terminal recall: 1.0
+Terminal precision: 0.9913793103448276
+Generated reward: [-0.93016875]
+Generated terminal: [-0.01597554]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10349843128594434
+Reward loss: 0.117448541577521
+Terminal loss: 0.1156715131614579
+Terminal recall: 1.0
+Terminal precision: 0.968503937007874
+Generated reward: [-0.99987235]
+Generated terminal: [-0.0142296]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:08:41,502:GAIRL:INFO: Current model step: 74000
+
+Train -----------Set size: 56955
+State loss: 0.08462879982479925
+Reward loss: 0.08412555723930504
+Terminal loss: 0.09474439420063768
+Terminal recall: 0.9920634920634921
+Terminal precision: 0.9920634920634921
+Generated reward: [-0.92359318]
+Generated terminal: [-0.03392801]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10240429302375698
+Reward loss: 0.10506924965022607
+Terminal loss: 0.10179407155984416
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [0.10741812]
+Generated terminal: [0.95928045]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:08:45,209:GAIRL:INFO: Current model step: 74500
+
+Train -----------Set size: 56955
+State loss: 0.08249042980798434
+Reward loss: 0.08276854712758691
+Terminal loss: 0.08930847038724124
+Terminal recall: 1.0
+Terminal precision: 0.990909090909091
+Generated reward: [-0.17062537]
+Generated terminal: [0.93402979]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09905556440503809
+Reward loss: 0.11637825077165953
+Terminal loss: 0.11580007863587338
+Terminal recall: 0.9830508474576272
+Terminal precision: 0.9914529914529915
+Generated reward: [-0.87715416]
+Generated terminal: [0.17513984]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:08:49,674:GAIRL:INFO: Current model step: 75000
+
+Train -----------Set size: 56955
+State loss: 0.08540630891980176
+Reward loss: 0.09496566236363899
+Terminal loss: 0.09649987575873187
+Terminal recall: 1.0
+Terminal precision: 0.9761904761904762
+Generated reward: [-0.20989499]
+Generated terminal: [1.08289097]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09671562415991357
+Reward loss: 0.10634965684822334
+Terminal loss: 0.10601226188077481
+Terminal recall: 1.0
+Terminal precision: 0.984
+Generated reward: [-1.11909905]
+Generated terminal: [-0.01380084]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:08:53,139:GAIRL:INFO: Current model step: 75500
+
+Train -----------Set size: 56955
+State loss: 0.08384081557690949
+Reward loss: 0.09565204860158516
+Terminal loss: 0.0864355088273045
+Terminal recall: 1.0
+Terminal precision: 0.9642857142857143
+Generated reward: [-0.02800947]
+Generated terminal: [0.9325179]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09583358312240085
+Reward loss: 0.10421511151252406
+Terminal loss: 0.11264040026598476
+Terminal recall: 0.975
+Terminal precision: 1.0
+Generated reward: [-0.91606788]
+Generated terminal: [0.02402533]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:08:57,553:GAIRL:INFO: Current model step: 76000
+
+Train -----------Set size: 56955
+State loss: 0.0811492777331581
+Reward loss: 0.09289541106979546
+Terminal loss: 0.09162330785969622
+Terminal recall: 1.0
+Terminal precision: 0.9827586206896551
+Generated reward: [0.03554685]
+Generated terminal: [0.77203577]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09571452075334118
+Reward loss: 0.10850351562435369
+Terminal loss: 0.10722504835686404
+Terminal recall: 0.9906542056074766
+Terminal precision: 0.9906542056074766
+Generated reward: [-0.9668123]
+Generated terminal: [0.01151307]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:09:00,989:GAIRL:INFO: Current model step: 76500
+
+Train -----------Set size: 56955
+State loss: 0.08560335178899348
+Reward loss: 0.09289471435312434
+Terminal loss: 0.09051079106888474
+Terminal recall: 1.0
+Terminal precision: 0.9752066115702479
+Generated reward: [-0.08405775]
+Generated terminal: [1.10612991]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09914012380237569
+Reward loss: 0.12618697747977958
+Terminal loss: 0.120227928973372
+Terminal recall: 0.9838709677419355
+Terminal precision: 0.9606299212598425
+Generated reward: [-0.022664]
+Generated terminal: [1.08101196]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:09:05,247:GAIRL:INFO: Current model step: 77000
+
+Train -----------Set size: 56955
+State loss: 0.08391590333268902
+Reward loss: 0.08278028604570675
+Terminal loss: 0.08976205467555892
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-1.07151389]
+Generated terminal: [-0.00164949]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09826156425931616
+Reward loss: 0.09793097642158294
+Terminal loss: 0.09996423121457415
+Terminal recall: 1.0
+Terminal precision: 0.9913793103448276
+Generated reward: [-0.9726957]
+Generated terminal: [-0.03037499]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:09:08,749:GAIRL:INFO: Current model step: 77500
+
+Train -----------Set size: 56955
+State loss: 0.0852546923937695
+Reward loss: 0.0973457961005362
+Terminal loss: 0.0926566607975086
+Terminal recall: 1.0
+Terminal precision: 0.9813084112149533
+Generated reward: [-0.7009461]
+Generated terminal: [0.18774367]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10189817432342592
+Reward loss: 0.1259500093360032
+Terminal loss: 0.11755876156065488
+Terminal recall: 0.9661016949152542
+Terminal precision: 0.991304347826087
+Generated reward: [-1.03201016]
+Generated terminal: [0.03593074]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:09:12,938:GAIRL:INFO: Current model step: 78000
+
+Train -----------Set size: 56955
+State loss: 0.08496402536917141
+Reward loss: 0.10290062806347568
+Terminal loss: 0.10805625375477812
+Terminal recall: 1.0
+Terminal precision: 0.972972972972973
+Generated reward: [-1.11966175]
+Generated terminal: [0.0104549]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09967268862032376
+Reward loss: 0.10295175294994768
+Terminal loss: 0.11167405125360778
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-0.92664525]
+Generated terminal: [0.12648478]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:09:16,581:GAIRL:INFO: Current model step: 78500
+
+Train -----------Set size: 56955
+State loss: 0.08133171255082375
+Reward loss: 0.09788359769225863
+Terminal loss: 0.09004095727224318
+Terminal recall: 1.0
+Terminal precision: 0.9920634920634921
+Generated reward: [-0.9423742]
+Generated terminal: [-0.12041512]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10036395281720417
+Reward loss: 0.1180217190277837
+Terminal loss: 0.11713244850411085
+Terminal recall: 0.9848484848484849
+Terminal precision: 0.9848484848484849
+Generated reward: [-0.97284017]
+Generated terminal: [0.05308217]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:09:20,654:GAIRL:INFO: Current model step: 79000
+
+Train -----------Set size: 56955
+State loss: 0.08332916414961498
+Reward loss: 0.09099953368076477
+Terminal loss: 0.0784139072894095
+Terminal recall: 1.0
+Terminal precision: 0.9914529914529915
+Generated reward: [-0.07271081]
+Generated terminal: [0.83449888]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.10653197621489185
+Reward loss: 0.12624864779092593
+Terminal loss: 0.1298911274565825
+Terminal recall: 0.9920634920634921
+Terminal precision: 0.9689922480620154
+Generated reward: [0.17146526]
+Generated terminal: [1.10804925]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:09:24,036:GAIRL:INFO: Current model step: 79500
+
+Train -----------Set size: 56955
+State loss: 0.08079092360743145
+Reward loss: 0.09379017624450185
+Terminal loss: 0.08372365763338817
+Terminal recall: 1.0
+Terminal precision: 0.9844961240310077
+Generated reward: [0.12107848]
+Generated terminal: [1.02201549]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09919667573930448
+Reward loss: 0.11706804940523112
+Terminal loss: 0.1159176134452909
+Terminal recall: 1.0
+Terminal precision: 0.9848484848484849
+Generated reward: [-0.05978718]
+Generated terminal: [0.7507007]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:09:28,139:GAIRL:INFO: Current model step: 80000
+
+Train -----------Set size: 56955
+State loss: 0.08892754517163215
+Reward loss: 0.09337529806566887
+Terminal loss: 0.09371066945735214
+Terminal recall: 1.0
+Terminal precision: 0.9758064516129032
+Generated reward: [-0.91672972]
+Generated terminal: [-0.01593033]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.0998066621493054
+Reward loss: 0.11017634703618308
+Terminal loss: 0.11757732808579413
+Terminal recall: 0.9927536231884058
+Terminal precision: 0.9927536231884058
+Generated reward: [-1.13826804]
+Generated terminal: [7.50276438e-05]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:09:31,509:GAIRL:INFO: Current model step: 80500
+
+Train -----------Set size: 56955
+State loss: 0.07890133864082971
+Reward loss: 0.09438963111279638
+Terminal loss: 0.0833573907507276
+Terminal recall: 1.0
+Terminal precision: 0.9911504424778761
+Generated reward: [0.00211637]
+Generated terminal: [1.01860245]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09601634746968092
+Reward loss: 0.1187735892766217
+Terminal loss: 0.11073104324413752
+Terminal recall: 0.9829059829059829
+Terminal precision: 0.9663865546218487
+Generated reward: [-1.00228039]
+Generated terminal: [0.22359518]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:09:35,563:GAIRL:INFO: Current model step: 81000
+
+Train -----------Set size: 56955
+State loss: 0.08438448267577413
+Reward loss: 0.09308043474503348
+Terminal loss: 0.09256805705430508
+Terminal recall: 1.0
+Terminal precision: 0.9433962264150944
+Generated reward: [-0.95344088]
+Generated terminal: [-0.02749048]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10391472960989816
+Reward loss: 0.11502012319653634
+Terminal loss: 0.11960223094973203
+Terminal recall: 0.9847328244274809
+Terminal precision: 0.9772727272727273
+Generated reward: [-0.0899874]
+Generated terminal: [0.92182671]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:09:38,902:GAIRL:INFO: Current model step: 81500
+
+Train -----------Set size: 56955
+State loss: 0.08076323571093556
+Reward loss: 0.08472307787290714
+Terminal loss: 0.08114972509875934
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-0.05494207]
+Generated terminal: [1.02668917]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09966447030304477
+Reward loss: 0.10173843234545718
+Terminal loss: 0.11307199588947331
+Terminal recall: 0.9921259842519685
+Terminal precision: 0.984375
+Generated reward: [-0.92544155]
+Generated terminal: [0.06648845]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:09:42,908:GAIRL:INFO: Current model step: 82000
+
+Train -----------Set size: 56955
+State loss: 0.08470839546657871
+Reward loss: 0.10022477451438647
+Terminal loss: 0.0859784312532999
+Terminal recall: 0.9907407407407407
+Terminal precision: 0.9553571428571429
+Generated reward: [0.08821704]
+Generated terminal: [1.10096302]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.10313212189667009
+Reward loss: 0.11283109723132258
+Terminal loss: 0.10709611866466631
+Terminal recall: 0.9841269841269841
+Terminal precision: 0.9841269841269841
+Generated reward: [-0.25567728]
+Generated terminal: [0.78194421]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:09:46,506:GAIRL:INFO: Current model step: 82500
+
+Train -----------Set size: 56955
+State loss: 0.08914642259034651
+Reward loss: 0.09549309697076126
+Terminal loss: 0.08147521862982741
+Terminal recall: 0.9918032786885246
+Terminal precision: 0.9758064516129032
+Generated reward: [-1.03965111]
+Generated terminal: [-0.05907738]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10427233963329045
+Reward loss: 0.11343778292753011
+Terminal loss: 0.11883887295686096
+Terminal recall: 0.96875
+Terminal precision: 0.9841269841269841
+Generated reward: [0.1192059]
+Generated terminal: [0.81306657]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:09:50,597:GAIRL:INFO: Current model step: 83000
+
+Train -----------Set size: 56955
+State loss: 0.08096026012269038
+Reward loss: 0.08509898544225508
+Terminal loss: 0.0802985057412684
+Terminal recall: 1.0
+Terminal precision: 0.9904761904761905
+Generated reward: [-1.09292339]
+Generated terminal: [0.01106111]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10271649558768421
+Reward loss: 0.12832374264388052
+Terminal loss: 0.12246394400741668
+Terminal recall: 0.9626865671641791
+Terminal precision: 0.9772727272727273
+Generated reward: [-0.11930247]
+Generated terminal: [1.01830711]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:09:53,969:GAIRL:INFO: Current model step: 83500
+
+Train -----------Set size: 56955
+State loss: 0.08814917310193493
+Reward loss: 0.09371195422241632
+Terminal loss: 0.09239462226847203
+Terminal recall: 1.0
+Terminal precision: 0.9763779527559056
+Generated reward: [-0.23698865]
+Generated terminal: [0.96378601]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09643837077627171
+Reward loss: 0.11327501438879163
+Terminal loss: 0.10194183686109867
+Terminal recall: 0.9906542056074766
+Terminal precision: 0.954954954954955
+Generated reward: [0.22562007]
+Generated terminal: [1.01583693]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:09:57,983:GAIRL:INFO: Current model step: 84000
+
+Train -----------Set size: 56955
+State loss: 0.08691091243082653
+Reward loss: 0.08953637181475307
+Terminal loss: 0.08277816245645772
+Terminal recall: 1.0
+Terminal precision: 0.9831932773109243
+Generated reward: [-0.00299923]
+Generated terminal: [0.89735347]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.0960208864877153
+Reward loss: 0.10277354502535513
+Terminal loss: 0.11184868389832234
+Terminal recall: 0.9824561403508771
+Terminal precision: 1.0
+Generated reward: [0.28705764]
+Generated terminal: [1.30101702]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:10:01,672:GAIRL:INFO: Current model step: 84500
+
+Train -----------Set size: 56955
+State loss: 0.08504094496804841
+Reward loss: 0.08660791153279873
+Terminal loss: 0.08100403346712573
+Terminal recall: 1.0
+Terminal precision: 0.9819819819819819
+Generated reward: [-0.20339017]
+Generated terminal: [0.84440851]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09696791443045782
+Reward loss: 0.11378311681401669
+Terminal loss: 0.10495662986033746
+Terminal recall: 0.9911504424778761
+Terminal precision: 0.9824561403508771
+Generated reward: [-0.88346553]
+Generated terminal: [-0.05541801]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:10:05,882:GAIRL:INFO: Current model step: 85000
+
+Train -----------Set size: 56955
+State loss: 0.08457404630668486
+Reward loss: 0.08898050113348147
+Terminal loss: 0.07692027372502391
+Terminal recall: 1.0
+Terminal precision: 0.990909090909091
+Generated reward: [-1.17671579]
+Generated terminal: [0.01256233]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09981305487753937
+Reward loss: 0.1149497694161691
+Terminal loss: 0.11612790691531177
+Terminal recall: 1.0
+Terminal precision: 0.9824561403508771
+Generated reward: [-0.90578393]
+Generated terminal: [-0.04882759]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:10:09,292:GAIRL:INFO: Current model step: 85500
+
+Train -----------Set size: 56955
+State loss: 0.0812474513874057
+Reward loss: 0.0887938287266973
+Terminal loss: 0.0821363730093242
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-1.09888016]
+Generated terminal: [0.0641714]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10289407382893075
+Reward loss: 0.11996562836641533
+Terminal loss: 0.11461588781759872
+Terminal recall: 0.9927536231884058
+Terminal precision: 1.0
+Generated reward: [-1.01466593]
+Generated terminal: [-0.10817222]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:10:13,688:GAIRL:INFO: Current model step: 86000
+
+Train -----------Set size: 56955
+State loss: 0.08103392534507235
+Reward loss: 0.08864241297048153
+Terminal loss: 0.08417547914968249
+Terminal recall: 0.9900990099009901
+Terminal precision: 0.970873786407767
+Generated reward: [0.15537734]
+Generated terminal: [1.02585222]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09970369379208781
+Reward loss: 0.11585686707094843
+Terminal loss: 0.11302878753276838
+Terminal recall: 0.992
+Terminal precision: 0.9612403100775194
+Generated reward: [-0.14767618]
+Generated terminal: [0.95382725]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:10:17,411:GAIRL:INFO: Current model step: 86500
+
+Train -----------Set size: 56955
+State loss: 0.08432149715475484
+Reward loss: 0.09075133620854156
+Terminal loss: 0.08388092415398563
+Terminal recall: 1.0
+Terminal precision: 0.9831932773109243
+Generated reward: [-0.00159285]
+Generated terminal: [1.21973398]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09906842339950038
+Reward loss: 0.11217700107998328
+Terminal loss: 0.11542944859678161
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-0.88517052]
+Generated terminal: [0.52935797]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:10:21,402:GAIRL:INFO: Current model step: 87000
+
+Train -----------Set size: 56955
+State loss: 0.08112534241727144
+Reward loss: 0.0893683206593674
+Terminal loss: 0.09994706076142476
+Terminal recall: 1.0
+Terminal precision: 0.9833333333333333
+Generated reward: [0.0480278]
+Generated terminal: [0.83990077]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.10142723416923433
+Reward loss: 0.11505289107204163
+Terminal loss: 0.12117446545413724
+Terminal recall: 0.9833333333333333
+Terminal precision: 0.9833333333333333
+Generated reward: [-0.99369502]
+Generated terminal: [-0.04352121]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:10:24,990:GAIRL:INFO: Current model step: 87500
+
+Train -----------Set size: 56955
+State loss: 0.08390511067323557
+Reward loss: 0.08899894279761877
+Terminal loss: 0.07935731589198985
+Terminal recall: 0.9917355371900827
+Terminal precision: 0.9917355371900827
+Generated reward: [-0.52756696]
+Generated terminal: [0.40917972]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09867901879240992
+Reward loss: 0.10837091131465965
+Terminal loss: 0.10230805011066066
+Terminal recall: 1.0
+Terminal precision: 0.9923076923076923
+Generated reward: [-0.15646977]
+Generated terminal: [1.00773255]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:10:29,854:GAIRL:INFO: Current model step: 88000
+
+Train -----------Set size: 56955
+State loss: 0.08535811621481341
+Reward loss: 0.09436198228560468
+Terminal loss: 0.09981774445579245
+Terminal recall: 1.0
+Terminal precision: 0.983739837398374
+Generated reward: [0.27368052]
+Generated terminal: [0.82605862]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09565158127331748
+Reward loss: 0.11534790205054793
+Terminal loss: 0.11555377297253398
+Terminal recall: 0.9915254237288136
+Terminal precision: 0.9831932773109243
+Generated reward: [-0.28644256]
+Generated terminal: [0.85591111]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:10:33,488:GAIRL:INFO: Current model step: 88500
+
+Train -----------Set size: 56955
+State loss: 0.08006111919511959
+Reward loss: 0.09319719273176194
+Terminal loss: 0.08487809559328567
+Terminal recall: 0.9903846153846154
+Terminal precision: 0.9903846153846154
+Generated reward: [0.02150147]
+Generated terminal: [0.92708113]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.10158011312906491
+Reward loss: 0.08922216372222898
+Terminal loss: 0.1035171846926822
+Terminal recall: 0.9609375
+Terminal precision: 0.9919354838709677
+Generated reward: [-0.36383712]
+Generated terminal: [0.71184886]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:10:37,969:GAIRL:INFO: Current model step: 89000
+
+Train -----------Set size: 56955
+State loss: 0.08491241795290093
+Reward loss: 0.08941676879796556
+Terminal loss: 0.09366032834241503
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-0.96707673]
+Generated terminal: [0.05982458]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09516072873886933
+Reward loss: 0.10809959045431408
+Terminal loss: 0.10842602835518825
+Terminal recall: 1.0
+Terminal precision: 0.9824561403508771
+Generated reward: [0.0007965]
+Generated terminal: [1.06812226]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:10:41,634:GAIRL:INFO: Current model step: 89500
+
+Train -----------Set size: 56955
+State loss: 0.0807386539122264
+Reward loss: 0.09485196661008985
+Terminal loss: 0.08421033261923364
+Terminal recall: 1.0
+Terminal precision: 0.990990990990991
+Generated reward: [-0.89009409]
+Generated terminal: [0.01943461]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.1016297517326183
+Reward loss: 0.11690053372928146
+Terminal loss: 0.11876527724017863
+Terminal recall: 0.9722222222222222
+Terminal precision: 0.9813084112149533
+Generated reward: [-0.0977844]
+Generated terminal: [0.7759876]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:10:46,095:GAIRL:INFO: Current model step: 90000
+
+Train -----------Set size: 56955
+State loss: 0.08679639817766895
+Reward loss: 0.09335487751916409
+Terminal loss: 0.0904121954532531
+Terminal recall: 1.0
+Terminal precision: 0.9834710743801653
+Generated reward: [-1.10339452]
+Generated terminal: [0.00974176]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09458114911455771
+Reward loss: 0.11538480283560765
+Terminal loss: 0.12202781835612783
+Terminal recall: 0.9809523809523809
+Terminal precision: 0.9716981132075472
+Generated reward: [-1.00279774]
+Generated terminal: [0.02028933]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:10:49,614:GAIRL:INFO: Current model step: 90500
+
+Train -----------Set size: 56955
+State loss: 0.08468776793001025
+Reward loss: 0.0870565562081086
+Terminal loss: 0.08407069734671202
+Terminal recall: 0.9911504424778761
+Terminal precision: 0.9824561403508771
+Generated reward: [-0.91845105]
+Generated terminal: [-0.03773201]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.1017749521316504
+Reward loss: 0.12093440849717943
+Terminal loss: 0.11896799652459719
+Terminal recall: 0.991869918699187
+Terminal precision: 0.9838709677419355
+Generated reward: [-0.19240211]
+Generated terminal: [0.58031655]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:10:53,616:GAIRL:INFO: Current model step: 91000
+
+Train -----------Set size: 56955
+State loss: 0.08060844909656846
+Reward loss: 0.09135336999695164
+Terminal loss: 0.09356362784830122
+Terminal recall: 0.9920634920634921
+Terminal precision: 0.9765625
+Generated reward: [-0.97768992]
+Generated terminal: [0.03552201]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09852516696393661
+Reward loss: 0.1136763718330939
+Terminal loss: 0.10855820907136476
+Terminal recall: 0.9767441860465116
+Terminal precision: 0.9921259842519685
+Generated reward: [0.46209521]
+Generated terminal: [1.31837239]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:10:57,325:GAIRL:INFO: Current model step: 91500
+
+Train -----------Set size: 56955
+State loss: 0.08358068319469163
+Reward loss: 0.08392002280467678
+Terminal loss: 0.0880003962408139
+Terminal recall: 1.0
+Terminal precision: 0.9907407407407407
+Generated reward: [-0.92364324]
+Generated terminal: [0.00758892]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10061512913192176
+Reward loss: 0.10420992193635535
+Terminal loss: 0.1105459425184818
+Terminal recall: 0.9911504424778761
+Terminal precision: 0.9824561403508771
+Generated reward: [-1.02349693]
+Generated terminal: [0.07734624]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:11:01,355:GAIRL:INFO: Current model step: 92000
+
+Train -----------Set size: 56955
+State loss: 0.08471991369161151
+Reward loss: 0.08937188093969131
+Terminal loss: 0.08381765911287564
+Terminal recall: 1.0
+Terminal precision: 0.9739130434782609
+Generated reward: [-0.14205223]
+Generated terminal: [1.06950439]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.10079915997801303
+Reward loss: 0.11360890267760856
+Terminal loss: 0.11016233293187463
+Terminal recall: 0.9732142857142857
+Terminal precision: 0.9819819819819819
+Generated reward: [-0.32882102]
+Generated terminal: [1.11109532]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:11:04,842:GAIRL:INFO: Current model step: 92500
+
+Train -----------Set size: 56955
+State loss: 0.08229188442106314
+Reward loss: 0.09687449052330657
+Terminal loss: 0.10046732916885005
+Terminal recall: 1.0
+Terminal precision: 0.9572649572649573
+Generated reward: [-0.32215815]
+Generated terminal: [0.70949843]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.10043243712299955
+Reward loss: 0.11442482786208406
+Terminal loss: 0.12310363735423265
+Terminal recall: 0.9927007299270073
+Terminal precision: 0.9577464788732394
+Generated reward: [-0.31240867]
+Generated terminal: [0.79769756]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:11:08,916:GAIRL:INFO: Current model step: 93000
+
+Train -----------Set size: 56955
+State loss: 0.08296388025766319
+Reward loss: 0.09798894933658893
+Terminal loss: 0.09848902863358466
+Terminal recall: 1.0
+Terminal precision: 0.981651376146789
+Generated reward: [0.0915645]
+Generated terminal: [0.82223856]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09900853959260941
+Reward loss: 0.10941697007764958
+Terminal loss: 0.1137818756333881
+Terminal recall: 0.984251968503937
+Terminal precision: 0.984251968503937
+Generated reward: [0.17475448]
+Generated terminal: [1.24008138]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:11:12,316:GAIRL:INFO: Current model step: 93500
+
+Train -----------Set size: 56955
+State loss: 0.08431592392626157
+Reward loss: 0.09730818829220914
+Terminal loss: 0.10345457090014752
+Terminal recall: 1.0
+Terminal precision: 0.975609756097561
+Generated reward: [-0.98339684]
+Generated terminal: [-0.01530673]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09656377221044678
+Reward loss: 0.10179028642667357
+Terminal loss: 0.1114784537348687
+Terminal recall: 0.991869918699187
+Terminal precision: 0.991869918699187
+Generated reward: [-0.92419206]
+Generated terminal: [0.06011174]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:11:16,574:GAIRL:INFO: Current model step: 94000
+
+Train -----------Set size: 56955
+State loss: 0.08449393272201566
+Reward loss: 0.09540213469597844
+Terminal loss: 0.08156452324284791
+Terminal recall: 1.0
+Terminal precision: 0.9915966386554622
+Generated reward: [-0.10372555]
+Generated terminal: [1.12078094]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.10046579718958197
+Reward loss: 0.12192221375240554
+Terminal loss: 0.12762461094436048
+Terminal recall: 0.9915966386554622
+Terminal precision: 0.9752066115702479
+Generated reward: [-0.20773054]
+Generated terminal: [0.94640013]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:11:20,165:GAIRL:INFO: Current model step: 94500
+
+Train -----------Set size: 56955
+State loss: 0.0758737995542263
+Reward loss: 0.08701507118552632
+Terminal loss: 0.080015666867969
+Terminal recall: 1.0
+Terminal precision: 0.9805825242718447
+Generated reward: [-1.12916197]
+Generated terminal: [-0.02503289]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.093092345491657
+Reward loss: 0.10403037052192306
+Terminal loss: 0.107741508392046
+Terminal recall: 0.9743589743589743
+Terminal precision: 0.9827586206896551
+Generated reward: [-0.8767928]
+Generated terminal: [-0.02331757]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:11:24,681:GAIRL:INFO: Current model step: 95000
+
+Train -----------Set size: 56955
+State loss: 0.07802821551636328
+Reward loss: 0.08601371866791718
+Terminal loss: 0.08965316749254348
+Terminal recall: 1.0
+Terminal precision: 0.9831932773109243
+Generated reward: [-0.87922901]
+Generated terminal: [0.00608492]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09611837734903701
+Reward loss: 0.10549606282280306
+Terminal loss: 0.11806697219795564
+Terminal recall: 0.9918032786885246
+Terminal precision: 0.968
+Generated reward: [0.25966485]
+Generated terminal: [0.72276318]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:11:28,096:GAIRL:INFO: Current model step: 95500
+
+Train -----------Set size: 56955
+State loss: 0.07856128965021658
+Reward loss: 0.08370119029630171
+Terminal loss: 0.08328006303517482
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-0.94507208]
+Generated terminal: [0.04996181]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10569749749034056
+Reward loss: 0.11404221533119983
+Terminal loss: 0.12245618950153786
+Terminal recall: 0.9836065573770492
+Terminal precision: 0.975609756097561
+Generated reward: [-0.95860765]
+Generated terminal: [0.20934268]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:11:32,135:GAIRL:INFO: Current model step: 96000
+
+Train -----------Set size: 56955
+State loss: 0.08291955900928541
+Reward loss: 0.09041868978720236
+Terminal loss: 0.08700804961803008
+Terminal recall: 0.991304347826087
+Terminal precision: 0.9827586206896551
+Generated reward: [0.05657804]
+Generated terminal: [0.90574071]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.10003284109128945
+Reward loss: 0.1295428358430371
+Terminal loss: 0.1269600546859004
+Terminal recall: 0.968503937007874
+Terminal precision: 0.9609375
+Generated reward: [-0.92435546]
+Generated terminal: [0.05438322]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:11:35,600:GAIRL:INFO: Current model step: 96500
+
+Train -----------Set size: 56955
+State loss: 0.0835244850802921
+Reward loss: 0.10158517882772652
+Terminal loss: 0.10802856341417622
+Terminal recall: 1.0
+Terminal precision: 0.9557522123893806
+Generated reward: [-0.96931849]
+Generated terminal: [-0.09285867]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09842391464623369
+Reward loss: 0.11476519450161282
+Terminal loss: 0.126404766042151
+Terminal recall: 0.9583333333333334
+Terminal precision: 0.9829059829059829
+Generated reward: [-0.9518165]
+Generated terminal: [-0.0932381]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:11:39,747:GAIRL:INFO: Current model step: 97000
+
+Train -----------Set size: 56955
+State loss: 0.08023778133720576
+Reward loss: 0.08522310985845921
+Terminal loss: 0.08545398528020975
+Terminal recall: 1.0
+Terminal precision: 0.990909090909091
+Generated reward: [-0.80692298]
+Generated terminal: [0.03655196]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09436095946825256
+Reward loss: 0.10268819437959296
+Terminal loss: 0.09957157338076011
+Terminal recall: 0.9823008849557522
+Terminal precision: 0.9736842105263158
+Generated reward: [0.2362831]
+Generated terminal: [1.23701349]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:11:43,221:GAIRL:INFO: Current model step: 97500
+
+Train -----------Set size: 56955
+State loss: 0.08154686001958882
+Reward loss: 0.10181139115496587
+Terminal loss: 0.09462409500576151
+Terminal recall: 1.0
+Terminal precision: 0.9672131147540983
+Generated reward: [-0.93870171]
+Generated terminal: [0.01213036]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09671008570519575
+Reward loss: 0.11069338647692377
+Terminal loss: 0.11082755311474335
+Terminal recall: 1.0
+Terminal precision: 0.9689922480620154
+Generated reward: [-0.21107575]
+Generated terminal: [0.84191595]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:11:47,512:GAIRL:INFO: Current model step: 98000
+
+Train -----------Set size: 56955
+State loss: 0.08406953186808497
+Reward loss: 0.09582857183151036
+Terminal loss: 0.08803009575306049
+Terminal recall: 1.0
+Terminal precision: 0.9739130434782609
+Generated reward: [-1.08075546]
+Generated terminal: [0.03290692]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09625719739431304
+Reward loss: 0.11852834643507884
+Terminal loss: 0.11424368672793493
+Terminal recall: 0.9830508474576272
+Terminal precision: 0.9830508474576272
+Generated reward: [-1.06159065]
+Generated terminal: [0.06461792]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:11:51,175:GAIRL:INFO: Current model step: 98500
+
+Train -----------Set size: 56955
+State loss: 0.08175758003208965
+Reward loss: 0.09295361526596954
+Terminal loss: 0.089755526000136
+Terminal recall: 1.0
+Terminal precision: 1.0
+Generated reward: [-0.91955943]
+Generated terminal: [0.06205557]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.0963425946326089
+Reward loss: 0.12103899106354885
+Terminal loss: 0.1227383096548178
+Terminal recall: 0.9915254237288136
+Terminal precision: 0.975
+Generated reward: [0.31596177]
+Generated terminal: [1.05605254]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:11:55,302:GAIRL:INFO: Current model step: 99000
+
+Train -----------Set size: 56955
+State loss: 0.08016530177188663
+Reward loss: 0.08357904548070211
+Terminal loss: 0.08837576976043113
+Terminal recall: 1.0
+Terminal precision: 0.9724770642201835
+Generated reward: [-0.97775772]
+Generated terminal: [-0.00236971]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.09852633104413015
+Reward loss: 0.10650563137074126
+Terminal loss: 0.1161015484177626
+Terminal recall: 0.983739837398374
+Terminal precision: 0.9918032786885246
+Generated reward: [0.17361617]
+Generated terminal: [1.00554445]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+--------------------------------------------------
+
+2019-03-08 23:11:58,760:GAIRL:INFO: Current model step: 99500
+
+Train -----------Set size: 56955
+State loss: 0.08290112636961317
+Reward loss: 0.09876908846110866
+Terminal loss: 0.09219362905309944
+Terminal recall: 1.0
+Terminal precision: 0.9838709677419355
+Generated reward: [-0.94341504]
+Generated terminal: [0.11070245]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+Test -----------
+Set size: 15122
+State loss: 0.10550254915764413
+Reward loss: 0.1233849390138792
+Terminal loss: 0.11488523730019436
+Terminal recall: 0.9609375
+Terminal precision: 0.9919354838709677
+Generated reward: [-0.97397172]
+Generated terminal: [-0.01277229]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:12:03,612:GAIRL:INFO: Current model step: 100000
+
+Train -----------Set size: 56955
+State loss: 0.08276826637049588
+Reward loss: 0.08927113643536634
+Terminal loss: 0.09572556579043019
+Terminal recall: 1.0
+Terminal precision: 0.963963963963964
+Generated reward: [0.05559667]
+Generated terminal: [1.00539967]
+Expected reward: [0.]
+Expected terminal: [ True]
+
+Test -----------
+Set size: 15122
+State loss: 0.09966001747829295
+Reward loss: 0.12144698839403817
+Terminal loss: 0.12148623907075343
+Terminal recall: 0.9811320754716981
+Terminal precision: 0.9719626168224299
+Generated reward: [-0.9222297]
+Generated terminal: [-0.00668326]
+Expected reward: [-1.]
+Expected terminal: [False]
+
+--------------------------------------------------
+
+2019-03-08 23:12:03,612:GAIRL:INFO: 
+******************************************************
+
+
+******************************************************
+************  Back to real environment  **************
+******************************************************
+

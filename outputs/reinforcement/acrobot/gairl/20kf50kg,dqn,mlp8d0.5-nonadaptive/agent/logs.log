@@ -1,0 +1,2659 @@
+2019-03-08 18:30:35,491:GAIRL - dqn:INFO: 
+Creating DQN Agent with:
+Input size 6
+Hidden layers: [24, 24]
+Outputs number: 3
+Activation function: leaky_relu
+Optimizer: GradientDescentOptimizer
+Gradient clip: 1
+Discount factor: 0.99
+Starting epsilon: 1
+Epsilon warmup period: 1000
+Ending epsilon: 0.05
+Epsilon decay period: 10000
+Replay buffer: ReplayBuffer(max_capacity=10000, min_capacity=512, replay_batch_size=256)
+Update frequency: 4
+Target update frequency: 500
+2019-03-08 18:30:35,827:GAIRL - dqn:INFO: Saving the model
+2019-03-08 18:30:36,773:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 499
+Previous state: [ 0.38552633 -0.92269684 -0.22872199  0.97349178  0.99493495  0.25968869]
+Previous online qs: [[4.68271540e-05 3.64601543e-05 4.57366098e-05]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -500.0
+***
+Current step: 500
+Is terminal: False
+Current state: [ 0.64808119 -0.76157125 -0.13185452  0.99126908  2.05506116 -1.27452032]
+Current online qs: [4.68271540e-05 3.64601543e-05 4.57366098e-05]
+Current target qs: [4.64660791e-05 2.35015469e-05 3.91491690e-05]
+Current real qs: 4.646607907205906e-05
+Chosen action: 1
+Current sample loss: 0.9999994703830453
+***
+Episodes so far: 0
+Average episode length: 0.0
+Average reward over last 100 episodes: -500.0
+Current epsilon: 1
+
+2019-03-08 18:30:37,653:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 999
+Previous state: [-0.05911769  0.99825102  0.84201926 -0.53944746 -0.33507868  3.56104292]
+Previous online qs: [[-0.22759044 -0.2276029  -0.24140218]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -1000.0
+***
+Current step: 1000
+Is terminal: False
+Current state: [ 0.16020001  0.98708457  0.9565834   0.29145876 -1.79035474  4.97477419]
+Current online qs: [-0.22759044 -0.2276029  -0.24140218]
+Current target qs: [5.30485216e-01 2.35017690e-05 3.91491510e-05]
+Current real qs: 0.5304852163202404
+Chosen action: 0
+Current sample loss: 0.05448370827270959
+***
+Episodes so far: 0
+Average episode length: 0.0
+Average reward over last 100 episodes: -1000.0
+Current epsilon: 1
+
+2019-03-08 18:30:37,654:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:37,760:GAIRL - dqn:INFO: Training with loss: 0.9861433595593013
+----------------------------------------------------
+
+2019-03-08 18:30:38,495:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 1499
+Previous state: [ 0.83234431  0.55425893  0.9053102  -0.42475104 -0.11891783  3.30854698]
+Previous online qs: [[-0.44982937 -0.46269769 -0.48056917]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -472.0
+***
+Current step: 1500
+Is terminal: False
+Current state: [ 0.87871355  0.47734946  0.96349227  0.26773616 -0.69403293  3.60153509]
+Current online qs: [-0.44982937 -0.46269769 -0.48056917]
+Current target qs: [ 0.30767673 -0.2276029  -0.24140218]
+Current real qs: 0.30767672882739705
+Chosen action: 0
+Current sample loss: 0.06030495086915062
+***
+Episodes so far: 1
+Average episode length: 1028.0
+Average reward over last 100 episodes: -749.5
+Current epsilon: 0.9525950000000218
+
+2019-03-08 18:30:38,496:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:38,500:GAIRL - dqn:INFO: Training with loss: 0.9577090866105449
+----------------------------------------------------
+
+2019-03-08 18:30:39,179:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 1999
+Previous state: [ 0.97232757  0.23362168  0.96273197  0.2704573   3.22551381 -2.34756227]
+Previous online qs: [[-0.68327228 -0.68516545 -0.71017367]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -972.0
+***
+Current step: 2000
+Is terminal: False
+Current state: [ 0.68302919  0.73039107  0.98963367 -0.14361473  2.48050692 -1.62905529]
+Current online qs: [-0.68327228 -0.68516545 -0.71017367]
+Current target qs: [ 0.08148663 -0.46269769 -0.48056916]
+Current real qs: 0.08148662992414608
+Chosen action: 2
+Current sample loss: 0.04374563088684742
+***
+Episodes so far: 1
+Average episode length: 1028.0
+Average reward over last 100 episodes: -999.5
+Current epsilon: 0.9050950000000437
+
+2019-03-08 18:30:39,180:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:39,183:GAIRL - dqn:INFO: Training with loss: 0.9662640275971276
+----------------------------------------------------
+
+2019-03-08 18:30:39,880:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 2499
+Previous state: [ 0.98134783 -0.19224057 -0.08118056 -0.99669941  2.7231042  -1.3476729 ]
+Previous online qs: [[-0.92015261 -0.91572384 -0.93088587]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -1472.0
+***
+Current step: 2500
+Is terminal: False
+Current state: [ 0.94525795  0.32632408 -0.18222986 -0.98325596  2.3848319   0.44777546]
+Current online qs: [-0.92015261 -0.91572384 -0.93088587]
+Current target qs: [-0.15100937 -0.68516544 -0.71017367]
+Current real qs: -0.15100936625838365
+Chosen action: 1
+Current sample loss: 0.04779181858294665
+***
+Episodes so far: 1
+Average episode length: 1028.0
+Average reward over last 100 episodes: -1249.5
+Current epsilon: 0.8575950000000656
+
+2019-03-08 18:30:39,881:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:39,884:GAIRL - dqn:INFO: Training with loss: 0.9685024506200195
+----------------------------------------------------
+
+2019-03-08 18:30:40,616:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 2999
+Previous state: [ 0.36814118  0.9297699  -0.13182143 -0.99127348  1.86901276 -5.05370132]
+Previous online qs: [[-1.15113113 -1.15381009 -1.15080542]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -1972.0
+***
+Current step: 3000
+Is terminal: False
+Current state: [ 0.16147142  0.98687739 -0.81029109 -0.5860276   0.31072285 -3.15898673]
+Current online qs: [-1.15113113 -1.15381009 -1.15080542]
+Current target qs: [-0.92015259 -0.38326902 -0.93088586]
+Current real qs: -0.3832690237393898
+Chosen action: 0
+Current sample loss: 0.05090720329827061
+***
+Episodes so far: 1
+Average episode length: 1028.0
+Average reward over last 100 episodes: -1499.5
+Current epsilon: 0.8100950000000875
+
+2019-03-08 18:30:40,617:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:40,620:GAIRL - dqn:INFO: Training with loss: 0.9748561867221787
+----------------------------------------------------
+
+2019-03-08 18:30:41,354:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 3499
+Previous state: [ 0.54554361 -0.83808244 -0.59495104  0.80376194 -2.54936392  3.58383064]
+Previous online qs: [[-1.38340716 -1.38610232 -1.37805504]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -2472.0
+***
+Current step: 3500
+Is terminal: False
+Current state: [ 0.16946324 -0.98553651 -0.9306073   0.3660192  -1.48314849  2.05747054]
+Current online qs: [-1.38340716 -1.38610232 -1.37805504]
+Current target qs: [-1.1511311  -1.15381005 -0.61726472]
+Current real qs: -0.6172647237172726
+Chosen action: 2
+Current sample loss: 0.054306260342061555
+***
+Episodes so far: 1
+Average episode length: 1028.0
+Average reward over last 100 episodes: -1749.5
+Current epsilon: 0.7625950000001094
+
+2019-03-08 18:30:41,355:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:41,358:GAIRL - dqn:INFO: Training with loss: 0.963451899202497
+----------------------------------------------------
+
+2019-03-08 18:30:42,132:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 3999
+Previous state: [ 0.80902359 -0.58777617  0.66967856  0.74265108 -1.20633903  1.20588611]
+Previous online qs: [[-1.61085974 -1.61075634 -1.61230804]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -226.0
+***
+Current step: 4000
+Is terminal: False
+Current state: [ 0.71099821 -0.70319381  0.58559446  0.81060417 -0.28783421 -0.12749069]
+Current online qs: [-1.61085974 -1.61075634 -1.61230804]
+Current target qs: [-1.38340708 -1.38610224 -0.84644719]
+Current real qs: -0.8464471894281739
+Chosen action: 1
+Current sample loss: 0.051631826558425985
+***
+Episodes so far: 2
+Average episode length: 1887.0
+Average reward over last 100 episodes: -1332.6666666666667
+Current epsilon: 0.7150950000001313
+
+2019-03-08 18:30:42,132:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:42,136:GAIRL - dqn:INFO: Training with loss: 0.9669065430289935
+----------------------------------------------------
+
+2019-03-08 18:30:42,892:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 4499
+Previous state: [ 0.99795074  0.06398689  0.57988738  0.81469665 -2.35966042  2.31256865]
+Previous online qs: [[-1.84513684 -1.8382043  -1.83831731]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -726.0
+***
+Current step: 4500
+Is terminal: False
+Current state: [ 0.93114806 -0.36464132  0.30913583  0.9510179  -1.92351294  0.65650099]
+Current online qs: [-1.84513684 -1.8382043  -1.83831731]
+Current target qs: [-1.61085954 -1.0786103  -1.61230785]
+Current real qs: -1.0786102960271928
+Chosen action: 0
+Current sample loss: 0.04958965536078551
+***
+Episodes so far: 2
+Average episode length: 1887.0
+Average reward over last 100 episodes: -1499.3333333333333
+Current epsilon: 0.6675950000001531
+
+2019-03-08 18:30:42,893:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:42,896:GAIRL - dqn:INFO: Training with loss: 0.9591672889187618
+----------------------------------------------------
+
+2019-03-08 18:30:43,622:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 4999
+Previous state: [ 0.91811794 -0.39630726  0.78569297  0.61861664  0.82169916 -0.89439692]
+Previous online qs: [[-2.07045691 -2.07264712 -2.06254579]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -87.0
+***
+Current step: 5000
+Is terminal: False
+Current state: [ 0.97924276 -0.20269096  0.90954238  0.41561118  1.16872133 -1.43127169]
+Current online qs: [-2.07045691 -2.07264712 -2.06254579]
+Current target qs: [-1.84513641 -1.30736813 -1.83831689]
+Current real qs: -1.307368128035792
+Chosen action: 2
+Current sample loss: 0.05370744051328218
+***
+Episodes so far: 3
+Average episode length: 1637.6666666666667
+Average reward over last 100 episodes: -1249.25
+Current epsilon: 0.620095000000175
+
+2019-03-08 18:30:43,623:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:43,626:GAIRL - dqn:INFO: Training with loss: 0.947273321573811
+----------------------------------------------------
+
+2019-03-08 18:30:44,434:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 5499
+Previous state: [ 0.92649487 -0.37630739  0.98829816  0.15253441 -2.27824     4.80587564]
+Previous online qs: [[-2.29339177 -2.29302648 -2.29650582]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -587.0
+***
+Current step: 5500
+Is terminal: False
+Current state: [ 0.71826459 -0.69577006  0.5192445   0.85462574 -1.45602581  3.72476609]
+Current online qs: [-2.29339177 -2.29302648 -2.29650582]
+Current target qs: [-2.070456   -2.0726462  -1.53367177]
+Current real qs: -1.5336717695045963
+Chosen action: 1
+Current sample loss: 0.04920820690717224
+***
+Episodes so far: 3
+Average episode length: 1637.6666666666667
+Average reward over last 100 episodes: -1374.25
+Current epsilon: 0.5725950000001969
+
+2019-03-08 18:30:44,434:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:44,440:GAIRL - dqn:INFO: Training with loss: 0.9520603786640288
+----------------------------------------------------
+
+2019-03-08 18:30:45,555:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 5999
+Previous state: [ 0.87606663  0.48219007  0.8243073  -0.56614263 -3.09222977  1.29323079]
+Previous online qs: [[-2.52032016 -2.51814448 -2.52512835]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -1087.0
+***
+Current step: 6000
+Is terminal: False
+Current state: [ 0.98739787 -0.1582575   0.97032518 -0.24180373 -3.37332489  2.0766703 ]
+Current online qs: [-2.52032016 -2.51814448 -2.52512835]
+Current target qs: [-2.29338971 -1.76328204 -2.29650376]
+Current real qs: -1.7632820366846091
+Chosen action: 2
+Current sample loss: 0.0507731814670877
+***
+Episodes so far: 3
+Average episode length: 1637.6666666666667
+Average reward over last 100 episodes: -1499.25
+Current epsilon: 0.5250950000002188
+
+2019-03-08 18:30:45,556:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:45,561:GAIRL - dqn:INFO: Training with loss: 0.9443994166263847
+----------------------------------------------------
+
+2019-03-08 18:30:46,808:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 6499
+Previous state: [ 0.98452343  0.17525303  0.45926373 -0.88829996 -1.17928829  1.43247713]
+Previous online qs: [[-2.74362446 -2.74911967 -2.74725289]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -359.0
+***
+Current step: 6500
+Is terminal: False
+Current state: [ 0.99562902 -0.09339625  0.77874537 -0.62734013 -1.47445018  2.66348233]
+Current online qs: [-2.74362446 -2.74911967 -2.74725289]
+Current target qs: [-2.52031565 -1.98975087 -2.52512383]
+Current real qs: -1.9897508724112027
+Chosen action: 0
+Current sample loss: 0.04955096868905033
+***
+Episodes so far: 4
+Average episode length: 1535.25
+Average reward over last 100 episodes: -1299.2
+Current epsilon: 0.4775950000002276
+
+2019-03-08 18:30:46,809:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:46,813:GAIRL - dqn:INFO: Training with loss: 0.9402639942305729
+----------------------------------------------------
+
+2019-03-08 18:30:47,722:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 6999
+Previous state: [ 0.94782044  0.31880468  0.9186081  -0.39516978  0.54370303 -0.54891569]
+Previous online qs: [[-2.9734996  -2.96975564 -2.97027244]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -137.0
+***
+Current step: 7000
+Is terminal: False
+Current state: [ 0.92753961  0.37372486  0.90432436 -0.42684594  0.03071609  0.21138459]
+Current online qs: [-2.9734996  -2.96975564 -2.97027244]
+Current target qs: [-2.21590172 -2.74910973 -2.74724306]
+Current real qs: -2.2159017245799033
+Chosen action: 1
+Current sample loss: 0.050170207322567134
+***
+Episodes so far: 5
+Average episode length: 1372.6
+Average reward over last 100 episodes: -1165.8333333333333
+Current epsilon: 0.4300950000002217
+
+2019-03-08 18:30:47,723:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:47,727:GAIRL - dqn:INFO: Training with loss: 0.938921883729225
+----------------------------------------------------
+
+2019-03-08 18:30:48,566:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 7499
+Previous state: [ 0.7559058   0.6546804   0.82192116 -0.56960128  0.05881549 -0.23507831]
+Previous online qs: [[-3.19552017 -3.19287629 -3.19877215]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -637.0
+***
+Current step: 7500
+Is terminal: False
+Current state: [ 0.80384532  0.59483838  0.85627633 -0.516518   -0.8133028   0.85883767]
+Current online qs: [-3.19552017 -3.19287629 -3.19877215]
+Current target qs: [-2.97347803 -2.44225201 -2.97025108]
+Current real qs: -2.4422520122653455
+Chosen action: 0
+Current sample loss: 0.05060394486716409
+***
+Episodes so far: 5
+Average episode length: 1372.6
+Average reward over last 100 episodes: -1249.1666666666667
+Current epsilon: 0.38259500000021585
+
+2019-03-08 18:30:48,567:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:48,571:GAIRL - dqn:INFO: Training with loss: 0.9316659496337676
+----------------------------------------------------
+
+2019-03-08 18:30:49,406:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 7999
+Previous state: [ 0.99758952  0.06939125  0.99321539 -0.11628926  1.61858527 -3.30614472]
+Previous online qs: [[-3.41856461 -3.42145383 -3.41676116]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -1137.0
+***
+Current step: 8000
+Is terminal: False
+Current state: [ 0.93122292  0.36445009  0.73337395 -0.67982546  1.33311594 -2.8423509 ]
+Current online qs: [-3.41856461 -3.42145383 -3.41676116]
+Current target qs: [-3.19547359 -2.66650048 -3.19872545]
+Current real qs: -2.6665004837738793
+Chosen action: 2
+Current sample loss: 0.04896079875404103
+***
+Episodes so far: 5
+Average episode length: 1372.6
+Average reward over last 100 episodes: -1332.5
+Current epsilon: 0.33509500000021
+
+2019-03-08 18:30:49,407:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:49,410:GAIRL - dqn:INFO: Training with loss: 0.9285817868297802
+----------------------------------------------------
+
+2019-03-08 18:30:50,238:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 8499
+Previous state: [ 0.97139533  0.23746811  0.87744438 -0.47967839 -0.79407882  1.08246156]
+Previous online qs: [[-3.64126236 -3.64217108 -3.64262799]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -148.0
+***
+Current step: 8500
+Is terminal: False
+Current state: [ 0.99797277  0.06364232  0.96756909 -0.25260653 -0.92467543  1.30023074]
+Current online qs: [-3.64126236 -3.64217108 -3.64262799]
+Current target qs: [-3.41846466 -3.42135335 -2.89095623]
+Current real qs: -2.8909562312420674
+Chosen action: 0
+Current sample loss: 0.04874570922496155
+***
+Episodes so far: 6
+Average episode length: 1392.0
+Average reward over last 100 episodes: -1213.4285714285713
+Current epsilon: 0.2875950000002041
+
+2019-03-08 18:30:50,239:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:50,243:GAIRL - dqn:INFO: Training with loss: 0.9270633251099119
+----------------------------------------------------
+
+2019-03-08 18:30:51,078:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 8999
+Previous state: [ 0.70219422  0.71198545  0.95742381 -0.28868607  0.98589249 -2.27018511]
+Previous online qs: [[-3.86222786 -3.86253891 -3.87110528]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -648.0
+***
+Current step: 9000
+Is terminal: False
+Current state: [ 0.62146138  0.7834448   0.78312201 -0.62186809  0.06660215 -1.45852227]
+Current online qs: [-3.86222786 -3.86253891 -3.87110528]
+Current target qs: [-3.11547385 -3.64195293 -3.64240965]
+Current real qs: -3.1154738539952445
+Chosen action: 0
+Current sample loss: 0.049324524873569565
+***
+Episodes so far: 6
+Average episode length: 1392.0
+Average reward over last 100 episodes: -1284.857142857143
+Current epsilon: 0.24009500000019823
+
+2019-03-08 18:30:51,079:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:51,082:GAIRL - dqn:INFO: Training with loss: 0.9196612603606054
+----------------------------------------------------
+
+2019-03-08 18:30:51,921:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 9499
+Previous state: [ 0.99360959 -0.11287151 -0.98806322  0.15404892 -1.26168444 -0.88942948]
+Previous online qs: [[-4.08804267 -4.08625505 -4.09020369]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -1148.0
+***
+Current step: 9500
+Is terminal: False
+Current state: [ 0.94256417 -0.33402513 -0.92809107  0.37235328 -0.96131366 -1.46598248]
+Current online qs: [-4.08804267 -4.08625505 -4.09020369]
+Current target qs: [-3.33756773 -3.86207428 -3.8706353 ]
+Current real qs: -3.337567731741691
+Chosen action: 1
+Current sample loss: 0.047496535897798356
+***
+Episodes so far: 6
+Average episode length: 1392.0
+Average reward over last 100 episodes: -1356.2857142857142
+Current epsilon: 0.19259500000019236
+
+2019-03-08 18:30:51,922:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:51,926:GAIRL - dqn:INFO: Training with loss: 0.9165819627798476
+----------------------------------------------------
+
+2019-03-08 18:30:52,826:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 9999
+Previous state: [ 0.87428918  0.48540543  0.99750155 -0.0706446  -0.70078263  2.261958  ]
+Previous online qs: [[-4.31412436 -4.31179347 -4.31105404]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -431.0
+***
+Current step: 10000
+Is terminal: False
+Current state: [ 0.95465426  0.29771672  0.90207458  0.43158017 -1.28151891  2.77442552]
+Current online qs: [-4.31412436 -4.31179347 -4.31105404]
+Current target qs: [-4.08703764 -3.56117309 -4.08920095]
+Current real qs: -3.5611730935590846
+Chosen action: 2
+Current sample loss: 0.04601339062084088
+***
+Episodes so far: 7
+Average episode length: 1367.0
+Average reward over last 100 episodes: -1249.125
+Current epsilon: 0.1450950000001865
+
+2019-03-08 18:30:52,826:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:52,830:GAIRL - dqn:INFO: Training with loss: 0.913317097883153
+----------------------------------------------------
+
+2019-03-08 18:30:53,706:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 10499
+Previous state: [-0.56347813  0.82613098 -0.65262379 -0.75768212  3.391385   -3.62132986]
+Previous online qs: [[-4.53928102 -4.54077331 -4.54171523]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -931.0
+***
+Current step: 10500
+Is terminal: False
+Current state: [-0.93172214  0.36317193 -0.97368217 -0.22791012  2.70521075 -2.84391165]
+Current online qs: [-4.53928102 -4.54077331 -4.54171523]
+Current target qs: [-4.31199729 -4.30967472 -3.78505394]
+Current real qs: -3.7850539417533176
+Chosen action: 0
+Current sample loss: 0.04323171835357437
+***
+Episodes so far: 7
+Average episode length: 1367.0
+Average reward over last 100 episodes: -1311.625
+Current epsilon: 0.09759500000018463
+
+2019-03-08 18:30:53,707:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:53,710:GAIRL - dqn:INFO: Training with loss: 0.9088581332654208
+----------------------------------------------------
+
+2019-03-08 18:30:54,558:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 10999
+Previous state: [ 0.95103337 -0.30908821  0.97023253 -0.24217523  1.27469377 -1.05873008]
+Previous online qs: [[-4.77552633 -4.7759831  -4.77651811]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -479.0
+***
+Current step: 11000
+Is terminal: False
+Current state: [ 0.9996782  -0.02536735  0.88991534 -0.45612574  1.54750556 -1.13722341]
+Current online qs: [-4.77552633 -4.7759831  -4.77651811]
+Current target qs: [-4.0106809  -4.53629078 -4.5372376 ]
+Current real qs: -4.010680897367053
+Chosen action: 0
+Current sample loss: 0.03804362681567608
+***
+Episodes so far: 8
+Average episode length: 1315.125
+Average reward over last 100 episodes: -1221.3333333333333
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:30:54,558:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:54,562:GAIRL - dqn:INFO: Training with loss: 0.9058459961940263
+----------------------------------------------------
+
+2019-03-08 18:30:55,434:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 11499
+Previous state: [ 0.94567454 -0.32511484  0.74130623  0.67116694 -0.92231929  2.37920784]
+Previous online qs: [[-5.02688125 -5.02478687 -5.0292106 ]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -979.0
+***
+Current step: 11500
+Is terminal: False
+Current state: [ 0.89893027 -0.43809173  0.45929084  0.88828595 -0.28679682  1.17283752]
+Current online qs: [-5.02688125 -5.02478687 -5.02921059]
+Current target qs: [-4.24184975 -4.76676792 -4.7673003 ]
+Current real qs: -4.241849753462838
+Chosen action: 1
+Current sample loss: 0.030500662946663818
+***
+Episodes so far: 8
+Average episode length: 1315.125
+Average reward over last 100 episodes: -1276.888888888889
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:30:55,435:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:55,439:GAIRL - dqn:INFO: Training with loss: 0.8983156897776267
+----------------------------------------------------
+
+2019-03-08 18:30:56,295:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 11999
+Previous state: [ 0.66153279  0.74991624 -0.0502962  -0.99873435  1.01486312 -0.66080721]
+Previous online qs: [[-5.29785449 -5.30832128 -5.29691693]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -1479.0
+***
+Current step: 12000
+Is terminal: False
+Current state: [ 0.59041305  0.80710125 -0.00115898 -0.99999933 -0.12209495  1.14891491]
+Current online qs: [-5.29785449 -5.30832128 -5.29691693]
+Current target qs: [-5.00884249 -4.48376725 -5.01113366]
+Current real qs: -4.483767254236964
+Chosen action: 2
+Current sample loss: 0.020167594161616693
+***
+Episodes so far: 8
+Average episode length: 1315.125
+Average reward over last 100 episodes: -1332.4444444444443
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:30:56,296:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:56,299:GAIRL - dqn:INFO: Training with loss: 0.889576137661014
+----------------------------------------------------
+
+2019-03-08 18:30:57,146:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 12499
+Previous state: [ 0.78010677 -0.62564641  0.31175202  0.9501635   2.07741969 -0.70748136]
+Previous online qs: [[-5.59905325 -5.60706074 -5.60085761]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -1979.0
+***
+Current step: 12500
+Is terminal: False
+Current state: [ 0.98516601 -0.17160398  0.61753047  0.78654696  2.86501264 -2.72908028]
+Current online qs: [-5.59905325 -5.60706074 -5.60085761]
+Current target qs: [-5.26562323 -5.27570127 -4.74439254]
+Current real qs: -4.744392536534491
+Chosen action: 0
+Current sample loss: 0.009583502095140563
+***
+Episodes so far: 8
+Average episode length: 1315.125
+Average reward over last 100 episodes: -1388.0
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:30:57,146:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:57,150:GAIRL - dqn:INFO: Training with loss: 0.8850765187721541
+----------------------------------------------------
+
+2019-03-08 18:30:58,016:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 12999
+Previous state: [ 0.99997528 -0.00703067  0.68649858  0.72713114 -0.68826597  1.23252671]
+Previous online qs: [[-5.93303958 -5.9244     -5.92233999]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -432.0
+***
+Current step: 13000
+Is terminal: False
+Current state: [ 0.99026319 -0.13920779  0.53235594  0.84652062 -0.61257001  0.68441324]
+Current online qs: [-5.93303958 -5.9244     -5.92233999]
+Current target qs: [-5.0320758  -5.55509226 -5.54914533]
+Current real qs: -5.032075802332317
+Chosen action: 2
+Current sample loss: 0.003530148445084669
+***
+Episodes so far: 9
+Average episode length: 1396.4444444444443
+Average reward over last 100 episodes: -1299.1
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:30:58,017:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:58,020:GAIRL - dqn:INFO: Training with loss: 0.8770984237556725
+----------------------------------------------------
+
+2019-03-08 18:30:58,881:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 13499
+Previous state: [ 0.99631369 -0.08578475  0.85242881  0.52284331 -0.67248591  0.8413809 ]
+Previous online qs: [[-6.26765305 -6.26151404 -6.25893093]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -932.0
+***
+Current step: 13500
+Is terminal: False
+Current state: [ 0.97850896 -0.20620429  0.77746241  0.62892941 -0.51938033  0.42467908]
+Current online qs: [-6.26765305 -6.26151404 -6.25893093]
+Current target qs: [-5.86107143 -5.85311436 -5.34301807]
+Current real qs: -5.343018068335967
+Chosen action: 2
+Current sample loss: 0.0009398487549016081
+***
+Episodes so far: 9
+Average episode length: 1396.4444444444443
+Average reward over last 100 episodes: -1349.1
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:30:58,881:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:58,885:GAIRL - dqn:INFO: Training with loss: 0.8715191587857961
+----------------------------------------------------
+
+2019-03-08 18:30:59,728:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 13999
+Previous state: [ 0.99973947 -0.02282534  0.8381999   0.54536311  0.76956986 -3.26223297]
+Previous online qs: [[-6.60065792 -6.60543161 -6.59842544]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -1432.0
+***
+Current step: 14000
+Is terminal: False
+Current state: [ 0.99148062  0.1302543   0.99600758 -0.08926867  0.68468509 -3.2221175 ]
+Current online qs: [-6.60065792 -6.60543161 -6.59842544]
+Current target qs: [-6.17893458 -6.17323817 -5.66991259]
+Current real qs: -5.669912591805232
+Chosen action: 2
+Current sample loss: 0.00021868571647969286
+***
+Episodes so far: 9
+Average episode length: 1396.4444444444443
+Average reward over last 100 episodes: -1399.1
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:30:59,729:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:30:59,733:GAIRL - dqn:INFO: Training with loss: 0.866944075681261
+----------------------------------------------------
+
+2019-03-08 18:31:00,593:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 14499
+Previous state: [ 0.90311828 -0.42939186  0.85655162  0.51606135 -1.19885824 -1.04064264]
+Previous online qs: [[-6.93864642 -6.93867606 -6.93994134]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -1932.0
+***
+Current step: 14500
+Is terminal: False
+Current state: [ 0.83065207 -0.55679182  0.98139341  0.19200773 -0.26201454 -2.39295764]
+Current online qs: [-6.93864642 -6.93867606 -6.93994133]
+Current target qs: [-6.49977061 -6.50426821 -6.00428172]
+Current real qs: -6.004281718177771
+Chosen action: 0
+Current sample loss: 3.127584129852982e-05
+***
+Episodes so far: 9
+Average episode length: 1396.4444444444443
+Average reward over last 100 episodes: -1449.1
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:31:00,593:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:31:00,597:GAIRL - dqn:INFO: Training with loss: 0.8652519932744263
+----------------------------------------------------
+
+2019-03-08 18:31:01,439:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 14999
+Previous state: [ 0.80807345  0.58908174  0.51840672  0.85513418  0.75746256 -0.91308112]
+Previous online qs: [[-7.27708656 -7.27165469 -7.27748795]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -2432.0
+***
+Current step: 15000
+Is terminal: False
+Current state: [ 0.75899456  0.65109696  0.65857395  0.75251601  0.025182   -0.80332946]
+Current online qs: [-7.27708657 -7.2716547  -7.27748796]
+Current target qs: [-6.34138841 -6.82860206 -6.82971277]
+Current real qs: -6.341388413669783
+Chosen action: 1
+Current sample loss: 3.994041533519988e-05
+***
+Episodes so far: 9
+Average episode length: 1396.4444444444443
+Average reward over last 100 episodes: -1499.1
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:31:01,440:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:31:01,444:GAIRL - dqn:INFO: Training with loss: 0.8526163694008806
+----------------------------------------------------
+
+2019-03-08 18:31:02,296:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 15499
+Previous state: [ 0.9998518  -0.01721548  0.99058581  0.13689322 -0.1961564   0.31130686]
+Previous online qs: [[-7.60865263 -7.60988611 -7.60451956]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -298.0
+***
+Current step: 15500
+Is terminal: False
+Current state: [ 0.99801518 -0.06297387  0.97706951  0.21292056 -0.2500375   0.44048275]
+Current online qs: [-7.60865263 -7.60988611 -7.60451956]
+Current target qs: [-7.16098369 -6.67549888 -7.16132713]
+Current real qs: -6.675498878721806
+Chosen action: 2
+Current sample loss: 1.7844968868022148e-05
+***
+Episodes so far: 10
+Average episode length: 1520.2
+Average reward over last 100 episodes: -1408.1818181818182
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:31:02,296:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:31:02,300:GAIRL - dqn:INFO: Training with loss: 0.8478638373766147
+----------------------------------------------------
+
+2019-03-08 18:31:03,161:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 15999
+Previous state: [0.99696391 0.07786505 0.98762364 0.15684242 0.0126569  0.03198344]
+Previous online qs: [[-7.93063762 -7.93190889 -7.92422538]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -798.0
+***
+Current step: 16000
+Is terminal: False
+Current state: [ 0.99816467  0.06055823  0.98218885  0.18789641 -0.18139992  0.27470925]
+Current online qs: [-7.93063762 -7.93190889 -7.92422538]
+Current target qs: [-7.48657708 -7.48775579 -7.00193005]
+Current real qs: -7.001930050355034
+Chosen action: 2
+Current sample loss: 5.906492648343047e-05
+***
+Episodes so far: 10
+Average episode length: 1520.2
+Average reward over last 100 episodes: -1453.6363636363637
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:31:03,162:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:31:03,165:GAIRL - dqn:INFO: Training with loss: 0.8395571744172946
+----------------------------------------------------
+
+2019-03-08 18:31:04,007:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 16499
+Previous state: [ 0.99858515 -0.05317617  0.9900737   0.14054918 -0.39544593  1.38317447]
+Previous online qs: [[-8.24507644 -8.24349634 -8.24044972]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -1298.0
+***
+Current step: 16500
+Is terminal: False
+Current state: [ 0.99152346 -0.12992774  0.9137014   0.40638621 -0.35013563  1.3311973 ]
+Current online qs: [-8.24507641 -8.2434963  -8.24044968]
+Current target qs: [-7.80421563 -7.80543632 -7.31842982]
+Current real qs: -7.3184298181356064
+Chosen action: 2
+Current sample loss: 2.2999707290384492e-05
+***
+Episodes so far: 10
+Average episode length: 1520.2
+Average reward over last 100 episodes: -1499.090909090909
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:31:04,008:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:31:04,012:GAIRL - dqn:INFO: Training with loss: 0.8375596836066819
+----------------------------------------------------
+
+2019-03-08 18:31:04,860:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 16999
+Previous state: [ 0.99794002 -0.06415389  0.99085452  0.13493447 -0.09104495 -1.77182355]
+Previous online qs: [[-8.55487404 -8.56026312 -8.55593541]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -1798.0
+***
+Current step: 17000
+Is terminal: False
+Current state: [ 0.99817584 -0.0603737   0.96607768 -0.25825165  0.10418918 -2.10900982]
+Current online qs: [-8.55487401 -8.56026308 -8.55593537]
+Current target qs: [-8.11576725 -8.11425958 -7.63646345]
+Current real qs: -7.636463454010603
+Chosen action: 0
+Current sample loss: 2.7298301990588893e-05
+***
+Episodes so far: 10
+Average episode length: 1520.2
+Average reward over last 100 episodes: -1544.5454545454545
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:31:04,861:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:31:04,864:GAIRL - dqn:INFO: Training with loss: 0.8323468442453379
+----------------------------------------------------
+
+2019-03-08 18:31:05,721:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 17499
+Previous state: [ 0.93734972 -0.34838987  0.99607111  0.088557   -0.37214215 -1.92597912]
+Previous online qs: [[-8.87475618 -8.87492404 -8.87217402]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -2298.0
+***
+Current step: 17500
+Is terminal: False
+Current state: [ 0.92110486 -0.38931456  0.95782308 -0.28735856 -0.08125615 -1.80816257]
+Current online qs: [-8.87475608 -8.87492394 -8.87217392]
+Current target qs: [-7.95592408 -8.42925088 -8.42506713]
+Current real qs: -7.955924081451601
+Chosen action: 2
+Current sample loss: 1.7562937561077896e-05
+***
+Episodes so far: 10
+Average episode length: 1520.2
+Average reward over last 100 episodes: -1590.0
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:31:05,722:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:31:05,726:GAIRL - dqn:INFO: Training with loss: 0.8272647482535163
+----------------------------------------------------
+
+2019-03-08 18:31:06,580:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 17999
+Previous state: [ 0.89463238 -0.44680298  0.86537073  0.50113221 -0.0422256  -1.10027251]
+Previous online qs: [[-9.18320005 -9.18175385 -9.18059875]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -2798.0
+***
+Current step: 18000
+Is terminal: False
+Current state: [ 0.91305796 -0.40782981  0.96845919  0.24917221  0.45555044 -1.58052707]
+Current online qs: [-9.18320012 -9.18175392 -9.18059882]
+Current target qs: [-8.73995833 -8.74013001 -8.26630312]
+Current real qs: -8.266303115466897
+Chosen action: 2
+Current sample loss: 9.249716084158391e-06
+***
+Episodes so far: 10
+Average episode length: 1520.2
+Average reward over last 100 episodes: -1635.4545454545455
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:31:06,581:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:31:06,585:GAIRL - dqn:INFO: Training with loss: 1.1485041077550084
+----------------------------------------------------
+
+2019-03-08 18:31:07,451:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 18499
+Previous state: [ 0.92861669 -0.37104049  0.87301342  0.48769618 -0.19542278  1.1247025 ]
+Previous online qs: [[-9.49124029 -9.49575565 -9.48768088]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -3298.0
+***
+Current step: 18500
+Is terminal: False
+Current state: [ 0.93070028 -0.36578271  0.78017928  0.62555599  0.25312664  0.51849156]
+Current online qs: [-9.49123992 -9.49575528 -9.48768051]
+Current target qs: [-9.04727076 -9.04588334 -8.57949727]
+Current real qs: -8.579497269131833
+Chosen action: 2
+Current sample loss: 3.625746941460693e-05
+***
+Episodes so far: 10
+Average episode length: 1520.2
+Average reward over last 100 episodes: -1680.909090909091
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:31:07,451:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:31:07,455:GAIRL - dqn:INFO: Training with loss: 0.812528273466951
+----------------------------------------------------
+
+2019-03-08 18:31:08,303:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 18999
+Previous state: [ 0.94799425 -0.31828744  0.37433489  0.92729358  2.12717958 -2.10364979]
+Previous online qs: [[-9.78998922 -9.79561537 -9.79096191]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -3798.0
+***
+Current step: 19000
+Is terminal: False
+Current state: [ 0.98918009  0.14670635  0.8244771   0.56589532  2.50432342 -3.64426534]
+Current online qs: [-9.78999033 -9.79561648 -9.79096302]
+Current target qs: [-9.35324472 -9.35761472 -8.88500695]
+Current real qs: -8.885006949928641
+Chosen action: 0
+Current sample loss: 3.804007693460702e-05
+***
+Episodes so far: 10
+Average episode length: 1520.2
+Average reward over last 100 episodes: -1726.3636363636363
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:31:08,303:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:31:08,307:GAIRL - dqn:INFO: Training with loss: 1.181283925326243
+----------------------------------------------------
+
+2019-03-08 18:31:09,171:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 19499
+Previous state: [ 0.98234935 -0.18705548  0.45469672  0.89064633  2.50507509 -3.3083043 ]
+Previous online qs: [[-10.10002924 -10.10006402 -10.09693018]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -4298.0
+***
+Current step: 19500
+Is terminal: False
+Current state: [ 0.94873864  0.31606168  0.94082101  0.33890385  2.48216653 -4.01110134]
+Current online qs: [-10.1000309  -10.10006568 -10.09693184]
+Current target qs: [-9.19207202 -9.65676262 -9.65223609]
+Current real qs: -9.192072016693547
+Chosen action: 2
+Current sample loss: 1.0375597310629871e-05
+***
+Episodes so far: 10
+Average episode length: 1520.2
+Average reward over last 100 episodes: -1771.8181818181818
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:31:09,172:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:31:09,175:GAIRL - dqn:INFO: Training with loss: 1.1996831394771756
+----------------------------------------------------
+
+2019-03-08 18:35:31,693:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 19999
+Previous state: [ 0.96964486  0.24451758 -0.12501629 -0.99215469  1.98337094 -1.58548005]
+Previous online qs: [[-10.40583639 -10.40993149 -10.40838134]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -4798.0
+***
+Current step: 20000
+Is terminal: False
+Current state: [ 0.82163747  0.57001041 -0.3144788  -0.9492645   1.5367315  -0.32362954]
+Current online qs: [-10.40583468 -10.40992978 -10.40837963]
+Current target qs: [-9.96053734 -9.9605777  -9.5033173 ]
+Current real qs: -9.503317302406536
+Chosen action: 0
+Current sample loss: 5.991418468071229e-06
+***
+Episodes so far: 10
+Average episode length: 1520.2
+Average reward over last 100 episodes: -1817.2727272727273
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:31,694:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:31,698:GAIRL - dqn:INFO: Training with loss: 0.7989011660302039
+----------------------------------------------------
+
+2019-03-08 18:35:32,629:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 20499
+Previous state: [ 0.97817122  0.20780053  0.99974288 -0.0226754  -0.00708052  0.67326816]
+Previous online qs: [[-10.70740877 -10.71272099 -10.70544232]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -183.0
+***
+Current step: 20500
+Is terminal: False
+Current state: [ 0.98558789  0.16916416  0.98676473  0.16215847 -0.37155431  1.14271504]
+Current online qs: [-10.70740943 -10.71272164 -10.70544297]
+Current target qs: [ -9.80819947 -10.26798741 -10.26646464]
+Current real qs: -9.808199469647988
+Chosen action: 2
+Current sample loss: 2.1857061179964135e-05
+***
+Episodes so far: 11
+Average episode length: 1847.0
+Average reward over last 100 episodes: -1707.4166666666667
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:32,630:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:32,634:GAIRL - dqn:INFO: Training with loss: 0.7922118423841169
+----------------------------------------------------
+
+2019-03-08 18:35:33,478:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 20999
+Previous state: [ 0.99575467 -0.09204694  0.93149118 -0.36376391  1.55368112 -1.28401702]
+Previous online qs: [[-11.01379411 -11.01305435 -11.00298695]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -683.0
+***
+Current step: 21000
+Is terminal: False
+Current state: [ 0.98107988  0.1936034   0.85758969 -0.51433445  1.25340873 -0.32680844]
+Current online qs: [-11.01379343 -11.01305366 -11.00298626]
+Current target qs: [-10.56504973 -10.57022339 -10.11172293]
+Current real qs: -10.111722927367623
+Chosen action: 2
+Current sample loss: 5.804538544763776e-05
+***
+Episodes so far: 11
+Average episode length: 1847.0
+Average reward over last 100 episodes: -1749.0833333333333
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:33,478:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:33,482:GAIRL - dqn:INFO: Training with loss: 0.781030196342142
+----------------------------------------------------
+
+2019-03-08 18:35:34,346:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 21499
+Previous state: [ 0.96368315 -0.2670483   0.93966234  0.34210332  1.21760685  0.01810774]
+Previous online qs: [[-11.31359835 -11.31308884 -11.30804228]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -1183.0
+***
+Current step: 21500
+Is terminal: False
+Current state: [ 0.99996874 -0.00790742  0.94741081  0.32001993  1.35263703 -0.2090888 ]
+Current online qs: [-11.31359887 -11.31308935 -11.30804279]
+Current target qs: [-10.87168255 -10.87096547 -10.41580349]
+Current real qs: -10.415803489734849
+Chosen action: 2
+Current sample loss: 1.2982875088065169e-05
+***
+Episodes so far: 11
+Average episode length: 1847.0
+Average reward over last 100 episodes: -1790.75
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:34,347:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:34,350:GAIRL - dqn:INFO: Training with loss: 1.2772094275623735
+----------------------------------------------------
+
+2019-03-08 18:35:35,214:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 21999
+Previous state: [ 0.96334593 -0.26826223  0.99358334  0.11310239  0.79457973  1.38415245]
+Previous online qs: [[-11.61098893 -11.61053972 -11.60580895]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -1683.0
+***
+Current step: 22000
+Is terminal: False
+Current state: [ 0.99587471 -0.09073902  0.93039066  0.36656954  0.99427033  1.20153816]
+Current online qs: [-11.61098825 -11.61053903 -11.60580827]
+Current target qs: [-11.16892743 -11.16843292 -10.71578112]
+Current real qs: -10.715781120028023
+Chosen action: 2
+Current sample loss: 7.920599231830874e-06
+***
+Episodes so far: 11
+Average episode length: 1847.0
+Average reward over last 100 episodes: -1832.4166666666667
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:35,215:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:35,219:GAIRL - dqn:INFO: Training with loss: 0.7764959694495319
+----------------------------------------------------
+
+2019-03-08 18:35:36,080:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 22499
+Previous state: [ 0.92196975 -0.38726191  0.59446042  0.80412487 -1.13545131  1.07575614]
+Previous online qs: [[-11.88576619 -11.88535926 -11.87349929]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -336.0
+***
+Current step: 22500
+Is terminal: False
+Current state: [ 0.8419987  -0.53947955  0.49499098  0.86889811 -0.55561819  0.09459087]
+Current online qs: [-11.88576171 -11.88535478 -11.87349482]
+Current target qs: [-11.45992443 -11.45948813 -10.99114411]
+Current real qs: -10.991144112705152
+Chosen action: 2
+Current sample loss: 5.980521110377879e-05
+***
+Episodes so far: 12
+Average episode length: 1847.0
+Average reward over last 100 episodes: -1729.8461538461538
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:36,081:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:36,084:GAIRL - dqn:INFO: Training with loss: 0.7655775544147323
+----------------------------------------------------
+
+2019-03-08 18:35:36,932:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 22999
+Previous state: [ 0.89085038  0.45429682  0.77461795 -0.63242946  2.5295676  -4.08315487]
+Previous online qs: [[-12.18074813 -12.18118521 -12.17106393]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -836.0
+***
+Current step: 23000
+Is terminal: False
+Current state: [ 0.64088519  0.76763674  0.26152001 -0.96519805  1.46608459 -2.11784432]
+Current online qs: [-12.18071365 -12.18115073 -12.1710295 ]
+Current target qs: [-11.74110491 -11.74070916 -11.29026519]
+Current real qs: -11.290265186501657
+Chosen action: 2
+Current sample loss: 3.9672361140382494e-05
+***
+Episodes so far: 12
+Average episode length: 1847.0
+Average reward over last 100 episodes: -1768.3076923076924
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:36,933:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:36,937:GAIRL - dqn:INFO: Training with loss: 0.7617171461156459
+----------------------------------------------------
+
+2019-03-08 18:35:37,790:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 23499
+Previous state: [ 0.75350746 -0.65743935 -0.40683062  0.91350361  0.54249921 -1.02290938]
+Previous online qs: [[-12.47419786 -12.47419408 -12.46968703]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -1336.0
+***
+Current step: 23500
+Is terminal: False
+Current state: [ 0.85834609 -0.51307114 -0.09048516  0.9958978   1.2244467  -2.26619335]
+Current online qs: [-12.47422191 -12.47421813 -12.46971106]
+Current target qs: [-12.03497416 -12.03540395 -11.58792383]
+Current real qs: -11.587923833632775
+Chosen action: 2
+Current sample loss: 5.55811305913994e-06
+***
+Episodes so far: 12
+Average episode length: 1847.0
+Average reward over last 100 episodes: -1806.7692307692307
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:37,791:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:37,795:GAIRL - dqn:INFO: Training with loss: 0.7619709706337061
+----------------------------------------------------
+
+2019-03-08 18:35:38,643:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 23999
+Previous state: [ 0.60661709 -0.79499415  0.93008154  0.36735313  2.36593564 -2.63262442]
+Previous online qs: [[-12.78346102 -12.78343658 -12.78116042]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -1836.0
+***
+Current step: 24000
+Is terminal: False
+Current state: [ 0.93197408 -0.36252492  0.97890041 -0.20433791  3.00038655 -2.97775024]
+Current online qs: [-12.7834891  -12.78346467 -12.78118849]
+Current target qs: [-12.33090113 -12.33089965 -11.9015875 ]
+Current real qs: -11.901587504428694
+Chosen action: 2
+Current sample loss: 1.991522639593515e-06
+***
+Episodes so far: 12
+Average episode length: 1847.0
+Average reward over last 100 episodes: -1845.2307692307693
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:38,644:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:38,647:GAIRL - dqn:INFO: Training with loss: 0.7582853643424117
+----------------------------------------------------
+
+2019-03-08 18:35:39,508:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 24499
+Previous state: [ 0.99838365 -0.05683391  0.97499074 -0.22224547  0.47896983  1.26504777]
+Previous online qs: [[-13.07364385 -13.07692376 -13.06750866]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -348.0
+***
+Current step: 24500
+Is terminal: False
+Current state: [0.99970841 0.02414747 0.99696176 0.07789253 0.33189496 1.70512194]
+Current online qs: [-13.07364419 -13.0769241  -13.067509  ]
+Current target qs: [-12.63509127 -12.63506961 -12.1960533 ]
+Current real qs: -12.1960533032168
+Chosen action: 2
+Current sample loss: 4.335047821980598e-05
+***
+Episodes so far: 13
+Average episode length: 1857.8461538461538
+Average reward over last 100 episodes: -1749.0714285714287
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:39,508:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:39,512:GAIRL - dqn:INFO: Training with loss: 0.7479505193576581
+----------------------------------------------------
+
+2019-03-08 18:35:40,393:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 24999
+Previous state: [ 0.94965534 -0.31329657 -0.2590557   0.96586238 -0.21082115 -1.98459797]
+Previous online qs: [[-13.35281594 -13.36014237 -13.33567115]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -848.0
+***
+Current step: 25000
+Is terminal: False
+Current state: [ 0.95405063 -0.29964546  0.24680343  0.96906556  0.38223625 -3.15924621]
+Current online qs: [-13.35288639 -13.36021288 -13.33574144]
+Current target qs: [-12.92355254 -12.92676969 -12.4781289 ]
+Current real qs: -12.478128896575072
+Chosen action: 2
+Current sample loss: 0.0003124569883413366
+***
+Episodes so far: 13
+Average episode length: 1857.8461538461538
+Average reward over last 100 episodes: -1784.7857142857142
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:40,394:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:40,398:GAIRL - dqn:INFO: Training with loss: 0.7299626531872032
+----------------------------------------------------
+
+2019-03-08 18:35:41,443:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 25499
+Previous state: [ 0.98871826 -0.14978722  0.3520175   0.93599342  2.45009694 -2.19266496]
+Previous online qs: [[-13.62116714 -13.62525851 -13.62029054]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -1348.0
+***
+Current step: 25500
+Is terminal: False
+Current state: [ 0.94304801  0.33265666  0.77785607  0.62844247  2.34865423 -2.97076667]
+Current online qs: [-13.62121936 -13.62531076 -13.62034275]
+Current target qs: [-13.20312446 -13.21031264 -12.74917901]
+Current real qs: -12.749179009524916
+Chosen action: 2
+Current sample loss: 1.9507204470975405e-06
+***
+Episodes so far: 13
+Average episode length: 1857.8461538461538
+Average reward over last 100 episodes: -1820.5
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:41,445:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:41,450:GAIRL - dqn:INFO: Training with loss: 0.7433039123920362
+----------------------------------------------------
+
+2019-03-08 18:35:42,651:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 25999
+Previous state: [ 0.90840677 -0.41808748  0.99755624 -0.06986807 -2.61743667  4.0123863 ]
+Previous online qs: [[-13.90121373 -13.90267851 -13.8967207 ]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -1848.0
+***
+Current step: 26000
+Is terminal: False
+Current state: [ 0.6281677  -0.77807798  0.77538192  0.63149258 -1.87863396  3.31777085]
+Current online qs: [-13.90116877 -13.90263354 -13.89667577]
+Current target qs: [-13.46910784 -13.47312455 -13.02994767]
+Current real qs: -13.02994767191036
+Chosen action: 2
+Current sample loss: 8.570199497766244e-06
+***
+Episodes so far: 13
+Average episode length: 1857.8461538461538
+Average reward over last 100 episodes: -1856.2142857142858
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:42,652:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:42,656:GAIRL - dqn:INFO: Training with loss: 0.7364596219263216
+----------------------------------------------------
+
+2019-03-08 18:35:43,577:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 26499
+Previous state: [ 0.8393348   0.54361484  0.90680438 -0.42155168 -1.56077021  4.18077133]
+Previous online qs: [[-14.17604359 -14.18104545 -14.17886099]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -2348.0
+***
+Current step: 26500
+Is terminal: False
+Current state: [ 0.97719517  0.21234311  0.90870687  0.41743482 -1.91188976  4.2016986 ]
+Current online qs: [-14.17607165 -14.18107352 -14.17888905]
+Current target qs: [-13.74981427 -13.75125487 -13.31157874]
+Current real qs: -13.311578741568859
+Chosen action: 0
+Current sample loss: 5.853309874929966e-06
+***
+Episodes so far: 13
+Average episode length: 1857.8461538461538
+Average reward over last 100 episodes: -1891.9285714285713
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:43,578:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:43,581:GAIRL - dqn:INFO: Training with loss: 0.7330274331042366
+----------------------------------------------------
+
+2019-03-08 18:35:44,445:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 26999
+Previous state: [ 0.9902582  -0.13924332  0.46001129  0.88791306  0.8273204  -1.57395109]
+Previous online qs: [[-14.46623119 -14.46705267 -14.45361307]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -2848.0
+***
+Current step: 27000
+Is terminal: False
+Current state: [ 0.99930936  0.03715911  0.75568072  0.65494019  0.90923777 -2.15630994]
+Current online qs: [-14.4663399  -14.46716138 -14.45372162]
+Current target qs: [-13.59940991 -14.03112788 -14.02898074]
+Current real qs: -13.599409913526632
+Chosen action: 2
+Current sample loss: 9.609381818578516e-05
+***
+Episodes so far: 13
+Average episode length: 1857.8461538461538
+Average reward over last 100 episodes: -1927.642857142857
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:44,445:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:44,449:GAIRL - dqn:INFO: Training with loss: 0.7193765763373701
+----------------------------------------------------
+
+2019-03-08 18:35:45,306:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 27499
+Previous state: [ 0.99873502 -0.05028281  0.99879737 -0.04902868 -1.05565567  0.41413457]
+Previous online qs: [[-14.74922837 -14.7497398  -14.74862249]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -3348.0
+***
+Current step: 27500
+Is terminal: False
+Current state: [ 0.97278259 -0.23171973  0.99995648 -0.00932924 -0.74188487 -0.05199155]
+Current online qs: [-14.74927204 -14.74978347 -14.74866616]
+Current target qs: [-14.31816392 -14.31897305 -13.88794799]
+Current real qs: -13.88794799440648
+Chosen action: 2
+Current sample loss: 2.555332256955431e-08
+***
+Episodes so far: 13
+Average episode length: 1857.8461538461538
+Average reward over last 100 episodes: -1963.357142857143
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:45,307:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:45,311:GAIRL - dqn:INFO: Training with loss: 0.7259077550303898
+----------------------------------------------------
+
+2019-03-08 18:35:46,165:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 27999
+Previous state: [ 0.99550326  0.09472731  0.95946252 -0.28183624  0.62430949 -1.340807  ]
+Previous online qs: [[-15.01957188 -15.02097716 -15.0147935 ]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -3848.0
+***
+Current step: 28000
+Is terminal: False
+Current state: [ 0.98325363  0.18224242  0.89195607 -0.45212208  0.24015749 -0.45788343]
+Current online qs: [-15.01942165 -15.02082691 -15.01464335]
+Current target qs: [-14.59452152 -14.59502519 -14.15918118]
+Current real qs: -14.15918118032708
+Chosen action: 2
+Current sample loss: 7.816890839720751e-06
+***
+Episodes so far: 13
+Average episode length: 1857.8461538461538
+Average reward over last 100 episodes: -1999.0714285714287
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:46,166:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:46,170:GAIRL - dqn:INFO: Training with loss: 0.716886525643767
+----------------------------------------------------
+
+2019-03-08 18:35:47,026:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 28499
+Previous state: [ 0.89423805  0.44759167  0.59107504 -0.80661657 -0.94236416  0.21243658]
+Previous online qs: [[-15.28966194 -15.29127767 -15.28104058]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -4348.0
+***
+Current step: 28500
+Is terminal: False
+Current state: [ 0.97899951  0.20386262  0.7351201  -0.6779369  -1.59581602  1.6856099 ]
+Current online qs: [-15.28955179 -15.29116751 -15.28093054]
+Current target qs: [-14.8652473  -14.86663023 -14.43084574]
+Current real qs: -14.430845742202838
+Chosen action: 2
+Current sample loss: 3.0213748299172755e-05
+***
+Episodes so far: 13
+Average episode length: 1857.8461538461538
+Average reward over last 100 episodes: -2034.7857142857142
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:47,027:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:47,030:GAIRL - dqn:INFO: Training with loss: 0.7085871017052146
+----------------------------------------------------
+
+2019-03-08 18:35:47,909:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 28999
+Previous state: [ 0.99979361  0.02031611  0.96994079 -0.24334105  0.1979079  -1.75021365]
+Previous online qs: [[-15.57192396 -15.58177085 -15.58146902]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -4848.0
+***
+Current step: 29000
+Is terminal: False
+Current state: [ 0.99827806  0.05865923  0.83378984 -0.55208197  0.16642184 -1.57811295]
+Current online qs: [-15.57180974 -15.58165651 -15.58135469]
+Current target qs: [-15.14352049 -15.14511228 -14.73018087]
+Current real qs: -14.730180867976475
+Chosen action: 0
+Current sample loss: 0.00012001422039352657
+***
+Episodes so far: 13
+Average episode length: 1857.8461538461538
+Average reward over last 100 episodes: -2070.5
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:47,909:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:47,913:GAIRL - dqn:INFO: Training with loss: 0.7006213483093744
+----------------------------------------------------
+
+2019-03-08 18:35:48,768:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 29499
+Previous state: [ 0.96936095  0.24564071  0.96296315  0.26963304 -0.18434698  1.79704209]
+Previous online qs: [[-15.84994516 -15.84991542 -15.84953101]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -5348.0
+***
+Current step: 29500
+Is terminal: False
+Current state: [ 0.98374224  0.17958622  0.79951068  0.60065188 -0.46735659  1.84784743]
+Current online qs: [-15.84979792 -15.84976818 -15.84938379]
+Current target qs: [-14.99964055 -15.42912565 -15.42883095]
+Current real qs: -14.99964054784413
+Chosen action: 2
+Current sample loss: 1.279803274411257e-08
+***
+Episodes so far: 13
+Average episode length: 1857.8461538461538
+Average reward over last 100 episodes: -2106.214285714286
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:48,769:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:48,773:GAIRL - dqn:INFO: Training with loss: 0.7077388842399372
+----------------------------------------------------
+
+2019-03-08 18:35:49,619:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 29999
+Previous state: [ 0.99527547 -0.09709139  0.99908643 -0.04273535  1.10898405 -1.3936753 ]
+Previous online qs: [[-16.10084208 -16.11736159 -16.10989913]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -309.0
+***
+Current step: 30000
+Is terminal: False
+Current state: [ 0.99057484  0.13697255  0.94233227 -0.3346788   1.17959345 -1.49772395]
+Current online qs: [-16.10081236 -16.11733182 -16.10986938]
+Current target qs: [-15.69354482 -15.69351597 -15.26111778]
+Current real qs: -15.261117775401203
+Chosen action: 0
+Current sample loss: 5.874479537144669e-05
+***
+Episodes so far: 14
+Average episode length: 2120.785714285714
+Average reward over last 100 episodes: -1999.0666666666666
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:49,620:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:49,623:GAIRL - dqn:INFO: Training with loss: 1.7014180364142635
+----------------------------------------------------
+
+2019-03-08 18:35:50,476:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 30499
+Previous state: [ 0.99091262  0.1345072   0.76243651 -0.64706303 -0.44243277  1.99681565]
+Previous online qs: [[-16.35383398 -16.35916463 -16.35717543]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -809.0
+***
+Current step: 30500
+Is terminal: False
+Current state: [ 0.99951433  0.03116262  0.96526296 -0.26128033 -0.55886153  2.3093193 ]
+Current online qs: [-16.35396031 -16.35929103 -16.3573018 ]
+Current target qs: [-15.51204048 -15.95889671 -15.95155122]
+Current real qs: -15.512040479989349
+Chosen action: 0
+Current sample loss: 9.523982628719754e-06
+***
+Episodes so far: 14
+Average episode length: 2120.785714285714
+Average reward over last 100 episodes: -2032.4
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:50,476:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:50,480:GAIRL - dqn:INFO: Training with loss: 1.7373557255248542
+----------------------------------------------------
+
+2019-03-08 18:35:51,344:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 30999
+Previous state: [ 0.99991255 -0.01322442  0.1543524   0.98801586  0.02393607  6.09884771]
+Previous online qs: [[-16.60294893 -16.60775676 -16.59976231]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -1309.0
+***
+Current step: 31000
+Is terminal: False
+Current state: [ 0.99188039  0.12717428 -0.76965893  0.63845527  1.22243798  4.49118963]
+Current online qs: [-16.60273619 -16.60754392 -16.59954964]
+Current target qs: [-15.76126852 -16.19897032 -16.19701516]
+Current real qs: -15.761268522522897
+Chosen action: 2
+Current sample loss: 1.5159546229132892e-05
+***
+Episodes so far: 14
+Average episode length: 2120.785714285714
+Average reward over last 100 episodes: -2065.733333333333
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:51,345:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:51,348:GAIRL - dqn:INFO: Training with loss: 0.6905216033642895
+----------------------------------------------------
+
+2019-03-08 18:35:52,209:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 31499
+Previous state: [ 0.99204809 -0.12585937  0.98435098 -0.17621906  0.49306836 -1.12104626]
+Previous online qs: [[-16.84322908 -16.8451483  -16.83438105]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -475.0
+***
+Current step: 31500
+Is terminal: False
+Current state: [ 0.99941584 -0.03417577  0.93945836 -0.3426631   0.40501372 -0.56503818]
+Current online qs: [-16.84290359 -16.84482276 -16.83405584]
+Current target qs: [-16.44423142 -16.44896947 -15.9996097 ]
+Current real qs: -15.999609697545672
+Chosen action: 2
+Current sample loss: 2.7379563287838756e-05
+***
+Episodes so far: 15
+Average episode length: 2068.3333333333335
+Average reward over last 100 episodes: -1967.8125
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:52,210:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:52,213:GAIRL - dqn:INFO: Training with loss: 0.6823122363764814
+----------------------------------------------------
+
+2019-03-08 18:35:53,075:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 31999
+Previous state: [ 0.9995462   0.03012288  0.84029507  0.54212932  0.46728972 -1.46367128]
+Previous online qs: [[-17.09329103 -17.08958079 -17.09336807]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -975.0
+***
+Current step: 32000
+Is terminal: False
+Current state: [ 0.99206235  0.12574697  0.97214341  0.23438685  0.46517764 -1.83482422]
+Current online qs: [-17.09368436 -17.08997399 -17.09376139]
+Current target qs: [-16.6865993  -16.68849151 -16.2550375 ]
+Current real qs: -16.25503749792089
+Chosen action: 1
+Current sample loss: 8.446764970076518e-06
+***
+Episodes so far: 15
+Average episode length: 2068.3333333333335
+Average reward over last 100 episodes: -1999.0625
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:53,076:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:53,080:GAIRL - dqn:INFO: Training with loss: 0.6827987154746027
+----------------------------------------------------
+
+2019-03-08 18:35:53,957:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 32499
+Previous state: [ 0.98625583  0.16522543  0.83434989 -0.55123522  2.57133267 -3.08958073]
+Previous online qs: [[-17.33474693 -17.3393704  -17.34140715]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -1475.0
+***
+Current step: 32500
+Is terminal: False
+Current state: [ 0.80406918  0.59453575  0.45722898 -0.88934901  2.05062561 -1.93117119]
+Current online qs: [-17.33247755 -17.33710012 -17.33913654]
+Current target qs: [-16.93338028 -16.50128086 -16.93346121]
+Current real qs: -16.501280859417534
+Chosen action: 0
+Current sample loss: 2.3138109977297402e-06
+***
+Episodes so far: 15
+Average episode length: 2068.3333333333335
+Average reward over last 100 episodes: -2030.3125
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:53,957:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:53,961:GAIRL - dqn:INFO: Training with loss: 0.6778704282903567
+----------------------------------------------------
+
+2019-03-08 18:35:54,813:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 32999
+Previous state: [ 0.54777086  0.8366284   0.92327777 -0.384133    0.58171139  1.33541022]
+Previous online qs: [[-17.54998023 -17.56447739 -17.57199953]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -1975.0
+***
+Current step: 33000
+Is terminal: False
+Current state: [ 0.53409409  0.84542504  0.99842682 -0.05607028 -0.40302518  1.99461468]
+Current online qs: [-17.54923482 -17.56373106 -17.57125276]
+Current target qs: [-16.73510694 -17.17326187 -17.17527516]
+Current real qs: -16.73510693596814
+Chosen action: 0
+Current sample loss: 0.000315973186385913
+***
+Episodes so far: 15
+Average episode length: 2068.3333333333335
+Average reward over last 100 episodes: -2061.5625
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:54,813:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:54,817:GAIRL - dqn:INFO: Training with loss: 0.6600985850238819
+----------------------------------------------------
+
+2019-03-08 18:35:55,681:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 33499
+Previous state: [ 0.99606995 -0.08857008  0.90293186  0.42978372 -0.5255943   0.71617159]
+Previous online qs: [[-17.79181933 -17.77884103 -17.79383953]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -274.0
+***
+Current step: 33500
+Is terminal: False
+Current state: [ 0.9854397  -0.1700253   0.86388063  0.50369659 -0.27858036  0.09798311]
+Current online qs: [-17.79126747 -17.77828976 -17.7932876 ]
+Current target qs: [-16.95668451 -17.40412557 -17.41155154]
+Current real qs: -16.95668451315537
+Chosen action: 1
+Current sample loss: 6.850281723870778e-05
+***
+Episodes so far: 16
+Average episode length: 2076.625
+Average reward over last 100 episodes: -1969.6470588235295
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:55,682:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:55,685:GAIRL - dqn:INFO: Training with loss: 0.6592399622815601
+----------------------------------------------------
+
+2019-03-08 18:35:56,536:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 33999
+Previous state: [ 0.99227918  0.12402433  0.92882541 -0.37051768  0.58383139 -0.32099545]
+Previous online qs: [[-17.98180006 -17.9832633  -17.98839781]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -774.0
+***
+Current step: 34000
+Is terminal: False
+Current state: [ 0.97432538  0.22514453  0.91254892 -0.40896755  0.42225578 -0.07600267]
+Current online qs: [-17.98180544 -17.98326868 -17.98840319]
+Current target qs: [-17.62175952 -17.1551165  -17.62375648]
+Current real qs: -17.15511650248962
+Chosen action: 2
+Current sample loss: 3.1161994213386004e-06
+***
+Episodes so far: 16
+Average episode length: 2076.625
+Average reward over last 100 episodes: -1999.0588235294117
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:56,537:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:56,541:GAIRL - dqn:INFO: Training with loss: 0.6684914268363493
+----------------------------------------------------
+
+2019-03-08 18:35:57,416:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 34499
+Previous state: [ 0.94285382 -0.33320666  0.39189048  0.92001187  0.2657983   0.06200422]
+Previous online qs: [[-18.23769595 -18.2335097  -18.24045268]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -1274.0
+***
+Current step: 34500
+Is terminal: False
+Current state: [ 0.97133313 -0.23772241  0.48300849  0.87561567  0.71304817 -1.06224739]
+Current online qs: [-18.23696273 -18.23277671 -18.23971932]
+Current target qs: [-17.41095385 -17.82356002 -17.82863335]
+Current real qs: -17.410953854233274
+Chosen action: 1
+Current sample loss: 1.1119687062679078e-05
+***
+Episodes so far: 16
+Average episode length: 2076.625
+Average reward over last 100 episodes: -2028.4705882352941
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:57,417:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:57,421:GAIRL - dqn:INFO: Training with loss: 0.6622931643827085
+----------------------------------------------------
+
+2019-03-08 18:35:58,280:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 34999
+Previous state: [ 0.9999745   0.00714151  0.9091618  -0.41644306  2.0059271  -2.29173265]
+Previous online qs: [[-18.49076607 -18.50554756 -18.51037716]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -1774.0
+***
+Current step: 35000
+Is terminal: False
+Current state: [ 0.92427435  0.38172886  0.67335528 -0.73931905  1.75743304 -1.62029233]
+Current online qs: [-18.48962214 -18.50440229 -18.5092315 ]
+Current target qs: [-18.08361745 -17.6818489  -18.08634456]
+Current real qs: -17.681848900237185
+Chosen action: 0
+Current sample loss: 0.00020347146911044343
+***
+Episodes so far: 16
+Average episode length: 2076.625
+Average reward over last 100 episodes: -2057.8823529411766
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:58,280:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:58,284:GAIRL - dqn:INFO: Training with loss: 0.6479029186263825
+----------------------------------------------------
+
+2019-03-08 18:35:59,140:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 35499
+Previous state: [ 0.99707417  0.07644012  0.99473232  0.10250668 -2.38355411  4.14436439]
+Previous online qs: [[-18.75851948 -18.75937263 -18.76846575]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -2274.0
+***
+Current step: 35500
+Is terminal: False
+Current state: [ 0.93442845 -0.35615091  0.67495111  0.73786245 -1.91962441  2.93698514]
+Current online qs: [-18.75294983 -18.75380258 -18.76289199]
+Current target qs: [-17.93315711 -18.35389236 -18.35866986]
+Current real qs: -17.933157111458073
+Chosen action: 0
+Current sample loss: 2.203308884163397e-05
+***
+Episodes so far: 16
+Average episode length: 2076.625
+Average reward over last 100 episodes: -2087.294117647059
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:35:59,140:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:35:59,144:GAIRL - dqn:INFO: Training with loss: 0.6555099799704331
+----------------------------------------------------
+
+2019-03-08 18:36:00,011:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 35999
+Previous state: [ 0.86000336  0.51028836  0.50010969 -0.86596207  0.12896251 -0.56392956]
+Previous online qs: [[-18.95691893 -18.96489689 -18.97165947]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -2774.0
+***
+Current step: 36000
+Is terminal: False
+Current state: [ 0.87783809  0.47895751  0.48715698 -0.87331442 -0.48174707  0.41326827]
+Current online qs: [-18.96027669 -18.96825671 -18.9750209 ]
+Current target qs: [-18.1522492  -18.58091523 -18.58988969]
+Current real qs: -18.152249203200583
+Chosen action: 0
+Current sample loss: 0.000190654946902899
+***
+Episodes so far: 16
+Average episode length: 2076.625
+Average reward over last 100 episodes: -2116.705882352941
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:36:00,011:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:36:00,015:GAIRL - dqn:INFO: Training with loss: 0.6458503102844504
+----------------------------------------------------
+
+2019-03-08 18:36:00,877:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 36499
+Previous state: [ 0.86995829 -0.49312531  0.28829757  0.95754087  0.8435658  -0.02601345]
+Previous online qs: [[-19.23032929 -19.22946181 -19.23123519]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -3274.0
+***
+Current step: 36500
+Is terminal: False
+Current state: [ 0.95997427 -0.28008822  0.42036646  0.90735442  1.42915863 -1.36447209]
+Current online qs: [-19.22742467 -19.22655736 -19.22833045]
+Current target qs: [-18.41432918 -18.80988407 -18.81657245]
+Current real qs: -18.414329182018523
+Chosen action: 1
+Current sample loss: 5.242961495620162e-07
+***
+Episodes so far: 16
+Average episode length: 2076.625
+Average reward over last 100 episodes: -2146.1176470588234
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:36:00,878:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:36:00,881:GAIRL - dqn:INFO: Training with loss: 0.6512964959602228
+----------------------------------------------------
+
+2019-03-08 18:36:01,743:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 36999
+Previous state: [ 0.96709491  0.25441588  0.89535416 -0.44535484 -2.14396894  2.18099112]
+Previous online qs: [[-19.51038322 -19.51199594 -19.51228995]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -3774.0
+***
+Current step: 37000
+Is terminal: False
+Current state: [ 0.98390862 -0.17867242  0.99999339 -0.00363499 -2.118239    2.22279358]
+Current online qs: [-19.51211945 -19.51373236 -19.51402638]
+Current target qs: [-19.0921158  -18.69628837 -19.09301563]
+Current real qs: -18.696288370241426
+Chosen action: 0
+Current sample loss: 1.1188021379633446e-06
+***
+Episodes so far: 16
+Average episode length: 2076.625
+Average reward over last 100 episodes: -2175.529411764706
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:36:01,743:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:36:01,747:GAIRL - dqn:INFO: Training with loss: 0.6459027373616755
+----------------------------------------------------
+
+2019-03-08 18:36:02,601:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 37499
+Previous state: [ 0.8435051   0.53712117  0.977742   -0.20981084  0.43777359 -0.18144774]
+Previous online qs: [[-19.71775777 -19.72397356 -19.73084953]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -4274.0
+***
+Current step: 37500
+Is terminal: False
+Current state: [ 0.82776083  0.5610811   0.97804024 -0.20841613 -0.15516135  0.19729902]
+Current online qs: [-19.720241   -19.72645785 -19.73333503]
+Current target qs: [-18.91522032 -19.3335669  -19.33386233]
+Current real qs: -18.91522031739573
+Chosen action: 0
+Current sample loss: 6.906177247996469e-05
+***
+Episodes so far: 16
+Average episode length: 2076.625
+Average reward over last 100 episodes: -2204.9411764705883
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:36:02,602:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:36:02,606:GAIRL - dqn:INFO: Training with loss: 0.6337835970293357
+----------------------------------------------------
+
+2019-03-08 18:36:03,477:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 37999
+Previous state: [ 0.99948897  0.0319655   0.56682443 -0.82383862 -0.99632869  3.46055938]
+Previous online qs: [[-19.91622893 -19.92283743 -19.93512252]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -4774.0
+***
+Current step: 38000
+Is terminal: False
+Current state: [ 0.98372644 -0.17967275  0.97682493 -0.21403985 -1.05124826  3.89935815]
+Current online qs: [-19.92622305 -19.93283603 -19.94512976]
+Current target qs: [-19.11404498 -19.57178988 -19.57859559]
+Current real qs: -19.114044979905827
+Chosen action: 0
+Current sample loss: 4.4563647030050727e-05
+***
+Episodes so far: 16
+Average episode length: 2076.625
+Average reward over last 100 episodes: -2234.3529411764707
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:36:03,477:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:36:03,481:GAIRL - dqn:INFO: Training with loss: 0.630868077063739
+----------------------------------------------------
+
+2019-03-08 18:36:04,375:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 38499
+Previous state: [ 0.95135628  0.30809289  0.57487687 -0.81823993 -0.61073283 -0.9030163 ]
+Previous online qs: [[-20.10388875 -20.09582054 -20.10488115]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -5274.0
+***
+Current step: 38500
+Is terminal: False
+Current state: [ 0.98983084  0.14224944  0.52046158 -0.85388509 -1.04959672  0.22694238]
+Current online qs: [-20.11503249 -20.10695775 -20.11602543]
+Current target qs: [-19.3027804  -19.72810105 -19.74022223]
+Current real qs: -19.3027804008649
+Chosen action: 1
+Current sample loss: 0.0001941021819832289
+***
+Episodes so far: 16
+Average episode length: 2076.625
+Average reward over last 100 episodes: -2263.764705882353
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:36:04,376:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:36:04,380:GAIRL - dqn:INFO: Training with loss: 0.6320302182166972
+----------------------------------------------------
+
+2019-03-08 18:36:05,238:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 38999
+Previous state: [ 0.98193767  0.1892047   0.74448249  0.66764198  0.50248321 -2.61117652]
+Previous online qs: [[-20.32023552 -20.31267002 -20.3246209 ]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -5774.0
+***
+Current step: 39000
+Is terminal: False
+Current state: [ 0.96008817  0.27969753  0.98665508  0.16282428  0.38711708 -2.95639196]
+Current online qs: [-20.32381531 -20.31624781 -20.3282017 ]
+Current target qs: [-19.92528718 -19.51766921 -19.92627092]
+Current real qs: -19.51766921422831
+Chosen action: 1
+Current sample loss: 9.648152244412502e-05
+***
+Episodes so far: 16
+Average episode length: 2076.625
+Average reward over last 100 episodes: -2293.176470588235
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:36:05,239:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:36:05,243:GAIRL - dqn:INFO: Training with loss: 0.62815527191025
+----------------------------------------------------
+
+2019-03-08 18:36:06,118:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 39499
+Previous state: [ 0.89119677  0.45361692  0.97093482 -0.23934406 -0.23988429 -1.73115039]
+Previous online qs: [[-20.5538026  -20.53072164 -20.55822984]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -6274.0
+***
+Current step: 39500
+Is terminal: False
+Current state: [ 0.93672837  0.35005709  0.87506122 -0.48401226 -0.88142525 -0.86982795]
+Current online qs: [-20.56575645 -20.54265578 -20.57018706]
+Current target qs: [-20.17364601 -19.75358104 -20.17799002]
+Current real qs: -19.753581039578613
+Chosen action: 1
+Current sample loss: 0.000641284111019499
+***
+Episodes so far: 16
+Average episode length: 2076.625
+Average reward over last 100 episodes: -2322.5882352941176
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:36:06,118:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:36:06,122:GAIRL - dqn:INFO: Training with loss: 0.6115146102424904
+----------------------------------------------------
+
+2019-03-08 18:40:29,676:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 39999
+Previous state: [ 0.91110328  0.41217813 -0.75643575 -0.654068   -0.78654351  1.24398953]
+Previous online qs: [[-20.77289463 -20.77219479 -20.77403518]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -6774.0
+***
+Current step: 40000
+Is terminal: False
+Current state: [ 0.97532272  0.22078406 -0.46416786 -0.88574725 -1.20937335  2.51519657]
+Current online qs: [-20.80220722 -20.80150252 -20.80334951]
+Current target qs: [-20.41078047 -20.00784394 -20.41516737]
+Current real qs: -20.007843940706415
+Chosen action: 1
+Current sample loss: 0.0011377343497344617
+***
+Episodes so far: 16
+Average episode length: 2076.625
+Average reward over last 100 episodes: -2352.0
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:29,677:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:29,681:GAIRL - dqn:INFO: Training with loss: 0.6271969661591568
+----------------------------------------------------
+
+2019-03-08 18:40:30,546:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 40499
+Previous state: [ 0.98021897 -0.19791609  0.99448486  0.10488019 -0.00158658 -0.10338947]
+Previous online qs: [[-21.02064555 -20.98415182 -21.02368575]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -349.0
+***
+Current step: 40500
+Is terminal: False
+Current state: [ 0.98494852 -0.17284794  0.99841939  0.05620251  0.24986389 -0.37254291]
+Current online qs: [-21.01658175 -20.98009837 -21.01962119]
+Current target qs: [-20.62710035 -20.19833252 -20.62823217]
+Current real qs: -20.19833251665211
+Chosen action: 1
+Current sample loss: 0.0001487759871435738
+***
+Episodes so far: 17
+Average episode length: 2361.823529411765
+Average reward over last 100 episodes: -2249.0555555555557
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:30,547:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:30,550:GAIRL - dqn:INFO: Training with loss: 2.2992924191097415
+----------------------------------------------------
+
+2019-03-08 18:40:31,415:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 40999
+Previous state: [ 0.87563524  0.482973    0.51098403 -0.8595902  -0.31967131 -0.1007134 ]
+Previous online qs: [[-21.20012283 -21.17559578 -21.20141483]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -849.0
+***
+Current step: 41000
+Is terminal: False
+Current state: [ 0.93089389  0.36528969  0.59663728 -0.80251103 -0.95780148  1.11651394]
+Current online qs: [-21.22453781 -21.19996789 -21.22583151]
+Current target qs: [-20.85203798 -20.40936306 -20.85504701]
+Current real qs: -20.409363061141363
+Chosen action: 1
+Current sample loss: 0.0008805257903633219
+***
+Episodes so far: 17
+Average episode length: 2361.823529411765
+Average reward over last 100 episodes: -2276.8333333333335
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:31,415:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:31,419:GAIRL - dqn:INFO: Training with loss: 0.6047487748187309
+----------------------------------------------------
+
+2019-03-08 18:40:32,278:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 41499
+Previous state: [ 0.97874589 -0.2050768   0.98967189  0.14335113  0.1716023   0.36354535]
+Previous online qs: [[-21.43299398 -21.43130991 -21.44081336]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -1349.0
+***
+Current step: 41500
+Is terminal: False
+Current state: [ 0.98943948 -0.14494659  0.9836046   0.18033856  0.42787754  0.01419094]
+Current online qs: [-21.43004972 -21.42836661 -21.43786767]
+Current target qs: [-21.04099758 -20.63441024 -21.0422785 ]
+Current real qs: -20.634410239161728
+Chosen action: 1
+Current sample loss: 1.0522045592425135e-05
+***
+Episodes so far: 17
+Average episode length: 2361.823529411765
+Average reward over last 100 episodes: -2304.6111111111113
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:32,278:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:32,282:GAIRL - dqn:INFO: Training with loss: 0.6141233065547469
+----------------------------------------------------
+
+2019-03-08 18:40:33,136:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 41999
+Previous state: [ 0.99390175  0.11026923  0.99999245  0.00388694  0.56908784 -0.99722291]
+Previous online qs: [[-21.70698031 -21.70647473 -21.71058823]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -1849.0
+***
+Current step: 42000
+Is terminal: False
+Current state: [ 0.97906388  0.20355322  0.98471072 -0.17419756  0.35153134 -0.74782363]
+Current online qs: [-21.70920428 -21.70869801 -21.71281268]
+Current target qs: [-21.26887564 -20.91212471 -21.27661511]
+Current real qs: -20.912124712349133
+Chosen action: 1
+Current sample loss: 1.204969004105324e-05
+***
+Episodes so far: 17
+Average episode length: 2361.823529411765
+Average reward over last 100 episodes: -2332.3888888888887
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:33,137:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:33,140:GAIRL - dqn:INFO: Training with loss: 0.6137277728758348
+----------------------------------------------------
+
+2019-03-08 18:40:34,007:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 42499
+Previous state: [ 0.98776854 -0.15592725  0.89796938  0.44005794  0.82020192 -1.01307416]
+Previous online qs: [[-21.92645863 -21.89614168 -21.9314174 ]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -2349.0
+***
+Current step: 42500
+Is terminal: False
+Current state: [ 0.99964343  0.02670244  0.97952389  0.20132797  0.96908569 -1.44735767]
+Current online qs: [-21.93220877 -21.901879   -21.93716923]
+Current target qs: [-21.52209822 -21.13303777 -21.52566662]
+Current real qs: -21.133037766635976
+Chosen action: 1
+Current sample loss: 0.0006536057113392888
+***
+Episodes so far: 17
+Average episode length: 2361.823529411765
+Average reward over last 100 episodes: -2360.1666666666665
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:34,008:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:34,011:GAIRL - dqn:INFO: Training with loss: 0.5898657067970151
+----------------------------------------------------
+
+2019-03-08 18:40:34,860:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 42999
+Previous state: [ 0.9963753   0.0850662   0.91350039 -0.40683785 -0.15437211  0.72466326]
+Previous online qs: [[-22.20254027 -22.19738045 -22.20333698]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -2849.0
+***
+Current step: 43000
+Is terminal: False
+Current state: [ 0.9992665   0.03829433  0.97377176 -0.22752704 -0.30021073  1.13333411]
+Current online qs: [-22.20776747 -22.20260384 -22.20856437]
+Current target qs: [-21.78973215 -21.40809741 -21.79465057]
+Current real qs: -21.408097412123475
+Chosen action: 1
+Current sample loss: 1.1316547542276083e-05
+***
+Episodes so far: 17
+Average episode length: 2361.823529411765
+Average reward over last 100 episodes: -2387.9444444444443
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:34,861:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:34,865:GAIRL - dqn:INFO: Training with loss: 0.6002206039476687
+----------------------------------------------------
+
+2019-03-08 18:40:35,732:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 43499
+Previous state: [ 0.90492191  0.42557764  0.78315916 -0.6218213   0.64063908 -1.4002534 ]
+Previous online qs: [[-22.39976    -22.36638663 -22.40386731]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -3349.0
+***
+Current step: 43500
+Is terminal: False
+Current state: [ 0.87739528  0.47976819  0.66615713 -0.74581142 -0.04130218 -0.29042977]
+Current online qs: [-22.39289317 -22.35953696 -22.39699886]
+Current target qs: [-21.99574071 -21.61176366 -21.99653004]
+Current real qs: -21.611763661847384
+Chosen action: 1
+Current sample loss: 0.000856112052897867
+***
+Episodes so far: 17
+Average episode length: 2361.823529411765
+Average reward over last 100 episodes: -2415.722222222222
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:35,733:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:35,737:GAIRL - dqn:INFO: Training with loss: 0.5855401459107948
+----------------------------------------------------
+
+2019-03-08 18:40:36,606:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 43999
+Previous state: [ 0.74418959 -0.66796845  0.67674714  0.73621553  0.67759071 -1.5391231 ]
+Previous online qs: [[-22.61797294 -22.59051773 -22.61917584]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -3849.0
+***
+Current step: 44000
+Is terminal: False
+Current state: [ 0.87455152 -0.48493262  0.9229092   0.38501768  1.53379186 -2.72361054]
+Current online qs: [-22.66059168 -22.63304323 -22.66179698]
+Current target qs: [-22.22425168 -21.84583107 -22.22831787]
+Current real qs: -21.845831069455343
+Chosen action: 1
+Current sample loss: 0.0013582930386588047
+***
+Episodes so far: 17
+Average episode length: 2361.823529411765
+Average reward over last 100 episodes: -2443.5
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:36,607:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:36,610:GAIRL - dqn:INFO: Training with loss: 0.5892240004324484
+----------------------------------------------------
+
+2019-03-08 18:40:37,468:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 44499
+Previous state: [ 0.90896746  0.41686707  0.694223   -0.71975998  0.79482425 -1.40099297]
+Previous online qs: [[-22.88191353 -22.87298582 -22.8925778 ]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -423.0
+***
+Current step: 44500
+Is terminal: False
+Current state: [ 0.86694858  0.49839759  0.56832664 -0.82280303  0.10973989 -0.21440871]
+Current online qs: [-22.8549271  -22.84603049 -22.86557497]
+Current target qs: [-22.45928115 -22.08046351 -22.46047501]
+Current real qs: -22.080463505569448
+Chosen action: 1
+Current sample loss: 0.00017760761357812313
+***
+Episodes so far: 18
+Average episode length: 2448.722222222222
+Average reward over last 100 episodes: -2341.157894736842
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:37,468:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:37,472:GAIRL - dqn:INFO: Training with loss: 0.5915216268728913
+----------------------------------------------------
+
+2019-03-08 18:40:38,342:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 44999
+Previous state: [ 0.94799874 -0.31827408  0.98326144  0.18220027 -1.10568473  0.35524421]
+Previous online qs: [[-23.14166224 -23.13619985 -23.15120961]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -923.0
+***
+Current step: 45000
+Is terminal: False
+Current state: [ 0.88072757 -0.47362321  0.98086429  0.19469268 -0.55852412 -0.24860966]
+Current online qs: [-23.13262128 -23.12716807 -23.14216383]
+Current target qs: [-22.7139539  -22.34691407 -22.72451589]
+Current real qs: -22.3469140748954
+Chosen action: 1
+Current sample loss: 0.00016268780128243768
+***
+Episodes so far: 18
+Average episode length: 2448.722222222222
+Average reward over last 100 episodes: -2367.4736842105262
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:38,342:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:38,346:GAIRL - dqn:INFO: Training with loss: 0.5875746592449089
+----------------------------------------------------
+
+2019-03-08 18:40:39,209:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 45499
+Previous state: [ 0.96075768 -0.27738904  0.99881001  0.04877046  0.14101131 -0.44679177]
+Previous online qs: [[-23.30611205 -23.30823316 -23.31288402]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -1423.0
+***
+Current step: 45500
+Is terminal: False
+Current state: [ 0.97871272 -0.20523501  0.99486644 -0.10119663  0.58273473 -1.01681711]
+Current online qs: [-23.31626755 -23.31838196 -23.3230432 ]
+Current target qs: [-22.93903722 -22.53551906 -22.94847645]
+Current real qs: -22.535519056099673
+Chosen action: 0
+Current sample loss: 1.6417224468804352e-05
+***
+Episodes so far: 18
+Average episode length: 2448.722222222222
+Average reward over last 100 episodes: -2393.7894736842104
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:39,210:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:39,214:GAIRL - dqn:INFO: Training with loss: 0.5901607012796412
+----------------------------------------------------
+
+2019-03-08 18:40:40,081:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 45999
+Previous state: [ 0.92988489  0.36785063  0.99990432  0.01383325 -0.76608277 -0.28345105]
+Previous online qs: [[-23.51532971 -23.52690073 -23.53421854]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -1923.0
+***
+Current step: 46000
+Is terminal: False
+Current state: [ 0.98048625  0.19658765  0.99888513 -0.0472069  -0.98998418 -0.3414467 ]
+Current online qs: [-23.53442697 -23.54599414 -23.55333567]
+Current target qs: [-22.76441345 -23.13366534 -23.13828021]
+Current real qs: -22.76441345423653
+Chosen action: 0
+Current sample loss: 0.00045965686953728903
+***
+Episodes so far: 18
+Average episode length: 2448.722222222222
+Average reward over last 100 episodes: -2420.1052631578946
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:40,082:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:40,086:GAIRL - dqn:INFO: Training with loss: 0.5729622211473715
+----------------------------------------------------
+
+2019-03-08 18:40:41,104:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 46499
+Previous state: [ 0.96263746 -0.27079352  0.81334415  0.58178286  0.23277218  0.36841668]
+Previous online qs: [[-23.69331521 -23.67494057 -23.69974694]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -157.0
+***
+Current step: 46500
+Is terminal: False
+Current state: [ 0.98258674 -0.18580448  0.8191363   0.57359892  0.62167781 -0.45543506]
+Current online qs: [-23.7193474  -23.70092204 -23.72578771]
+Current target qs: [-22.92848983 -23.29253505 -23.29971196]
+Current real qs: -22.928489834806662
+Chosen action: 2
+Current sample loss: 0.0005887596942887894
+***
+Episodes so far: 19
+Average episode length: 2439.1052631578946
+Average reward over last 100 episodes: -2324.05
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:41,105:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:41,108:GAIRL - dqn:INFO: Training with loss: 0.5745488694072893
+----------------------------------------------------
+
+2019-03-08 18:40:42,030:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 46999
+Previous state: [ 0.99736246 -0.07258184  0.96354678 -0.2675399   0.04555425  0.0292172 ]
+Previous online qs: [[-23.89069474 -23.86880702 -23.88118906]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -657.0
+***
+Current step: 47000
+Is terminal: False
+Current state: [ 0.99821389 -0.05974134  0.97026604 -0.24204092  0.08102527  0.23252246]
+Current online qs: [-23.88571127 -23.86383443 -23.87620837]
+Current target qs: [-23.49342463 -23.09509584 -23.49979025]
+Current real qs: -23.09509583844076
+Chosen action: 1
+Current sample loss: 2.1735540811537786e-05
+***
+Episodes so far: 19
+Average episode length: 2439.1052631578946
+Average reward over last 100 episodes: -2349.05
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:42,031:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:42,034:GAIRL - dqn:INFO: Training with loss: 2.669090073603108
+----------------------------------------------------
+
+2019-03-08 18:40:42,883:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 47499
+Previous state: [ 0.82916777  0.55899983  0.97159041 -0.23666872 -0.15060633  1.40219995]
+Previous online qs: [[-23.9505316  -23.95358827 -23.95464874]] (calculated now)
+Previous action: 0
+Received reward: -1.0
+Episode cumulative reward: -1157.0
+***
+Current step: 47500
+Is terminal: False
+Current state: [ 0.87467007  0.48471876  0.99739515  0.07213123 -0.69327456  1.64546434]
+Current online qs: [-23.97264872 -23.97568736 -23.97677005]
+Current target qs: [-23.59286632 -23.19975191 -23.58352671]
+Current real qs: -23.199751913833115
+Chosen action: 0
+Current sample loss: 0.00029662457632501234
+***
+Episodes so far: 19
+Average episode length: 2439.1052631578946
+Average reward over last 100 episodes: -2374.05
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:42,884:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:42,887:GAIRL - dqn:INFO: Training with loss: 0.5706749292483853
+----------------------------------------------------
+
+2019-03-08 18:40:43,754:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 47999
+Previous state: [ 0.90567102  0.42398113  0.93967193  0.34207699  1.75415675 -2.25335385]
+Previous online qs: [[-24.33650719 -24.32802792 -24.32716724]] (calculated now)
+Previous action: 2
+Received reward: -1.0
+Episode cumulative reward: -1657.0
+***
+Current step: 48000
+Is terminal: False
+Current state: [ 0.75495188  0.65578019  0.99916234 -0.04092206  0.95918233 -1.5356706 ]
+Current online qs: [-24.24900705 -24.24065879 -24.23971501]
+Current target qs: [-23.50522604 -23.83944939 -23.84057432]
+Current real qs: -23.505226036870674
+Chosen action: 2
+Current sample loss: 0.003248254624546394
+***
+Episodes so far: 19
+Average episode length: 2439.1052631578946
+Average reward over last 100 episodes: -2399.05
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:43,755:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:43,759:GAIRL - dqn:INFO: Training with loss: 0.5682206989942563
+----------------------------------------------------
+
+2019-03-08 18:40:44,635:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 48499
+Previous state: [ 0.97587519 -0.21832914  0.97014912  0.24250915  0.46076469  0.04938726]
+Previous online qs: [[-24.42677227 -24.40032424 -24.42276221]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -202.0
+***
+Current step: 48500
+Is terminal: False
+Current state: [ 0.99496113 -0.10026143  0.97769588  0.21002561  0.71068195 -0.35967248]
+Current online qs: [-24.44859617 -24.42209333 -24.44458042]
+Current target qs: [-24.05439942 -24.04615382 -23.65017882]
+Current real qs: -23.650178824947375
+Chosen action: 1
+Current sample loss: 0.00017829723672639294
+***
+Episodes so far: 20
+Average episode length: 2414.9
+Average reward over last 100 episodes: -2308.5714285714284
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:44,635:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:44,639:GAIRL - dqn:INFO: Training with loss: 0.565557519178049
+----------------------------------------------------
+
+2019-03-08 18:40:45,532:GAIRL - dqn:INFO: 
+--------------------------------------------------
+Previous step: 48999
+Previous state: [ 0.99993943 -0.01100612  0.74590392  0.66605356  0.58317554 -0.12671008]
+Previous online qs: [[-24.51999941 -24.50630733 -24.50680938]] (calculated now)
+Previous action: 1
+Received reward: -1.0
+Episode cumulative reward: -702.0
+***
+Current step: 49000
+Is terminal: False
+Current state: [ 0.99378766  0.11129281  0.80139264  0.59813864  0.61528674 -0.71879821]
+Current online qs: [-24.53480764 -24.52108774 -24.52160638]
+Current target qs: [-24.1832926  -23.73624862 -24.17934585]
+Current real qs: -23.736248624870996
+Chosen action: 1
+Current sample loss: 5.5074100218008705e-05
+***
+Episodes so far: 20
+Average episode length: 2414.9
+Average reward over last 100 episodes: -2332.3809523809523
+Current epsilon: 0.0500950000001857
+
+2019-03-08 18:40:45,532:GAIRL - dqn:INFO: Updating target network with online params
+2019-03-08 18:40:45,536:GAIRL - dqn:INFO: Training with loss: 0.5615360260366858
+----------------------------------------------------
+
