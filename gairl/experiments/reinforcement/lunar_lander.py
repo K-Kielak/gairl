@@ -8,6 +8,7 @@ from gairl.agents import create_agent
 from gairl.config import AGENT_STR, DELAY_BETWEEN_RENDERS, RENDER
 
 EPISODES_NUM = 5000
+REWARD_RANGE = (-100, 100)
 
 
 def main():
@@ -18,7 +19,9 @@ def main():
         a_ranges = [[0, 1]] * env.action_space.n
         agent = create_agent(AGENT_STR, env.action_space.n,
                              env.observation_space.shape[0], sess,
-                             state_ranges=s_ranges, action_ranges=a_ranges)
+                             state_ranges=s_ranges,
+                             action_ranges=a_ranges,
+                             reward_range=REWARD_RANGE)
         for e in range(EPISODES_NUM):
             observation = env.reset()
             action = agent.step(observation)

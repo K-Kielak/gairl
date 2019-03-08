@@ -181,7 +181,7 @@ class MultilayerPerceptron(AbstractGenerator):
                     training_summs.extend(summarize_ndarray(layer.weights))
                 with tf.name_scope(f'{i}/biases'):
                     training_summs.extend(summarize_ndarray(layer.biases))
-        with tf.name_scope('losses'):
+        with tf.name_scope('losses/'):
             training_summs.append(tf.summary.scalar('loss', self._loss))
 
         self._training_summary = tf.summary.merge(training_summs)

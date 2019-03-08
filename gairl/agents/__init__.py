@@ -20,7 +20,8 @@ def create_agent(agent_name,
                  name=None,
                  output_dir=None,
                  state_ranges=(-1, 1),
-                 action_ranges=(-1, 1)):
+                 action_ranges=(-1, 1),
+                 reward_range=(-1, 1)):
     if agent_name not in _STR_TO_AGENT.keys():
         raise AttributeError(f"There's no agent like {agent_name}.")
 
@@ -28,7 +29,8 @@ def create_agent(agent_name,
         return _create_gairl_agent(actions_num, state_size, session,
                                    name=name, output_dir=output_dir,
                                    state_ranges=state_ranges,
-                                   action_ranges=action_ranges)
+                                   action_ranges=action_ranges,
+                                   reward_range=reward_range)
 
     creation_method = _STR_TO_AGENT[agent_name]
     if 'session' in getfullargspec(creation_method).args:
@@ -108,20 +110,20 @@ def _create_gairl_agent(actions_num,
                         name=None,
                         output_dir=None,
                         state_ranges=(-1, 1),
-                        action_ranges=(-1, 1)):
+                        action_ranges=(-1, 1),
+                        reward_range=(-1, 1)):
     output_dir = output_dir if output_dir else gairl_conf.OUTPUT_DIRECTORY
     name = name if name else 'GAIRL'
 
     # Create directory for RL agent and generative model
     os.mkdir(output_dir)
 
-    generative_model = _create_generative_for_gairl(actions_num,
-                                                    state_size,
-                                                    session,
-                                                    name,
-                                                    output_dir,
-                                                    state_ranges=state_ranges,
-                                                    action_ranges=action_ranges)
+    state_model, reward_model, terminal_model = \
+        _create_generative_for_gairl(actions_num, state_size, session,
+                                     name, output_dir,
+                                     state_ranges=state_ranges,
+                                     action_ranges=action_ranges,
+                                     reward_range=reward_range)
 
     rl_output_dir = os.path.join(output_dir, 'agent')
     rl_agent = create_agent(gairl_conf.RL_AGENT_STR,
@@ -134,7 +136,9 @@ def _create_gairl_agent(actions_num,
     return GAIRLAgent(actions_num,
                       state_size,
                       rl_agent,
-                      generative_model,
+                      state_model,
+                      reward_model,
+                      terminal_model,
                       session,
                       output_dir,
                       name=name,
@@ -152,12 +156,13 @@ def _create_gairl_agent(actions_num,
 def _create_generative_for_gairl(actions_num, state_size,
                                  session, name, output_dir,
                                  state_ranges=(-1, 1),
-                                 action_ranges=(-1, 1)):
-    # Define output dir
-    gen_output_dir = os.path.join(output_dir, 'model')
+                                 action_ranges=(-1, 1),
+                                 reward_range=(-1, 1)):
+    # Define output dirs
+    state_output_dir = os.path.join(output_dir, 'state')
+    reward_output_dir = os.path.join(output_dir, 'reward')
+    terminal_output_dir = os.path.join(output_dir, 'terminal')
 
-    # Prepare shapes
-    gen_data_shape = (state_size,)
     cond_data_shape = (state_size + actions_num,)
 
     # Make sure state ranges are of correct size
@@ -170,15 +175,31 @@ def _create_generative_for_gairl(actions_num, state_size,
     conditional_ranges = np.vstack((full_s_ranges, full_a_ranges))
 
     gen_name = f'{name} - {gairl_conf.GENERATIVE_MODEL_STR}'
-    generative_model = create_generator(gairl_conf.GENERATIVE_MODEL_STR,
-                                        gen_data_shape,
-                                        session,
-                                        name=gen_name,
-                                        data_ranges=full_s_ranges,
-                                        conditional_shape=cond_data_shape,
-                                        conditional_ranges=conditional_ranges,
-                                        output_dir=gen_output_dir)
-    return generative_model
+    state_model = create_generator(gairl_conf.GENERATIVE_MODEL_STR,
+                                   (state_size,),
+                                   session,
+                                   name=gen_name + ' - state',
+                                   data_ranges=full_s_ranges,
+                                   conditional_shape=cond_data_shape,
+                                   conditional_ranges=conditional_ranges,
+                                   output_dir=state_output_dir)
+    reward_model = create_generator(gairl_conf.GENERATIVE_MODEL_STR,
+                                    (1,),
+                                    session,
+                                    name=gen_name + ' - reward',
+                                    data_ranges=reward_range,
+                                    conditional_shape=cond_data_shape,
+                                    conditional_ranges=conditional_ranges,
+                                    output_dir=reward_output_dir)
+    terminal_model = create_generator(gairl_conf.GENERATIVE_MODEL_STR,
+                                      (1,),
+                                      session,
+                                      name=gen_name + ' - terminal',
+                                      data_ranges=(0, 1),
+                                      conditional_shape=cond_data_shape,
+                                      conditional_ranges=conditional_ranges,
+                                      output_dir=terminal_output_dir)
+    return state_model, reward_model, terminal_model
 
 
 _STR_TO_AGENT = {

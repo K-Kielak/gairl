@@ -297,7 +297,7 @@ class VanillaGAN(AbstractGenerator):
                     training_summs.extend(summarize_ndarray(layer.weights))
                 with tf.name_scope(f'{i}/biases'):
                     training_summs.extend(summarize_ndarray(layer.biases))
-        with tf.name_scope('losses'):
+        with tf.name_scope('losses/'):
             training_summs.append(tf.summary.scalar('generator-loss',
                                                     self._g_loss))
             training_summs.append(tf.summary.scalar('fake-discriminator-loss',
