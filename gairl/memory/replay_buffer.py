@@ -60,6 +60,13 @@ class ReplayBuffer:
         samples = sample(self._buffer, replay_size)
         return np.array(samples)
 
+    def get_non_terminal_experience(self):
+        exp = sample(self._buffer, 1)[0]
+        while exp[4]:
+            exp = sample(self._buffer, 1)[0]
+
+        return exp
+
     @property
     def prioritized(self):
         return False

@@ -128,7 +128,7 @@ class WassersteinGAN(VanillaGAN):
         self._fake_discrim = Dnu.model_output(fake_discrim_in,
                                               self._d_params,
                                               activation,
-                                              dropout_prob=dropout,
+                                              dropout_prob=self._d_dropout_ph,
                                               out_activation_fn=None,  # Linear
                                               name='fake_discrimination')
         self._fake_discrim_mean = tf.reduce_mean(self._fake_discrim)
@@ -138,7 +138,7 @@ class WassersteinGAN(VanillaGAN):
         self._real_discrim = Dnu.model_output(real_discrim_in,
                                               self._d_params,
                                               activation,
-                                              dropout_prob=dropout,
+                                              dropout_prob=self._d_dropout_ph,
                                               out_activation_fn=None,  # Linear
                                               name='real_discrimination')
         self._real_discrim_mean = tf.reduce_mean(self._real_discrim)

@@ -118,13 +118,6 @@ def _create_gairl_agent(actions_num,
     # Create directory for RL agent and generative model
     os.mkdir(output_dir)
 
-    state_model, reward_model, terminal_model = \
-        _create_generative_for_gairl(actions_num, state_size, session,
-                                     name, output_dir,
-                                     state_ranges=state_ranges,
-                                     action_ranges=action_ranges,
-                                     reward_range=reward_range)
-
     rl_output_dir = os.path.join(output_dir, 'agent')
     rl_agent = create_agent(gairl_conf.RL_AGENT_STR,
                             actions_num,
@@ -132,6 +125,13 @@ def _create_gairl_agent(actions_num,
                             session=session,
                             name=f'{name} - {gairl_conf.RL_AGENT_STR}',
                             output_dir=rl_output_dir)
+
+    state_model, reward_model, terminal_model = \
+        _create_generative_for_gairl(actions_num, state_size, session,
+                                     name, output_dir,
+                                     state_ranges=state_ranges,
+                                     action_ranges=action_ranges,
+                                     reward_range=reward_range)
 
     return GAIRLAgent(actions_num,
                       state_size,

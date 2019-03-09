@@ -8,7 +8,7 @@ import tensorflow as tf
 
 from gairl.generators.abstract_generator import AbstractGenerator
 from gairl.neural_utils import DenseNetworkUtils as Dnu
-from gairl.neural_utils import normalize, summarize_ndarray
+from gairl.neural_utils import clip, normalize, summarize_ndarray
 
 
 MAX_IMGS_TO_VIS = 10
@@ -144,7 +144,9 @@ class MultilayerPerceptron(AbstractGenerator):
                                          target_ranges=self._output_ranges,
                                          name='denorm_generated_out',
                                          dtype=dtype)
-        self._generated_output = tf.reshape(denorm_generated_out,
+        clipped_generated_out = clip(denorm_generated_out,
+                                     self._output_ranges, dtype=dtype)
+        self._generated_output = tf.reshape(clipped_generated_out,
                                             (batch_size, *data_shape),
                                             name='generated_output')
 

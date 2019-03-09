@@ -260,6 +260,32 @@ class GAIRLAgent(AbstractAgent):
             self._logger.info(
                 f'\n******************************************************\n\n'
                 f'\n******************************************************\n'
+                f'************  Model-based reinforcement  *************\n'
+                f'******************************************************\n'
+            )
+
+            steps = 0
+            while steps < self._model_based_steps:
+                start_exp = self._training_memory.get_non_terminal_experience()
+                state = start_exp[0]
+                action = self._rl_agent.step(state)
+                terminal = False
+                while not terminal:
+                    action_onehot = self._action_onehot_opts[action]
+                    model_in = np.array([list(state) + list(action_onehot)])
+                    reward = self._reward_model.generate(1, condition=model_in)[0][0]
+                    state = self._state_model.generate(1, condition=model_in)[0]
+                    terminal = self._terminal_model.generate(1, condition=model_in)[0][0]
+                    terminal = bool(round(terminal))
+                    action = self._rl_agent.step(state, reward=reward,
+                                                 is_terminal=terminal)
+                    steps += 1
+                    if steps >= self._model_based_steps:
+                        break
+
+            self._logger.info(
+                f'\n******************************************************\n\n'
+                f'\n******************************************************\n'
                 f'************  Back to real environment  **************\n'
                 f'******************************************************\n'
             )

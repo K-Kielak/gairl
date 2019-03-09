@@ -169,3 +169,11 @@ def normalize(data_batch, data_ranges=None,
     data_normed = data_normed / (data_ranges[..., 1] - data_ranges[..., 0])
     data_normed = data_normed * (target_ranges[..., 1] - target_ranges[..., 0])
     return tf.add(data_normed, target_ranges[..., 0], name=name)
+
+
+def clip(data_batch, clips, dtype=tf.float32):
+    clips = tf.convert_to_tensor(clips, dtype=dtype)
+    lacking_dims = tf.tile([1], [tf.rank(data_batch) - tf.rank(clips)])
+    final_shape = tf.concat((lacking_dims, tf.shape(clips)), 0)
+    clips = tf.reshape(clips, final_shape)
+    return tf.clip_by_value(data_batch, clips[..., 0], clips[..., 1])

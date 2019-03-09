@@ -9,7 +9,7 @@ import tensorflow as tf
 
 from gairl.generators.abstract_generator import AbstractGenerator
 from gairl.neural_utils import DenseNetworkUtils as Dnu
-from gairl.neural_utils import normalize, summarize_ndarray
+from gairl.neural_utils import clip, normalize, summarize_ndarray
 
 
 MAX_IMGS_TO_VIS = 10
@@ -166,10 +166,8 @@ class VanillaGAN(AbstractGenerator):
                                               dtype=dtype)
 
         # Create networks
-        self._create_generator_network(g_layers, g_activation,
-                                       g_dropout, dtype)
-        self._create_discriminator_network(d_layers, d_activation,
-                                           d_dropout, dtype)
+        self._create_generator_network(g_layers, g_activation, dtype)
+        self._create_discriminator_network(d_layers, d_activation, dtype)
 
         # Define objectives
         self._define_generator_objective(g_optimizer)
@@ -219,6 +217,8 @@ class VanillaGAN(AbstractGenerator):
                                                      out_activation_fn=tf.nn.tanh,
                                                      name='generator_out_flat')
         # Denormalize
+        generated_data_clipped = clip(self._generated_data_flat,
+                                      self._data_ranges, dtype=dtype)
         self._generated_data = normalize(self._generated_data_flat,
                                          data_ranges=GENERATOR_OUT_RANGE,
                                          target_ranges=self._data_ranges,
@@ -434,9 +434,9 @@ class VanillaGAN(AbstractGenerator):
         noise = np.random.normal(0, 1, (how_many, self._noise_size))
 
         return self._sess.run(self._generated_data, feed_dict={
-                                  self._noise: noise,
-                                  self._g_condition: condition,
-                                  self._g_dropout_ph: 1
+                                 self._noise: noise,
+                                 self._g_condition: condition,
+                                 self._g_dropout_ph: 1
                               })
 
     def visualize_data(self, data):
