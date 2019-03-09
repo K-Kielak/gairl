@@ -90,6 +90,7 @@ class MultilayerPerceptron(AbstractGenerator):
         self._input_shape = input_shape
         self._input_ranges = input_ranges
         self._output_ranges = output_ranges
+        self._dropout_val = dropout
         self._logging_freq = logging_freq
         self._save_freq = save_freq
 
@@ -100,6 +101,8 @@ class MultilayerPerceptron(AbstractGenerator):
                                           dtype=dtype, name='input')
         self._real_output = tf.placeholder(shape=(None, *data_shape),
                                            dtype=dtype, name='real_output')
+        self._dropout_ph = tf.placeholder(shape=(), dtype=dtype,
+                                          name='dropout')
 
         # Preprocess placeholders
         batch_size = tf.shape(self._input_data)[0]
@@ -133,7 +136,7 @@ class MultilayerPerceptron(AbstractGenerator):
         generated_out = Dnu.model_output(input_preproc,
                                          self._params,
                                          activation,
-                                         dropout_prob=dropout,
+                                         dropout_prob=self._dropout_ph,
                                          out_activation_fn=final_activation,
                                          name='flat_generated_output')
         denorm_generated_out = normalize(generated_out,
@@ -231,7 +234,8 @@ class MultilayerPerceptron(AbstractGenerator):
         # Train network
         self._sess.run(self._train_step, feed_dict={
             self._input_data: condition,
-            self._real_output: expected_output
+            self._real_output: expected_output,
+            self._dropout_ph: self._dropout_val
         })
 
         self._steps_so_far += 1
@@ -250,7 +254,8 @@ class MultilayerPerceptron(AbstractGenerator):
             self._sess.run(
                 [self._training_summary, self._loss], feed_dict={
                     self._input_data: condition,
-                    self._real_output: expected_output
+                    self._real_output: expected_output,
+                    self._dropout_ph: 1
                 })
         self._summary_writer.add_summary(train_summ, self._steps_so_far)
 
@@ -264,6 +269,7 @@ class MultilayerPerceptron(AbstractGenerator):
         self._logger.info('Visualising data\n')
         vis_summ = self._sess.run(self._visualise_summary, feed_dict={
             self._real_output: data,
+            self._dropout_ph: 1
         })
         self._summary_writer.add_summary(vis_summ, self._steps_so_far)
 
@@ -277,7 +283,8 @@ class MultilayerPerceptron(AbstractGenerator):
             'generated images!'
 
         return self._sess.run(self._generated_output, feed_dict={
-            self._input_data: condition
+            self._input_data: condition,
+            self._dropout_ph: 1
         })
 
     def calculate_l1_loss(self, expected_output, condition):
@@ -291,4 +298,5 @@ class MultilayerPerceptron(AbstractGenerator):
         return self._sess.run(self._loss, feed_dict={
             self._real_output: expected_output,
             self._input_data: condition,
+            self._dropout_ph: 1
         })

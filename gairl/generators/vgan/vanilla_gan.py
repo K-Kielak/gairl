@@ -108,8 +108,10 @@ class VanillaGAN(AbstractGenerator):
         self._conditional_ranges = conditional_ranges
         self._flat_condition_size = reduce(mul, self._conditional_shape)
         self._dtype = dtype
+        self._g_dropout_val = g_dropout
         self._g_optimizer = g_optimizer
         self._g_activation = g_activation
+        self._d_dropout_val = d_dropout
         self._d_optimizer = d_optimizer
         self._d_activation = d_activation
         self._k = k
@@ -126,9 +128,13 @@ class VanillaGAN(AbstractGenerator):
         self._g_condition = tf.placeholder(shape=(None,
                                                   *self._conditional_shape,),
                                            dtype=dtype, name='g_condition')
+        self._g_dropout_ph = tf.placeholder(shape=(), dtype=dtype,
+                                            name='g_dropout')
         self._d_condition = tf.placeholder(shape=(None,
                                                   *self._conditional_shape,),
                                            dtype=dtype, name='d_condition')
+        self._d_dropout_ph = tf.placeholder(shape=(), dtype=dtype,
+                                            name='d_dropout')
         self._batch_size = tf.shape(self._noise)[0]
         real_data_flat = tf.reshape(self._real_data,
                                     (self._batch_size, self._flat_data_size),
@@ -196,7 +202,7 @@ class VanillaGAN(AbstractGenerator):
             f'Condition size: {conditional_shape}'
         )
 
-    def _create_generator_network(self, layers, activation, dropout, dtype):
+    def _create_generator_network(self, layers, activation, dtype):
         self._g_params = Dnu.create_network_params(self._noise_size +
                                                    self._flat_condition_size,
                                                    layers,
@@ -209,7 +215,7 @@ class VanillaGAN(AbstractGenerator):
         self._generated_data_flat = Dnu.model_output(gen_in,
                                                      self._g_params,
                                                      activation,
-                                                     dropout_prob=dropout,
+                                                     dropout_prob=self._g_dropout_ph,
                                                      out_activation_fn=tf.nn.tanh,
                                                      name='generator_out_flat')
         # Denormalize
@@ -223,7 +229,7 @@ class VanillaGAN(AbstractGenerator):
                                           (self._batch_size,
                                            *self._data_shape))
 
-    def _create_discriminator_network(self, layers, activation, dropout, dtype):
+    def _create_discriminator_network(self, layers, activation, dtype):
         self._d_params = Dnu.create_network_params(self._flat_data_size +
                                                    self._flat_condition_size,
                                                    layers,
@@ -237,7 +243,7 @@ class VanillaGAN(AbstractGenerator):
         self._fake_discrim = Dnu.model_output(fake_discrim_in,
                                               self._d_params,
                                               activation,
-                                              dropout_prob=dropout,
+                                              dropout_prob=self._d_dropout_ph,
                                               out_activation_fn=tf.nn.sigmoid,
                                               name='fake_discrimination')
         self._fake_discrim_mean = tf.reduce_mean(self._fake_discrim)
@@ -247,7 +253,7 @@ class VanillaGAN(AbstractGenerator):
         self._real_discrim = Dnu.model_output(real_discrim_in,
                                               self._d_params,
                                               activation,
-                                              dropout_prob=dropout,
+                                              dropout_prob=self._d_dropout_ph,
                                               out_activation_fn=tf.nn.sigmoid,
                                               name='real_discrimination')
         self._real_discrim_mean = tf.reduce_mean(self._real_discrim)
@@ -371,7 +377,9 @@ class VanillaGAN(AbstractGenerator):
                            self._noise: noise,
                            self._real_data: expected_output,
                            self._g_condition: condition,
-                           self._d_condition: condition
+                           self._g_dropout_ph: 1,
+                           self._d_condition: condition,
+                           self._d_dropout_ph: self._d_dropout_val
                        })
         self._steps_so_far += 1
 
@@ -380,7 +388,9 @@ class VanillaGAN(AbstractGenerator):
             self._sess.run(self._g_train_step, feed_dict={
                                 self._noise: noise,
                                 self._g_condition: condition,
-                                self._d_condition: condition
+                                self._g_dropout_ph: self._g_dropout_val,
+                                self._d_condition: condition,
+                                self._d_dropout_ph: 1
                            })
 
         # Save model
@@ -400,7 +410,9 @@ class VanillaGAN(AbstractGenerator):
                                self._noise: noise_batch,
                                self._real_data: data_batch,
                                self._g_condition: condition,
-                               self._d_condition: condition
+                               self._g_dropout_ph: 1,
+                               self._d_condition: condition,
+                               self._d_dropout_ph: 1
                            })
         self._summary_writer.add_summary(train_summ, self._steps_so_far)
 
@@ -423,7 +435,8 @@ class VanillaGAN(AbstractGenerator):
 
         return self._sess.run(self._generated_data, feed_dict={
                                   self._noise: noise,
-                                  self._g_condition: condition
+                                  self._g_condition: condition,
+                                  self._g_dropout_ph: 1
                               })
 
     def visualize_data(self, data):
@@ -445,5 +458,5 @@ class VanillaGAN(AbstractGenerator):
         return self._sess.run(self._l1_loss, feed_dict={
             self._real_data: expected_output,
             self._g_condition: condition,
-            self._d_condition: condition
+            self._g_dropout_ph: 1
         })
