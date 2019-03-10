@@ -268,6 +268,7 @@ class GAIRLAgent(AbstractAgent):
             while steps < self._model_based_steps:
                 start_exp = self._training_memory.get_non_terminal_experience()
                 state = start_exp[0]
+
                 action = self._rl_agent.step(state)
                 terminal = False
                 while not terminal:
@@ -361,10 +362,14 @@ class GAIRLAgent(AbstractAgent):
                                          self._model_training_steps_so_far)
 
         # Get sample remaining outputs
+        train_state_out = \
+            self._state_model.generate(1, condition=train_in[np.newaxis, 0])
         train_reward_out = \
             self._reward_model.generate(1, condition=train_in[np.newaxis, 0])
         train_term_out = \
             self._terminal_model.generate(1, condition=train_in[np.newaxis, 0])
+        test_state_out = \
+            self._state_model.generate(1, condition=test_in[np.newaxis, 0])
         test_reward_out = \
             self._reward_model.generate(1, condition=test_in[np.newaxis, 0])
         test_term_out = \
@@ -379,8 +384,10 @@ class GAIRLAgent(AbstractAgent):
             f'Terminal loss: {train_term_loss}\n'
             f'Terminal recall: {train_recall}\n'
             f'Terminal precision: {train_prec}\n'
+            f'Generated state: {train_state_out[0]}\n'
             f'Generated reward: {train_reward_out[0]}\n'
             f'Generated terminal: {train_term_out[0]}\n'
+            f'Expected state: {train_ns[0]}\n'
             f'Expected reward: {train_r[0]}\n'
             f'Expected terminal: {train_term[0]}\n\n'
             f'Test -----------\n'
@@ -390,8 +397,10 @@ class GAIRLAgent(AbstractAgent):
             f'Terminal loss: {test_term_loss}\n'
             f'Terminal recall: {test_recall}\n'
             f'Terminal precision: {test_prec}\n'
+            f'Generated state: {test_state_out[0]}\n'
             f'Generated reward: {test_reward_out[0]}\n'
             f'Generated terminal: {test_term_out[0]}\n'
+            f'Expected state: {test_ns[0]}\n'
             f'Expected reward: {test_r[0]}\n'
             f'Expected terminal: {test_term[0]}\n'
             '\n--------------------------------------------------\n'
