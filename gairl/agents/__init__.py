@@ -126,7 +126,7 @@ def _create_gairl_agent(actions_num,
                             name=f'{name} - {gairl_conf.RL_AGENT_STR}',
                             output_dir=rl_output_dir)
 
-    state_model, reward_model, terminal_model = \
+    state_model, rewterm_model = \
         _create_generative_for_gairl(actions_num, state_size, session,
                                      name, output_dir,
                                      state_ranges=state_ranges,
@@ -137,8 +137,7 @@ def _create_gairl_agent(actions_num,
                       state_size,
                       rl_agent,
                       state_model,
-                      reward_model,
-                      terminal_model,
+                      rewterm_model,
                       session,
                       output_dir,
                       name=name,
@@ -160,8 +159,7 @@ def _create_generative_for_gairl(actions_num, state_size,
                                  reward_range=(-1, 1)):
     # Define output dirs
     state_output_dir = os.path.join(output_dir, 'state')
-    reward_output_dir = os.path.join(output_dir, 'reward')
-    terminal_output_dir = os.path.join(output_dir, 'terminal')
+    rewterm_output_dir = os.path.join(output_dir, 'rewterm')
 
     cond_data_shape = (state_size + actions_num,)
 
@@ -174,32 +172,29 @@ def _create_generative_for_gairl(actions_num, state_size,
         full_a_ranges = np.vstack((full_a_ranges, action_ranges))
     conditional_ranges = np.vstack((full_s_ranges, full_a_ranges))
 
-    gen_name = f'{name} - {gairl_conf.GENERATIVE_MODEL_STR}'
-    state_model = create_generator(gairl_conf.GENERATIVE_MODEL_STR,
+    state_model_name = f'{name} - {gairl_conf.STATE_MODEL_STR} - state'
+    state_model = create_generator(gairl_conf.STATE_MODEL_STR,
                                    (state_size,),
                                    session,
-                                   name=gen_name + ' - state',
+                                   name=state_model_name,
                                    data_ranges=full_s_ranges,
                                    conditional_shape=cond_data_shape,
                                    conditional_ranges=conditional_ranges,
-                                   output_dir=state_output_dir)
-    reward_model = create_generator(gairl_conf.GENERATIVE_MODEL_STR,
-                                    (1,),
-                                    session,
-                                    name=gen_name + ' - reward',
-                                    data_ranges=reward_range,
-                                    conditional_shape=cond_data_shape,
-                                    conditional_ranges=conditional_ranges,
-                                    output_dir=reward_output_dir)
-    terminal_model = create_generator(gairl_conf.GENERATIVE_MODEL_STR,
-                                      (1,),
-                                      session,
-                                      name=gen_name + ' - terminal',
-                                      data_ranges=(0, 1),
-                                      conditional_shape=cond_data_shape,
-                                      conditional_ranges=conditional_ranges,
-                                      output_dir=terminal_output_dir)
-    return state_model, reward_model, terminal_model
+                                   output_dir=state_output_dir,
+                                   layers=gairl_conf.STATE_MODEL_LAYERS,
+                                   dropout=gairl_conf.STATE_MODEL_DROPOUT)
+    rewterm_model_name = f'{name} - {gairl_conf.REWTERM_MODEL_STR} - rewterm'
+    rewterm_model = create_generator(gairl_conf.REWTERM_MODEL_STR,
+                                     (2,),
+                                     session,
+                                     name=rewterm_model_name,
+                                     data_ranges=(reward_range, (0, 1)),
+                                     conditional_shape=cond_data_shape,
+                                     conditional_ranges=conditional_ranges,
+                                     output_dir=rewterm_output_dir,
+                                     layers=gairl_conf.REWTERM_MODEL_LAYERS,
+                                     dropout=gairl_conf.REWTERM_MODEL_DROPOUT)
+    return state_model, rewterm_model
 
 
 _STR_TO_AGENT = {

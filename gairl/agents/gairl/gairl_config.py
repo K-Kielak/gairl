@@ -7,8 +7,13 @@ from gairl.config import OUTPUTS_DIR
 
 
 OUTPUT_DIRECTORY = os.path.join(OUTPUTS_DIR, 'reinforcement', 'acrobot',
-                                'gairls', '20kf50kg100kb,dqn,mlp16,16d0.75proper-2')
-GENERATIVE_MODEL_STR = 'mlp'
+                                'gairlss', '20kf50kg50kb,dqn,mlp64,64d0.75,mlp16,16d0.75')
+STATE_MODEL_STR = 'mlp'
+STATE_MODEL_DROPOUT = 0.75
+STATE_MODEL_LAYERS = [64, 64]
+REWTERM_MODEL_STR = 'mlp'
+REWTERM_MODEL_DROPOUT = 0.75
+REWTERM_MODEL_LAYERS = [16, 16]
 RL_AGENT_STR = 'dqn'
 DTYPE = tf.float64
 MODEL_FREE_STEPS = 20000

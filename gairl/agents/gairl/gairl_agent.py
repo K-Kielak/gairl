@@ -18,8 +18,7 @@ class GAIRLAgent(AbstractAgent):
                  state_size,
                  rl_agent,
                  state_model,
-                 reward_model,
-                 terminal_model,
+                 rewterm_model,
                  session,
                  output_directory,
                  name='GAIRL',
@@ -41,10 +40,8 @@ class GAIRLAgent(AbstractAgent):
             used as a part of GAIRL.
         :param state_model: gairl..generator; generator used for
             state prediction as part of gairl.
-        :param reward_model: gairl..generator; generator used for
-            reward prediction as part of gairl.
-        :param terminal_model: gairl..generator; generator used for
-            predicting if next state is terminal as part of gairl.
+        :param rewterm_model: gairl..generator; generator used for
+            reward an terminal prediction as part of gairl.
         :param session: tensorflow..Session; tensorflow session that
             will be used to run the model.
         :param output_directory: string; directory to which all of the
@@ -74,8 +71,7 @@ class GAIRLAgent(AbstractAgent):
         self._dtype = dtype
         self._rl_agent = rl_agent
         self._state_model = state_model
-        self._reward_model = reward_model
-        self._terminal_model = terminal_model
+        self._rewterm_model = rewterm_model
 
         self._model_free_steps = model_free_steps
         self._model_training_steps = model_training_steps
@@ -144,17 +140,12 @@ class GAIRLAgent(AbstractAgent):
                                                    name='state_train_loss')
         self._state_test_loss_ph = tf.placeholder(dtype=self._dtype, shape=(),
                                                   name='state_test_loss')
-        self._reward_train_loss_ph = tf.placeholder(dtype=self._dtype,
-                                                    shape=(),
-                                                    name='reward_train_loss')
-        self._reward_test_loss_ph = tf.placeholder(dtype=self._dtype, shape=(),
-                                                   name='reward_test_loss')
-        self._terminal_train_loss_ph = tf.placeholder(dtype=self._dtype,
-                                                      shape=(),
-                                                      name='terminal_train_loss')
-        self._terminal_test_loss_ph = tf.placeholder(dtype=self._dtype,
+        self._rewterm_train_loss_ph = tf.placeholder(dtype=self._dtype,
                                                      shape=(),
-                                                     name='terminal_test_loss')
+                                                     name='reward_train_loss')
+        self._rewterm_test_loss_ph = tf.placeholder(dtype=self._dtype,
+                                                    shape=(),
+                                                    name='reward_test_loss')
         self._terminal_train_prec_ph = tf.placeholder(dtype=self._dtype,
                                                       shape=(),
                                                       name='terminal_train_prec')
@@ -173,14 +164,10 @@ class GAIRLAgent(AbstractAgent):
                                                self._state_train_loss_ph))
             gen_summs.append(tf.summary.scalar('state_test',
                                                self._state_test_loss_ph))
-            gen_summs.append(tf.summary.scalar('reward_train',
-                                               self._reward_train_loss_ph))
-            gen_summs.append(tf.summary.scalar('reward_test',
-                                               self._reward_test_loss_ph))
-            gen_summs.append(tf.summary.scalar('terminal_train',
-                                               self._terminal_train_loss_ph))
-            gen_summs.append(tf.summary.scalar('terminal_test',
-                                               self._terminal_test_loss_ph))
+            gen_summs.append(tf.summary.scalar('rewterm_train',
+                                               self._rewterm_train_loss_ph))
+            gen_summs.append(tf.summary.scalar('rewterm_test',
+                                               self._rewterm_test_loss_ph))
         with tf.name_scope('accuracy/'):
             gen_summs.append(tf.summary.scalar('terminal_train_precision',
                                                self._terminal_train_prec_ph))
@@ -264,25 +251,7 @@ class GAIRLAgent(AbstractAgent):
                 f'******************************************************\n'
             )
 
-            steps = 0
-            while steps < self._model_based_steps:
-                start_exp = self._training_memory.get_non_terminal_experience()
-                state = start_exp[0]
-
-                action = self._rl_agent.step(state)
-                terminal = False
-                while not terminal:
-                    action_onehot = self._action_onehot_opts[action]
-                    model_in = np.array([list(state) + list(action_onehot)])
-                    reward = self._reward_model.generate(1, condition=model_in)[0][0]
-                    state = self._state_model.generate(1, condition=model_in)[0]
-                    terminal = self._terminal_model.generate(1, condition=model_in)[0][0]
-                    terminal = bool(round(terminal))
-                    action = self._rl_agent.step(state, reward=reward,
-                                                 is_terminal=terminal)
-                    steps += 1
-                    if steps >= self._model_based_steps:
-                        break
+            self._train_based_on_model()
 
             self._logger.info(
                 f'\n******************************************************\n\n'
@@ -295,12 +264,11 @@ class GAIRLAgent(AbstractAgent):
 
     def _train_generative_model(self):
         experience = self._training_memory.replay_experience()
-        inputs, rewards, next_states, are_terminal = \
+        inputs, next_states, rewterms = \
             self._extract_data_from_experience(experience)
 
         self._state_model.train_step(next_states, condition=inputs)
-        self._reward_model.train_step(rewards, condition=inputs)
-        self._terminal_model.train_step(are_terminal, condition=inputs)
+        self._rewterm_model.train_step(rewterms, condition=inputs)
         self._model_training_steps_so_far += 1
 
         if self._model_training_steps_so_far % self._logging_freq == 0:
@@ -308,51 +276,45 @@ class GAIRLAgent(AbstractAgent):
 
     def _log_generative_step(self):
         train_experience = self._training_memory.replay_experience()
-        train_in, train_r, train_ns, train_term = \
+        train_in, train_ns, train_rewterm = \
             self._extract_data_from_experience(train_experience)
         test_experience = self._test_memory.replay_experience()
-        test_in, test_r, test_ns, test_term = \
+        test_in, test_ns, test_rewterm = \
             self._extract_data_from_experience(test_experience)
 
         # Calc train losses
         train_state_loss = \
             self._state_model.calculate_l1_loss(train_ns, condition=train_in)
-        train_reward_loss = \
-            self._reward_model.calculate_l1_loss(train_r, condition=train_in)
-        train_term_loss = \
-            self._terminal_model.calculate_l1_loss(train_term,
-                                                   condition=train_in)
+        train_rewterm_loss = \
+            self._rewterm_model.calculate_l1_loss(train_rewterm,
+                                                  condition=train_in)
 
         # Calc test loss
         test_state_loss = \
             self._state_model.calculate_l1_loss(test_ns, condition=test_in)
-        test_reward_loss = \
-            self._reward_model.calculate_l1_loss(test_r, condition=test_in)
-        test_term_loss = \
-            self._terminal_model.calculate_l1_loss(test_term,
-                                                   condition=test_in)
+        test_rewterm_loss = \
+            self._rewterm_model.calculate_l1_loss(test_rewterm,
+                                                  condition=test_in)
 
         # Calc terminal accuracy
-        gen_train_term = \
-            self._terminal_model.generate(self._model_train_batch_size,
-                                          condition=train_in)
-        train_recall, train_prec = self._calc_recall_prec(train_term,
-                                                          gen_train_term)
+        gen_train_rewterm = \
+            self._rewterm_model.generate(self._model_train_batch_size,
+                                         condition=train_in)
+        train_recall, train_prec = self._calc_recall_prec(train_rewterm[:, 1],
+                                                          gen_train_rewterm[:, 1])
 
-        gen_test_term = \
-            self._terminal_model.generate(self._model_test_batch_size,
-                                          condition=test_in)
-        test_recall, test_prec = self._calc_recall_prec(test_term,
-                                                        gen_test_term)
+        gen_test_rewterm = \
+            self._rewterm_model.generate(self._model_test_batch_size,
+                                         condition=test_in)
+        test_recall, test_prec = self._calc_recall_prec(test_rewterm[:, 1],
+                                                        gen_test_rewterm[:, 1])
 
         # Save summary
         gen_summ = self._sess.run(self._gen_summary, feed_dict={
             self._state_train_loss_ph: train_state_loss,
             self._state_test_loss_ph: test_state_loss,
-            self._reward_train_loss_ph: train_reward_loss,
-            self._reward_test_loss_ph: test_reward_loss,
-            self._terminal_train_loss_ph: train_term_loss,
-            self._terminal_test_loss_ph: test_term_loss,
+            self._rewterm_train_loss_ph: train_rewterm_loss,
+            self._rewterm_test_loss_ph: test_rewterm_loss,
             self._terminal_train_rec_ph: train_recall,
             self._terminal_test_rec_ph: test_recall,
             self._terminal_train_prec_ph: train_prec,
@@ -364,47 +326,62 @@ class GAIRLAgent(AbstractAgent):
         # Get sample remaining outputs
         train_state_out = \
             self._state_model.generate(1, condition=train_in[np.newaxis, 0])
-        train_reward_out = \
-            self._reward_model.generate(1, condition=train_in[np.newaxis, 0])
-        train_term_out = \
-            self._terminal_model.generate(1, condition=train_in[np.newaxis, 0])
+        train_rewterm_out = \
+            self._rewterm_model.generate(1, condition=train_in[np.newaxis, 0])
         test_state_out = \
             self._state_model.generate(1, condition=test_in[np.newaxis, 0])
-        test_reward_out = \
-            self._reward_model.generate(1, condition=test_in[np.newaxis, 0])
-        test_term_out = \
-            self._terminal_model.generate(1, condition=test_in[np.newaxis, 0])
+        test_rewterm_out = \
+            self._rewterm_model.generate(1, condition=test_in[np.newaxis, 0])
 
         self._logger.info(
             f'Current model step: {self._model_training_steps_so_far}\n\n'
             f'Train -----------'
             f'Set size: {len(self._training_memory._buffer)}\n'
             f'State loss: {train_state_loss}\n'
-            f'Reward loss: {train_reward_loss}\n'
-            f'Terminal loss: {train_term_loss}\n'
+            f'Rewterm loss: {train_rewterm_loss}\n'
             f'Terminal recall: {train_recall}\n'
             f'Terminal precision: {train_prec}\n'
             f'Generated state: {train_state_out[0]}\n'
-            f'Generated reward: {train_reward_out[0]}\n'
-            f'Generated terminal: {train_term_out[0]}\n'
+            f'Generated reward: {train_rewterm_out[0, 0]}\n'
+            f'Generated terminal: {train_rewterm_out[0, 1]}\n'
             f'Expected state: {train_ns[0]}\n'
-            f'Expected reward: {train_r[0]}\n'
-            f'Expected terminal: {train_term[0]}\n\n'
+            f'Expected reward: {train_rewterm[0, 0]}\n'
+            f'Expected terminal: {train_rewterm[0, 1]}\n\n'
             f'Test -----------\n'
             f'Set size: {len(self._test_memory._buffer)}\n'
             f'State loss: {test_state_loss}\n'
-            f'Reward loss: {test_reward_loss}\n'
-            f'Terminal loss: {test_term_loss}\n'
+            f'Rewterm loss: {test_rewterm_loss}\n'
             f'Terminal recall: {test_recall}\n'
             f'Terminal precision: {test_prec}\n'
             f'Generated state: {test_state_out[0]}\n'
-            f'Generated reward: {test_reward_out[0]}\n'
-            f'Generated terminal: {test_term_out[0]}\n'
+            f'Generated reward: {test_rewterm_out[0, 0]}\n'
+            f'Generated terminal: {test_rewterm_out[0, 1]}\n'
             f'Expected state: {test_ns[0]}\n'
-            f'Expected reward: {test_r[0]}\n'
-            f'Expected terminal: {test_term[0]}\n'
+            f'Expected reward: {test_rewterm[0, 0]}\n'
+            f'Expected terminal: {test_rewterm[0, 1]}\n'
             '\n--------------------------------------------------\n'
         )
+
+    def _train_based_on_model(self):
+        steps = 0
+        while steps < self._model_based_steps:
+            start_exp = self._training_memory.get_non_terminal_experience()
+            state = start_exp[0]
+
+            action = self._rl_agent.step(state)
+            terminal = False
+            while not terminal:
+                action_onehot = self._action_onehot_opts[action]
+                model_in = np.array([list(state) + list(action_onehot)])
+                reward, terminal = \
+                    self._rewterm_model.generate(1, condition=model_in)[0]
+                state = self._state_model.generate(1, condition=model_in)[0]
+                terminal = bool(round(terminal))
+                action = self._rl_agent.step(state, reward=reward,
+                                             is_terminal=terminal)
+                steps += 1
+                if steps >= self._model_based_steps:
+                    break
 
     def _extract_data_from_experience(self, experience):
         # Inputs
@@ -413,10 +390,11 @@ class GAIRLAgent(AbstractAgent):
         actions_onehot = self._action_onehot_opts[actions]
         inputs = np.concatenate((start_states, actions_onehot), axis=1)
         # Outputs
-        rewards = np.vstack(experience[:, 2])
         next_states = np.vstack(experience[:, 3])
+        rewards = np.vstack(experience[:, 2])
         are_terminal = np.vstack(experience[:, 4])
-        return inputs, rewards, next_states, are_terminal
+        rewterms = np.concatenate((rewards, are_terminal), axis=1)
+        return inputs, next_states, rewterms
 
     def _calc_recall_prec(self, real_data, preds):
         preds = np.round(preds)
