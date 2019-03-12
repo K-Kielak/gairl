@@ -1,0 +1,652 @@
+2019-03-12 13:55:40,606:GAIRL - mlp - state:INFO: 
+Creating MLP with:
+Input shape (9,)
+Output shape (6,)
+Dtype: <dtype: 'float64'>
+Network layers: [512, 512]
+Activation function: leaky_relu
+Dropout probability: 1
+Optimizer: AdamOptimizer
+
+2019-03-12 13:56:59,289:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 13:57:27,176:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 13:57:57,442:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 13:58:25,716:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 13:58:56,482:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 13:59:26,444:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 13:59:55,739:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:00:23,638:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:00:51,616:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:01:19,364:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:01:48,379:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:02:19,811:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:02:50,233:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:03:20,274:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:03:49,799:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:04:22,577:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:04:53,086:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:05:22,168:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:05:51,107:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:06:22,440:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:06:51,877:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:07:20,697:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:07:51,009:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:08:21,126:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:08:51,097:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:09:21,227:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:09:54,949:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:10:27,016:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:10:55,912:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:11:27,539:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:11:58,584:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:12:27,264:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:12:58,141:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:13:30,286:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:14:03,542:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:14:38,693:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:15:10,805:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:15:40,971:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:16:12,702:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:16:43,890:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:17:19,392:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:17:50,168:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:18:18,081:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:18:47,121:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:19:15,390:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:19:40,971:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:20:03,779:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:20:26,983:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:20:49,876:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:21:14,351:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:21:14,614:GAIRL - mlp - state:INFO: Current step: 50000
+Loss: 0.004432413134855181
+
+--------------------------------------------------
+
+2019-03-12 14:25:46,934:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:26:20,069:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:26:52,240:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:27:23,036:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:27:54,884:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:28:28,217:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:28:59,586:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:29:30,839:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:30:00,748:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:30:30,679:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:31:05,584:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:31:47,009:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:32:22,128:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:32:51,686:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:33:20,882:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:33:50,309:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:34:20,301:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:34:52,922:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:35:27,842:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:35:56,787:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:36:24,935:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:36:52,881:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:37:21,055:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:37:51,939:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:38:22,160:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:38:52,123:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:39:22,090:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:39:52,598:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:40:24,175:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:40:53,905:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:41:24,517:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:41:56,777:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:42:28,431:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:43:00,279:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:43:29,852:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:43:59,902:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:44:30,327:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:45:01,756:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:45:33,226:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:46:04,497:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:46:33,757:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:47:01,828:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:47:29,134:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:47:50,918:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:48:23,122:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:48:48,610:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:49:15,874:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:49:43,107:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:50:05,713:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:50:28,915:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:50:29,140:GAIRL - mlp - state:INFO: Current step: 100000
+Loss: 0.004153305954614355
+
+--------------------------------------------------
+
+2019-03-12 14:55:02,274:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:55:35,759:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:56:06,699:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:56:36,626:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:57:09,753:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:57:43,603:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:58:15,352:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:58:48,197:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:59:21,739:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 14:59:57,873:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:00:29,163:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:01:00,017:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:01:32,084:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:02:06,783:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:02:37,136:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:03:07,853:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:03:36,557:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:04:06,546:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:04:36,033:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:05:12,599:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:05:45,192:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:06:16,608:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:06:48,245:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:07:20,633:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:07:53,643:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:08:28,546:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:09:01,269:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:09:33,041:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:10:06,319:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:10:38,712:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:11:09,958:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:11:41,318:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:12:13,417:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:12:44,949:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:13:19,102:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:13:51,641:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:14:23,329:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:15:00,801:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:15:31,175:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:15:59,559:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:16:27,851:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:16:56,169:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:17:23,332:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:17:46,777:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:18:13,311:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:18:42,629:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:19:11,887:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:19:40,925:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:20:09,029:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:20:37,302:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:20:37,494:GAIRL - mlp - state:INFO: Current step: 150000
+Loss: 0.002326361125422163
+
+--------------------------------------------------
+
+2019-03-12 15:24:54,082:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:25:25,431:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:25:55,961:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:26:26,536:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:27:01,252:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:27:34,763:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:28:04,399:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:28:38,702:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:29:10,694:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:29:44,608:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:30:17,737:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:30:48,610:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:31:18,418:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:31:47,415:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:32:16,278:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:32:45,240:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:33:13,969:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:33:42,339:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:34:10,817:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:34:39,235:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:35:07,316:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:35:35,476:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:36:03,532:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:36:31,957:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:37:00,503:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:37:28,906:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:37:57,459:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:38:25,746:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:38:54,036:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:39:22,500:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:39:50,658:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:40:18,973:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:40:47,235:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:41:17,256:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:41:45,544:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:42:13,955:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:42:42,031:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:43:10,188:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:43:38,510:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:44:06,659:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:44:34,700:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:45:02,783:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:45:31,788:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:45:58,824:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:46:23,419:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:46:46,895:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:47:11,896:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:47:34,992:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:47:59,341:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:48:23,060:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:48:23,239:GAIRL - mlp - state:INFO: Current step: 200000
+Loss: 0.002250252662292677
+
+--------------------------------------------------
+
+2019-03-12 15:52:41,769:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:53:14,123:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:53:46,482:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:54:18,828:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:54:48,244:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:55:17,997:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:55:47,911:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:56:17,345:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:56:47,324:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:57:15,939:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:57:44,677:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:58:14,408:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:58:44,060:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:59:13,128:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 15:59:43,402:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:00:16,032:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:00:54,021:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:01:29,645:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:02:03,960:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:02:39,007:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:03:12,393:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:03:47,291:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:04:20,747:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:05:01,024:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:05:42,883:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:06:25,060:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:07:06,516:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:07:48,320:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:08:29,822:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:09:11,528:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:09:54,023:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:10:35,484:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:11:16,860:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:11:49,910:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:12:20,724:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:13:02,498:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:13:43,196:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:14:17,167:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:14:50,145:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:15:23,369:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:15:56,722:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:16:29,613:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:17:09,377:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:17:50,765:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:18:31,391:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:19:07,448:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:19:44,586:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:20:12,141:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:20:39,520:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:21:04,492:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:21:04,676:GAIRL - mlp - state:INFO: Current step: 250000
+Loss: 0.002515468794606023
+
+--------------------------------------------------
+
+2019-03-12 16:25:16,218:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:25:50,094:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:26:18,560:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:26:47,107:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:27:15,444:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:27:43,341:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:28:11,881:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:28:39,978:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:29:09,661:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:29:38,635:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:30:06,406:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:30:34,561:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:31:03,839:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:31:32,214:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:32:00,438:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:32:28,854:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:32:57,012:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:33:25,195:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:33:53,349:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:34:23,148:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:34:51,442:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:35:19,699:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:35:47,988:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:36:16,007:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:36:44,024:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:37:12,293:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:37:40,554:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:38:08,355:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:38:38,608:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:39:17,879:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:39:59,264:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:40:33,947:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:41:02,165:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:41:35,682:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:42:09,569:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:42:41,717:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:43:22,052:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:44:01,542:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:44:45,512:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:45:27,578:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:46:09,732:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:46:50,879:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:47:29,954:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:55:17,994:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:55:46,703:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:56:15,560:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:56:43,097:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:57:07,660:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:57:25,483:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:57:44,350:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 16:57:45,421:GAIRL - mlp - state:INFO: Current step: 300000
+Loss: 0.001306299347333053
+
+--------------------------------------------------
+
+2019-03-12 17:02:15,461:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 17:03:06,353:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 17:03:53,389:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 17:04:33,164:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 17:05:06,991:GAIRL - mlp - state:INFO: Saving the model
+
+2019-03-12 17:05:46,909:GAIRL - mlp - state:INFO: Saving the model
+

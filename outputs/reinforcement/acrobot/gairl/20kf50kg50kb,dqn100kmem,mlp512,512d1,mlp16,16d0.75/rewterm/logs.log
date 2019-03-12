@@ -1,0 +1,448 @@
+2019-03-12 07:48:11,898:GAIRL - mlp - rewterm:INFO: 
+Creating MLP with:
+Input shape (9,)
+Output shape (2,)
+Dtype: <dtype: 'float64'>
+Network layers: [16, 16]
+Activation function: leaky_relu
+Dropout probability: 0.75
+Optimizer: AdamOptimizer
+
+2019-03-12 07:49:33,622:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:50:01,779:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:50:31,432:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:51:00,519:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:51:29,470:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:51:59,011:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:52:31,120:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:53:00,063:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:53:29,440:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:53:58,274:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:54:27,122:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:54:57,784:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:55:26,917:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:55:55,977:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:56:24,920:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:56:54,127:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:57:22,715:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:57:53,854:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:58:26,338:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:58:53,599:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:59:17,569:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 07:59:40,856:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:00:04,951:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:00:28,629:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:00:54,161:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:01:19,165:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:01:44,548:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:02:09,805:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:02:32,905:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:03:02,201:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:03:32,725:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:04:00,476:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:04:28,734:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:04:57,291:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:05:25,839:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:05:54,276:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:06:23,310:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:06:51,553:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:07:20,191:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:07:48,849:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:08:17,565:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:08:46,006:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:09:14,627:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:09:43,124:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:10:11,543:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:10:39,814:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:11:08,228:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:11:36,604:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:12:05,114:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:12:33,572:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:12:33,840:GAIRL - mlp - rewterm:INFO: Current step: 50000
+Loss: 0.0360380361298613
+
+--------------------------------------------------
+
+2019-03-12 08:16:47,699:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:17:16,109:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:17:44,570:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:18:13,007:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:18:41,533:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:19:09,923:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:19:41,066:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:20:10,775:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:20:41,913:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:21:14,705:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:21:46,602:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:22:14,982:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:22:44,008:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:23:12,214:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:23:40,766:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:24:09,466:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:24:37,863:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:25:06,468:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:25:36,291:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:26:00,569:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:26:24,633:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:26:48,646:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:27:12,576:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:27:36,507:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:27:59,320:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:28:23,344:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:28:51,069:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:29:15,002:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:29:38,580:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:30:09,911:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:30:42,635:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:31:11,709:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:31:40,668:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:32:09,575:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:32:38,442:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:33:07,329:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:33:36,005:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:34:04,948:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:34:33,344:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:35:01,296:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:35:29,977:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:35:58,969:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:36:27,955:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:36:56,769:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:37:25,488:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:37:54,346:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:38:23,454:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:38:52,336:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:39:21,048:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:39:50,426:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:39:50,600:GAIRL - mlp - rewterm:INFO: Current step: 100000
+Loss: 0.02201343270737438
+
+--------------------------------------------------
+
+2019-03-12 08:44:35,841:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:45:04,715:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:45:33,243:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:46:01,560:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:46:30,271:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:46:59,488:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:47:28,394:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:47:57,362:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:48:26,361:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:48:55,328:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:49:24,542:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:49:53,585:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:50:22,647:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:50:51,924:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:51:21,489:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:51:50,456:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:52:19,645:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:52:48,999:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:53:13,883:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:53:38,098:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:54:01,284:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:54:25,484:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:54:49,767:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:55:13,957:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:55:38,325:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:56:01,187:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:56:24,585:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:56:49,026:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:57:19,726:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:57:48,936:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:58:17,924:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:58:46,813:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:59:15,865:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 08:59:44,952:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:00:14,130:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:00:43,234:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:01:12,175:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:01:41,176:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:02:13,093:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:02:44,883:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:03:14,734:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:03:48,065:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:04:20,571:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:04:53,765:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:05:25,250:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:05:58,103:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:06:27,774:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:06:59,205:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:07:30,462:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:08:06,468:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:08:06,661:GAIRL - mlp - rewterm:INFO: Current step: 150000
+Loss: 0.02907572479689356
+
+--------------------------------------------------
+
+2019-03-12 09:13:04,966:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:13:38,007:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:14:07,205:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:14:37,623:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:15:08,814:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:15:38,163:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:16:07,148:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:16:36,262:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:17:05,306:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:17:34,233:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:18:02,796:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:18:37,616:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:19:11,378:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:19:44,545:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:20:17,216:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:20:50,042:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:21:19,884:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:21:48,196:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:22:14,542:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:22:46,930:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:23:15,740:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:23:40,335:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:24:05,259:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:24:28,110:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:24:53,207:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:25:17,335:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:25:47,672:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:26:21,977:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:26:54,842:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:27:24,876:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:27:44,729:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:28:05,146:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:28:26,821:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:28:47,947:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:29:09,555:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:29:29,117:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:29:51,295:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:30:12,596:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:30:36,451:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:30:58,082:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:31:19,542:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:31:39,435:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:31:58,555:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:32:17,351:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:32:37,530:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:32:58,849:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:33:19,788:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:33:40,353:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:34:01,189:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:34:20,272:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:34:20,440:GAIRL - mlp - rewterm:INFO: Current step: 200000
+Loss: 0.026138631122456936
+
+--------------------------------------------------
+
+2019-03-12 09:37:46,061:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:38:04,044:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:38:22,572:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:38:41,043:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:38:59,879:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:39:20,338:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:39:41,960:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:40:05,057:GAIRL - mlp - rewterm:INFO: Saving the model
+
+2019-03-12 09:40:26,539:GAIRL - mlp - rewterm:INFO: Saving the model
+

@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/reinforcement/acrobot/gairlss/20kf50kg50kb,dqn,mlp32,32d0.75,mlp16,16d0.75-2/agent/checkpoints/ckpt-0"
+all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/reinforcement/acrobot/gairlss/20kf50kg50kb,dqn,mlp32,32d0.75,mlp16,16d0.75-2/agent/checkpoints/ckpt-0"
