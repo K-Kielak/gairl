@@ -1,0 +1,6 @@
+model_checkpoint_path: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/generation/cond_mnist/vgan/test/checkpoints/ckpt-442000"
+all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/generation/cond_mnist/vgan/test/checkpoints/ckpt-438000"
+all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/generation/cond_mnist/vgan/test/checkpoints/ckpt-439000"
+all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/generation/cond_mnist/vgan/test/checkpoints/ckpt-440000"
+all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/generation/cond_mnist/vgan/test/checkpoints/ckpt-441000"
+all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/generation/cond_mnist/vgan/test/checkpoints/ckpt-442000"
