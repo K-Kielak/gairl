@@ -1,0 +1,4 @@
+model_checkpoint_path: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/reinforcement/acrobot/gairl/puredqn-10k-2.5/agent/checkpoints/ckpt-200000"
+all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/reinforcement/acrobot/gairl/puredqn-10k-2.5/agent/checkpoints/ckpt-0"
+all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/reinforcement/acrobot/gairl/puredqn-10k-2.5/agent/checkpoints/ckpt-100000"
+all_model_checkpoint_paths: "/home/kacper/Pulpit/Rozwoj/University of Birmingham/Third Year/FinalProject/gairl/outputs/reinforcement/acrobot/gairl/puredqn-10k-2.5/agent/checkpoints/ckpt-200000"
