@@ -1,0 +1,6 @@
+model_checkpoint_path: "/home/kacper/gairl/outputs/reinforcement/mountaincar999999/gairl/20kf20kg60kb600kmem,dqn,mlp512,512d1,mlp64,64d0.75-2/agent/checkpoints/ckpt-3400000"
+all_model_checkpoint_paths: "/home/kacper/gairl/outputs/reinforcement/mountaincar999999/gairl/20kf20kg60kb600kmem,dqn,mlp512,512d1,mlp64,64d0.75-2/agent/checkpoints/ckpt-3000000"
+all_model_checkpoint_paths: "/home/kacper/gairl/outputs/reinforcement/mountaincar999999/gairl/20kf20kg60kb600kmem,dqn,mlp512,512d1,mlp64,64d0.75-2/agent/checkpoints/ckpt-3100000"
+all_model_checkpoint_paths: "/home/kacper/gairl/outputs/reinforcement/mountaincar999999/gairl/20kf20kg60kb600kmem,dqn,mlp512,512d1,mlp64,64d0.75-2/agent/checkpoints/ckpt-3200000"
+all_model_checkpoint_paths: "/home/kacper/gairl/outputs/reinforcement/mountaincar999999/gairl/20kf20kg60kb600kmem,dqn,mlp512,512d1,mlp64,64d0.75-2/agent/checkpoints/ckpt-3300000"
+all_model_checkpoint_paths: "/home/kacper/gairl/outputs/reinforcement/mountaincar999999/gairl/20kf20kg60kb600kmem,dqn,mlp512,512d1,mlp64,64d0.75-2/agent/checkpoints/ckpt-3400000"
